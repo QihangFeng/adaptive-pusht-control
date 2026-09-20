@@ -1,0 +1,52 @@
+{
+  "id": "eval-two_pulses-reference-nominal",
+  "stage": "evaluation",
+  "scenario": "two_pulses",
+  "seed": 1,
+  "tuning": "reference",
+  "variant": "nominal",
+  "power_parameters": {
+    "L": 226.0715968177177,
+    "x0": 5.487179487179487,
+    "k": 1.0811807510766078,
+    "b0": 473.6872506209777
+  },
+  "config": {
+    "primal_step_size": 0.1,
+    "w_throughput": 0.001,
+    "w_switch": 1.0,
+    "voltage_gradient_scale": 1000000.0,
+    "v_min": 0.95,
+    "v_max": 1.05,
+    "voltage_dual_step_size": 1.0,
+    "latency_dual_step_size": 1.0,
+    "sensitivity_update_interval": 3600,
+    "sensitivity_perturbation_kw": 100.0
+  },
+  "integrated_violation_pu_s": 0.047005992792242796,
+  "violation_time_s": 15.29999999999913,
+  "worst_vmin": 0.942833499304439,
+  "worst_vmax": 1.043232571632691,
+  "throughput_tps": 14840700.618051058,
+  "integrated_tokens": 4452210185.41532,
+  "itl_violation_fraction": 0.0,
+  "batch_switches": 21,
+  "batch_log2_total_variation": 30.0,
+  "mean_dc_power_kw": 3485.999186667585,
+  "observed_batches": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "simulation_seconds": 2.638368999999784,
+  "steps": 3000,
+  "all_solves_converged": true,
+  "trajectory_sha256": "6d51af79c70de63f30fdc5a89e430ed114046019f2f36e2ca7ca3d1363569516",
+  "wall_seconds": 5.89067870000008,
+  "peak_sampled_rss_mib": 139.68359375,
+  "memory_sampling_scope": "sum of launcher and recursive child RSS"
+}

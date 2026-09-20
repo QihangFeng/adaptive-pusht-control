@@ -1,0 +1,51 @@
+{
+  "id": "dev-double_step",
+  "stage": "development",
+  "scenario": "development",
+  "seed": 0,
+  "tuning": "double_step",
+  "variant": "nominal",
+  "power_parameters": {
+    "L": 226.0715968177177,
+    "x0": 5.487179487179487,
+    "k": 1.0811807510766078,
+    "b0": 473.6872506209777
+  },
+  "config": {
+    "primal_step_size": 0.2,
+    "w_throughput": 0.001,
+    "w_switch": 1.0,
+    "voltage_gradient_scale": 1000000.0,
+    "v_min": 0.95,
+    "v_max": 1.05,
+    "voltage_dual_step_size": 1.0,
+    "latency_dual_step_size": 1.0,
+    "sensitivity_update_interval": 3600,
+    "sensitivity_perturbation_kw": 100.0
+  },
+  "integrated_violation_pu_s": 0.017330675112335683,
+  "violation_time_s": 12.599999999999284,
+  "worst_vmin": 0.9456356861324521,
+  "worst_vmax": 1.038467122496753,
+  "throughput_tps": 24320312.15625532,
+  "integrated_tokens": 7296093646.876617,
+  "itl_violation_fraction": 0.0,
+  "batch_switches": 33,
+  "batch_log2_total_variation": 40.0,
+  "mean_dc_power_kw": 3523.2938740538552,
+  "observed_batches": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "simulation_seconds": 2.4898349999998572,
+  "steps": 3000,
+  "all_solves_converged": true,
+  "trajectory_sha256": "61c105c0be58fd9da436d5b441bcf7d50ffd11ef65643557d934324d7f63d025",
+  "wall_seconds": 5.756998100000146,
+  "peak_sampled_rss_mib": 4.28125
+}
