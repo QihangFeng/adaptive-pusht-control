@@ -1,0 +1,67 @@
+{
+  "purpose": "Screen static tuning before implementing adaptation",
+  "prior_results": "E:\\Courses\\Fall 2026\\ECE 730\\project\\results\\power-model-pilot-verified",
+  "prior_manifest_sha256": "823e08492ab464d1eb6103ccfecc27fa0262244b078e2caa6adb5bab0009d8bd",
+  "driver_sha256": "12fa6d289aa74171599c4b8fe9bd5587f45a4f5cb1a6ecdb392bfe0bd5b15d08",
+  "followup_driver_sha256": "21c3524bde9a4dd0a351b6ccb81d6898355f63c9d16ad88b49e7c37b481e62ff",
+  "openg2g_commit": "c582a5115cfd49dcdfb140f1837224e7cbf0cfb1",
+  "prepared_data_sha256": {
+    "b473220852891f26/_manifest.json": "caa2faa8a54aac3d080f2d51d73cb1047505f324a98d3fcd13f2b7921da4e431",
+    "b473220852891f26/itl_fit.json": "254d3a4ec37f07de858c6572408a647ba649bbb57d02c7af334096b3d6effa48",
+    "b473220852891f26/logistic_fit.json": "9e58dc52fb9e1b6849bbbda9c75e32a0cc2aa82f86a2ea2866be4775292bc99d",
+    "b473220852891f26/trace.csv": "4649569a11e2d9e37a410d20c84c5894efe7f2909113ed2a2652a2508cc6cc1e"
+  },
+  "tunings": {
+    "reference": [
+      0.1,
+      1000000.0
+    ],
+    "half_step": [
+      0.05,
+      1000000.0
+    ],
+    "double_step": [
+      0.2,
+      1000000.0
+    ],
+    "half_voltage_gain": [
+      0.1,
+      500000.0
+    ],
+    "double_voltage_gain": [
+      0.1,
+      2000000.0
+    ]
+  },
+  "variants": {
+    "nominal": {
+      "L": 226.0715968177177,
+      "x0": 5.487179487179487,
+      "k": 1.0811807510766078,
+      "b0": 473.6872506209777
+    },
+    "omit_batch_64": {
+      "L": 218.06749105955313,
+      "x0": 5.282051282051282,
+      "k": 1.2638482029342986,
+      "b0": 474.502229366789
+    }
+  },
+  "development_seed": 0,
+  "evaluation_seeds": [
+    2,
+    3
+  ],
+  "evaluation_scenarios": [
+    "abrupt",
+    "two_pulses"
+  ],
+  "selection": "Across both development fits: original voltage/ITL budgets must hold for both; maximize minimum throughput. If none qualifies, minimize maximum integrated voltage violation, then maximum ITL misses.",
+  "comparators": [
+    "reference",
+    "half_voltage_gain",
+    "robust-development-selected"
+  ],
+  "max_new_simulations": 29,
+  "limitations": "One profile, one development schedule, one omission. Evaluation schedules are already known. Seeds 2/3 are new but are not independent workloads. No calibration, no realistic temporal workload change, no new error magnitudes."
+}
