@@ -2,6 +2,19 @@
 AGENTS.md
 course-materials/
 
+# Local environment variants; retain shareable templates
+.env.*
+!.env.example
+!.env.template
+
+# Downloaded/prepared datasets and scratch files
+/data/raw/
+/data/prepared/
+/tmp/
+
+# Disposable reruns; keep authoritative experiment results
+/results/*-repeat/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
