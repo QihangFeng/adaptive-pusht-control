@@ -5,3 +5,9 @@
 - `power-model-pilot-startup-check/` preserves the initial output-path failure. No complete exported simulation result is present there.
 
 The repeated cases use the same seeds; they demonstrate numerical reproducibility, not independent statistical replication. The [pilot report](../reports/2026-09-20-power-model-pilot.md) explains scope, results, limitations, and reproduction.
+
+## Delayed-voltage topic screening
+
+- `delay-screen/`: 30 baseline cases, predeclared protocol, exact zero-delay compatibility check, and development-only tuning selection.
+- `delay-prototype/`: 18 cases using the frozen selected setting; includes the minimal power-history predictor and two evaluation schedules with two seeds.
+- [Gap audit and decision report](../reports/2026-09-20-delay-go-no-go.md): interpretation, literature, limitations, CPU resource use, and reproduction commands. These results support a course-project extension under stated assumptions, not deployment safety or general algorithmic novelty.
