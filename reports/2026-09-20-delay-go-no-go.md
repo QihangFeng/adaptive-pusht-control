@@ -1,5 +1,7 @@
 # Delay-aware AI batch control: gap audit and bounded feasibility study
 
+Follow-up: the [October 7 practicality review](2026-10-07-telemetry-delay-practicality-review.md) adds field evidence, clarifies methodological precedent, and qualifies the deployment motivation. The simulation results below are unchanged; typical AI-center remote-voltage delays remain unverified.
+
 ## Decision
 
 **GO: select this as a course-project topic, framed as a meaningful extension of existing control, not a new general delay-compensation algorithm.** The completed 48-run study demonstrates an important delay effect and a useful inexpensive remedy in the declared simulation setting. We have enough preliminary evidence to move from topic searching to a focused research project.
@@ -26,7 +28,7 @@ Ortmann et al.'s real distribution-grid deployment received measurements through
 
 Comden et al. explicitly separate remote grid measurements, coordinator messages, and local power measurements. Their numerical study uses an approximately 2,000-node feeder, 163 PV units, and 140 batteries. For the delay study, remote messages are sent every 10 seconds and local messages every 2 seconds. Table I's 60-second voltage-channel limit is a **tolerance in their simulation**, not typical observed network latency and not transferable to OpenG2G. [R4, Sections II, V-A, V-D and Table I]
 
-Conversely, GridPilot demonstrates a fast GPU response path: its reported 97.2 ms median concerns synthetic-trigger-to-GPU-power response on three V100s, not remote feeder-voltage measurement age. Large-facility behavior is extrapolated. This is evidence against assuming all AI-grid interfaces must be slow. [R7, Sections 2, 4-6]
+Conversely, GridPilot reports a fast GPU dispatch path on three V100s. **October 7 clarification:** the [authors' artifact](https://github.com/denisa-c/gridpilot#reading-the-latency-result) states that the roughly 97.2 ms headline interval ends when the final cap write returns; delivered-power settling is estimated, not independently measured in that interval. This is neither remote feeder-voltage measurement age nor measured physical power-response time. Large-facility behavior is extrapolated. [R7, Sections 2, 4-6; artifact clarification]
 
 **Interpretation:** studying stale feedback is defensible under a stated telemetry architecture. We have not established a field delay distribution for an AI computing center. Our delay values are sensitivity cases, not industry statistics. Reporting interval, transport delay, and actuation delay must remain distinct.
 
