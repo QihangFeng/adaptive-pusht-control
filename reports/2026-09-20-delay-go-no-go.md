@@ -2,6 +2,8 @@
 
 Follow-up: the [October 7 practicality review](2026-10-07-telemetry-delay-practicality-review.md) adds field evidence, clarifies methodological precedent, and qualifies the deployment motivation. The simulation results below are unchanged; typical AI-center remote-voltage delays remain unverified.
 
+Acceptability clarification: the [October 8 saved-results audit](2026-10-08-delay-acceptability-audit.md) finds that only one of four corrected evaluation cases meets all earlier experimental budgets. Passing the relative useful-prototype rule below does not mean meeting absolute voltage requirements. Slower-update evaluation remains untested, and the temporary simulator environment and prepared inputs are now missing.
+
 ## Decision
 
 **GO: select this as a course-project topic, framed as a meaningful extension of existing control, not a new general delay-compensation algorithm.** The completed 48-run study demonstrates an important delay effect and a useful inexpensive remedy in the declared simulation setting. We have enough preliminary evidence to move from topic searching to a focused research project.
