@@ -15,4 +15,11 @@ The repeated cases use the same seeds; they demonstrate numerical reproducibilit
 ## Absolute acceptability audit
 
 - `delay-acceptability-audit/`: a standard-library reanalysis of the same 48 saved runs, not new simulations. Includes source/trace hashes, unchanged experimental budgets, per-run failures, and paired comparisons.
-- [Acceptability report](../reports/2026-10-08-delay-acceptability-audit.md): only one of four corrected evaluation cases meets all earlier experimental budgets; none of the 48 runs meets the strict nominal-voltage check. Slower-update evaluation and independent grid-disturbance tests remain pending. The earlier temporary simulator environment and prepared inputs are now missing.
+- [Acceptability report](../reports/2026-10-08-delay-acceptability-audit.md): only one of four corrected evaluation cases meets all earlier experimental budgets; none of the 48 runs meets the strict nominal-voltage check. The environment was missing and slower-update evaluation was pending at audit time; see the completed follow-up below. Independent grid-disturbance tests remain pending.
+
+## Restored environment and slower-controller comparison
+
+- `simulator-restoration/`: provenance for the recreated numerical inputs and runtime. Numerical files match the historical hashes; the new manifest's only difference is its truthful creation timestamp.
+- `slow-update-check/`: two exact historical-trajectory checks followed by four new frozen `slow_update` cases. Includes the protocol, traces, absolute-budget checks and comparison against saved correction runs.
+- [Comparison report](../reports/2026-10-08-slow-update-comparison.md): slower stale control passes zero of four cases; correction passes one of four. Relative gains do not imply reliable absolute compliance.
+- [Persistent setup and reproduction](../reports/2026-10-08-simulator-restoration.md): replaces the earlier temporary-directory setup instructions.

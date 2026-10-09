@@ -2,6 +2,8 @@
 
 Date: October 8, 2026
 
+Follow-up completed later the same day: the [environment is restored](2026-10-08-simulator-restoration.md), and the [four slower-controller comparisons are complete](2026-10-08-slow-update-comparison.md). The audit below is retained as the earlier evidence and pre-comparison decision rule.
+
 ## Conclusion
 
 **Correction helps in the saved simulations, but we have not shown that it is necessary or that it reliably meets our requirements.** This distinction matters more than the large percentage improvements reported earlier.
