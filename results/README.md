@@ -15,7 +15,7 @@ The repeated cases use the same seeds; they demonstrate numerical reproducibilit
 ## Absolute acceptability audit
 
 - `delay-acceptability-audit/`: a standard-library reanalysis of the same 48 saved runs, not new simulations. Includes source/trace hashes, unchanged experimental budgets, per-run failures, and paired comparisons.
-- [Acceptability report](../reports/2026-10-08-delay-acceptability-audit.md): only one of four corrected evaluation cases meets all earlier experimental budgets; none of the 48 runs meets the strict nominal-voltage check. The environment was missing and slower-update evaluation was pending at audit time; see the completed follow-up below. Independent grid-disturbance tests remain pending.
+- [Acceptability report](../reports/2026-10-08-delay-acceptability-audit.md): only one of four corrected evaluation cases meets all earlier experimental budgets; none of the 48 runs meets the strict nominal-voltage check. The environment was missing and slower-update evaluation was pending at audit time; see the completed follow-up below. Variable-delay and independent grid-disturbance tests are now complete in `robustness-check/`.
 
 ## Restored environment and slower-controller comparison
 
@@ -23,3 +23,9 @@ The repeated cases use the same seeds; they demonstrate numerical reproducibilit
 - `slow-update-check/`: two exact historical-trajectory checks followed by four new frozen `slow_update` cases. Includes the protocol, traces, absolute-budget checks and comparison against saved correction runs.
 - [Comparison report](../reports/2026-10-08-slow-update-comparison.md): slower stale control passes zero of four cases; correction passes one of four. Relative gains do not imply reliable absolute compliance.
 - [Persistent setup and reproduction](../reports/2026-10-08-simulator-restoration.md): replaces the earlier temporary-directory setup instructions.
+
+## Variable delay and independent outside demand
+
+- `robustness-check/`: four exact historical compatibility checks and 72 frozen paired evaluations, using two workloads, additional seeds 3/4/5, constant/variable delay, and fixed/changing outside demand. Includes the pre-run protocol, all traces, independently recomputed four-metric results, seed ranges and paired comparisons.
+- [Robustness report](../reports/2026-10-08-robustness-check.md): correction improves both voltage metrics in all 12 unchanged-background comparisons against the tuned baseline, but severity improves in only seven of 12 disturbed comparisons. Gradual-workload cases demonstrate higher throughput with worse voltage and modeled ITL. These are synthetic sensitivity tests, not deployment guarantees.
+- [Four agreed metrics](../reports/evaluation-metrics.md): voltage violation fraction, average simulated throughput, average modeled inter-token latency and accumulated violation severity. Historical experimental budgets are separate from comparative improvements.

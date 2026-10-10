@@ -146,6 +146,12 @@ def simulate(args):
 
     job = json.loads(Path(args.job).read_text(encoding="utf-8"))
     out = Path(args.output).resolve()  # OpenDSS changes cwd.
+    robustness = job.get("robustness")
+    if robustness is not None:
+        try:
+            from .robustness_check import external_power_kw, transport_delay
+        except ImportError:
+            from robustness_check import external_power_kw, transport_delay
     spec = InferenceModelSpec(
         model_label=pilot.LABEL, model_id="meta-llama/Llama-3.1-8B-Instruct",
         gpu_model="H100", task="lm-arena-chat", precision="bfloat16",
@@ -167,6 +173,18 @@ def simulate(args):
         dt_s=Fraction(1, 10), source_pu=system["source_pu"],
         initial_tap_position=system["initial_taps"], exclude_buses=system["exclude_buses"])
     grid.attach_dc(dc, bus="671")
+    external_attachment = None
+    if robustness is not None and robustness["external_enabled"]:
+        from openg2g.grid.load import ExternalLoad
+
+        class IndependentLoad(ExternalLoad):
+            def power_kw(self, t):
+                # The pinned backend applies this value to EACH phase.
+                return external_power_kw(float(t), robustness)
+
+        grid.attach_load(IndependentLoad(), bus=robustness["external_bus"], power_factor=0.96)
+        # Read-back for simulation diagnostics only; never exposed to OFO.
+        external_attachment = grid._load_attachments[-1]
     fits = LogisticModelStore.load(Path(args.prepared_data), (spec,))
     primal, gain, dual, period = SETTINGS[job["setting"]]
     config = OFOConfig(
@@ -195,7 +213,8 @@ def simulate(args):
                 view.v_index = tuple(grid.v_index)
             power = dc.state.power_w
             view.current_power_kw = np.array([power.a, power.b, power.c]) / 1000
-            self.channel.publish(t, job["delay_s"], grid.voltages_vector(), view.current_power_kw)
+            delay = job["delay_s"] if robustness is None else transport_delay(t, robustness)
+            self.channel.publish(t, delay, grid.voltages_vector(), view.current_power_kw)
             view.packet = self.channel.receive(t)
             return []
 
@@ -223,6 +242,7 @@ def simulate(args):
     coordinator = Coordinator(datacenters=[dc], grid=grid, controllers=[Sensor(), controller],
                               total_duration_s=pilot.DURATION)
     dc_states, grid_states, rows = [], [], []
+    external_applied = []
     excluded = set(system["exclude_buses"])
     start = time.perf_counter()
     for tick in coordinator.run_iter():
@@ -238,6 +258,16 @@ def simulate(args):
         p = sum((state.power_w.a, state.power_w.b, state.power_w.c))
         rows.append([tick.t_s, b, p, itl, n, min(volts), max(volts),
                      sum(max(0.95-v, 0) + max(v-1.05, 0) for v in volts), b/itl*n])
+        if robustness is not None:
+            phase_kw = [0.0, 0.0, 0.0]
+            if external_attachment is not None:
+                for phase, name in enumerate(external_attachment.load_names):
+                    dss.Loads.Name(name)
+                    phase_kw[phase] = dss.Loads.kW()
+            expected_kw = external_power_kw(float(tick.t_s), robustness)
+            assert np.allclose(phase_kw, expected_kw, rtol=0, atol=1e-9), (
+                "Applied external load disagrees with the declared per-phase profile")
+            external_applied.append(phase_kw)
     values = np.asarray(rows)
     assert values.shape == (3000, 9) and np.isfinite(values).all()
     assert set(values[:, 1]).issubset(pilot.BATCHES)
@@ -253,19 +283,28 @@ def simulate(args):
         integrated_violation_pu_s=integral, violation_time_s=vs.violation_time_s,
         worst_vmin=vs.worst_vmin, worst_vmax=vs.worst_vmax,
         throughput_tps=perf.mean_throughput_tps, itl_violation_fraction=perf.itl_deadline_fraction,
+        mean_modeled_itl_ms=float(values[:, 3].mean() * 1000),
+        voltage_violation_fraction_percent=float(np.mean(values[:, 7] > 0) * 100),
         batch_switches=int(np.count_nonzero(np.diff(values[:, 1]))),
         batch_log2_total_variation=float(np.abs(np.diff(np.log2(values[:, 1]))).sum()),
         voltage_observation_rmse_pu=float(np.sqrt(np.mean(error**2))),
         raw_packet_rmse_pu=float(np.sqrt(np.mean(raw_error**2))),
+        mean_age_s=float(np.mean([r["age_s"] for r in delivered])),
         max_age_s=max(r["age_s"] for r in delivered), control_updates=len(delivered),
         startup_skipped_updates=len(observations)-len(delivered),
         all_solves_converged=True, steps=len(rows), simulation_seconds=time.perf_counter()-start,
         trajectory_sha256=hashlib.sha256(values.tobytes()).hexdigest())
+    trace = dict(columns=["time_s", "batch", "power_w", "itl_s", "replicas", "vmin",
+                          "vmax", "violation_sum_pu", "throughput_tps"], rows=rows,
+                 observations=observations, sensitivity=view.sensitivity.tolist())
+    if robustness is not None:
+        trace["robustness"] = dict(
+            robustness,
+            external_power_kw_per_phase=[phase_kw[0] for phase_kw in external_applied],
+            external_applied_kw_by_phase=external_applied)
+        result["external_load_readback_matches_profile"] = True
     with gzip.open(out / f"{job['id']}.trace.json.gz", "wt", encoding="utf-8") as stream:
-        json.dump(dict(columns=["time_s", "batch", "power_w", "itl_s", "replicas", "vmin",
-                                 "vmax", "violation_sum_pu", "throughput_tps"], rows=rows,
-                       observations=observations, sensitivity=view.sensitivity.tolist()), stream,
-                  allow_nan=False)
+        json.dump(trace, stream, allow_nan=False)
     pilot.write_json(out / f"{job['id']}.json", result)
 
 
