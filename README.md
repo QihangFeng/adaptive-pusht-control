@@ -4,7 +4,7 @@ ECE 730 course project: computation and AI for cyber-physical systems.
 
 This branch explores feedback around a frozen robot-action model. In the PushT simulator, a camera observes a pusher and a T-shaped block. A pretrained Diffusion Policy predicts movements; the simulator applies them and returns updated images.
 
-The candidate contribution is a lightweight, contact-aware feedback rule that decides when to interrupt an existing movement plan and request a new prediction. Its usefulness has **not** been established. The next step is to inspect unchanged-baseline failures before implementing the rule.
+The candidate contribution is lightweight execution feedback that decides when to interrupt an existing movement plan and request a new prediction, potentially adapting the number of actions executed between predictions. Its usefulness has **not** been established. The baseline screen found task failures, but contact loss alone was not a reliable failure signal, and short local replanning probes did not improve alignment.
 
 ## Current status
 
@@ -12,12 +12,15 @@ Laptop feasibility is verified on a GTX 1650 (4 GiB), 16 GB RAM and Python 3.11.
 
 This supports bounded **offline simulation**, not real-time deployment, large 3D robot models or policy training. See the [feasibility report](reports/2026-10-10-robotics-laptop-feasibility.md) for evidence, limitations, sources and setup instructions.
 
+The [baseline diagnostic report](reports/2026-10-10-robotics-baseline-check.md) covers six unchanged-policy episodes (three successes, three timeouts), contact/trajectory analysis, and 15 short same-state replanning probes. The next investigation should compare fixed execution lengths and clarify the trigger before implementing the proposed method.
+
 ## Where to start
 
 | Location | Purpose |
 |---|---|
 | [requirements-robotics.txt](requirements-robotics.txt) | Compatible simulator and inference dependencies |
 | [experiments/robotics_feasibility.py](experiments/robotics_feasibility.py) | Verified baseline integration and resource check |
+| [experiments/robotics_baseline_check.py](experiments/robotics_baseline_check.py) | Passive baseline recordings and local replanning probes |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
