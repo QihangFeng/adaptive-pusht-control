@@ -1,0 +1,190 @@
+{
+  "purpose": "failure-pattern discovery and conditional recovery opportunity, not method evaluation",
+  "model_id": "lerobot/diffusion_pusht",
+  "model_revision": "84a7c23178445c6bbf7e1a884ff497017910f653",
+  "weights_sha256": "995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8",
+  "config": {
+    "beta_end": 0.02,
+    "beta_schedule": "squaredcos_cap_v2",
+    "beta_start": 0.0001,
+    "clip_sample": true,
+    "clip_sample_range": 1.0,
+    "crop_is_random": true,
+    "crop_shape": [
+      84,
+      84
+    ],
+    "diffusion_step_embed_dim": 128,
+    "do_mask_loss_for_padding": false,
+    "down_dims": [
+      512,
+      1024,
+      2048
+    ],
+    "drop_n_last_frames": 7,
+    "horizon": 16,
+    "input_features": {
+      "observation.image": {
+        "shape": [
+          3,
+          96,
+          96
+        ],
+        "type": "VISUAL"
+      },
+      "observation.state": {
+        "shape": [
+          2
+        ],
+        "type": "STATE"
+      }
+    },
+    "kernel_size": 5,
+    "n_action_steps": 8,
+    "n_groups": 8,
+    "n_obs_steps": 2,
+    "device": "cuda",
+    "use_amp": false,
+    "noise_scheduler_type": "DDPM",
+    "normalization_mapping": {
+      "ACTION": "MIN_MAX",
+      "STATE": "MIN_MAX",
+      "VISUAL": "MEAN_STD"
+    },
+    "num_inference_steps": null,
+    "num_train_timesteps": 100,
+    "optimizer_betas": [
+      0.95,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "optimizer_lr": 0.0001,
+    "optimizer_weight_decay": 1e-06,
+    "output_features": {
+      "action": {
+        "shape": [
+          2
+        ],
+        "type": "ACTION"
+      }
+    },
+    "prediction_type": "epsilon",
+    "pretrained_backbone_weights": null,
+    "scheduler_name": "cosine",
+    "scheduler_warmup_steps": 500,
+    "spatial_softmax_num_keypoints": 32,
+    "type": "diffusion",
+    "use_film_scale_modulation": true,
+    "use_group_norm": true,
+    "use_separate_rgb_encoder_per_camera": false,
+    "vision_backbone": "resnet18"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "reused_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "new_seeds": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "max_episode_steps": 300,
+  "disturbances": "none",
+  "pattern_rules": {
+    "near_target_coverage": 0.9,
+    "cached_regression_drop": 0.05,
+    "regression_minimum_pending_actions": 1,
+    "low_progress_window_steps": 24,
+    "low_progress_max_running_best_gain": 0.01,
+    "low_progress_minimum_endpoint_coverage": 0.5
+  },
+  "original_directory": "results/robotics-baseline-check",
+  "original_hashes": {
+    "summary.json": "79827f7e572c8f066c57a3d7ff5ec4669365820ac156ec43fe46670888eb2595",
+    "protocol.json": "b2a52eab070eac4b74559cbfc245ff86341a29453cec5367f25109eadd4f127e",
+    "seed-0.trace.json.gz": "f4b9f9513b21d0192ab659264eb52a40f5eda1f1b8b6706728f1561f41503ae2",
+    "seed-1.trace.json.gz": "7c850c640c76a0b885b90acc8036c1299421e4e30b55d259f8b2691512ef5b38",
+    "seed-2.trace.json.gz": "fb25a02bf0b04772bd7bbc06ab19b4dc91f9b5e2be543f542163301fb6de1088",
+    "seed-3.trace.json.gz": "33738a44b79a7e7eb2bb522c1658e500386065043ae1a4d3ed147edc3545cec6",
+    "seed-4.trace.json.gz": "48e9ba03d58ccc035fdd2d3fc73b9dc8b972ab7681cc5966e7aa369375772a39",
+    "seed-5.trace.json.gz": "80ea31a039da07c0b8f3bdf77ec56828dc328720e7c401ef12f84f17b255e9b6"
+  },
+  "diagnostic_state_not_policy_input": true,
+  "recovery_selection": "first three failed seeds with a near-target cached regression and >=16 steps left; first successful seed as control, if eligible",
+  "recovery_diffusion_seeds": [
+    2000,
+    2001,
+    2002
+  ],
+  "recovery_arms": [
+    "continue_cached",
+    "replan_once"
+  ],
+  "recovery_scope": "remaining episode under original total 300-action budget; fixed eight after initial branch",
+  "recovery_limitations": "oracle-selected states; fresh random continuations, not exact original future RNG; discovery only",
+  "packages": {
+    "lerobot": "0.3.3",
+    "gym-pusht": "0.1.5",
+    "pymunk": "6.11.1",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "diffusers": "0.35.1"
+  }
+}

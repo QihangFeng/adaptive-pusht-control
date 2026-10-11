@@ -4,7 +4,7 @@ ECE 730 course project: computation and AI for cyber-physical systems.
 
 This branch explores feedback around a frozen robot-action model. In the PushT simulator, a camera observes a pusher and a T-shaped block. A pretrained Diffusion Policy predicts movements; the simulator applies them and returns updated images.
 
-The candidate contribution is lightweight execution feedback that decides when to interrupt an existing movement plan and request a new prediction, potentially adapting the number of actions executed between predictions. Its usefulness has **not** been established. The baseline screen found task failures, but contact loss alone was not a reliable failure signal, and short local replanning probes did not improve alignment.
+The candidate contribution is lightweight execution feedback that decides when to interrupt an existing movement plan and request a new prediction, potentially adapting the number of actions executed between predictions. Its usefulness has **not** been established. The completed investigation found recovery opportunities, but interruption also harmed successful continuations. The adaptive controller is not implemented.
 
 ## Current status
 
@@ -12,7 +12,7 @@ Laptop feasibility is verified on a GTX 1650 (4 GiB), 16 GB RAM and Python 3.11.
 
 This supports bounded **offline simulation**, not real-time deployment, large 3D robot models or policy training. See the [feasibility report](reports/2026-10-10-robotics-laptop-feasibility.md) for evidence, limitations, sources and setup instructions.
 
-The [baseline diagnostic report](reports/2026-10-10-robotics-baseline-check.md) covers six unchanged-policy episodes (three successes, three timeouts), contact/trajectory analysis, and 15 short same-state replanning probes. The next investigation should compare fixed execution lengths and clarify the trigger before implementing the proposed method.
+The [baseline diagnostic report](reports/2026-10-10-robotics-baseline-check.md) preserves the original six unchanged-policy episodes and 15 short probes. The [expanded failure/recovery report](reports/2026-10-11-robotics-failure-patterns.md) covers 30 baseline attempts (20 successes, 10 timeouts) and 24 matched-state continuations. Immediate replanning helped in some selected failed scenes but disrupted the successful control: overall success was 5/12 under each arm, with more AI calls for replanning. This is exploratory evidence, not a validated controller improvement. Clarifying the interruption trigger should precede implementation or further sweeps.
 
 ## Where to start
 
@@ -21,6 +21,8 @@ The [baseline diagnostic report](reports/2026-10-10-robotics-baseline-check.md) 
 | [requirements-robotics.txt](requirements-robotics.txt) | Compatible simulator and inference dependencies |
 | [experiments/robotics_feasibility.py](experiments/robotics_feasibility.py) | Verified baseline integration and resource check |
 | [experiments/robotics_baseline_check.py](experiments/robotics_baseline_check.py) | Passive baseline recordings and local replanning probes |
+| [experiments/robotics_failure_investigation.py](experiments/robotics_failure_investigation.py) | Resumable 30-attempt investigation and full remaining-episode recovery pilot |
+| [experiments/robotics_trajectory_analysis.py](experiments/robotics_trajectory_analysis.py) | Frozen exploratory rules applied to saved traces |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

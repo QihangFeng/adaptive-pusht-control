@@ -1,0 +1,44 @@
+{
+  "seed": 11,
+  "steps": 300,
+  "success": false,
+  "truncated": true,
+  "initial_coverage": 0.008558997813705067,
+  "final_coverage": 0.6647800289559119,
+  "max_coverage": 0.9477258527155489,
+  "max_reward": 0.9976061607532094,
+  "final_reward": 0.6997684515325389,
+  "model_queries": 38,
+  "query_seconds": {
+    "count": 38,
+    "mean": 4.949442363157902,
+    "median": 4.942557949999809,
+    "p95": 5.082283490000009,
+    "min": 4.815681900000072,
+    "max": 5.161613500000385
+  },
+  "wall_seconds": 191.2015124999998,
+  "candidates": [
+    {
+      "label": "contact_stall_candidate",
+      "start_step": 121,
+      "end_step": 123,
+      "chunk": 16,
+      "pending_actions": 5,
+      "max_block_vertex_motion": 1.3922336109171962,
+      "mean_command_distance": 6.670573860367102,
+      "coverage_change": 0.01025664803469789
+    },
+    {
+      "label": "contact_loss_candidate",
+      "start_step": 260,
+      "end_step": 262,
+      "chunk": 33,
+      "pending_actions": 2,
+      "max_block_vertex_motion": 0.0,
+      "mean_command_distance": 25.702627833332134,
+      "coverage_change": 0.0
+    }
+  ],
+  "trace": "seed-11.trace.json.gz"
+}

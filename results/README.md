@@ -18,4 +18,16 @@ These results establish offline laptop feasibility, not a reliable success-rate 
 
 Contact-loss candidates are not confirmed failures. The short probes did not demonstrate immediate alignment improvement and do not evaluate full-episode recovery or an adaptive controller. Full videos remain local under `tmp/robotics-baseline-videos/`; rerunning the experiment regenerates them.
 
+## Expanded failure and recovery investigation
+
+- [robotics-failure-patterns/summary.json](robotics-failure-patterns/summary.json): 30 completed fixed-eight baseline attempts, reusing the original six and adding seeds 6-29. Outcomes: 20 successes, 10 timeouts.
+- [robotics-failure-patterns/protocol.json](robotics-failure-patterns/protocol.json): frozen settings, exploratory rules, predetermined seeds, recovery selection and original-evidence hashes.
+- [robotics-failure-patterns/analysis.json](robotics-failure-patterns/analysis.json): nonexclusive trajectory patterns in failures and successes; simulator-only diagnostics, not a visual controller.
+- [robotics-failure-patterns/recovery.json](robotics-failure-patterns/recovery.json): all 24 matched-state continuations, including harmful and neutral interventions. The two arms each succeed in 5/12 continuations; replanning uses more remaining AI calls (167 versus 142).
+- `robotics-failure-patterns/episodes/` and `recovery/`: per-attempt summaries and compressed action/state traces; original seeds 0-5 remain referenced in `robotics-baseline-check/`.
+- [robotics-failure-patterns/figures/](robotics-failure-patterns/figures/): replay-verified selected baseline frames and every recovery endpoint.
+- [Failure/recovery report](../reports/2026-10-11-robotics-failure-patterns.md): conclusions, all paired outcomes, limitations and reproduction instructions.
+
+These deliberately selected continuations demonstrate some recovery opportunities, not a net controller improvement, a population success rate or equivalence of the methods. Adaptive chunk length and a deployable monitor are not evaluated. New baseline videos remain local under `tmp/robotics-failure-pattern-videos/`.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
