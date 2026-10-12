@@ -1,0 +1,66 @@
+{
+  "complete": true,
+  "methods": {
+    "fixed8": {
+      "attempts": 20,
+      "successes": 15,
+      "mean_final_coverage": 0.9203634273436716,
+      "mean_model_queries": 24.65,
+      "mean_wall_seconds": 121.86892751500008,
+      "mean_monitor_seconds": 0.0,
+      "eligible_decisions": 0,
+      "interruptions": 0
+    },
+    "fixed4": {
+      "attempts": 20,
+      "successes": 5,
+      "mean_final_coverage": 0.8773202458523375,
+      "mean_model_queries": 65.85,
+      "mean_wall_seconds": 323.9052179099997,
+      "mean_monitor_seconds": 0.0,
+      "eligible_decisions": 0,
+      "interruptions": 0
+    },
+    "warning_rule": {
+      "attempts": 20,
+      "successes": 15,
+      "mean_final_coverage": 0.9358649897415404,
+      "mean_model_queries": 25.6,
+      "mean_wall_seconds": 132.72828109000056,
+      "mean_monitor_seconds": 6.904080144994578,
+      "eligible_decisions": 7,
+      "interruptions": 7
+    },
+    "learned_gate": {
+      "attempts": 20,
+      "successes": 16,
+      "mean_final_coverage": 0.9455545170400625,
+      "mean_model_queries": 24.4,
+      "mean_wall_seconds": 126.69138752500051,
+      "mean_monitor_seconds": 6.152965139997264,
+      "eligible_decisions": 13,
+      "interruptions": 8
+    }
+  },
+  "paired_success_comparisons": {
+    "fixed8": {
+      "gate_only_success": 1,
+      "comparator_only_success": 0,
+      "both_success": 15,
+      "both_fail": 4
+    },
+    "fixed4": {
+      "gate_only_success": 12,
+      "comparator_only_success": 1,
+      "both_success": 4,
+      "both_fail": 3
+    },
+    "warning_rule": {
+      "gate_only_success": 2,
+      "comparator_only_success": 1,
+      "both_success": 14,
+      "both_fail": 3
+    }
+  },
+  "scope": "20 new initial scenarios, one stochastic sample per method; preliminary, not statistical proof"
+}

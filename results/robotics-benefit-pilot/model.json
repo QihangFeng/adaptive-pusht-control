@@ -1,0 +1,1003 @@
+{
+  "tree": {
+    "format_version": 1,
+    "n_features": 8,
+    "max_depth": 2,
+    "min_leaf": 3,
+    "root": {
+      "prediction": 0.0,
+      "n_samples": 12,
+      "squared_error": 1.3333333333333335,
+      "feature": 4,
+      "threshold": 0.006581048171935444,
+      "left": {
+        "prediction": 0.16666666666666666,
+        "n_samples": 8,
+        "squared_error": 0.4444444444444445,
+        "feature": 0,
+        "threshold": 0.8465953653543214,
+        "left": {
+          "prediction": 0.0,
+          "n_samples": 3,
+          "squared_error": 0.0
+        },
+        "right": {
+          "prediction": 0.26666666666666666,
+          "n_samples": 5,
+          "squared_error": 0.3111111111111111
+        }
+      },
+      "right": {
+        "prediction": -0.3333333333333333,
+        "n_samples": 4,
+        "squared_error": 0.2222222222222222
+      }
+    }
+  },
+  "threshold": 0.1,
+  "minimum_margin": 0.05,
+  "feature_names": [
+    "coverage",
+    "warning_count",
+    "drawdown",
+    "recovery",
+    "stagnation",
+    "position_error",
+    "orientation_error",
+    "pending_actions"
+  ],
+  "label_target": "empirical paired success difference; not calibrated probability",
+  "labels_sha256": "2cf68dccb389f9bbabae05ba07e985a32c20b4d1da2a5963c1ada4f29dad8392",
+  "validation": {
+    "threshold": 0.1,
+    "minimum_margin": 0.05,
+    "selected": {
+      "threshold": 0.1,
+      "mean_success": 0.3333333333333333,
+      "mean_success_gain": 0.0,
+      "mean_model_queries": 15.066666666666668,
+      "interventions": 1,
+      "cases": 5,
+      "decisions": [
+        false,
+        false,
+        false,
+        false,
+        true
+      ]
+    },
+    "candidates": [
+      {
+        "threshold": 0.0,
+        "mean_success": 0.3333333333333333,
+        "mean_success_gain": 0.0,
+        "mean_model_queries": 15.066666666666668,
+        "interventions": 1,
+        "cases": 5,
+        "decisions": [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "threshold": 0.1,
+        "mean_success": 0.3333333333333333,
+        "mean_success_gain": 0.0,
+        "mean_model_queries": 15.066666666666668,
+        "interventions": 1,
+        "cases": 5,
+        "decisions": [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "threshold": 0.34,
+        "mean_success": 0.3333333333333333,
+        "mean_success_gain": 0.0,
+        "mean_model_queries": 15.333333333333334,
+        "interventions": 0,
+        "cases": 5,
+        "decisions": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "threshold": 0.67,
+        "mean_success": 0.3333333333333333,
+        "mean_success_gain": 0.0,
+        "mean_model_queries": 15.333333333333334,
+        "interventions": 0,
+        "cases": 5,
+        "decisions": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "threshold": 1.1,
+        "mean_success": 0.3333333333333333,
+        "mean_success_gain": 0.0,
+        "mean_model_queries": 15.333333333333334,
+        "interventions": 0,
+        "cases": 5,
+        "decisions": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    ],
+    "selection_scope": "validation checkpoints only; not held-out test outcomes"
+  },
+  "protocol_sha256": "7399be9e89b197251da8fca14261449fa203696469c0d072146c2b6f4224dcd8",
+  "train_cases": [
+    {
+      "checkpoint_id": "seed-0-step-164",
+      "episode_id": 0,
+      "features": [
+        0.8515858223994571,
+        0.0,
+        0.002001971084435783,
+        -0.001750713135834192,
+        0.008812940802979452,
+        0.014978775370100651,
+        0.0034672505521484475,
+        4.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 3
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 17
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 3
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 2
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 3
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 17
+          }
+        }
+      ],
+      "benefit": -0.6666666666666666
+    },
+    {
+      "checkpoint_id": "seed-1-step-142",
+      "episode_id": 1,
+      "features": [
+        0.8541005078391694,
+        0.0,
+        0.007478786530915826,
+        -0.0017652208669065583,
+        0.009654299304608926,
+        0.010134384575186794,
+        0.014112528992033465,
+        2.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 7
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 20
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 6
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 7
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 7
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 8
+          }
+        }
+      ],
+      "benefit": -0.3333333333333333
+    },
+    {
+      "checkpoint_id": "seed-3-step-193",
+      "episode_id": 3,
+      "features": [
+        0.9329745577182823,
+        0.0,
+        1.0325860833049205e-08,
+        0.0,
+        0.0,
+        0.007836450625024827,
+        0.00661256483497502,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 13
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 14
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 13
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 2
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 13
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 1
+          }
+        }
+      ],
+      "benefit": 0.3333333333333333
+    },
+    {
+      "checkpoint_id": "seed-4-step-178",
+      "episode_id": 4,
+      "features": [
+        0.8965652626745508,
+        0.0,
+        0.0005823710945174199,
+        -0.0005823710945174199,
+        0.0006503964628251646,
+        0.011412232466439945,
+        0.029419546916306032,
+        6.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 15
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 15
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 10
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 10
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 15
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 15
+          }
+        }
+      ],
+      "benefit": 0.6666666666666666
+    },
+    {
+      "checkpoint_id": "seed-6-step-62",
+      "episode_id": 6,
+      "features": [
+        0.8242945545842744,
+        0.0,
+        1.3413303279197208e-07,
+        6.903051263940085e-08,
+        0.0,
+        0.024795274211007728,
+        0.05242031759094915,
+        2.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 30
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 30
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 21
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 6
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 24
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 22
+          }
+        }
+      ],
+      "benefit": 0.0
+    },
+    {
+      "checkpoint_id": "seed-7-step-241",
+      "episode_id": 7,
+      "features": [
+        0.8610189082442575,
+        0.0,
+        3.6157379423862324e-08,
+        6.661338147750939e-16,
+        0.0,
+        0.0061806110867353705,
+        0.02137342555015956,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 7
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 5
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 7
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 8
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 7
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 8
+          }
+        }
+      ],
+      "benefit": 0.3333333333333333
+    },
+    {
+      "checkpoint_id": "seed-9-step-153",
+      "episode_id": 9,
+      "features": [
+        0.8321718224643855,
+        3.0,
+        0.06343156752203205,
+        -0.03362868360760862,
+        0.004349155540891436,
+        0.010644401590244662,
+        0.025205030519216874,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 18
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 19
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 18
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 19
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 18
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 19
+          }
+        }
+      ],
+      "benefit": 0.0
+    },
+    {
+      "checkpoint_id": "seed-11-step-185",
+      "episode_id": 11,
+      "features": [
+        0.905464439838136,
+        0.0,
+        0.018856563023185946,
+        -0.002789730894871445,
+        0.0,
+        0.007557196492670681,
+        0.0034013324052848807,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 14
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 15
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 14
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 15
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 14
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 15
+          }
+        }
+      ],
+      "benefit": 0.0
+    },
+    {
+      "checkpoint_id": "seed-16-step-132",
+      "episode_id": 16,
+      "features": [
+        0.7545632719440915,
+        2.0,
+        0.17054423776441585,
+        -0.17054423776441585,
+        0.558193913410447,
+        0.028020432066060738,
+        0.05953696397711016,
+        4.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 20
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 21
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 21
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 14
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 19
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 21
+          }
+        }
+      ],
+      "benefit": -0.3333333333333333
+    },
+    {
+      "checkpoint_id": "seed-18-step-97",
+      "episode_id": 18,
+      "features": [
+        0.8510681172734177,
+        2.0,
+        0.03278576769782915,
+        -0.014983171281938712,
+        0.6448781151359597,
+        0.011555809021856593,
+        0.0009259778161762671,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 14
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 5
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 19
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 9
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 20
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 9
+          }
+        }
+      ],
+      "benefit": 0.0
+    },
+    {
+      "checkpoint_id": "seed-25-step-185",
+      "episode_id": 25,
+      "features": [
+        0.9323127807263321,
+        0.0,
+        0.0,
+        8.38340508124702e-11,
+        0.0007294643521923438,
+        0.006599638969655194,
+        0.006104886642887936,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 9
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 11
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 1
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 10
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 10
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 2
+          }
+        }
+      ],
+      "benefit": 0.0
+    },
+    {
+      "checkpoint_id": "seed-28-step-125",
+      "episode_id": 28,
+      "features": [
+        0.8035807015261089,
+        0.0,
+        4.3259840154519225e-12,
+        -2.0901058661593197e-12,
+        0.0,
+        0.01776696957692844,
+        0.0028328998741770635,
+        3.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 8
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 2
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 12
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 3
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 9
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 3
+          }
+        }
+      ],
+      "benefit": 0.0
+    }
+  ],
+  "validation_cases": [
+    {
+      "checkpoint_id": "seed-2-step-157",
+      "episode_id": 2,
+      "features": [
+        0.8583271481522536,
+        2.0,
+        0.07468916318897412,
+        -0.04507980540513257,
+        0.2400753935763793,
+        0.019865541785839116,
+        0.025988944851067803,
+        3.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 18
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 14
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 18
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 18
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 18
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 18
+          }
+        }
+      ],
+      "benefit": 0.6666666666666666
+    },
+    {
+      "checkpoint_id": "seed-5-step-150",
+      "episode_id": 5,
+      "features": [
+        0.8727699111663234,
+        0.0,
+        5.861782159666262e-08,
+        5.661138224866136e-12,
+        0.008473037919845772,
+        0.010190370563569336,
+        0.013507052068507275,
+        2.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": true,
+            "model_queries": 3
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 1
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": true,
+            "model_queries": 3
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 1
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": false,
+            "model_queries": 19
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 1
+          }
+        }
+      ],
+      "benefit": 0.3333333333333333
+    },
+    {
+      "checkpoint_id": "seed-8-step-51",
+      "episode_id": 8,
+      "features": [
+        0.7599469136468289,
+        0.0,
+        3.328630704402258e-10,
+        3.1086244689504383e-15,
+        0.0,
+        0.01641726403709898,
+        0.028073172022318765,
+        5.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 31
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 15
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 31
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 5
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 16
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 22
+          }
+        }
+      ],
+      "benefit": 0.6666666666666666
+    },
+    {
+      "checkpoint_id": "seed-15-step-218",
+      "episode_id": 15,
+      "features": [
+        0.8214630011805186,
+        2.0,
+        0.06386709065732077,
+        -0.06386657988171573,
+        0.13840953019475344,
+        0.013490650208322352,
+        0.00016263743829801304,
+        6.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 10
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 11
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 10
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 10
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 8
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 11
+          }
+        }
+      ],
+      "benefit": 0.0
+    },
+    {
+      "checkpoint_id": "seed-22-step-161",
+      "episode_id": 22,
+      "features": [
+        0.8743180446211614,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.006328728812989236,
+        0.023992022803516692,
+        7.0
+      ],
+      "pairs": [
+        {
+          "sample_seed": 3000,
+          "continue": {
+            "success": false,
+            "model_queries": 17
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 18
+          }
+        },
+        {
+          "sample_seed": 3001,
+          "continue": {
+            "success": false,
+            "model_queries": 17
+          },
+          "replan": {
+            "success": true,
+            "model_queries": 5
+          }
+        },
+        {
+          "sample_seed": 3002,
+          "continue": {
+            "success": true,
+            "model_queries": 11
+          },
+          "replan": {
+            "success": false,
+            "model_queries": 18
+          }
+        }
+      ],
+      "benefit": 0.0
+    }
+  ]
+}

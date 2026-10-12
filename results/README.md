@@ -30,4 +30,20 @@ Contact-loss candidates are not confirmed failures. The short probes did not dem
 
 These deliberately selected continuations demonstrate some recovery opportunities, not a net controller improvement, a population success rate or equivalence of the methods. Adaptive chunk length and a deployable monitor are not evaluated. New baseline videos remain local under `tmp/robotics-failure-pattern-videos/`.
 
+## Benefit-aware replanning pilot
+
+- [robotics-benefit-pilot/visual-validation.json](robotics-benefit-pilot/visual-validation.json): CPU-only replay of 30 saved attempts, exact camera-hash checks and camera-estimator accuracy. No new AI predictions.
+- [robotics-benefit-pilot/near-target-validation.json](robotics-benefit-pilot/near-target-validation.json): additional accuracy check where simulator truth coverage is at least 75%. Truth is used only to validate the estimator.
+- [robotics-benefit-pilot/visual-features.json.gz](robotics-benefit-pilot/visual-features.json.gz): past-only, camera-derived features; no future outcomes or dynamic simulator truth.
+- [robotics-benefit-pilot/protocol.json](robotics-benefit-pilot/protocol.json): 17 frozen checkpoints, episode-separated training/validation, fresh label seeds and held-out seeds 30–49; original evidence and code fingerprints.
+- `robotics-benefit-pilot/labels/` and [labels.json](robotics-benefit-pilot/labels.json): all 102 matched continuations, three repeats per arm per checkpoint.
+- [model.json](robotics-benefit-pilot/model.json): frozen depth-two tree, empirical benefit targets and validation-only threshold selection. Validation showed no success gain.
+- [evaluation-protocol.json](robotics-benefit-pilot/evaluation-protocol.json): binds held-out evaluation to the frozen protocol and model.
+- `robotics-benefit-pilot/evaluation/` and [evaluation.json](robotics-benefit-pilot/evaluation.json): all 80 full held-out attempts with sidecars, trace hashes, decisions and query counts.
+- [summary.json](robotics-benefit-pilot/summary.json): four-method metrics and paired outcomes. Gate 16/20 successes; fixed-eight and warning rule 15/20; fixed-four 5/20.
+- `*-resources.json`: stage memory and duration measurements. Evaluation measurements cover the resumed 45-attempt invocation; per-attempt timings cover all 80 attempts.
+- [Pilot report](../reports/2026-10-11-robotics-benefit-pilot.md): conclusions, method, training/validation results, complete held-out comparison, individual interruptions, limitations and reproduction instructions.
+
+The implemented controller makes at most one early decision per attempt. Its observed improvement was one additional success, with only five AI calls saved overall and slightly slower execution after monitoring. All eight interventions addressed stagnation, not alignment-warning events. This small pilot does not establish robust improvement or learning's advantage over an untested same-timing simple rule. The 91 tests and independent audits of all trials passed. Keep the frozen source, environment and evidence unchanged when resuming; never launch concurrent collectors.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
