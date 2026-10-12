@@ -1,0 +1,2829 @@
+{
+  "scope": "discovery scenes 0-29 only; no simulator or inference",
+  "warning": "The recorded next four actions are fresh predictions, NOT the discarded suffix.",
+  "rules": {
+    "base_length": 8,
+    "maximum_length": 12,
+    "minimum_history": 8,
+    "extension_max_coverage": 0.75,
+    "extension_max_drawdown": 0.015,
+    "extension_min_recovery": -0.01,
+    "minimum_command_step": 2.0,
+    "minimum_direction_cosine": 0.5,
+    "interrupt_warnings": 2,
+    "interrupt_drawdown": 0.03,
+    "interrupt_peak": 0.8,
+    "interrupt_recovery": -0.005,
+    "confirmation_steps": 2,
+    "minimum_plan_age": 4,
+    "minimum_pending": 2,
+    "maximum_interruptions": 2,
+    "cooldown_actions": 12
+  },
+  "episodes": [
+    {
+      "seed": 0,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.17965848909192822,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.2924323916641e-08
+        },
+        {
+          "step": 16,
+          "coverage": 0.1796585315103796,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 7.1615512964307015e-09
+        },
+        {
+          "step": 24,
+          "coverage": 0.17965864321237676,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.550615229330756e-07
+        },
+        {
+          "step": 32,
+          "coverage": 0.1796584761676043,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -4.576410460033209e-07
+        },
+        {
+          "step": 40,
+          "coverage": 0.17965873531671384,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.2057730741643624e-07
+        },
+        {
+          "step": 48,
+          "coverage": 0.17761546186098404,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.006143775214024455
+        },
+        {
+          "step": 56,
+          "coverage": 0.28104350754106916,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.19546397600692594
+        },
+        {
+          "step": 80,
+          "coverage": 0.322778502020255,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.3315135204972073e-06
+        },
+        {
+          "step": 88,
+          "coverage": 0.32277848054995345,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.1106082664635863e-08
+        },
+        {
+          "step": 96,
+          "coverage": 0.3384870837008087,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.024114397115217012
+        },
+        {
+          "step": 104,
+          "coverage": 0.3598999952427922,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.03967073853853481
+        },
+        {
+          "step": 128,
+          "coverage": 0.3333110075643471,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.021638308810645934
+        },
+        {
+          "step": 136,
+          "coverage": 0.6343185167073333,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.22287007599486963
+        }
+      ],
+      "candidate_count": 13,
+      "prefix_smooth_count": 13,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 1,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0008673639267231542,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0008673639267231542,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0008673639267231542,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.4444650199259626e-09
+        },
+        {
+          "step": 32,
+          "coverage": 0.0007633538173291524,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.04827973937431355
+        },
+        {
+          "step": 40,
+          "coverage": 0.1754333193526305,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.012726518994339409
+        },
+        {
+          "step": 48,
+          "coverage": 0.2712433303425947,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.11256079074101222
+        },
+        {
+          "step": 56,
+          "coverage": 0.5036428254260279,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05028270929361944
+        },
+        {
+          "step": 64,
+          "coverage": 0.5658847210711759,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.002052655128708447
+        },
+        {
+          "step": 72,
+          "coverage": 0.567937368016806,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -8.72911398719367e-09
+        },
+        {
+          "step": 80,
+          "coverage": 0.5678595837420354,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -2.5309144779939174e-08
+        },
+        {
+          "step": 88,
+          "coverage": 0.5679373680167867,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0016291935188460505
+        },
+        {
+          "step": 96,
+          "coverage": 0.5855050392787714,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.11299660214639251
+        }
+      ],
+      "candidate_count": 12,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 2,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 48,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.008802812318023033
+        },
+        {
+          "step": 56,
+          "coverage": 0.07685017025206797,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.047544905877411794
+        },
+        {
+          "step": 64,
+          "coverage": 0.14343819838493763,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.031547885903430856
+        },
+        {
+          "step": 72,
+          "coverage": 0.2614157926355554,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.031606186138408765
+        },
+        {
+          "step": 80,
+          "coverage": 0.35060139243033833,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.03564152638327944
+        },
+        {
+          "step": 88,
+          "coverage": 0.3862429120929087,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 96,
+          "coverage": 0.3862429120929087,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.301086168009613e-05
+        },
+        {
+          "step": 104,
+          "coverage": 0.41073778058196947,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.05511373302242417
+        },
+        {
+          "step": 120,
+          "coverage": 0.34921147171601596,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -6.106226635438361e-15
+        },
+        {
+          "step": 128,
+          "coverage": 0.3486075962723136,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.29205485597098707
+        }
+      ],
+      "candidate_count": 15,
+      "prefix_smooth_count": 13,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 3,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0057863138942030575,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -4.236657498782326e-09
+        },
+        {
+          "step": 16,
+          "coverage": 0.005785923757183278,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.003164032572973041
+        },
+        {
+          "step": 24,
+          "coverage": 0.08435340812002269,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.04873864217353739
+        },
+        {
+          "step": 40,
+          "coverage": 0.33010339501205044,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.00010914434109715598
+        },
+        {
+          "step": 64,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 72,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.006425061819979127
+        },
+        {
+          "step": 80,
+          "coverage": 0.06923650580855291,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.06419738126146153
+        },
+        {
+          "step": 88,
+          "coverage": 0.14286360308034168,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0006670512517376881
+        },
+        {
+          "step": 96,
+          "coverage": 0.1540364796077185,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.00027110957860113083
+        },
+        {
+          "step": 104,
+          "coverage": 0.15430758918631962,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 112,
+          "coverage": 0.15387463309616814,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.023063501932627267
+        },
+        {
+          "step": 120,
+          "coverage": 0.24756558479375065,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.10020453005344235
+        },
+        {
+          "step": 128,
+          "coverage": 0.3488429517357058,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 4.199860348386153e-09
+        },
+        {
+          "step": 136,
+          "coverage": 0.3488428659266899,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -8.737455203799982e-14
+        },
+        {
+          "step": 144,
+          "coverage": 0.3488428659266902,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0009775398723337325
+        },
+        {
+          "step": 152,
+          "coverage": 0.48299702000855504,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.25446125561118005
+        }
+      ],
+      "candidate_count": 16,
+      "prefix_smooth_count": 13,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 4,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.010178665159349329,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.2656656141543654e-08
+        },
+        {
+          "step": 16,
+          "coverage": 0.01017865250270154,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.9873672979796595e-14
+        },
+        {
+          "step": 24,
+          "coverage": 0.010178653476851545,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -4.286013887550011e-10
+        },
+        {
+          "step": 32,
+          "coverage": 0.010178654104722814,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.6020456558574203e-09
+        },
+        {
+          "step": 40,
+          "coverage": 0.020273035458986604,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08313998994535005
+        },
+        {
+          "step": 48,
+          "coverage": 0.13978906809231165,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.01947994471580533
+        },
+        {
+          "step": 56,
+          "coverage": 0.16983907117018227,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.01727676593068092
+        },
+        {
+          "step": 64,
+          "coverage": 0.20864326114570583,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.00040283945994074033
+        },
+        {
+          "step": 72,
+          "coverage": 0.20904610060564657,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 80,
+          "coverage": 0.2090460949503263,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -5.655320267639041e-09
+        },
+        {
+          "step": 88,
+          "coverage": 0.20904610797910197,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.030759739144514853
+        },
+        {
+          "step": 96,
+          "coverage": 0.30831326180532187,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.011969602785052658
+        },
+        {
+          "step": 104,
+          "coverage": 0.32123886198302865,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.6968064453504184e-08
+        },
+        {
+          "step": 112,
+          "coverage": 0.3212388789510931,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 3.9218183423006536e-08
+        },
+        {
+          "step": 120,
+          "coverage": 0.320772542823425,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.0006008277860336531
+        },
+        {
+          "step": 128,
+          "coverage": 0.34486060798178425,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.00039714402549206884
+        },
+        {
+          "step": 136,
+          "coverage": 0.34446361682195425,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.5291561838992607e-07
+        },
+        {
+          "step": 144,
+          "coverage": 0.35160958768884726,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.2933570474366611
+        },
+        {
+          "step": 240,
+          "coverage": 0.6371051789753792,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        }
+      ],
+      "candidate_count": 19,
+      "prefix_smooth_count": 15,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 5,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.18277349418471758,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 8.223977054910847e-14
+        },
+        {
+          "step": 16,
+          "coverage": 0.1826950538070313,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.005048238298766244
+        },
+        {
+          "step": 40,
+          "coverage": 0.10662446896355729,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.012387340544480041
+        },
+        {
+          "step": 48,
+          "coverage": 0.12796527875055633,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.010122654668185072
+        },
+        {
+          "step": 56,
+          "coverage": 0.14583390760105253,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.018265396452112614
+        },
+        {
+          "step": 64,
+          "coverage": 0.18001097290332504,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.017405873419545942
+        },
+        {
+          "step": 72,
+          "coverage": 0.20760631743188115,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.019903401245222024
+        },
+        {
+          "step": 80,
+          "coverage": 0.2334493275729991,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 3.012531726853673e-08
+        },
+        {
+          "step": 88,
+          "coverage": 0.23344909100635716,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -2.3656664194238175e-07
+        },
+        {
+          "step": 96,
+          "coverage": 0.23344929073865264,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.9662161315103788e-05
+        },
+        {
+          "step": 104,
+          "coverage": 0.23338130632359072,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.048503495823051856
+        },
+        {
+          "step": 112,
+          "coverage": 0.35749951707221417,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.10706689774343875
+        },
+        {
+          "step": 120,
+          "coverage": 0.6446219712035709,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.19327334303498445
+        }
+      ],
+      "candidate_count": 13,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 6,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0050483162517727265
+        },
+        {
+          "step": 16,
+          "coverage": 0.1067837433379159,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.07068286117051231
+        },
+        {
+          "step": 24,
+          "coverage": 0.22383041539075765,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.10020640367139527
+        },
+        {
+          "step": 32,
+          "coverage": 0.4448358654985273,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.33541924229660874
+        },
+        {
+          "step": 192,
+          "coverage": 0.46056767081053557,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.7220444787090514e-09
+        },
+        {
+          "step": 200,
+          "coverage": 0.4605676680884911,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.00041738766622378964
+        },
+        {
+          "step": 208,
+          "coverage": 0.6304174927645952,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.14192850733604823
+        },
+        {
+          "step": 224,
+          "coverage": 0.6456573202890754,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 4.6076331639000045e-10
+        },
+        {
+          "step": 232,
+          "coverage": 0.645656037357236,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 5.4403370697286846e-11
+        },
+        {
+          "step": 240,
+          "coverage": 0.6457877077893235,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08419388327956645
+        },
+        {
+          "step": 248,
+          "coverage": 0.7329522785320403,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 256,
+          "coverage": 0.7329522785320403,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0012296883454883112
+        }
+      ],
+      "candidate_count": 12,
+      "prefix_smooth_count": 12,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 7,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 3.585390214440573e-07,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0005534640716833528
+        },
+        {
+          "step": 40,
+          "coverage": 0.0023639251908658732,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 3.7280151073378846e-05
+        },
+        {
+          "step": 48,
+          "coverage": 0.0023089000578322364,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0015722423791112465
+        },
+        {
+          "step": 56,
+          "coverage": 0.008989804385898371,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.031160762561057292
+        },
+        {
+          "step": 64,
+          "coverage": 0.12853033920953832,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.2062842335458977
+        },
+        {
+          "step": 72,
+          "coverage": 0.3834886276910846,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.00047292165340734327
+        },
+        {
+          "step": 80,
+          "coverage": 0.38396183155018,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -7.621813757352491e-07
+        },
+        {
+          "step": 88,
+          "coverage": 0.3883214821973448,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0397455220417362
+        },
+        {
+          "step": 104,
+          "coverage": 0.375418911369093,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 4.569945138976905e-08
+        },
+        {
+          "step": 112,
+          "coverage": 0.37541891135503475,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -5.551115123125783e-16
+        },
+        {
+          "step": 120,
+          "coverage": 0.3809192608564273,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.037980509017520314
+        },
+        {
+          "step": 144,
+          "coverage": 0.3334481878230778,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.4820220928821755e-08
+        },
+        {
+          "step": 152,
+          "coverage": 0.3334482226432987,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0016745068054982437
+        },
+        {
+          "step": 160,
+          "coverage": 0.4182722353321722,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.11575118462836714
+        },
+        {
+          "step": 168,
+          "coverage": 0.5885358265828889,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0018016327321247472
+        },
+        {
+          "step": 176,
+          "coverage": 0.5903374520006869,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 184,
+          "coverage": 0.5903374520006869,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.14946465615987847
+        }
+      ],
+      "candidate_count": 20,
+      "prefix_smooth_count": 16,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 8,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.5572831650198169,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.5572831658049975,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.002605077403568634
+        },
+        {
+          "step": 24,
+          "coverage": 0.7000309589300243,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08988133830812373
+        },
+        {
+          "step": 120,
+          "coverage": 0.5614071550507116,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0016676029634674627
+        },
+        {
+          "step": 128,
+          "coverage": 0.6031156240285794,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0027377596079343203
+        },
+        {
+          "step": 136,
+          "coverage": 0.6054759076084211,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.9768188742073107e-13
+        },
+        {
+          "step": 144,
+          "coverage": 0.6054759916027147,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 8.399429585193019e-08
+        },
+        {
+          "step": 152,
+          "coverage": 0.6054759076084174,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 5.551115123125783e-16
+        },
+        {
+          "step": 160,
+          "coverage": 0.7168854474229063,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.16968662368563736
+        }
+      ],
+      "candidate_count": 9,
+      "prefix_smooth_count": 7,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 9,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.10257686456756901,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.10257682556477683,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.9002792176501266e-08
+        },
+        {
+          "step": 24,
+          "coverage": 0.10257686456756901,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.10257686456756901,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 3.8182849937395957e-10
+        },
+        {
+          "step": 40,
+          "coverage": 0.10285221545543353,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.03980236970492383
+        },
+        {
+          "step": 48,
+          "coverage": 0.14292081126943493,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -7.315553942985331e-05
+        },
+        {
+          "step": 56,
+          "coverage": 0.14301612036813066,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.014637720915255198
+        },
+        {
+          "step": 64,
+          "coverage": 0.17820049479323363,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.034910256650421384
+        },
+        {
+          "step": 72,
+          "coverage": 0.22479298409623846,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.000554204904853417
+        },
+        {
+          "step": 80,
+          "coverage": 0.22534718900247802,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 9.593942967844882e-08
+        },
+        {
+          "step": 88,
+          "coverage": 0.22534718900110737,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -2.904454454721872e-12
+        },
+        {
+          "step": 96,
+          "coverage": 0.22534718900110107,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -2.8401170304448442e-12
+        },
+        {
+          "step": 104,
+          "coverage": 0.23485765728643926,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.07351939165190768
+        },
+        {
+          "step": 112,
+          "coverage": 0.36501568309879245,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0676107598647579
+        },
+        {
+          "step": 120,
+          "coverage": 0.6478682889101849,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.17063873386814143
+        },
+        {
+          "step": 168,
+          "coverage": 0.7093122898737759,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0001229834990735812
+        },
+        {
+          "step": 176,
+          "coverage": 0.7093122898781535,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 4.374278717023117e-12
+        },
+        {
+          "step": 184,
+          "coverage": 0.7093122898754404,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.6567858196481211e-12
+        },
+        {
+          "step": 192,
+          "coverage": 0.7093122898737771,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -4.283173438146548e-08
+        },
+        {
+          "step": 200,
+          "coverage": 0.7093122898737826,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 208,
+          "coverage": 0.7093122407077469,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -4.9166021365287804e-08
+        },
+        {
+          "step": 216,
+          "coverage": 0.7093122898737778,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 7.04681013541375e-09
+        },
+        {
+          "step": 224,
+          "coverage": 0.7093122898763854,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.1384226894506355e-12
+        },
+        {
+          "step": 232,
+          "coverage": 0.7081471884693148,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.04923375937322183
+        },
+        {
+          "step": 288,
+          "coverage": 0.64938841499732,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -7.505696375531556e-08
+        },
+        {
+          "step": 296,
+          "coverage": 0.6493884900542838,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 7.036774540836177e-07
+        }
+      ],
+      "candidate_count": 26,
+      "prefix_smooth_count": 23,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 10,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.023106099428411967,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.06453731066628943
+        },
+        {
+          "step": 40,
+          "coverage": 0.1429119285830702,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.040021809058365124
+        },
+        {
+          "step": 56,
+          "coverage": 0.09582715002992519,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.10461292852987765
+        },
+        {
+          "step": 88,
+          "coverage": 0.033987116614081284,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.324940217429683e-08
+        },
+        {
+          "step": 96,
+          "coverage": 0.033987093365996694,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.4944634998816384e-05
+        },
+        {
+          "step": 104,
+          "coverage": 0.03396095619920948,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.00022902753994703123
+        },
+        {
+          "step": 112,
+          "coverage": 0.031404011341639976,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.001441111671323339
+        },
+        {
+          "step": 120,
+          "coverage": 0.02807866412584409,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.0005108414383824048
+        },
+        {
+          "step": 128,
+          "coverage": 0.027567822687461684,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.03123988757437949
+        },
+        {
+          "step": 136,
+          "coverage": 0.17614221513141215,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0848922303415468
+        },
+        {
+          "step": 144,
+          "coverage": 0.34284463550539257,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.21455289966806912
+        },
+        {
+          "step": 152,
+          "coverage": 0.6729649485073962,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.01318808544124328
+        },
+        {
+          "step": 160,
+          "coverage": 0.6860932959640256,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -7.177035132865939e-08
+        },
+        {
+          "step": 168,
+          "coverage": 0.6860933172810676,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -5.0452337752027177e-08
+        },
+        {
+          "step": 176,
+          "coverage": 0.6841774815292319,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.12049777053729005
+        }
+      ],
+      "candidate_count": 18,
+      "prefix_smooth_count": 14,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 11,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.007780648089548394,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0077805746807461384,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -7.340880225567559e-08
+        },
+        {
+          "step": 24,
+          "coverage": 0.007780648089548394,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0077807472987920885,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 9.92092436943523e-08
+        },
+        {
+          "step": 40,
+          "coverage": 0.007780648089548394,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 48,
+          "coverage": 0.007760061073168563,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.009797427022378537
+        },
+        {
+          "step": 56,
+          "coverage": 0.07439517662835415,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02732815797392199
+        },
+        {
+          "step": 64,
+          "coverage": 0.10707358691610808,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.011399725881697936
+        },
+        {
+          "step": 80,
+          "coverage": 0.08905473341661789,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.005365216882493168
+        },
+        {
+          "step": 88,
+          "coverage": 0.10948687910620922,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.013069632113436258
+        },
+        {
+          "step": 96,
+          "coverage": 0.1352963426037824,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.008326072195253914
+        },
+        {
+          "step": 104,
+          "coverage": 0.1550499658698912,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.04609836189789365
+        },
+        {
+          "step": 112,
+          "coverage": 0.29400476784754687,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05360381510791484
+        },
+        {
+          "step": 120,
+          "coverage": 0.3648402759113691,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.019951364882141442
+        },
+        {
+          "step": 128,
+          "coverage": 0.3835941434651401,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -2.9976021664879227e-15
+        },
+        {
+          "step": 136,
+          "coverage": 0.38359414346514037,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -4.107825191113079e-15
+        },
+        {
+          "step": 144,
+          "coverage": 0.42508523189779457,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.2016412806910901
+        },
+        {
+          "step": 224,
+          "coverage": 0.2998832744801834,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 232,
+          "coverage": 0.2998832744801834,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0009009803177498221
+        },
+        {
+          "step": 240,
+          "coverage": 0.29264518671897133,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.01168398909826529
+        },
+        {
+          "step": 264,
+          "coverage": 0.22897588783684594,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -8.136572804406939e-10
+        },
+        {
+          "step": 272,
+          "coverage": 0.22897588783684544,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02370481682368744
+        },
+        {
+          "step": 280,
+          "coverage": 0.28433280955567514,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02247342894570592
+        },
+        {
+          "step": 288,
+          "coverage": 0.3359371178791951,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.046523916698834766
+        },
+        {
+          "step": 296,
+          "coverage": 0.4299441144089562,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.22245456013010767
+        }
+      ],
+      "candidate_count": 25,
+      "prefix_smooth_count": 22,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 12,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.03402808774683013,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02022048381229062
+        },
+        {
+          "step": 48,
+          "coverage": 0.26783623953575003,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.013385500879197987
+        },
+        {
+          "step": 56,
+          "coverage": 0.2811912887551702,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.10254823262235235
+        },
+        {
+          "step": 72,
+          "coverage": 0.391453684450983,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.04521077120710165
+        },
+        {
+          "step": 80,
+          "coverage": 0.5102117482582309,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.06325522329718447
+        },
+        {
+          "step": 96,
+          "coverage": 0.5582584820025104,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 104,
+          "coverage": 0.5994231956223635,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.056417470136542525
+        },
+        {
+          "step": 112,
+          "coverage": 0.7029555387182547,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.0008852733673381241
+        },
+        {
+          "step": 120,
+          "coverage": 0.702354448676983,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 4.833526634495655e-08
+        },
+        {
+          "step": 128,
+          "coverage": 0.7023543870731265,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.00024389175873751334
+        }
+      ],
+      "candidate_count": 14,
+      "prefix_smooth_count": 11,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 13,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.03749393508368489,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0818801640539408
+        },
+        {
+          "step": 40,
+          "coverage": 0.18931271624314067,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.04307656026635695
+        },
+        {
+          "step": 48,
+          "coverage": 0.2861178434859167,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.002039852070250925
+        },
+        {
+          "step": 56,
+          "coverage": 0.2881576853381885,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0065698709895916085
+        },
+        {
+          "step": 64,
+          "coverage": 0.2866997590521612,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.060355964445508836
+        },
+        {
+          "step": 72,
+          "coverage": 0.4083755459977096,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0949303235548189
+        },
+        {
+          "step": 88,
+          "coverage": 0.27107570084854576,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.03336067985093494
+        },
+        {
+          "step": 96,
+          "coverage": 0.33276646128963044,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.014245121832657526
+        },
+        {
+          "step": 104,
+          "coverage": 0.34694330359188796,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 5.937426605928664e-09
+        },
+        {
+          "step": 112,
+          "coverage": 0.3467033721012493,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.06877548798092287
+        },
+        {
+          "step": 120,
+          "coverage": 0.7032795131547231,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.15242417414581666
+        }
+      ],
+      "candidate_count": 14,
+      "prefix_smooth_count": 11,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 14,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 48,
+          "coverage": 0.03912666002427309,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.1358923858156235
+        },
+        {
+          "step": 56,
+          "coverage": 0.2704295600107123,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05780340482845486
+        },
+        {
+          "step": 64,
+          "coverage": 0.42768044227894775,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.15537828609341686
+        },
+        {
+          "step": 72,
+          "coverage": 0.6914620416026511,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.0010174478488121919
+        },
+        {
+          "step": 80,
+          "coverage": 0.690444593753849,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -5.551115123125783e-15
+        },
+        {
+          "step": 88,
+          "coverage": 0.6904445937538476,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.147706409321247
+        }
+      ],
+      "candidate_count": 11,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 15,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.3735559616318078,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.947220162890062e-12
+        },
+        {
+          "step": 16,
+          "coverage": 0.4852793182871996,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.15737432695073128
+        },
+        {
+          "step": 48,
+          "coverage": 0.14452225113584152,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 56,
+          "coverage": 0.14452225332147542,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.1856338960901667e-09
+        },
+        {
+          "step": 64,
+          "coverage": 0.14452225113584152,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 72,
+          "coverage": 0.14452225113584152,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.00048001297462965664
+        },
+        {
+          "step": 80,
+          "coverage": 0.2521165252405898,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08098455896642104
+        },
+        {
+          "step": 96,
+          "coverage": 0.21647226904929306,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 8.326672684688674e-17
+        },
+        {
+          "step": 104,
+          "coverage": 0.21647226904929356,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -2.220446049250313e-16
+        },
+        {
+          "step": 120,
+          "coverage": 0.19627522870010242,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0053434720372419475
+        },
+        {
+          "step": 128,
+          "coverage": 0.2009708833711863,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -6.071853015376938e-06
+        },
+        {
+          "step": 136,
+          "coverage": 0.2005896587635659,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02361431402647232
+        },
+        {
+          "step": 144,
+          "coverage": 0.2247504524215745,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.00015349624054225575
+        },
+        {
+          "step": 152,
+          "coverage": 0.22459695618103223,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.00012391140013545687
+        },
+        {
+          "step": 160,
+          "coverage": 0.23450125274449357,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.01781648211523501
+        },
+        {
+          "step": 168,
+          "coverage": 0.2554982293092748,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0001160007267191343
+        },
+        {
+          "step": 176,
+          "coverage": 0.2556143380446865,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 6.881330821828513e-08
+        },
+        {
+          "step": 184,
+          "coverage": 0.2835417816586579,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.11468619079403064
+        },
+        {
+          "step": 192,
+          "coverage": 0.6777340077299423,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.17313270136507708
+        },
+        {
+          "step": 232,
+          "coverage": 0.7335251829919858,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.7461758705650254e-09
+        },
+        {
+          "step": 240,
+          "coverage": 0.7335251847381614,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.3306690738754696e-15
+        },
+        {
+          "step": 248,
+          "coverage": 0.7335251834432683,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.2948959682290706e-09
+        },
+        {
+          "step": 256,
+          "coverage": 0.7335251847381635,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.06624785479286255
+        }
+      ],
+      "candidate_count": 23,
+      "prefix_smooth_count": 21,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 16,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.20489997326554613,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.037519364077462675
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 48,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 56,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.002281752034973294
+        },
+        {
+          "step": 64,
+          "coverage": 0.006083037120963794,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.005388890793973441
+        },
+        {
+          "step": 72,
+          "coverage": 0.012982951479111715,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.00031381161476678673
+        },
+        {
+          "step": 80,
+          "coverage": 0.012669142472884731,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.6085398025649242e-09
+        },
+        {
+          "step": 88,
+          "coverage": 0.012669139864344928,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.4727028487329652e-08
+        },
+        {
+          "step": 96,
+          "coverage": 0.05815194902917613,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08930853955881617
+        },
+        {
+          "step": 104,
+          "coverage": 0.24768210917639683,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.11923148712166354
+        },
+        {
+          "step": 112,
+          "coverage": 0.7233647589170236,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.12401666886345852
+        },
+        {
+          "step": 144,
+          "coverage": 0.7304516333432466,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.9376549396099563e-06
+        },
+        {
+          "step": 152,
+          "coverage": 0.7304510675558065,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 7.216425170208929e-06
+        },
+        {
+          "step": 160,
+          "coverage": 0.7304067440152474,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.005705473721554721
+        },
+        {
+          "step": 224,
+          "coverage": 0.6891242017272284,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 232,
+          "coverage": 0.6891242165995538,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -8.606601320515495e-09
+        },
+        {
+          "step": 240,
+          "coverage": 0.6883686996083589,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05074072903657045
+        }
+      ],
+      "candidate_count": 17,
+      "prefix_smooth_count": 14,
+      "fresh_next_four_drops_over_three_points": 1
+    },
+    {
+      "seed": 17,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.04702244317245351,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.04682970408489799
+        },
+        {
+          "step": 48,
+          "coverage": 0.14321990579503918,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.00014681857526130382
+        },
+        {
+          "step": 56,
+          "coverage": 0.21218361746499903,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.03856199831067558
+        },
+        {
+          "step": 64,
+          "coverage": 0.2877699228026039,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.05117454617685485
+        },
+        {
+          "step": 72,
+          "coverage": 0.33036692209584634,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -8.392505085330626e-08
+        },
+        {
+          "step": 80,
+          "coverage": 0.33036692209584634,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.1198839855453002e-08
+        },
+        {
+          "step": 88,
+          "coverage": 0.3760235378313352,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.23175326825718728
+        }
+      ],
+      "candidate_count": 11,
+      "prefix_smooth_count": 9,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 18,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.33375554860473144,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.036641879296704816
+        },
+        {
+          "step": 48,
+          "coverage": 0.14598043357764365,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.013010882356491116
+        },
+        {
+          "step": 56,
+          "coverage": 0.1595463231923202,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.013951652874087894
+        },
+        {
+          "step": 72,
+          "coverage": 0.2173733319783478,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.11453879049564414
+        },
+        {
+          "step": 80,
+          "coverage": 0.5157895285510706,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.14354804515806874
+        },
+        {
+          "step": 208,
+          "coverage": 0.3133553949784568,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.942890293094024e-15
+        },
+        {
+          "step": 216,
+          "coverage": 0.3133554003178083,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08397386254436606
+        },
+        {
+          "step": 224,
+          "coverage": 0.644448734837981,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.14165732307626844
+        },
+        {
+          "step": 240,
+          "coverage": 0.7376825961077339,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.8615368957419776e-07
+        },
+        {
+          "step": 248,
+          "coverage": 0.7376815229376601,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -8.870163875629444e-07
+        },
+        {
+          "step": 256,
+          "coverage": 0.7376824099540499,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.0020627132031407758
+        }
+      ],
+      "candidate_count": 11,
+      "prefix_smooth_count": 8,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 19,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.004765081066428586
+        },
+        {
+          "step": 48,
+          "coverage": 0.08662651736376989,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08482045058596574
+        },
+        {
+          "step": 56,
+          "coverage": 0.25891631314724267,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.055963356670338193
+        },
+        {
+          "step": 64,
+          "coverage": 0.35242619577051487,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.09578865283403926
+        },
+        {
+          "step": 72,
+          "coverage": 0.7374255288407786,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.12126191508601991
+        }
+      ],
+      "candidate_count": 9,
+      "prefix_smooth_count": 9,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 20,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.00017311728048365714,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.001098393914146451
+        },
+        {
+          "step": 40,
+          "coverage": 0.09308682298072496,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.1678433330231589
+        },
+        {
+          "step": 48,
+          "coverage": 0.3932365337162006,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.001353988919747806
+        },
+        {
+          "step": 56,
+          "coverage": 0.384855145146839,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": 0.012447397143559857
+        },
+        {
+          "step": 72,
+          "coverage": 0.4076980275949644,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.005313573661539894
+        },
+        {
+          "step": 96,
+          "coverage": 0.33762372510066324,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 104,
+          "coverage": 0.33762372510066324,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.6738860569853742e-07
+        },
+        {
+          "step": 112,
+          "coverage": 0.3377981537523899,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.00020104990938762946
+        },
+        {
+          "step": 120,
+          "coverage": 0.4780617692051314,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.23660413595080815
+        }
+      ],
+      "candidate_count": 12,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 21,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0033970913687577354
+        },
+        {
+          "step": 48,
+          "coverage": 0.007010965664362875,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.006522112461786659
+        },
+        {
+          "step": 56,
+          "coverage": 0.126061383400559,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02467846532600501
+        },
+        {
+          "step": 64,
+          "coverage": 0.17635325459812604,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.06895664462308057
+        },
+        {
+          "step": 72,
+          "coverage": 0.28691354739823516,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.04362909092989625
+        },
+        {
+          "step": 80,
+          "coverage": 0.33116597106943346,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -7.260858581048524e-14
+        },
+        {
+          "step": 88,
+          "coverage": 0.331166005419477,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 3.435004286567178e-08
+        },
+        {
+          "step": 96,
+          "coverage": 0.3311659710695059,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05469294807103681
+        },
+        {
+          "step": 104,
+          "coverage": 0.640224743077161,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.1941936408427989
+        }
+      ],
+      "candidate_count": 13,
+      "prefix_smooth_count": 12,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 22,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.25158587632164525,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 3.4728786446613924e-07
+        },
+        {
+          "step": 16,
+          "coverage": 0.2516060597594918,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08512060192663734
+        },
+        {
+          "step": 40,
+          "coverage": 0.17395689007230003,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.023476011572114402
+        },
+        {
+          "step": 64,
+          "coverage": 0.09157017573519968,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -7.499595827686889e-08
+        },
+        {
+          "step": 72,
+          "coverage": 0.09133844242441196,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0466061601075657
+        },
+        {
+          "step": 80,
+          "coverage": 0.13872137208174715,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 9.572451098449619e-08
+        },
+        {
+          "step": 88,
+          "coverage": 0.13872127635723616,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.0836647620915407e-07
+        },
+        {
+          "step": 96,
+          "coverage": 0.18924657924993937,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.12138070952782348
+        },
+        {
+          "step": 104,
+          "coverage": 0.384830035152834,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.2793901995117105
+        }
+      ],
+      "candidate_count": 9,
+      "prefix_smooth_count": 9,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 23,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.07070895964142974,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.011262993767867914
+        },
+        {
+          "step": 48,
+          "coverage": 0.09182861968867387,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.000723966221488126
+        },
+        {
+          "step": 56,
+          "coverage": 0.092552585910162,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 64,
+          "coverage": 0.092552585910162,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.034399021078584835
+        },
+        {
+          "step": 72,
+          "coverage": 0.15210511071635857,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.03176510918252551
+        },
+        {
+          "step": 80,
+          "coverage": 0.21084418004089342,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.01686051496938712
+        },
+        {
+          "step": 88,
+          "coverage": 0.2281585950116387,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 1.40828404493476e-10
+        },
+        {
+          "step": 96,
+          "coverage": 0.22815862706031073,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.07625489356362522
+        },
+        {
+          "step": 104,
+          "coverage": 0.42168972991629416,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.24328436458168246
+        }
+      ],
+      "candidate_count": 13,
+      "prefix_smooth_count": 11,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 24,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.5185048047022365,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0004607076813909483
+        },
+        {
+          "step": 48,
+          "coverage": 0.14291257610670377,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 2.3637364288120466e-10
+        },
+        {
+          "step": 56,
+          "coverage": 0.14291223843102738,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.021915377972398065
+        },
+        {
+          "step": 64,
+          "coverage": 0.2256810743231875,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.03461782750029041
+        },
+        {
+          "step": 72,
+          "coverage": 0.26198919378638436,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.015070103870026885
+        },
+        {
+          "step": 80,
+          "coverage": 0.30727470543140406,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -9.574419963354064e-05
+        },
+        {
+          "step": 88,
+          "coverage": 0.3073704496325394,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 8.326672684688674e-16
+        },
+        {
+          "step": 96,
+          "coverage": 0.40485430295959757,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.3586697018852667
+        }
+      ],
+      "candidate_count": 8,
+      "prefix_smooth_count": 6,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 25,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 48,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 56,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 64,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 72,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.02587008876948413
+        },
+        {
+          "step": 80,
+          "coverage": 0.1409794067712641,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.015962384405643987
+        },
+        {
+          "step": 88,
+          "coverage": 0.25118402125230876,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.060334273417530615
+        },
+        {
+          "step": 96,
+          "coverage": 0.32731540237161294,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.027069860528186496
+        },
+        {
+          "step": 112,
+          "coverage": 0.3327919355627839,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.1652903781376196e-07
+        },
+        {
+          "step": 120,
+          "coverage": 0.3327919355627847,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.015294553682360601
+        },
+        {
+          "step": 128,
+          "coverage": 0.5047135061125985,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.26332262852980337
+        }
+      ],
+      "candidate_count": 15,
+      "prefix_smooth_count": 11,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 26,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.02811435095692354,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.003881009126985118
+        },
+        {
+          "step": 40,
+          "coverage": 0.044947577603165416,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.02109774637214614
+        },
+        {
+          "step": 48,
+          "coverage": 0.07054558097862011,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05811212944510276
+        },
+        {
+          "step": 56,
+          "coverage": 0.18432765586082978,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.025837430858643373
+        },
+        {
+          "step": 64,
+          "coverage": 0.28029203943648073,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0481838172161394
+        },
+        {
+          "step": 72,
+          "coverage": 0.3671047580376357,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.000470288006802988
+        },
+        {
+          "step": 80,
+          "coverage": 0.3675750460444387,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 88,
+          "coverage": 0.3675750460444387,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 96,
+          "coverage": 0.658641032806983,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.18592935305438896
+        }
+      ],
+      "candidate_count": 12,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 27,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.012061064205725516,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.07312699365550149
+        },
+        {
+          "step": 40,
+          "coverage": 0.15256870324141014,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -6.553749886500926e-05
+        },
+        {
+          "step": 56,
+          "coverage": 0.0964222983379289,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0037996628025856877
+        },
+        {
+          "step": 64,
+          "coverage": 0.10022196114051458,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 72,
+          "coverage": 0.09894158121988132,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.12461037456085382
+        },
+        {
+          "step": 80,
+          "coverage": 0.40304058758187955,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08803680647516354
+        },
+        {
+          "step": 88,
+          "coverage": 0.5794694499770711,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0057282140826413475
+        },
+        {
+          "step": 96,
+          "coverage": 0.5851976640597887,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -3.560918582223849e-08
+        },
+        {
+          "step": 104,
+          "coverage": 0.5851976640596113,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.1606918091673144
+        }
+      ],
+      "candidate_count": 12,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 28,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -5.681589158075728e-05
+        },
+        {
+          "step": 48,
+          "coverage": 0.0030394865422262323,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0027235110923108387
+        },
+        {
+          "step": 56,
+          "coverage": 0.006882547642904909,
+          "prefix_smooth_proxy": false,
+          "fresh_next_four_drop": -0.0011887865121394028
+        },
+        {
+          "step": 64,
+          "coverage": 0.008071334155044312,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 72,
+          "coverage": 0.008071334155044312,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 80,
+          "coverage": 0.007349304184269801,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05436620311557763
+        },
+        {
+          "step": 88,
+          "coverage": 0.12682444677596025,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.08371379184212988
+        },
+        {
+          "step": 96,
+          "coverage": 0.328952209035719,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.4458281498620623
+        }
+      ],
+      "candidate_count": 12,
+      "prefix_smooth_count": 10,
+      "fresh_next_four_drops_over_three_points": 0
+    },
+    {
+      "seed": 29,
+      "candidates": [
+        {
+          "step": 8,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 16,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 24,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 32,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 40,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 48,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 56,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": 0.0
+        },
+        {
+          "step": 64,
+          "coverage": 0.0,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.0023807628365451307
+        },
+        {
+          "step": 72,
+          "coverage": 0.022238858597529915,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.05726482838040052
+        },
+        {
+          "step": 80,
+          "coverage": 0.08802686480616849,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.426636586643326e-14
+        },
+        {
+          "step": 88,
+          "coverage": 0.08802686370575312,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -1.1004281375015523e-09
+        },
+        {
+          "step": 96,
+          "coverage": 0.10196346566302167,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.12527369531306312
+        },
+        {
+          "step": 104,
+          "coverage": 0.3502117578564221,
+          "prefix_smooth_proxy": true,
+          "fresh_next_four_drop": -0.18418037436858647
+        }
+      ],
+      "candidate_count": 13,
+      "prefix_smooth_count": 13,
+      "fresh_next_four_drops_over_three_points": 0
+    }
+  ],
+  "total_candidates": 427,
+  "total_prefix_smooth": 363
+}

@@ -46,4 +46,17 @@ These deliberately selected continuations demonstrate some recovery opportunitie
 
 The implemented controller makes at most one early decision per attempt. Its observed improvement was one additional success, with only five AI calls saved overall and slightly slower execution after monitoring. All eight interventions addressed stagnation, not alignment-warning events. This small pilot does not establish robust improvement or learning's advantage over an untested same-timing simple rule. The 91 tests and independent audits of all trials passed. Keep the frozen source, environment and evidence unchanged when resuming; never launch concurrent collectors.
 
+## Adaptive action-reuse development screen
+
+- [robotics-adaptive-length/discovery-analysis.json](robotics-adaptive-length/discovery-analysis.json): CPU-only analysis of the 30 saved discovery trajectories. Later baseline movements are fresh predictions, not evidence about discarded cached suffixes.
+- [protocol.json](robotics-adaptive-length/protocol.json): predetermined discovery seeds 0–7, fixed-eight/fixed-twelve/adaptive methods, frozen rules, source/evidence hashes, package versions and checkpoint identity.
+- [prefix-smoke.json](robotics-adaptive-length/prefix-smoke.json): GPU verification of identical initial prefixes, exact forced-trim matching over sixteen actions and actual cached-suffix execution.
+- `robotics-adaptive-length/episodes/` and [episodes.json](robotics-adaptive-length/episodes.json): all 24 complete attempts, compressed action/state traces, actual unit lengths, query counts, camera features and controller events.
+- [summary.json](robotics-adaptive-length/summary.json): all-scene metrics. Adaptive 6/8 successes, fixed-eight 3/8 and fixed-twelve 5/8. Adaptive uses fewer calls and less runtime than fixed-eight, but its mean final alignment is lower.
+- [independent-audit.json](robotics-adaptive-length/independent-audit.json): direct fingerprint checks and independent arithmetic verification of all 5,392 actions/queue transitions, all 75 extended paths, the interruption and all summary values. Discarded suffixes and RGB estimates cannot be fully rechecked from these records.
+- [run-resources.json](robotics-adaptive-length/run-resources.json): the complete collector invocation, 49.70 minutes, peak process memory 2.94 GiB and peak PyTorch GPU allocation 1.07 GiB.
+- [Adaptive-length report](../reports/2026-10-12-robotics-adaptive-length.md): conclusion-first comparison, paired outcomes, trade-offs, audit limits and reproduction instructions.
+
+These eight scenes are reused development data, with one stochastic sample per method. Adaptive execution rescued four baseline failures and lost one baseline success. Fixed-twelve provides a substantial efficiency gain without the monitor, so the adaptive rule's benefit must be assessed against it, not just fixed-eight. All 124 robotics tests passed. Preserve this frozen screen and the earlier pilot; use an ignored `*-repeat/` directory for reruns and fresh scenes for a future generalization test.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
