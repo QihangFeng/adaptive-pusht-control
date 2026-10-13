@@ -18,6 +18,8 @@ The [completed benefit-aware pilot](reports/2026-10-11-robotics-benefit-pilot.md
 
 The [adaptive action-reuse screen](reports/2026-10-12-robotics-adaptive-length.md) completed 24 attempts on eight reused development scenes. Adaptive execution achieved 6/8 successes versus fixed-eight 3/8, with 37.55% fewer predictions and 31.65% shorter runtime including monitoring. However, mean final alignment was slightly lower: 92.14% versus 93.43%, with one baseline success lost. Fixed-twelve was fastest and achieved 5/8 successes, but only 82.05% mean alignment. This supports further investigation of the quality/computation trade-off, not a reliable general improvement. All 124 robotics tests and the independent artifact audit passed; the earlier frozen pilot remains unchanged.
 
+The [fresh-scene evaluation](reports/2026-10-12-robotics-fresh-evaluation.md) kept that controller unchanged and completed 60 attempts on new seeds 50–69. Adaptive execution finished 18/20 pushes versus fixed-eight 15/20, with 95.60% versus 92.88% mean alignment, 22.22% fewer predictions and 16.35% shorter runtime including monitoring. It rescued five baseline failures but lost two successes; the success-rate gain remains uncertain. Fixed-twelve was cheaper (16/20 successes, 88.61% mean alignment), so adaptive execution is a quality/computation trade-off, not dominance over every comparator. All 152 tests and the independent audit passed. The evaluation took 97.21 minutes on the laptop; interruption-specific benefit and repeated-randomness reliability remain untested.
+
 The [expanded replanning literature review](reports/2026-10-11-robotics-replanning-literature.md) compares 17 timing, monitoring and recovery papers, with code-access and laptop-fit caveats. SGAC and DCDP directly study Diffusion Policy on PushT; observation-driven interruption also has established precedent. The review recommends keeping the frozen-policy setup while discussing a narrow method, not claiming that adaptive replanning itself is new.
 
 ## Where to start
@@ -33,6 +35,7 @@ The [expanded replanning literature review](reports/2026-10-11-robotics-replanni
 | [experiments/robotics_benefit_model.py](experiments/robotics_benefit_model.py) | Small outcome-trained decision tree and validation-only threshold selection |
 | [experiments/robotics_benefit_pilot.py](experiments/robotics_benefit_pilot.py) | Resumable, one-decision pilot with separate held-out evaluation |
 | [experiments/robotics_adaptive_length.py](experiments/robotics_adaptive_length.py) | Frozen development screen of cached action reuse, camera/path gating and bounded interruptions |
+| [experiments/robotics_fresh_evaluation.py](experiments/robotics_fresh_evaluation.py) | Frozen three-method evaluation on 20 new scenes, with paired uncertainty and strict resumability |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

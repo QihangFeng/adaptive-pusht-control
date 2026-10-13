@@ -59,4 +59,15 @@ The implemented controller makes at most one early decision per attempt. Its obs
 
 These eight scenes are reused development data, with one stochastic sample per method. Adaptive execution rescued four baseline failures and lost one baseline success. Fixed-twelve provides a substantial efficiency gain without the monitor, so the adaptive rule's benefit must be assessed against it, not just fixed-eight. All 124 robotics tests passed. Preserve this frozen screen and the earlier pilot; use an ignored `*-repeat/` directory for reruns and fresh scenes for a future generalization test.
 
+## Fresh-scene adaptive action-reuse evaluation
+
+- [robotics-fresh-evaluation/protocol.json](robotics-fresh-evaluation/protocol.json): frozen seeds 50–69, three unchanged methods, rules, checkpoint/packages, 51 source/evidence bindings and paired statistical plan, saved before collection.
+- `robotics-fresh-evaluation/episodes/` and [episodes.json](robotics-fresh-evaluation/episodes.json): all 60 complete attempts, sidecars and compressed traces; no excluded or selectively repeated trials.
+- [summary.json](robotics-fresh-evaluation/summary.json): four-metric means, paired gained/lost successes, 10,000-scene-pair bootstrap intervals and exact discordant-success tests. Adaptive 18/20 successes versus fixed-eight 15/20 and fixed-twelve 16/20; success advantages remain uncertain.
+- [independent-audit.json](robotics-fresh-evaluation/independent-audit.json): all 60 hashes, 10,691 movements/queue transitions, 3,435 camera rows, 131 retained paths, seven interruptions, source/packages/weights, 20 unique initial scenes and summary/statistical arithmetic. Hidden discarded suffixes and RGB fits retain explicit audit limits.
+- [run-resources.json](robotics-fresh-evaluation/run-resources.json): one complete 97.21-minute collector invocation, peak process memory 2.57 GiB and PyTorch GPU allocation 1.07 GiB.
+- [Fresh-scene report](../reports/2026-10-12-robotics-fresh-evaluation.md): fixed evaluation plan, results, every scene's outcome, uncertainty, regressions, attribution and reproduction instructions.
+
+Adaptive execution improved all four observed means versus fixed-eight, with 22.22% fewer calls and 16.35% shorter runtime, but lost baseline successes 54 and 59. Fixed-twelve remains cheaper. All 152 tests and independent checks passed; neither the combined controller's interruption-specific benefit nor reliability across repeated prediction seeds is established. Preserve this evaluation and all earlier frozen evidence. Seeds 50–69 are no longer unseen data for a method revised after inspecting these results.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
