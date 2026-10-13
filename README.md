@@ -26,6 +26,8 @@ The designated **milestone** is commit [`0f40449`](https://github.com/QihangFeng
 
 The [regression diagnosis](reports/2026-10-12-robotics-regression-diagnosis.md) completed 26 bounded trials on lost baseline-success scenes 54/59. New prediction samples changed outcomes: unchanged adaptive execution succeeded in 3/4 repeats versus fixed-eight 1/4. Neither one-movement-earlier replanning nor deferring interruption rescued a tested local failure; both changes lost the same successful scene-59 continuation. Keep the milestone controller unchanged. These selected-case results explain sensitivity, not general reliability or a validated fix. Both restoration controls, all 183 tests and the independent audit passed.
 
+The [alignment-decline screen](reports/2026-10-12-robotics-decline-screen.md) compared every first interruption in the saved adaptive attempts: six situations, three paired prediction samples each, reusing eight completed comparisons. Continuing and replanning both succeeded 7/18 times. Smaller two-warning declines favored continuing (7/9 versus 2/9); larger three-warning declines favored replanning (5/9 versus 0/9). These correlated signals support discussing a simple ongoing-decline check, not a validated classifier or controller fix. All six restoration controls, 213 tests and the independent audit passed; no controller or model was changed.
+
 ## Where to start
 
 | Location | Purpose |
@@ -41,6 +43,7 @@ The [regression diagnosis](reports/2026-10-12-robotics-regression-diagnosis.md) 
 | [experiments/robotics_adaptive_length.py](experiments/robotics_adaptive_length.py) | Frozen development screen of cached action reuse, camera/path gating and bounded interruptions |
 | [experiments/robotics_fresh_evaluation.py](experiments/robotics_fresh_evaluation.py) | Frozen three-method evaluation on 20 new scenes, with paired uncertainty and strict resumability |
 | [experiments/robotics_regression_diagnosis.py](experiments/robotics_regression_diagnosis.py) | Selected-case sampling and matched-state diagnosis of lost baseline successes, with restoration controls |
+| [experiments/robotics_decline_screen.py](experiments/robotics_decline_screen.py) | Frozen matched-state screen of when camera-observed declines benefit from replanning, with reuse of completed trials |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

@@ -81,4 +81,14 @@ Adaptive execution improved all four observed means versus fixed-eight, with 22.
 
 Prediction samples changed both baseline and adaptive outcomes. Neither earlier replanning nor finishing the current unit established successful recovery; both changes lost the same successful scene-59 continuation. The milestone controller stays unchanged. These are conditional selected-case diagnostics, not a new held-out evaluation or an adopted controller revision. Local runtime/call counts exclude the prefix and must not be mixed with complete-attempt metrics. Preserve commit `0f40449` as the designated milestone and keep scenes 54/59 out of unseen evaluation for revisions informed by this diagnosis.
 
+## Alignment-decline benefit screen
+
+- [robotics-decline-screen/protocol.json](robotics-decline-screen/protocol.json), [cases.json](robotics-decline-screen/cases.json), and [legacy inventory](robotics-decline-screen/legacy-inventory.json): frozen selection of all six first adaptive interruptions, past-only features, three future samples and references to completed evidence.
+- [comparisons.json](robotics-decline-screen/comparisons.json) and `robotics-decline-screen/trials/`: 36 comparison records, eight reused by hash-bound reference and 28 newly collected; four new restoration controls bring new collection to 32 trials.
+- [restoration audit](robotics-decline-screen/restoration-audit.json) and [controls.json](robotics-decline-screen/controls.json): all six regenerated prefixes, four new exact suffix controls and two reused controls.
+- [summary.json](robotics-decline-screen/summary.json), [independent audit](robotics-decline-screen/independent-audit.json), and [resources](robotics-decline-screen/resources.json): per-context outcomes, feature rank associations, cached versus eventual recovery, integrity checks and the 46.97-minute collection cost.
+- [Decline-screen report](../reports/2026-10-12-robotics-decline-screen.md): conclusion-first tables, separate older fixed-eight evidence, post hoc latest-change exploration, limitations and reproduction commands.
+
+Both choices succeeded 7/18 times, with five gains and five losses from replanning. Two-warning/smaller-drop contexts favored continuing; three-warning/larger-drop contexts favored replanning. These are six source situations, not eighteen independent scenes, and the signals are correlated. No classifier was trained or controller changed. All 213 tests, six restoration controls and independent checks passed. The milestone remains `0f40449`; these inspected scenes are development evidence for any subsequent revision.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
