@@ -30,6 +30,8 @@ The [alignment-decline screen](reports/2026-10-12-robotics-decline-screen.md) co
 
 The [weighted-versus-simple gate evaluation](reports/2026-10-13-robotics-weighted-gate.md) completed a bounded development-only search and 60 full attempts on new seeds 70–89. Both gates succeeded 16/20 times versus the unchanged adaptive controller's 15/20, rescuing 72/81 but losing 73. The simple gate had 94.58% mean final alignment versus weighted 92.13% and unchanged 92.02%; both gates used slightly more predictions and runtime than unchanged. Weighting did not demonstrate an advantage, and the success gain remains uncertain. Keep the milestone controller unchanged. All 247 tests and the independent audit passed; settings were not retuned using these outcomes.
 
+The [saved decision review](reports/2026-10-13-robotics-decision-review.md) inspected all 131 milestone extensions and 358 fresh-plan transitions without new GPU runs. It did not identify a clearly harmful earlier extension or a common abrupt-transition defect explaining losses 54/59. Both severe declines later regained their pre-drop overlap, but neither attempt ever exceeded 95% true coverage. Final positioning is therefore a better-supported subject for further discussion than labeling these dips unrecoverable. The milestone stays unchanged; development/retesting of the rejected threshold and weighted filters has stopped.
+
 ## Where to start
 
 | Location | Purpose |
@@ -48,6 +50,7 @@ The [weighted-versus-simple gate evaluation](reports/2026-10-13-robotics-weighte
 | [experiments/robotics_decline_screen.py](experiments/robotics_decline_screen.py) | Frozen matched-state screen of when camera-observed declines benefit from replanning, with reuse of completed trials |
 | [experiments/robotics_weighted_gate.py](experiments/robotics_weighted_gate.py) | Explicit weighted/trend and simple-threshold interruption gates, with a bounded development search |
 | [experiments/robotics_gate_evaluation.py](experiments/robotics_gate_evaluation.py) | Frozen three-method gate comparison, whole-trajectory preflight, complete plan logging and paired statistics |
+| [experiments/robotics_decision_review.py](experiments/robotics_decision_review.py) | CPU-only retrospective extension/transition and final-alignment review; no new predictions or controller changes |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

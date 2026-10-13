@@ -103,4 +103,12 @@ Both choices succeeded 7/18 times, with five gains and five losses from replanni
 
 Both gates achieved 16/20 successes versus unchanged adaptive 15/20, gained scenes 72/81 and lost 73. Simple gating had 94.58% mean alignment versus weighted 92.13% and unchanged 92.02%; both gates cost slightly more predictions/runtime than unchanged. Weighting shows no demonstrated advantage. All 247 tests and the independent audit passed. Neither gate is adopted; preserve the milestone and frozen evidence. Seeds 70–89 are now inspected data, not unseen evaluation for a revised method.
 
+## Saved extension and plan-transition review
+
+- [robotics-decision-review/analysis.json](robotics-decision-review/analysis.json): verifies all 60 milestone attempts and 176 source/evidence bindings; derives every extension and noninitial prediction transition, separates camera inputs from true diagnostic outcomes, and records exact loss/recovery windows.
+- [independent-audit.json](robotics-decision-review/independent-audit.json): independently derived arithmetic, source hashes and explicit inspection limits.
+- [Decision-review report](../reports/2026-10-13-robotics-decision-review.md): understandable findings, successful counterexamples, exact movement indices, final-positioning interpretation and CPU reproduction instructions.
+
+All 131 adaptive extended suffixes executed four movements. Losses 54/59 contain 21 extensions, with no immediate suffix drop greater than three percentage points; a successful scene has a much larger suffix decline. Their destructive fresh plans followed ordinary eight-action trimming, not immediate extensions, and do not share a large-jump/reversal defect. Both later severe declines regain pre-drop coverage but never finish above 95%. All 273 tests and the independent audit passed. This is retrospective inspection, not causal proof, a new controller or fresh evaluation. The milestone remains unchanged; no GPU, simulator, rendering or threshold/weighted retest was run.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
