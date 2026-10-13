@@ -70,4 +70,15 @@ These eight scenes are reused development data, with one stochastic sample per m
 
 Adaptive execution improved all four observed means versus fixed-eight, with 22.22% fewer calls and 16.35% shorter runtime, but lost baseline successes 54 and 59. Fixed-twelve remains cheaper. All 152 tests and independent checks passed; neither the combined controller's interruption-specific benefit nor reliability across repeated prediction seeds is established. Preserve this evaluation and all earlier frozen evidence. Seeds 50–69 are no longer unseen data for a method revised after inspecting these results.
 
+## Lost-success diagnosis
+
+- [robotics-regression-diagnosis/protocol.json](robotics-regression-diagnosis/protocol.json): 26 fixed diagnostic trial identities, source/evidence hashes, distinct scene/prediction seeds, bounded intervention definitions and the existing truth-coverage rounding tolerance.
+- [saved source analysis](robotics-regression-diagnosis/saved-analysis.json): selected failure moments and milestone comparisons, prepared before new scored trials.
+- [restored-prefix audit](robotics-regression-diagnosis/restore-prefix-audit.json): hidden cached commands, controller states and complete RNG/queue hash inventories for four checkpoints.
+- [all trials](robotics-regression-diagnosis/trials.json) and `robotics-regression-diagnosis/trials/`: two unchanged restoration controls, eight complete sampling repeats, sixteen remaining-episode probes, sidecars and hash-bound traces.
+- [summary](robotics-regression-diagnosis/summary.json), [independent audit](robotics-regression-diagnosis/independent-audit.json), and [resources](robotics-regression-diagnosis/resources.json): verified comparisons, explicit audit limitations and laptop measurements.
+- [Diagnosis report](../reports/2026-10-12-robotics-regression-diagnosis.md): understandable results, decision-point examples and interpretation.
+
+Prediction samples changed both baseline and adaptive outcomes. Neither earlier replanning nor finishing the current unit established successful recovery; both changes lost the same successful scene-59 continuation. The milestone controller stays unchanged. These are conditional selected-case diagnostics, not a new held-out evaluation or an adopted controller revision. Local runtime/call counts exclude the prefix and must not be mixed with complete-attempt metrics. Preserve commit `0f40449` as the designated milestone and keep scenes 54/59 out of unseen evaluation for revisions informed by this diagnosis.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

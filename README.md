@@ -22,6 +22,10 @@ The [fresh-scene evaluation](reports/2026-10-12-robotics-fresh-evaluation.md) ke
 
 The [expanded replanning literature review](reports/2026-10-11-robotics-replanning-literature.md) compares 17 timing, monitoring and recovery papers, with code-access and laptop-fit caveats. SGAC and DCDP directly study Diffusion Policy on PushT; observation-driven interruption also has established precedent. The review recommends keeping the frozen-policy setup while discussing a narrow method, not claiming that adaptive replanning itself is new.
 
+The designated **milestone** is commit [`0f40449`](https://github.com/QihangFeng/delay-aware-ai-grid-control/commit/0f4044966646df4cc38b0373fa52c0b733506e15), the completed fresh-scene evaluation. Subsequent work continues through new commits on this branch; this recovery reference is preserved, not an instruction to reset or discard later work.
+
+The [regression diagnosis](reports/2026-10-12-robotics-regression-diagnosis.md) completed 26 bounded trials on lost baseline-success scenes 54/59. New prediction samples changed outcomes: unchanged adaptive execution succeeded in 3/4 repeats versus fixed-eight 1/4. Neither one-movement-earlier replanning nor deferring interruption rescued a tested local failure; both changes lost the same successful scene-59 continuation. Keep the milestone controller unchanged. These selected-case results explain sensitivity, not general reliability or a validated fix. Both restoration controls, all 183 tests and the independent audit passed.
+
 ## Where to start
 
 | Location | Purpose |
@@ -36,6 +40,7 @@ The [expanded replanning literature review](reports/2026-10-11-robotics-replanni
 | [experiments/robotics_benefit_pilot.py](experiments/robotics_benefit_pilot.py) | Resumable, one-decision pilot with separate held-out evaluation |
 | [experiments/robotics_adaptive_length.py](experiments/robotics_adaptive_length.py) | Frozen development screen of cached action reuse, camera/path gating and bounded interruptions |
 | [experiments/robotics_fresh_evaluation.py](experiments/robotics_fresh_evaluation.py) | Frozen three-method evaluation on 20 new scenes, with paired uncertainty and strict resumability |
+| [experiments/robotics_regression_diagnosis.py](experiments/robotics_regression_diagnosis.py) | Selected-case sampling and matched-state diagnosis of lost baseline successes, with restoration controls |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "milestone": "0f4044966646df4cc38b0373fa52c0b733506e15",
+  "counts": {
+    "trials": 26,
+    "movements": 4120,
+    "feature_rows": 3078,
+    "source_bindings": 67,
+    "snapshot_command_hashes": 26,
+    "exact_suffix_movements": 258,
+    "retained_paths_checked": 77,
+    "camera_eligible_trims_with_unlogged_suffix": 31,
+    "cached_deferred_movements": 8
+  },
+  "summary_arithmetic_match": true,
+  "paired_outcomes": [
+    {
+      "scene_seed": 54,
+      "kind": "repeat",
+      "prediction_seed": 54001,
+      "fixed8_success": false,
+      "adaptive12_success": false
+    },
+    {
+      "scene_seed": 54,
+      "kind": "repeat",
+      "prediction_seed": 54002,
+      "fixed8_success": false,
+      "adaptive12_success": true
+    },
+    {
+      "scene_seed": 54,
+      "kind": "probe",
+      "checkpoint": 192,
+      "prediction_seed": 9100,
+      "alternative": "force_replan_now",
+      "original_success": false,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 54,
+      "kind": "probe",
+      "checkpoint": 192,
+      "prediction_seed": 9101,
+      "alternative": "force_replan_now",
+      "original_success": false,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 54,
+      "kind": "probe",
+      "checkpoint": 193,
+      "prediction_seed": 9100,
+      "alternative": "defer_current_unit",
+      "original_success": false,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 54,
+      "kind": "probe",
+      "checkpoint": 193,
+      "prediction_seed": 9101,
+      "alternative": "defer_current_unit",
+      "original_success": false,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 59,
+      "kind": "repeat",
+      "prediction_seed": 59001,
+      "fixed8_success": false,
+      "adaptive12_success": true
+    },
+    {
+      "scene_seed": 59,
+      "kind": "repeat",
+      "prediction_seed": 59002,
+      "fixed8_success": true,
+      "adaptive12_success": true
+    },
+    {
+      "scene_seed": 59,
+      "kind": "probe",
+      "checkpoint": 150,
+      "prediction_seed": 9100,
+      "alternative": "force_replan_now",
+      "original_success": false,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 59,
+      "kind": "probe",
+      "checkpoint": 150,
+      "prediction_seed": 9101,
+      "alternative": "force_replan_now",
+      "original_success": true,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 59,
+      "kind": "probe",
+      "checkpoint": 151,
+      "prediction_seed": 9100,
+      "alternative": "defer_current_unit",
+      "original_success": false,
+      "alternative_success": false
+    },
+    {
+      "scene_seed": 59,
+      "kind": "probe",
+      "checkpoint": 151,
+      "prediction_seed": 9101,
+      "alternative": "defer_current_unit",
+      "original_success": true,
+      "alternative_success": false
+    }
+  ],
+  "limits": [
+    "No physics or CUDA model was independently rerun; exact prefix assertions and full saved source-suffix matches are evidence for restoration, not an independent latent-state rerun.",
+    "Camera features were recomputed from saved camera coverage, not re-fitted from RGB; repeat initial estimates are inferred from first-step recovery.",
+    "Action-queue hashes are independently checked against saved full checkpoint plans; observation-queue and RNG payload hashes are format/completeness checks only because latent bytes are not published.",
+    "Later unexecuted rejected suffixes remain unlogged; camera-eligible trim path decisions cannot all be independently reconstructed.",
+    "Two selected scenes and two prediction samples per contrast do not establish population improvement or guarantee preservation of baseline successes."
+  ],
+  "artifact_hashes": {
+    "protocol.json": "08262ef5e3ac3376ae59252e3f3ba77c7e75a9c08642c400080eb8467670d844",
+    "restore-prefix-audit.json": "3816d9df2804cc86b006fb7bdf61ba50f51472b1f89fd1dbcb0da19e6596ede7",
+    "trials.json": "0fe976d84f9e4ef989057c377c2ac43ae5d5fa0f229ac598661dc8045dceb238",
+    "summary.json": "ffc4500148b87a8166f4db0ad6171771e425d5d6374bb7c0b02fa9f2841209c9"
+  }
+}
