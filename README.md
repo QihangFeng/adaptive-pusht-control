@@ -28,6 +28,8 @@ The [regression diagnosis](reports/2026-10-12-robotics-regression-diagnosis.md) 
 
 The [alignment-decline screen](reports/2026-10-12-robotics-decline-screen.md) compared every first interruption in the saved adaptive attempts: six situations, three paired prediction samples each, reusing eight completed comparisons. Continuing and replanning both succeeded 7/18 times. Smaller two-warning declines favored continuing (7/9 versus 2/9); larger three-warning declines favored replanning (5/9 versus 0/9). These correlated signals support discussing a simple ongoing-decline check, not a validated classifier or controller fix. All six restoration controls, 213 tests and the independent audit passed; no controller or model was changed.
 
+The [weighted-versus-simple gate evaluation](reports/2026-10-13-robotics-weighted-gate.md) completed a bounded development-only search and 60 full attempts on new seeds 70–89. Both gates succeeded 16/20 times versus the unchanged adaptive controller's 15/20, rescuing 72/81 but losing 73. The simple gate had 94.58% mean final alignment versus weighted 92.13% and unchanged 92.02%; both gates used slightly more predictions and runtime than unchanged. Weighting did not demonstrate an advantage, and the success gain remains uncertain. Keep the milestone controller unchanged. All 247 tests and the independent audit passed; settings were not retuned using these outcomes.
+
 ## Where to start
 
 | Location | Purpose |
@@ -44,6 +46,8 @@ The [alignment-decline screen](reports/2026-10-12-robotics-decline-screen.md) co
 | [experiments/robotics_fresh_evaluation.py](experiments/robotics_fresh_evaluation.py) | Frozen three-method evaluation on 20 new scenes, with paired uncertainty and strict resumability |
 | [experiments/robotics_regression_diagnosis.py](experiments/robotics_regression_diagnosis.py) | Selected-case sampling and matched-state diagnosis of lost baseline successes, with restoration controls |
 | [experiments/robotics_decline_screen.py](experiments/robotics_decline_screen.py) | Frozen matched-state screen of when camera-observed declines benefit from replanning, with reuse of completed trials |
+| [experiments/robotics_weighted_gate.py](experiments/robotics_weighted_gate.py) | Explicit weighted/trend and simple-threshold interruption gates, with a bounded development search |
+| [experiments/robotics_gate_evaluation.py](experiments/robotics_gate_evaluation.py) | Frozen three-method gate comparison, whole-trajectory preflight, complete plan logging and paired statistics |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

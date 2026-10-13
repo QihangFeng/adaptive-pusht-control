@@ -91,4 +91,16 @@ Prediction samples changed both baseline and adaptive outcomes. Neither earlier 
 
 Both choices succeeded 7/18 times, with five gains and five losses from replanning. Two-warning/smaller-drop contexts favored continuing; three-warning/larger-drop contexts favored replanning. These are six source situations, not eighteen independent scenes, and the signals are correlated. No classifier was trained or controller changed. All 213 tests, six restoration controls and independent checks passed. The milestone remains `0f40449`; these inspected scenes are development evidence for any subsequent revision.
 
+## Weighted versus simple interruption gates
+
+- [robotics-weighted-gate/development.json](robotics-weighted-gate/development.json) and [protocol.json](robotics-weighted-gate/protocol.json): twelve weighted and six threshold candidates evaluated only on six existing development contexts; selected settings, ties, proxy limitations and 223 frozen bindings.
+- [smoke.json](robotics-weighted-gate/smoke.json), `robotics-weighted-gate/smoke/` and [smoke-resources.json](robotics-weighted-gate/smoke-resources.json): exact 194-movement unchanged-controller reproduction plus two functional gate attempts; no retuning after preflight.
+- [evaluation-protocol.json](robotics-weighted-gate/evaluation-protocol.json), [episodes.json](robotics-weighted-gate/episodes.json) and `robotics-weighted-gate/episodes/`: all 60 full attempts on seeds 70–89, three methods, complete twelve-command plans including discarded suffixes, camera histories, decisions and hash-bound traces.
+- [summary.json](robotics-weighted-gate/summary.json): success, alignment, prediction/runtime means, paired gains/losses, exact discordant tests and scene-pair bootstrap intervals.
+- [independent-audit.json](robotics-weighted-gate/independent-audit.json): all 63 preflight/fresh records, 13,653 movements and 1,482 plans; independent source/evidence checks, gate/queue bookkeeping and summary/statistical arithmetic. Physics, inference and RGB fitting were not rerun.
+- [run-resources.json](robotics-weighted-gate/run-resources.json): complete 127.65-minute fresh collector invocation; peak RAM 2.51 GiB and allocated GPU memory 1.07 GiB.
+- [Gate-evaluation report](../reports/2026-10-13-robotics-weighted-gate.md): formulas, parameter selection, four-metric results, uncertainty, exact decision-point examples, audit limits and reproduction instructions.
+
+Both gates achieved 16/20 successes versus unchanged adaptive 15/20, gained scenes 72/81 and lost 73. Simple gating had 94.58% mean alignment versus weighted 92.13% and unchanged 92.02%; both gates cost slightly more predictions/runtime than unchanged. Weighting shows no demonstrated advantage. All 247 tests and the independent audit passed. Neither gate is adopted; preserve the milestone and frozen evidence. Seeds 70–89 are now inspected data, not unseen evaluation for a revised method.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

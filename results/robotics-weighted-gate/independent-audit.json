@@ -1,0 +1,366 @@
+{
+  "passed": true,
+  "stage": "complete",
+  "milestone": "0f4044966646df4cc38b0373fa52c0b733506e15",
+  "source_bindings": 223,
+  "development": {
+    "candidates": 18,
+    "contexts": 6,
+    "paired_futures": 18,
+    "selected": {
+      "weighted": {
+        "family": "weighted",
+        "weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "threshold": 0.5
+      },
+      "threshold": {
+        "family": "threshold",
+        "min_warnings": 3,
+        "min_drawdown": 0.15
+      }
+    },
+    "selection_details": {
+      "weighted": {
+        "selected_index": 0,
+        "tied_best_indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          11
+        ],
+        "tied_best_configurations": [
+          {
+            "family": "weighted",
+            "weights": [
+              0.5,
+              0.25,
+              0.25
+            ],
+            "threshold": 0.5
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.5,
+              0.25,
+              0.25
+            ],
+            "threshold": 0.65
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.25,
+              0.5,
+              0.25
+            ],
+            "threshold": 0.5
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.25,
+              0.5,
+              0.25
+            ],
+            "threshold": 0.65
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.25,
+              0.25,
+              0.5
+            ],
+            "threshold": 0.5
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.25,
+              0.25,
+              0.5
+            ],
+            "threshold": 0.65
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "threshold": 0.5
+          },
+          {
+            "family": "weighted",
+            "weights": [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "threshold": 0.65
+          }
+        ],
+        "equivalent_selected_mask_indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          11
+        ],
+        "selected_mask_equivalence_count": 8,
+        "distinct_decision_mask_count": 2
+      },
+      "threshold": {
+        "selected_index": 12,
+        "tied_best_indices": [
+          12,
+          13,
+          15
+        ],
+        "tied_best_configurations": [
+          {
+            "family": "threshold",
+            "min_warnings": 3,
+            "min_drawdown": 0.15
+          },
+          {
+            "family": "threshold",
+            "min_warnings": 3,
+            "min_drawdown": 0.1
+          },
+          {
+            "family": "threshold",
+            "min_warnings": 2,
+            "min_drawdown": 0.15
+          }
+        ],
+        "equivalent_selected_mask_indices": [
+          12,
+          13,
+          15
+        ],
+        "selected_mask_equivalence_count": 3,
+        "distinct_decision_mask_count": 3
+      }
+    },
+    "conditional_objective_is_proxy": true
+  },
+  "smoke": {
+    "passed": true,
+    "exact_movements": 194,
+    "maximum_truth_coverage_rounding_difference": 4.440892098500626e-16,
+    "gate_smoke_blocked_candidates": {
+      "threshold": 0,
+      "weighted": 0
+    }
+  },
+  "counts": {
+    "trials": 63,
+    "movements": 13653,
+    "camera_feature_rows": 13653,
+    "complete_plans": 1482,
+    "extensions": 510,
+    "trims": 893,
+    "interruptions": 20,
+    "blocked_candidates": 38,
+    "smoke_exact_movements": 194
+  },
+  "evaluation": {
+    "methods": {
+      "adaptive12": {
+        "attempts": 20,
+        "successes": 15,
+        "mean_final_coverage": 0.920201168680992,
+        "mean_model_queries": 23.15,
+        "mean_wall_seconds": 125.9111574949995,
+        "mean_monitor_seconds": 11.585935684983998,
+        "extensions": 158,
+        "interruptions": 11,
+        "blocked_candidates": 0
+      },
+      "threshold": {
+        "attempts": 20,
+        "successes": 16,
+        "mean_final_coverage": 0.9458132895665946,
+        "mean_model_queries": 23.55,
+        "mean_wall_seconds": 128.14432031999968,
+        "mean_monitor_seconds": 12.01549117498871,
+        "extensions": 151,
+        "interruptions": 2,
+        "blocked_candidates": 27
+      },
+      "weighted": {
+        "attempts": 20,
+        "successes": 16,
+        "mean_final_coverage": 0.9212597404208303,
+        "mean_model_queries": 23.45,
+        "mean_wall_seconds": 127.72278046999926,
+        "mean_monitor_seconds": 11.650682889996096,
+        "extensions": 158,
+        "interruptions": 5,
+        "blocked_candidates": 11
+      }
+    },
+    "paired": {
+      "threshold_vs_adaptive12": {
+        "reference": "adaptive12",
+        "method": "threshold",
+        "gained_success_seeds": [
+          72,
+          81
+        ],
+        "lost_success_seeds": [
+          73
+        ],
+        "exact_two_sided_discordant_success_p": 1.0,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.05,
+            "paired_bootstrap_95_interval": [
+              -0.1,
+              0.2
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": 0.025612120885602642,
+            "paired_bootstrap_95_interval": [
+              -0.005763750245452598,
+              0.08099800969288928
+            ]
+          },
+          "model_queries": {
+            "mean_difference": 0.4,
+            "paired_bootstrap_95_interval": [
+              -0.3,
+              1.3
+            ]
+          },
+          "wall_seconds": {
+            "mean_difference": 2.233162825000181,
+            "paired_bootstrap_95_interval": [
+              -1.696444831873523,
+              7.075067526124891
+            ]
+          }
+        }
+      },
+      "weighted_vs_adaptive12": {
+        "reference": "adaptive12",
+        "method": "weighted",
+        "gained_success_seeds": [
+          72,
+          81
+        ],
+        "lost_success_seeds": [
+          73
+        ],
+        "exact_two_sided_discordant_success_p": 1.0,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.05,
+            "paired_bootstrap_95_interval": [
+              -0.1,
+              0.2
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": 0.0010585717398383654,
+            "paired_bootstrap_95_interval": [
+              -0.003734521993483492,
+              0.007055545785131167
+            ]
+          },
+          "model_queries": {
+            "mean_difference": 0.3,
+            "paired_bootstrap_95_interval": [
+              -0.35,
+              1.2
+            ]
+          },
+          "wall_seconds": {
+            "mean_difference": 1.8116229749997728,
+            "paired_bootstrap_95_interval": [
+              -1.9833543932508109,
+              6.720397416748689
+            ]
+          }
+        }
+      },
+      "weighted_vs_threshold": {
+        "reference": "threshold",
+        "method": "weighted",
+        "gained_success_seeds": [],
+        "lost_success_seeds": [],
+        "exact_two_sided_discordant_success_p": 1.0,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.0,
+            "paired_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": -0.024553549145764277,
+            "paired_bootstrap_95_interval": [
+              -0.07914798486248362,
+              0.005487337425190758
+            ]
+          },
+          "model_queries": {
+            "mean_difference": -0.1,
+            "paired_bootstrap_95_interval": [
+              -0.25,
+              0.0
+            ]
+          },
+          "wall_seconds": {
+            "mean_difference": -0.4215398500004085,
+            "paired_bootstrap_95_interval": [
+              -2.0414469997484233,
+              1.0814313621250946
+            ]
+          }
+        }
+      }
+    },
+    "resources": {
+      "wall_seconds": 7658.971389500002,
+      "peak_process_rss_bytes": 2695176192,
+      "minimum_system_available_bytes": 1860538368,
+      "peak_gpu_allocated_bytes": 1148623360,
+      "peak_gpu_reserved_bytes": 1239416832
+    }
+  },
+  "artifact_hashes": {
+    "protocol.json": "8fa540c523fd756f01b330b26fd24afe5ed997641719d28589af7f3cdda57dd6",
+    "development.json": "895dc7fdcbc016040e0879a14fafe343405316ae835ce06243fa7515e2a733e5",
+    "smoke.json": "7da46f7f76f924b65d2d258879cd3a80e15852ff9bdec45db73bef1f5b1e5437",
+    "evaluation-protocol.json": "f82a3737cd035c296bf6426807363072a3e77f893673f36b2defcefcaacc264a",
+    "episodes.json": "67efd51bdd63dc8a2ce0b7969617e457358d88abafc92c939315b811013dbbf7",
+    "summary.json": "95a8e7eb22c01a4f2aa706ec5cc1ab87ab847192f8be4ff35a9586be2be065d5",
+    "run-resources.json": "cb2b8d51c8820512898cede5c6438d5e6a82437447d66d4c46b370c18512209a"
+  },
+  "limits": [
+    "No model inference, physics, rendering or RGB fitting was rerun.",
+    "Camera-window and score mathematics are recomputed from saved camera scalar estimates; their RGB accuracy is not independently re-established.",
+    "Full twelve-command plans, including discarded paths, permit complete queue and command-continuity checks; latent model observation/RNG bytes are not independently reconstructed.",
+    "Only simulator truth coverage allows 1e-12 rounding in unchanged-smoke comparisons; saved actions, images, camera features and events remain exact.",
+    "Development selection uses six selected contexts with one-shot labels; its objective is an optimistic proxy for a controller reconsidered every movement.",
+    "Fresh evaluation has twenty paired scenes and one prediction sample per arm; uncertainty intervals are exploratory and have no multiplicity adjustment.",
+    "A negative signed trend is decline, including a smaller negative decline; it is not positive recovery."
+  ]
+}

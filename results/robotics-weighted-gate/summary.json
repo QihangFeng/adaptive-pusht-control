@@ -1,0 +1,185 @@
+{
+  "complete": true,
+  "methods": {
+    "adaptive12": {
+      "attempts": 20,
+      "successes": 15,
+      "mean_final_coverage": 0.920201168680992,
+      "mean_model_queries": 23.15,
+      "mean_wall_seconds": 125.9111574949995,
+      "mean_monitor_seconds": 11.585935684983998,
+      "extensions": 158,
+      "interruptions": 11,
+      "blocked_candidates": 0
+    },
+    "threshold": {
+      "attempts": 20,
+      "successes": 16,
+      "mean_final_coverage": 0.9458132895665946,
+      "mean_model_queries": 23.55,
+      "mean_wall_seconds": 128.14432031999968,
+      "mean_monitor_seconds": 12.01549117498871,
+      "extensions": 151,
+      "interruptions": 2,
+      "blocked_candidates": 27
+    },
+    "weighted": {
+      "attempts": 20,
+      "successes": 16,
+      "mean_final_coverage": 0.9212597404208303,
+      "mean_model_queries": 23.45,
+      "mean_wall_seconds": 127.72278046999926,
+      "mean_monitor_seconds": 11.650682889996096,
+      "extensions": 158,
+      "interruptions": 5,
+      "blocked_candidates": 11
+    }
+  },
+  "paired": {
+    "threshold_vs_adaptive12": {
+      "reference": "adaptive12",
+      "method": "threshold",
+      "gained_success_seeds": [
+        72,
+        81
+      ],
+      "lost_success_seeds": [
+        73
+      ],
+      "exact_two_sided_discordant_success_p": 1.0,
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.05,
+          "paired_bootstrap_95_interval": [
+            -0.1,
+            0.2
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": 0.025612120885602642,
+          "paired_bootstrap_95_interval": [
+            -0.005763750245452598,
+            0.08099800969288928
+          ]
+        },
+        "model_queries": {
+          "mean_difference": 0.4,
+          "paired_bootstrap_95_interval": [
+            -0.3,
+            1.3
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": 2.233162825000181,
+          "paired_bootstrap_95_interval": [
+            -1.696444831873523,
+            7.075067526124891
+          ]
+        }
+      }
+    },
+    "weighted_vs_adaptive12": {
+      "reference": "adaptive12",
+      "method": "weighted",
+      "gained_success_seeds": [
+        72,
+        81
+      ],
+      "lost_success_seeds": [
+        73
+      ],
+      "exact_two_sided_discordant_success_p": 1.0,
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.05,
+          "paired_bootstrap_95_interval": [
+            -0.1,
+            0.2
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": 0.0010585717398383654,
+          "paired_bootstrap_95_interval": [
+            -0.003734521993483492,
+            0.007055545785131167
+          ]
+        },
+        "model_queries": {
+          "mean_difference": 0.3,
+          "paired_bootstrap_95_interval": [
+            -0.35,
+            1.2
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": 1.8116229749997728,
+          "paired_bootstrap_95_interval": [
+            -1.9833543932508109,
+            6.720397416748689
+          ]
+        }
+      }
+    },
+    "weighted_vs_threshold": {
+      "reference": "threshold",
+      "method": "weighted",
+      "gained_success_seeds": [],
+      "lost_success_seeds": [],
+      "exact_two_sided_discordant_success_p": 1.0,
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.0,
+          "paired_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": -0.024553549145764277,
+          "paired_bootstrap_95_interval": [
+            -0.07914798486248362,
+            0.005487337425190758
+          ]
+        },
+        "model_queries": {
+          "mean_difference": -0.1,
+          "paired_bootstrap_95_interval": [
+            -0.25,
+            0.0
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": -0.4215398500004085,
+          "paired_bootstrap_95_interval": [
+            -2.0414469997484233,
+            1.0814313621250946
+          ]
+        }
+      }
+    }
+  },
+  "scope": "20 new scene seeds, one paired prediction sample per method; not deployment proof",
+  "statistics": {
+    "unit": "paired initial scene",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261013,
+    "confidence": 0.95,
+    "interpretation": "exploratory intervals; no multiplicity adjustment"
+  },
+  "selected": {
+    "weighted": {
+      "family": "weighted",
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "threshold": 0.5
+    },
+    "threshold": {
+      "family": "threshold",
+      "min_warnings": 3,
+      "min_drawdown": 0.15
+    }
+  }
+}
