@@ -111,4 +111,15 @@ Both gates achieved 16/20 successes versus unchanged adaptive 15/20, gained scen
 
 All 131 adaptive extended suffixes executed four movements. Losses 54/59 contain 21 extensions, with no immediate suffix drop greater than three percentage points; a successful scene has a much larger suffix decline. Their destructive fresh plans followed ordinary eight-action trimming, not immediate extensions, and do not share a large-jump/reversal defect. Both later severe declines regain pre-drop coverage but never finish above 95%. All 273 tests and the independent audit passed. This is retrospective inspection, not causal proof, a new controller or fresh evaluation. The milestone remains unchanged; no GPU, simulator, rendering or threshold/weighted retest was run.
 
+## Completed comparator evidence and pooled synthesis
+
+- [robotics-cohort-completion/protocol.json](robotics-cohort-completion/protocol.json): 369 frozen bindings, unchanged rules/checkpoint/packages, baseline-only seeds 70–89, exact prefix requirements and paired statistical plan.
+- `robotics-cohort-completion/episodes/` and [episodes.json](robotics-cohort-completion/episodes.json): all 40 new fixed-eight/fixed-twelve sidecars and compressed traces, plus hash-bound references to 20 existing unchanged adaptive attempts. Original 50–69 evidence remains in its source directory; nothing is overwritten or selectively rerun.
+- [summary.json](robotics-cohort-completion/summary.json): separate additional-20-scene and pooled-40-scene tables, paired gains/losses, whole-scene bootstrap intervals and exact discordant-success tests. Runtime is descriptive only because sessions/logging differ.
+- [independent-audit.json](robotics-cohort-completion/independent-audit.json): 120 records, 22,657 movements, 2,411 predictions, 40 exact first-eight-command/physics/RGB pairs and independently checked arithmetic. No inference/physical replay/camera refitting was repeated by the audit.
+- [run-resources-from-00.json](robotics-cohort-completion/run-resources-from-00.json): complete 65.12-minute invocation, peak RAM 2.52 GiB and GPU allocation 1.07 GiB.
+- [Completion report](../reports/2026-10-13-robotics-cohort-completion.md): conclusion-first comparison, uncertainty, resource checks, limitations and reproduction instructions.
+
+The original milestone improvement did not repeat: additional-cohort adaptive/fixed-eight successes were 15/20 versus 18/20. Pooled, both finished 33/40, with six adaptive gains and six losses. Adaptive averaged 7.38% fewer predictions, but its saving interval includes zero; alignment and observed mean runtime did not improve. Fixed-twelve finished 29/40 with fewer predictions and lower alignment, a possible quality/cost trade-off rather than adaptive dominance. All 294 tests and the independent audit passed. Preserve milestone `0f40449`; no controller, scoring criterion or rejected filter was changed. These 40 initial scenes are inspected data, not a new untouched holdout or repeat-sampling reliability test.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

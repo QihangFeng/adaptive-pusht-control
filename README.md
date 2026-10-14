@@ -32,6 +32,8 @@ The [weighted-versus-simple gate evaluation](reports/2026-10-13-robotics-weighte
 
 The [saved decision review](reports/2026-10-13-robotics-decision-review.md) inspected all 131 milestone extensions and 358 fresh-plan transitions without new GPU runs. It did not identify a clearly harmful earlier extension or a common abrupt-transition defect explaining losses 54/59. Both severe declines later regained their pre-drop overlap, but neither attempt ever exceeded 95% true coverage. Final positioning is therefore a better-supported subject for further discussion than labeling these dips unrecoverable. The milestone stays unchanged; development/retesting of the rejected threshold and weighted filters has stopped.
 
+The [completed baseline comparison](reports/2026-10-13-robotics-cohort-completion.md) added the missing fixed-eight/fixed-twelve attempts on already-inspected scenes 70–89, without rerunning adaptive execution or changing any rule. The original improvement did not repeat: adaptive finished 15/20 versus fixed-eight 18/20. Pooled across 40 scenes, both finished 33/40; adaptive averaged 93.81% alignment versus 94.05% and 7.38% fewer predictions, but the prediction-saving interval includes zero. Runtime is descriptive only because collection sessions/logging differ. All 294 tests and the independent audit passed. Preserve the milestone, but do not claim a demonstrated general upgrade; no new controller or rejected filter is adopted.
+
 ## Where to start
 
 | Location | Purpose |
@@ -51,6 +53,7 @@ The [saved decision review](reports/2026-10-13-robotics-decision-review.md) insp
 | [experiments/robotics_weighted_gate.py](experiments/robotics_weighted_gate.py) | Explicit weighted/trend and simple-threshold interruption gates, with a bounded development search |
 | [experiments/robotics_gate_evaluation.py](experiments/robotics_gate_evaluation.py) | Frozen three-method gate comparison, whole-trajectory preflight, complete plan logging and paired statistics |
 | [experiments/robotics_decision_review.py](experiments/robotics_decision_review.py) | CPU-only retrospective extension/transition and final-alignment review; no new predictions or controller changes |
+| [experiments/robotics_cohort_completion.py](experiments/robotics_cohort_completion.py) | Frozen completion of two missing baseline arms on inspected scenes, with adaptive evidence reuse and paired 40-scene synthesis |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
