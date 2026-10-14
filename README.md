@@ -38,6 +38,8 @@ The [six-lost-success review](reports/2026-10-13-robotics-lost-success-review.md
 
 The [camera pose-precision gate](reports/2026-10-13-robotics-camera-pose-gate.md) checked 96 saved frames before attempting a fixed-eight-plus-correction prototype. The current 96×96 estimator failed the declared fine-correction targets: near-target 95th-percentile position/rotation/vertex errors were 1.48 units/0.98°/1.99 units. Direction agreement passed on the tested eligible components, but precision did not. All 384 tests and the independent audit passed. No corrective push, training or new policy prediction was performed; perception changes need discussion before continuing to a correction pilot.
 
+The [generation-length screen](reports/2026-10-14-robotics-generation-length.md) completed 64 attempts on eight inspected scenes with two new prediction samples each. Actual short H8/E4 generation and matched H16/E4 each succeeded 6/16 times, versus fixed-eight 11/16 and the unchanged milestone 10/16. Short generation showed no clear per-call computation saving and averaged 301.72 seconds per attempt versus baseline 138.29 seconds. All 427 CPU tests and the independent audit passed. This inference-only change is not adopted; the milestone stays unchanged. No variable-generation controller or generalization benefit is established.
+
 ## Where to start
 
 | Location | Purpose |
@@ -60,6 +62,7 @@ The [camera pose-precision gate](reports/2026-10-13-robotics-camera-pose-gate.md
 | [experiments/robotics_cohort_completion.py](experiments/robotics_cohort_completion.py) | Frozen completion of two missing baseline arms on inspected scenes, with adaptive evidence reuse and paired 40-scene synthesis |
 | [experiments/robotics_loss_review.py](experiments/robotics_loss_review.py) | Saved-evidence diagnosis of all six lost successes, final positioning, stationary intervals and successful counterexamples; no new trials |
 | [experiments/robotics_pose_gate.py](experiments/robotics_pose_gate.py) | Frozen CPU recorded-action replay and pixel-only pose-precision screen before any final-action corrector |
+| [experiments/robotics_generation_length.py](experiments/robotics_generation_length.py) | Frozen actual H8/H16 generation comparison, matched four-action control, original baseline and unchanged milestone |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

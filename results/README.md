@@ -140,4 +140,16 @@ All six lost successes approach but never exceed 95%. Cases 78/81 have final blo
 
 Near-target direction agreement is 184/184 eligible components, but cold 95th-percentile position/rotation/vertex errors are 1.48 units/0.98°/1.99 units, above the 1-unit/0.5°/1-unit targets. All 384 tests and the independent audit passed. Stop before corrective pushes; no training, action model, controller adoption or success improvement is established. Keep the milestone and all earlier evidence unchanged. The preflight archive is recoverable locally; production contains every selected frame, with no threshold changes or selectively discarded fits.
 
+## Actual neural generation-length screen
+
+- [robotics-generation-length/protocol.json](robotics-generation-length/protocol.json): fixed H8/E4, H16/E4, baseline H16/E8 and unchanged milestone; eight inspected scenes, two new prediction samples, rotated order, checkpoint/configuration/packages, 49 frozen input bindings and two installed model-source hashes.
+- [smoke.json](robotics-generation-length/smoke.json), `robotics-generation-length/smoke-episodes/` and [smoke resources](robotics-generation-length/smoke-resources.json): actual raw `(1,8,2)` versus `(1,16,2)` generation, queue/finite-output/parameter guards, exact reference prefixes, two warmups and three timed predictions per condition.
+- [episodes.json](robotics-generation-length/episodes.json) and `robotics-generation-length/episodes/`: all 64 scored attempts, sidecars and compressed movement traces; new samples preserve earlier results rather than replacing them.
+- [summary.json](robotics-generation-length/summary.json): success/alignment/calls/runtime, full-attempt prediction timings and GPU peaks, per-sample results and eight-scene-cluster bootstrap contrasts.
+- [independent-audit.json](robotics-generation-length/independent-audit.json): independently verified 14,821 movements, 2,800 predictions, 367 milestone decisions, frozen provenance, 142 artifact fingerprints and statistical arithmetic; no inference, physics, image fitting or timing repeat.
+- [run-resources.json](robotics-generation-length/run-resources.json): the complete 235.08-minute collection, peak process RAM 2.51 GiB and minimum available system RAM 2.72 GiB.
+- [Generation-length report](../reports/2026-10-14-robotics-generation-length.md): conclusion-first comparison, interpretation, limitations and reproduction instructions.
+
+Short and matched four-action methods each finished 6/16 pushes, versus baseline 11/16 and milestone 10/16. Short generation averaged 301.72 seconds versus baseline 138.29 seconds, with no clear practically useful per-call or memory saving. All 427 CPU tests and the independent audit passed. This unchanged-checkpoint H8 override is not adopted; it does not establish that every shorter or adaptive generation method fails. Preserve milestone `0f40449` and frozen evidence. The eight reused scenes are development data, not unseen evaluation; no training or variable-generation controller was introduced.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.
