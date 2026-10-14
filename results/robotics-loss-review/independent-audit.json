@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "scope": "Independent read-only standard-library recomputation; no project analysis imports or new robot trials.",
+  "artifact_sha256": {
+    "analysis.json": "0ba7efadbbc8430773ccb7609c10352fdf945b42a58ac8732b0fb21039560142"
+  },
+  "audit_helper_sha256": "c0cad9ac3a2baa24d980bf550af98f6682847a5fa7374bab4be99caa8a1f6509",
+  "verified_bindings": 457,
+  "records": 120,
+  "movements": 22657,
+  "predictions": 2411,
+  "extension_windows": 289,
+  "common_prefix_pairs": 40,
+  "groups": {
+    "lost_baseline_success": 6,
+    "rescued_baseline_failure": 6,
+    "retained_baseline_success": 27,
+    "shared_failure": 1
+  },
+  "checks": [
+    "Transitive source and evidence SHA bindings; 120 sidecars and compressed traces.",
+    "Body-origin target, wrapped angle, whole-attempt peaks including initial state and strict >95% termination.",
+    "Last48 actual movements include the pre-window state; command/pusher/block motion and query counts.",
+    "Chronological maximum drawdown with first subsequent regained peak.",
+    "Block-only terminal stationarity and nonterminal >=24-movement near-target stationary runs.",
+    "Saved finite camera rows, peak estimate, false-completion counts and maximum errors.",
+    "All suffix windows including hash-bound reuse of old diagnoses; post-interruption executed prefixes.",
+    "All40 initial/common prefixes, outcome-group inventories, medians and diagnostic bins."
+  ],
+  "limits": [
+    "No physical replay, RGB re-estimation, model inference or reconstruction of full latent RNG/observation state.",
+    "Saved true pose, future drawdown and stationary-window boundaries are offline outcomes, not deployable runtime inputs.",
+    "A common initial prefix does not establish matched later states or causal recovery from a controller change.",
+    "One stochastic policy sample per method/scene and outcome-defined inspected scenes cannot establish a reliable failure classifier.",
+    "Body-origin coordinates are simulator/action units, not physical metres or camera pixels; static goal inspected without importing simulator.",
+    "1e-12 arithmetic comparison tolerance applies only to audit scalar recomputation; recorded action/state/pixel fields require exact equality in common prefixes except established true-coverage tolerance."
+  ]
+}

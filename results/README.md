@@ -122,4 +122,12 @@ All 131 adaptive extended suffixes executed four movements. Losses 54/59 contain
 
 The original milestone improvement did not repeat: additional-cohort adaptive/fixed-eight successes were 15/20 versus 18/20. Pooled, both finished 33/40, with six adaptive gains and six losses. Adaptive averaged 7.38% fewer predictions, but its saving interval includes zero; alignment and observed mean runtime did not improve. Fixed-twelve finished 29/40 with fewer predictions and lower alignment, a possible quality/cost trade-off rather than adaptive dominance. All 294 tests and the independent audit passed. Preserve milestone `0f40449`; no controller, scoring criterion or rejected filter was changed. These 40 initial scenes are inspected data, not a new untouched holdout or repeat-sampling reliability test.
 
+## Six-lost-success saved-evidence review
+
+- [robotics-loss-review/analysis.json](robotics-loss-review/analysis.json): 457 source/evidence bindings, all 120 saved attempt summaries, 289 extension windows, exact common prefixes, terminal-48-movement diagnostics, physical pose/path errors, chronological drawdown/recovery, camera errors and nonterminal stationary controls.
+- [independent-audit.json](robotics-loss-review/independent-audit.json): independently recomputed diagnostics/groups and raw provenance, including 22,657 movements, 2,411 predictions and all 40 common-prefix pairs. No inference, physics or image fitting was rerun.
+- [Lost-success report](../reports/2026-10-13-robotics-lost-success-review.md): understandable six-case table, exact movement indices, successful counterexamples, limitations and CPU reproduction command.
+
+All six lost successes approach but never exceed 95%. Cases 78/81 have final block-stationary intervals despite 12/nine further predictions; 80/82 suffer renewed destructive fresh-plan pushing. Successful attempts also contain long nonterminal stalls and substantial drops, so the diagnostics are not new failure labels or a validated recovery rule. All 336 tests and the independent audit passed. Earlier 54/59 trials and extension windows were reused, not rerun; the milestone, old sources/results, controller and completion criterion remain unchanged.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

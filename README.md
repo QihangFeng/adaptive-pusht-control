@@ -34,6 +34,8 @@ The [saved decision review](reports/2026-10-13-robotics-decision-review.md) insp
 
 The [completed baseline comparison](reports/2026-10-13-robotics-cohort-completion.md) added the missing fixed-eight/fixed-twelve attempts on already-inspected scenes 70–89, without rerunning adaptive execution or changing any rule. The original improvement did not repeat: adaptive finished 15/20 versus fixed-eight 18/20. Pooled across 40 scenes, both finished 33/40; adaptive averaged 93.81% alignment versus 94.05% and 7.38% fewer predictions, but the prediction-saving interval includes zero. Runtime is descriptive only because collection sessions/logging differ. All 294 tests and the independent audit passed. Preserve the milestone, but do not claim a demonstrated general upgrade; no new controller or rejected filter is adopted.
 
+The [six-lost-success review](reports/2026-10-13-robotics-lost-success-review.md) found different observable problems: ineffective final pushing in 78/81 despite 12/nine further predictions, and destructive fresh-plan pushing in 80/82. All six failures approach but never exceed 95% coverage. Successful attempts also contain long temporary stalls and large drops, so neither symptom supplies a reliable failure label. The CPU-only review reuses all 120 attempts; all 336 tests and the independent audit passed. No controller was changed and no remedy or common causal defect is established.
+
 ## Where to start
 
 | Location | Purpose |
@@ -54,6 +56,7 @@ The [completed baseline comparison](reports/2026-10-13-robotics-cohort-completio
 | [experiments/robotics_gate_evaluation.py](experiments/robotics_gate_evaluation.py) | Frozen three-method gate comparison, whole-trajectory preflight, complete plan logging and paired statistics |
 | [experiments/robotics_decision_review.py](experiments/robotics_decision_review.py) | CPU-only retrospective extension/transition and final-alignment review; no new predictions or controller changes |
 | [experiments/robotics_cohort_completion.py](experiments/robotics_cohort_completion.py) | Frozen completion of two missing baseline arms on inspected scenes, with adaptive evidence reuse and paired 40-scene synthesis |
+| [experiments/robotics_loss_review.py](experiments/robotics_loss_review.py) | Saved-evidence diagnosis of all six lost successes, final positioning, stationary intervals and successful counterexamples; no new trials |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
