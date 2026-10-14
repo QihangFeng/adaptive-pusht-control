@@ -130,4 +130,14 @@ The original milestone improvement did not repeat: additional-cohort adaptive/fi
 
 All six lost successes approach but never exceed 95%. Cases 78/81 have final block-stationary intervals despite 12/nine further predictions; 80/82 suffer renewed destructive fresh-plan pushing. Successful attempts also contain long nonterminal stalls and substantial drops, so the diagnostics are not new failure labels or a validated recovery rule. All 336 tests and the independent audit passed. Earlier 54/59 trials and extension windows were reused, not rerun; the milestone, old sources/results, controller and completion criterion remain unchanged.
 
+## Camera precision before final-action correction
+
+- [robotics-pose-gate/protocol.json](robotics-pose-gate/protocol.json): 34 frozen source/evidence bindings, package/renderer identity, discovery-only selection of 76 fine-alignment frames plus 20 terminal controls, and accuracy/direction targets declared before production fitting.
+- [samples.json](robotics-pose-gate/samples.json): all 96 frame identities, exact original RGB hashes, cold/two-image estimates, 192 scored poses and offline truth comparisons; no new controller or policy calls.
+- [summary.json](robotics-pose-gate/summary.json): separate fine/control strata, availability, position/rotation/vertex precision, per-axis direction counts, frame-weighted and scene-equal errors; the primary and sensitivity gates both fail.
+- [independent-audit.json](robotics-pose-gate/independent-audit.json) and [resources-from-000.json](robotics-pose-gate/resources-from-000.json): independent statistical/provenance checks and the 36.65-second CPU replay/fit invocation, peak observed RAM 140.27 MiB.
+- [Pose-gate report](../reports/2026-10-13-robotics-camera-pose-gate.md): conclusion-first accuracy table, stopped static preflight/replay fallback, interpretation, limitations and repeat commands.
+
+Near-target direction agreement is 184/184 eligible components, but cold 95th-percentile position/rotation/vertex errors are 1.48 units/0.98°/1.99 units, above the 1-unit/0.5°/1-unit targets. All 384 tests and the independent audit passed. Stop before corrective pushes; no training, action model, controller adoption or success improvement is established. Keep the milestone and all earlier evidence unchanged. The preflight archive is recoverable locally; production contains every selected frame, with no threshold changes or selectively discarded fits.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

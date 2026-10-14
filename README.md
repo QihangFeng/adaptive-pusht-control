@@ -36,6 +36,8 @@ The [completed baseline comparison](reports/2026-10-13-robotics-cohort-completio
 
 The [six-lost-success review](reports/2026-10-13-robotics-lost-success-review.md) found different observable problems: ineffective final pushing in 78/81 despite 12/nine further predictions, and destructive fresh-plan pushing in 80/82. All six failures approach but never exceed 95% coverage. Successful attempts also contain long temporary stalls and large drops, so neither symptom supplies a reliable failure label. The CPU-only review reuses all 120 attempts; all 336 tests and the independent audit passed. No controller was changed and no remedy or common causal defect is established.
 
+The [camera pose-precision gate](reports/2026-10-13-robotics-camera-pose-gate.md) checked 96 saved frames before attempting a fixed-eight-plus-correction prototype. The current 96×96 estimator failed the declared fine-correction targets: near-target 95th-percentile position/rotation/vertex errors were 1.48 units/0.98°/1.99 units. Direction agreement passed on the tested eligible components, but precision did not. All 384 tests and the independent audit passed. No corrective push, training or new policy prediction was performed; perception changes need discussion before continuing to a correction pilot.
+
 ## Where to start
 
 | Location | Purpose |
@@ -57,6 +59,7 @@ The [six-lost-success review](reports/2026-10-13-robotics-lost-success-review.md
 | [experiments/robotics_decision_review.py](experiments/robotics_decision_review.py) | CPU-only retrospective extension/transition and final-alignment review; no new predictions or controller changes |
 | [experiments/robotics_cohort_completion.py](experiments/robotics_cohort_completion.py) | Frozen completion of two missing baseline arms on inspected scenes, with adaptive evidence reuse and paired 40-scene synthesis |
 | [experiments/robotics_loss_review.py](experiments/robotics_loss_review.py) | Saved-evidence diagnosis of all six lost successes, final positioning, stationary intervals and successful counterexamples; no new trials |
+| [experiments/robotics_pose_gate.py](experiments/robotics_pose_gate.py) | Frozen CPU recorded-action replay and pixel-only pose-precision screen before any final-action corrector |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
