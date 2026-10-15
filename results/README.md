@@ -164,4 +164,16 @@ Short and matched four-action methods each finished 6/16 pushes, versus baseline
 
 Candidate/milestone/fixed-eight successes were 17/17/14 out of twenty. The candidate's mean alignment was slightly higher, but it used 24.50 versus the milestone's 20.60 predictions and took 131.39 versus 110.81 seconds. Only 21/490 candidate units executed more than eight movements, including two full fifteen-movement units. All 482 CPU tests and the independent audit passed. No overall upgrade is established and no controller is adopted; preserve milestone `0f40449` and all frozen evidence. Scenes 90–109 are now inspected evaluation data, not unseen scenes for a revised rule.
 
+## Staged eight/twelve/fifteen execution
+
+- [robotics-staged-extension/protocol.json](robotics-staged-extension/protocol.json): frozen staged gate, unchanged baselines, 131 source/evidence bindings, forty reused-control references, inspected seeds 90–109 and fresh seeds 110–149, rotated order and separate-cohort statistical plan.
+- [smoke.json](robotics-staged-extension/smoke.json), `robotics-staged-extension/smoke/`, `disabled/` and `forced/`: five 32-movement mechanics records; disabling the late gate exactly reproduces the milestone and forcing it proves cached fifteen-command execution without a second prediction.
+- [episodes.json](robotics-staged-extension/episodes.json) and `robotics-staged-extension/episodes/`: all 180 compared records, with 140 new sidecars/traces and forty references to unchanged controls in `robotics-stateful-budget/episodes/`. No scored trial was excluded or replaced.
+- [summary.json](robotics-staged-extension/summary.json): separate primary fresh-forty, inspected-twenty and pooled-sixty metrics, paired gained/lost successes, scene-pair bootstrap/exact-discordant tests, realized lengths and milestone-equivalent prefixes.
+- [independent-audit.json](robotics-staged-extension/independent-audit.json): 377 artifact hashes, 36,848 scored movements, 4,164 predictions, cached-tail/guard/camera arithmetic and independent statistical/provenance checks. No inference, physics, image fitting or timing repeat.
+- [run-resources.json](robotics-staged-extension/run-resources.json): complete 4.79-hour collector invocation, peak RAM 2.51 GiB and minimum available system RAM 3.08 GiB; mechanics resources are separate.
+- [Staged-extension report](../reports/2026-10-15-robotics-staged-extension.md): method, all three comparison tables, uncertainty, actual fifteen-step usage, verification, limitations and reproduction commands.
+
+On forty fresh scenes, staged/milestone/fixed-eight successes were 26/30/26. Staged calls/runtime were essentially unchanged from the milestone, with lower observed alignment. All sixty scenes pooled gave 40/47/40 successes; pooled runtime is descriptive because controls span sessions. The staged controller actually completed 326 fifteen-movement units, unlike the earlier persistent variant, but is not adopted. All 529 CPU tests and the independent audit passed. Preserve milestone `0f40449` and frozen evidence; fresh seeds 110–149 are now inspected data for any subsequent revision.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

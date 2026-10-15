@@ -42,6 +42,8 @@ The [generation-length screen](reports/2026-10-14-robotics-generation-length.md)
 
 The [persistent execution-budget comparison](reports/2026-10-14-robotics-stateful-budget.md) completed 60 attempts on twenty new scenes, seeds 90–109. The new controller remembers an 8/12/15 execution budget while neural generation stays fixed. It matched the milestone's 17/20 successes versus fixed-eight 14/20, with slightly higher mean alignment, but used 24.50 versus 20.60 calls and took 131.39 versus 110.81 seconds. Only two of its 490 prediction units actually executed fifteen movements. All 482 CPU tests and the independent audit passed. This is not an established overall upgrade; the candidate is not adopted and milestone `0f40449` stays unchanged.
 
+The [staged 8/12/15 comparison](reports/2026-10-15-robotics-staged-extension.md) completed 180 comparisons on sixty scenes, with 140 new attempts and forty reused controls. Unlike persistent budgets, this version simply adds a checkpoint after twelve. On the primary forty fresh scenes it succeeded 26/40 times versus the milestone's 30/40, with 89.91% versus 93.70% alignment and almost identical calls/runtime. It genuinely executed fifteen movements in 326 units, but did not establish an upgrade. Pooled successes were fixed-eight/milestone/staged 40/47/40 out of sixty; mixed-session pooled runtime is descriptive. All 529 CPU tests and the independent audit passed. Keep the milestone unchanged; no new candidate is adopted.
+
 ## Where to start
 
 | Location | Purpose |
@@ -66,6 +68,7 @@ The [persistent execution-budget comparison](reports/2026-10-14-robotics-statefu
 | [experiments/robotics_pose_gate.py](experiments/robotics_pose_gate.py) | Frozen CPU recorded-action replay and pixel-only pose-precision screen before any final-action corrector |
 | [experiments/robotics_generation_length.py](experiments/robotics_generation_length.py) | Frozen actual H8/H16 generation comparison, matched four-action control, original baseline and unchanged milestone |
 | [experiments/robotics_stateful_budget.py](experiments/robotics_stateful_budget.py) | Frozen persistent 8/12/15 execution-budget comparison on twenty new scenes; generation remains fixed |
+| [experiments/robotics_staged_extension.py](experiments/robotics_staged_extension.py) | Frozen staged eight/twelve/fifteen comparison with cached-tail mechanics, reused controls and separate fresh confirmation |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |

@@ -1,0 +1,999 @@
+{
+  "scene": 92,
+  "draw": 30000,
+  "prediction_seed": 30092,
+  "method": "staged15",
+  "horizon": 16,
+  "execution": 15,
+  "late_mode": null,
+  "success": true,
+  "truncated": false,
+  "steps": 252,
+  "model_queries": 28,
+  "initial": {
+    "pusher_pos": [
+      172.0,
+      92.0
+    ],
+    "pusher_velocity": [
+      0.0,
+      0.0
+    ],
+    "block_pos": [
+      147.020689529887,
+      308.6081466156605
+    ],
+    "block_angle": -5.582287364626343,
+    "block_velocity": [
+      0.0,
+      0.0
+    ],
+    "block_angular_velocity": 0.0,
+    "block_vertices": [
+      [
+        101.16488501743427,
+        269.91389390914446
+      ],
+      [
+        192.87649404233971,
+        347.3023993221765
+      ],
+      [
+        173.5293676890817,
+        370.2303015784028
+      ],
+      [
+        81.81775866417628,
+        292.84179616537085
+      ],
+      [
+        116.20961204851582,
+        321.8624856952578
+      ],
+      [
+        139.13751430474218,
+        341.20961204851585
+      ],
+      [
+        81.09613524496817,
+        409.9933188171949
+      ],
+      [
+        58.168232988741806,
+        390.6461924639369
+      ]
+    ],
+    "pusher_block_gap": 176.49665052033578,
+    "coverage": 0.043412706208955425,
+    "image_sha256": "f5a31ee87793b45969d38d652cd5ee531525e9e12002f99549c139d5480bdbe4"
+  },
+  "initial_features": {
+    "quality": true,
+    "coverage": 0.04096214386813104,
+    "warning_count": 0,
+    "drawdown": 0.0,
+    "recovery": 0.0,
+    "stagnation": 0.0,
+    "position_error": 0.23726966377927852,
+    "orientation_error": 0.02644219331162493,
+    "pending_actions": 0,
+    "history_steps": 0,
+    "recent_best_gain": 0.0,
+    "recent_peak": 0.04096214386813104
+  },
+  "final_coverage": 0.9512884520299058,
+  "wall_seconds": 148.227919200006,
+  "monitor_seconds": 11.005462500077556,
+  "prediction_seconds": [
+    4.776480000000447,
+    4.873016100005771,
+    4.873568599999999,
+    4.87591429999884,
+    4.862554999999702,
+    4.80200540000078,
+    4.769228999997722,
+    4.855496800002584,
+    4.878525399995851,
+    4.881889500000398,
+    4.847483800003829,
+    4.847613300000376,
+    4.8964321999956155,
+    4.87445960000332,
+    4.870450500005973,
+    4.895364200005133,
+    4.876921499999298,
+    4.880097399996885,
+    4.866555100001278,
+    4.824619200000598,
+    4.890689799998654,
+    4.878784699998505,
+    4.901996099993994,
+    4.854611900002055,
+    4.900352999997267,
+    4.792122700004256,
+    4.778564300002472,
+    4.794249200000195
+  ],
+  "peak_gpu_allocated_bytes": 1148623872,
+  "unit_lengths": [
+    15,
+    15,
+    8,
+    15,
+    15,
+    8,
+    8,
+    8,
+    8,
+    4,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    4,
+    15,
+    15,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    2
+  ],
+  "events": [
+    {
+      "step": 8,
+      "plan_age": 8,
+      "kind": "extend",
+      "reason": "camera_and_plan_eligible",
+      "discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.04096214386813104,
+        "warning_count": 0,
+        "drawdown": 6.282720956748977e-07,
+        "recovery": 0.0,
+        "stagnation": 6.282720956748977e-07,
+        "position_error": 0.23726966377927852,
+        "orientation_error": 0.02644219331162493,
+        "pending_actions": 4,
+        "history_steps": 8,
+        "recent_best_gain": 6.282720956748977e-07,
+        "recent_peak": 0.040962772140226714
+      }
+    },
+    {
+      "step": 12,
+      "plan_age": 12,
+      "kind": "extend15",
+      "reason": "camera_and_suffix_eligible",
+      "discarded": 0,
+      "appended": 3,
+      "cached_discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.04096214386813104,
+        "warning_count": 0,
+        "drawdown": 5.954577284028595e-08,
+        "recovery": 0.0,
+        "stagnation": 6.282720956748977e-07,
+        "position_error": 0.23726966377927852,
+        "orientation_error": 0.02644219331162493,
+        "pending_actions": 0,
+        "history_steps": 12,
+        "recent_best_gain": 6.282720956748977e-07,
+        "recent_peak": 0.04096220341390388
+      }
+    },
+    {
+      "step": 23,
+      "plan_age": 8,
+      "kind": "extend",
+      "reason": "camera_and_plan_eligible",
+      "discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.04096214386813104,
+        "warning_count": 0,
+        "drawdown": 6.559348953508182e-07,
+        "recovery": 0.0,
+        "stagnation": 6.559348953508182e-07,
+        "position_error": 0.23726966377927852,
+        "orientation_error": 0.02644219331162493,
+        "pending_actions": 4,
+        "history_steps": 23,
+        "recent_best_gain": 6.559348953508182e-07,
+        "recent_peak": 0.04096279980302639
+      }
+    },
+    {
+      "step": 27,
+      "plan_age": 12,
+      "kind": "extend15",
+      "reason": "camera_and_suffix_eligible",
+      "discarded": 0,
+      "appended": 3,
+      "cached_discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.0409616809802789,
+        "warning_count": 0,
+        "drawdown": 1.118822747489534e-06,
+        "recovery": -7.033577747936337e-07,
+        "stagnation": 6.559348953508182e-07,
+        "position_error": 0.2372696293245503,
+        "orientation_error": 0.026441761653887653,
+        "pending_actions": 0,
+        "history_steps": 24,
+        "recent_best_gain": 6.559348953508182e-07,
+        "recent_peak": 0.04096279980302639
+      }
+    },
+    {
+      "step": 38,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.07447255842355044,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.007867414933306505,
+        "stagnation": 0.0335104145554194,
+        "position_error": 0.20560999649091646,
+        "orientation_error": 0.0033916583787568103,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.0335104145554194,
+        "recent_peak": 0.07447255842355044
+      }
+    },
+    {
+      "step": 46,
+      "plan_age": 8,
+      "kind": "extend",
+      "reason": "camera_and_plan_eligible",
+      "discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.07968250989409366,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.0004690454052291154,
+        "stagnation": 0.03872036602596262,
+        "position_error": 0.2017124520625951,
+        "orientation_error": 0.00853997297427842,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.03872036602596262,
+        "recent_peak": 0.07968250989409366
+      }
+    },
+    {
+      "step": 50,
+      "plan_age": 12,
+      "kind": "extend15",
+      "reason": "camera_and_suffix_eligible",
+      "discarded": 0,
+      "appended": 3,
+      "cached_discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.07968219959950831,
+        "warning_count": 0,
+        "drawdown": 3.1029458534559407e-07,
+        "recovery": -3.2638602792678384e-08,
+        "stagnation": 0.038720082052787416,
+        "position_error": 0.20171259060320776,
+        "orientation_error": 0.008540521973799942,
+        "pending_actions": 0,
+        "history_steps": 24,
+        "recent_best_gain": 0.038720082052787416,
+        "recent_peak": 0.07968250989409366
+      }
+    },
+    {
+      "step": 61,
+      "plan_age": 8,
+      "kind": "extend",
+      "reason": "camera_and_plan_eligible",
+      "discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.12601764595038645,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.046335413711871096,
+        "stagnation": 0.055083884648731665,
+        "position_error": 0.18270544611760964,
+        "orientation_error": 0.0072326385048263366,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.055083884648731665,
+        "recent_peak": 0.12601764595038645
+      }
+    },
+    {
+      "step": 65,
+      "plan_age": 12,
+      "kind": "extend15",
+      "reason": "camera_and_suffix_eligible",
+      "discarded": 0,
+      "appended": 3,
+      "cached_discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.2538545961742428,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.09562316643367214,
+        "stagnation": 0.17465741771912915,
+        "position_error": 0.1298179315200466,
+        "orientation_error": 0.006732025375492432,
+        "pending_actions": 0,
+        "history_steps": 24,
+        "recent_best_gain": 0.17465741771912915,
+        "recent_peak": 0.2538545961742428
+      }
+    },
+    {
+      "step": 76,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9330307895962757,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.1799159312756471,
+        "stagnation": 0.8533485573579312,
+        "position_error": 0.007591518479831816,
+        "orientation_error": 0.013930774428667917,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.8533485573579312,
+        "recent_peak": 0.9330307895962757
+      }
+    },
+    {
+      "step": 84,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9437117378040908,
+        "warning_count": 0,
+        "drawdown": 6.734337082425768e-07,
+        "recovery": -2.3514523661560816e-13,
+        "stagnation": 0.8477435376968843,
+        "position_error": 0.0068538003552858105,
+        "orientation_error": 0.01290681768924748,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.8477435376968843,
+        "recent_peak": 0.943712411237799
+      }
+    },
+    {
+      "step": 92,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9430338800247493,
+        "warning_count": 0,
+        "drawdown": 0.0006784081293301769,
+        "recovery": -0.000677857779529667,
+        "stagnation": 0.5729050090167198,
+        "position_error": 0.006926105121329781,
+        "orientation_error": 0.013066917213172902,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.5729050090167198,
+        "recent_peak": 0.9437122881540795
+      }
+    },
+    {
+      "step": 100,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.8832514250536176,
+        "warning_count": 1,
+        "drawdown": 0.06514964578077098,
+        "recovery": -0.058716341966822294,
+        "stagnation": 0.015370281238112904,
+        "position_error": 0.0037256301236204404,
+        "orientation_error": 0.017233245153311875,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.015370281238112904,
+        "recent_peak": 0.9484010708343886
+      }
+    },
+    {
+      "step": 104,
+      "plan_age": 4,
+      "kind": "interrupt",
+      "reason": "confirmed_regression",
+      "discarded": 8,
+      "features": {
+        "quality": true,
+        "coverage": 0.8383799575232939,
+        "warning_count": 2,
+        "drawdown": 0.11002111331109476,
+        "recovery": -0.011408274101966764,
+        "stagnation": 0.004689332653999956,
+        "position_error": 0.007994830806732562,
+        "orientation_error": 0.016239967845965764,
+        "pending_actions": 8,
+        "history_steps": 24,
+        "recent_best_gain": 0.004689332653999956,
+        "recent_peak": 0.9484010708343886
+      }
+    },
+    {
+      "step": 112,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.7752013136246285,
+        "warning_count": 2,
+        "drawdown": 0.06310671630855424,
+        "recovery": -0.042081774379378434,
+        "stagnation": 0.004689332722923156,
+        "position_error": 0.01882864442867487,
+        "orientation_error": 0.007945948587364075,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.004689332722923156,
+        "recent_peak": 0.8383080299331828
+      }
+    },
+    {
+      "step": 120,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.7718487734339409,
+        "warning_count": 0,
+        "drawdown": 2.5456807994928e-08,
+        "recovery": 0.0,
+        "stagnation": 0.006432350323559044,
+        "position_error": 0.019904111679578455,
+        "orientation_error": 0.006425042803813625,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.006432350323559044,
+        "recent_peak": 0.7718487988907489
+      }
+    },
+    {
+      "step": 128,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.7718487734339409,
+        "warning_count": 0,
+        "drawdown": 5.7617619231287165e-08,
+        "recovery": 0.0,
+        "stagnation": 0.0,
+        "position_error": 0.019904111679578455,
+        "orientation_error": 0.006425042803813625,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.7718488310515601
+      }
+    },
+    {
+      "step": 136,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.7921635706501355,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.02031479721619467,
+        "stagnation": 0.01696225702550702,
+        "position_error": 0.018339502418818293,
+        "orientation_error": 0.005794527084966879,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.01696225702550702,
+        "recent_peak": 0.7921635706501355
+      }
+    },
+    {
+      "step": 144,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9360681930262567,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.010407326064107436,
+        "stagnation": 0.16421941959231579,
+        "position_error": 0.008750318597220795,
+        "orientation_error": 0.01572194809755595,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.16421941959231579,
+        "recent_peak": 0.9360681930262567
+      }
+    },
+    {
+      "step": 152,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9007098621517946,
+        "warning_count": 0,
+        "drawdown": 0.025985257839334808,
+        "recovery": -0.0011183309891393822,
+        "stagnation": 0.16421941959231579,
+        "position_error": 0.004565714898263533,
+        "orientation_error": 0.024107865254922572,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.16421941959231579,
+        "recent_peak": 0.9266951199911294
+      }
+    },
+    {
+      "step": 160,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9007098621514973,
+        "warning_count": 0,
+        "drawdown": 1.3005426069412351e-07,
+        "recovery": -4.3298697960381105e-15,
+        "stagnation": 0.14390462237612112,
+        "position_error": 0.004565714898337958,
+        "orientation_error": 0.024107865255108885,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.14390462237612112,
+        "recent_peak": 0.900709992205758
+      }
+    },
+    {
+      "step": 168,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.8188758492891415,
+        "warning_count": 1,
+        "drawdown": 0.08183401286235847,
+        "recovery": -0.08158872209349044,
+        "stagnation": 0.0,
+        "position_error": 0.015749822175681227,
+        "orientation_error": 0.005428360057154977,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.9007098621515
+      }
+    },
+    {
+      "step": 172,
+      "plan_age": 4,
+      "kind": "interrupt",
+      "reason": "confirmed_regression",
+      "discarded": 8,
+      "features": {
+        "quality": true,
+        "coverage": 0.6677762130053102,
+        "warning_count": 3,
+        "drawdown": 0.2326883583773217,
+        "recovery": -0.06642003365956284,
+        "stagnation": 0.0,
+        "position_error": 0.03777290280315858,
+        "orientation_error": 0.016007943360049192,
+        "pending_actions": 8,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.9004645713826319
+      }
+    },
+    {
+      "step": 180,
+      "plan_age": 8,
+      "kind": "extend",
+      "reason": "camera_and_plan_eligible",
+      "discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.6677738665451095,
+        "warning_count": 0,
+        "drawdown": 2.3464602006972868e-06,
+        "recovery": -2.3464602006972868e-06,
+        "stagnation": 0.0,
+        "position_error": 0.03777342347867343,
+        "orientation_error": 0.016008975480946305,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.6677762130053102
+      }
+    },
+    {
+      "step": 184,
+      "plan_age": 12,
+      "kind": "extend15",
+      "reason": "camera_and_suffix_eligible",
+      "discarded": 0,
+      "appended": 3,
+      "cached_discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.6677761372821304,
+        "warning_count": 0,
+        "drawdown": 7.572317983761678e-08,
+        "recovery": -7.572317983761678e-08,
+        "stagnation": 2.6645352591003757e-15,
+        "position_error": 0.03777294343761855,
+        "orientation_error": 0.016008096200515673,
+        "pending_actions": 0,
+        "history_steps": 24,
+        "recent_best_gain": 2.6645352591003757e-15,
+        "recent_peak": 0.6677762130053102
+      }
+    },
+    {
+      "step": 195,
+      "plan_age": 8,
+      "kind": "extend",
+      "reason": "camera_and_plan_eligible",
+      "discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.6677762130053102,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 4.651461882332342e-09,
+        "stagnation": 0.0,
+        "position_error": 0.03777290280315858,
+        "orientation_error": 0.016007943360049192,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.6677762130053102
+      }
+    },
+    {
+      "step": 199,
+      "plan_age": 12,
+      "kind": "extend15",
+      "reason": "camera_and_suffix_eligible",
+      "discarded": 0,
+      "appended": 3,
+      "cached_discarded": 0,
+      "features": {
+        "quality": true,
+        "coverage": 0.6677762130053102,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.0,
+        "stagnation": 0.0,
+        "position_error": 0.03777290280315858,
+        "orientation_error": 0.016007943360049192,
+        "pending_actions": 0,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.6677762130053102
+      }
+    },
+    {
+      "step": 210,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.7774437089616585,
+        "warning_count": 0,
+        "drawdown": 0.0031020682320652693,
+        "recovery": -0.0031020682320652693,
+        "stagnation": 0.11276956418841355,
+        "position_error": 0.019882025597527393,
+        "orientation_error": 0.0028328890151101656,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.11276956418841355,
+        "recent_peak": 0.7805457771937238
+      }
+    },
+    {
+      "step": 218,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9294192470279694,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.08490569611898113,
+        "stagnation": 0.2616430340226592,
+        "position_error": 0.00842603832542834,
+        "orientation_error": 0.013196855033247924,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.2616430340226592,
+        "recent_peak": 0.9294192470279694
+      }
+    },
+    {
+      "step": 226,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9352078584147778,
+        "warning_count": 0,
+        "drawdown": 9.372771037075012e-07,
+        "recovery": -9.372771037075012e-07,
+        "stagnation": 0.2687318226456775,
+        "position_error": 0.007997099856974258,
+        "orientation_error": 0.014714717987362113,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.2687318226456775,
+        "recent_peak": 0.9352087956918815
+      }
+    },
+    {
+      "step": 234,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.935208627820843,
+        "warning_count": 0,
+        "drawdown": 1.799024749171707e-07,
+        "recovery": -1.6921787948653844e-07,
+        "stagnation": 0.15776509876165945,
+        "position_error": 0.007996959449960341,
+        "orientation_error": 0.014714486717104545,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.15776509876165945,
+        "recent_peak": 0.9352088077233179
+      }
+    },
+    {
+      "step": 242,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9322432853451036,
+        "warning_count": 0,
+        "drawdown": 0.002720329592106552,
+        "recovery": 0.0003664903031819211,
+        "stagnation": 0.005789560695348528,
+        "position_error": 0.008219018514204856,
+        "orientation_error": 0.01475893898575184,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.005789560695348528,
+        "recent_peak": 0.9349636149372101
+      }
+    },
+    {
+      "step": 250,
+      "plan_age": 8,
+      "kind": "trim",
+      "reason": "retain_eight_action_interval",
+      "discarded": 4,
+      "features": {
+        "quality": true,
+        "coverage": 0.9303645937665876,
+        "warning_count": 0,
+        "drawdown": 0.003928890415562436,
+        "recovery": -0.0037276143464483047,
+        "stagnation": 9.493085401102164e-07,
+        "position_error": 0.008421546604530102,
+        "orientation_error": 0.01519168376517351,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 9.493085401102164e-07,
+        "recent_peak": 0.9342934841821501
+      }
+    }
+  ],
+  "generated_shapes": [
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ],
+    [
+      1,
+      16,
+      2
+    ]
+  ],
+  "trace": "scene-92-draw-30000-staged15.trace.json.gz",
+  "trace_sha256": "44ebd15dd9e316ed2b95a24c6112fabee8c687f06d9e6fb7b889b7b436f06cd3"
+}

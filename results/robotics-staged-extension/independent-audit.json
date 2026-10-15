@@ -1,0 +1,970 @@
+{
+  "passed": true,
+  "collector_imported": false,
+  "independent_cpu_recomputation": true,
+  "frozen_bindings_verified": 131,
+  "installed_model_sources_verified": 2,
+  "checkpoint_config_and_weights_verified": true,
+  "scenes": 60,
+  "compared_attempts": 180,
+  "new_attempts": 140,
+  "reused_attempts": 40,
+  "mechanics_attempts": 5,
+  "compared_movements": 36848,
+  "compared_predictions": 4164,
+  "candidate_events_recomputed": {
+    "extend": 381,
+    "extend15": 326,
+    "replan12": 53,
+    "trim": 823,
+    "interrupt": 35
+  },
+  "candidate_unit_lengths_recomputed": {
+    "15": 326,
+    "12": 53,
+    "8": 835,
+    "7": 10,
+    "4": 26,
+    "2": 7,
+    "6": 14,
+    "1": 14,
+    "9": 2,
+    "5": 7,
+    "3": 3
+  },
+  "cohorts_recomputed": {
+    "fresh_primary": {
+      "scenes": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "methods": {
+        "fixed8": {
+          "attempts": 40,
+          "successes": 26,
+          "mean_final_coverage": 0.9208221469227158,
+          "mean_model_queries": 27.05,
+          "mean_wall_seconds": 133.6099649825008,
+          "mean_monitor_seconds": 0.0
+        },
+        "adaptive12": {
+          "attempts": 40,
+          "successes": 30,
+          "mean_final_coverage": 0.9369925567261242,
+          "mean_model_queries": 22.025,
+          "mean_wall_seconds": 119.53649524500088,
+          "mean_monitor_seconds": 10.543620187495435
+        },
+        "staged15": {
+          "attempts": 40,
+          "successes": 26,
+          "mean_final_coverage": 0.8990942281680064,
+          "mean_model_queries": 21.775,
+          "mean_wall_seconds": 119.26873833000063,
+          "mean_monitor_seconds": 11.23817926249958
+        }
+      },
+      "comparisons": [
+        {
+          "reference": "fixed8",
+          "method": "staged15",
+          "differences_method_minus_reference": {
+            "success": {
+              "mean_difference": 0.0,
+              "scene_pair_bootstrap_95_interval": [
+                -0.2,
+                0.2
+              ]
+            },
+            "final_coverage": {
+              "mean_difference": -0.02172791875470933,
+              "scene_pair_bootstrap_95_interval": [
+                -0.07601649036597964,
+                0.023709565991041116
+              ]
+            },
+            "model_queries": {
+              "mean_difference": -5.275,
+              "scene_pair_bootstrap_95_interval": [
+                -9.1,
+                -1.5
+              ]
+            },
+            "wall_seconds": {
+              "mean_difference": -14.341226652500154,
+              "scene_pair_bootstrap_95_interval": [
+                -33.80529814537582,
+                5.118250316499635
+              ]
+            }
+          },
+          "gained_successes": [
+            116,
+            118,
+            122,
+            127,
+            129,
+            134,
+            135,
+            137,
+            144
+          ],
+          "lost_successes": [
+            113,
+            114,
+            121,
+            123,
+            128,
+            130,
+            133,
+            140,
+            148
+          ],
+          "exact_discordant_two_sided_p": 1.0
+        },
+        {
+          "reference": "adaptive12",
+          "method": "staged15",
+          "differences_method_minus_reference": {
+            "success": {
+              "mean_difference": -0.1,
+              "scene_pair_bootstrap_95_interval": [
+                -0.3,
+                0.1
+              ]
+            },
+            "final_coverage": {
+              "mean_difference": -0.03789832855811777,
+              "scene_pair_bootstrap_95_interval": [
+                -0.08780880314474684,
+                0.0032591016968545627
+              ]
+            },
+            "model_queries": {
+              "mean_difference": -0.25,
+              "scene_pair_bootstrap_95_interval": [
+                -3.775,
+                3.3
+              ]
+            },
+            "wall_seconds": {
+              "mean_difference": -0.2677569150002455,
+              "scene_pair_bootstrap_95_interval": [
+                -18.869274451687353,
+                18.443829687438637
+              ]
+            }
+          },
+          "gained_successes": [
+            110,
+            111,
+            116,
+            118,
+            124,
+            134
+          ],
+          "lost_successes": [
+            114,
+            120,
+            123,
+            128,
+            130,
+            133,
+            140,
+            141,
+            143,
+            148
+          ],
+          "exact_discordant_two_sided_p": 0.454498291015625
+        }
+      ]
+    },
+    "development": {
+      "scenes": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "methods": {
+        "fixed8": {
+          "attempts": 20,
+          "successes": 14,
+          "mean_final_coverage": 0.9427344890130049,
+          "mean_model_queries": 24.6,
+          "mean_wall_seconds": 121.91905649000128,
+          "mean_monitor_seconds": 0.0
+        },
+        "adaptive12": {
+          "attempts": 20,
+          "successes": 17,
+          "mean_final_coverage": 0.9429873670734296,
+          "mean_model_queries": 20.6,
+          "mean_wall_seconds": 110.8092083749998,
+          "mean_monitor_seconds": 8.684819574993526
+        },
+        "staged15": {
+          "attempts": 20,
+          "successes": 14,
+          "mean_final_coverage": 0.9215604789692634,
+          "mean_model_queries": 21.3,
+          "mean_wall_seconds": 115.03444555500027,
+          "mean_monitor_seconds": 9.898462809992271
+        }
+      },
+      "comparisons": [
+        {
+          "reference": "fixed8",
+          "method": "staged15",
+          "differences_method_minus_reference": {
+            "success": {
+              "mean_difference": 0.0,
+              "scene_pair_bootstrap_95_interval": [
+                -0.25,
+                0.3
+              ]
+            },
+            "final_coverage": {
+              "mean_difference": -0.02117401004374129,
+              "scene_pair_bootstrap_95_interval": [
+                -0.06701294439457599,
+                0.01807241889589211
+              ]
+            },
+            "model_queries": {
+              "mean_difference": -3.3,
+              "scene_pair_bootstrap_95_interval": [
+                -9.75,
+                2.95
+              ]
+            },
+            "wall_seconds": {
+              "mean_difference": -6.884610935001001,
+              "scene_pair_bootstrap_95_interval": [
+                -40.01614322050135,
+                24.699284963374016
+              ]
+            }
+          },
+          "gained_successes": [
+            91,
+            95,
+            102,
+            104
+          ],
+          "lost_successes": [
+            90,
+            97,
+            107,
+            109
+          ],
+          "exact_discordant_two_sided_p": 1.0
+        },
+        {
+          "reference": "adaptive12",
+          "method": "staged15",
+          "differences_method_minus_reference": {
+            "success": {
+              "mean_difference": -0.15,
+              "scene_pair_bootstrap_95_interval": [
+                -0.35,
+                0.05
+              ]
+            },
+            "final_coverage": {
+              "mean_difference": -0.021426888104166004,
+              "scene_pair_bootstrap_95_interval": [
+                -0.04731064926630107,
+                -0.00040861741842888763
+              ]
+            },
+            "model_queries": {
+              "mean_difference": 0.7,
+              "scene_pair_bootstrap_95_interval": [
+                -3.55,
+                4.85
+              ]
+            },
+            "wall_seconds": {
+              "mean_difference": 4.225237180000477,
+              "scene_pair_bootstrap_95_interval": [
+                -18.234661733498424,
+                25.932647237125455
+              ]
+            }
+          },
+          "gained_successes": [
+            95
+          ],
+          "lost_successes": [
+            96,
+            97,
+            107,
+            108
+          ],
+          "exact_discordant_two_sided_p": 0.375
+        }
+      ]
+    },
+    "pooled_secondary": {
+      "scenes": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "methods": {
+        "fixed8": {
+          "attempts": 60,
+          "successes": 40,
+          "mean_final_coverage": 0.9281262609528121,
+          "mean_model_queries": 26.233333333333334,
+          "mean_wall_seconds": 129.71299548500096,
+          "mean_monitor_seconds": 0.0
+        },
+        "adaptive12": {
+          "attempts": 60,
+          "successes": 47,
+          "mean_final_coverage": 0.9389908268418927,
+          "mean_model_queries": 21.55,
+          "mean_wall_seconds": 116.62739962166718,
+          "mean_monitor_seconds": 9.924019983328131
+        },
+        "staged15": {
+          "attempts": 60,
+          "successes": 40,
+          "mean_final_coverage": 0.9065829784350922,
+          "mean_model_queries": 21.616666666666667,
+          "mean_wall_seconds": 117.85730740500051,
+          "mean_monitor_seconds": 10.79160711166381
+        }
+      },
+      "comparisons": [
+        {
+          "reference": "fixed8",
+          "method": "staged15",
+          "differences_method_minus_reference": {
+            "success": {
+              "mean_difference": 0.0,
+              "scene_pair_bootstrap_95_interval": [
+                -0.16666666666666666,
+                0.16666666666666666
+              ]
+            },
+            "final_coverage": {
+              "mean_difference": -0.021543282517719982,
+              "scene_pair_bootstrap_95_interval": [
+                -0.06075567528095655,
+                0.01130663859006417
+              ]
+            },
+            "model_queries": {
+              "mean_difference": -4.616666666666666,
+              "scene_pair_bootstrap_95_interval": [
+                -7.883333333333334,
+                -1.2833333333333334
+              ]
+            },
+            "wall_seconds": {
+              "mean_difference": -11.855688080000437,
+              "scene_pair_bootstrap_95_interval": [
+                -28.563836905208078,
+                5.178517583291258
+              ]
+            }
+          },
+          "gained_successes": [
+            91,
+            95,
+            102,
+            104,
+            116,
+            118,
+            122,
+            127,
+            129,
+            134,
+            135,
+            137,
+            144
+          ],
+          "lost_successes": [
+            90,
+            97,
+            107,
+            109,
+            113,
+            114,
+            121,
+            123,
+            128,
+            130,
+            133,
+            140,
+            148
+          ],
+          "exact_discordant_two_sided_p": 1.0
+        },
+        {
+          "reference": "adaptive12",
+          "method": "staged15",
+          "differences_method_minus_reference": {
+            "success": {
+              "mean_difference": -0.11666666666666667,
+              "scene_pair_bootstrap_95_interval": [
+                -0.26666666666666666,
+                0.03333333333333333
+              ]
+            },
+            "final_coverage": {
+              "mean_difference": -0.03240784840680052,
+              "scene_pair_bootstrap_95_interval": [
+                -0.0675028127042016,
+                -0.003908594595053305
+              ]
+            },
+            "model_queries": {
+              "mean_difference": 0.06666666666666667,
+              "scene_pair_bootstrap_95_interval": [
+                -2.6333333333333333,
+                2.85
+              ]
+            },
+            "wall_seconds": {
+              "mean_difference": 1.2299077833333285,
+              "scene_pair_bootstrap_95_interval": [
+                -12.907750079792086,
+                15.918066960999912
+              ]
+            }
+          },
+          "gained_successes": [
+            95,
+            110,
+            111,
+            116,
+            118,
+            124,
+            134
+          ],
+          "lost_successes": [
+            96,
+            97,
+            107,
+            108,
+            114,
+            120,
+            123,
+            128,
+            130,
+            133,
+            140,
+            141,
+            143,
+            148
+          ],
+          "exact_discordant_two_sided_p": 0.18924713134765625
+        }
+      ]
+    }
+  },
+  "paired_scene_bootstrap_samples": 10000,
+  "artifact_fingerprints": {
+    "results/robotics-staged-extension/disabled/scene-0-draw-1234-staged15.json": "8001fe2f78bc37c7f1c48c67e2dc924cfe0d7bc4ac67b8313951a7cdd0b25ac6",
+    "results/robotics-staged-extension/disabled/scene-0-draw-1234-staged15.trace.json.gz": "315d3d805f3a9ac72783a54310e7d60e9d14676c18daa5d4d916cb2d23240b66",
+    "results/robotics-staged-extension/episodes/scene-100-draw-30000-staged15.json": "ddcd7b8a47b17b1cb7201bcd086ace7dd4995e2e014c1f23e7ee8cc210afce04",
+    "results/robotics-staged-extension/episodes/scene-100-draw-30000-staged15.trace.json.gz": "d62610b2feb3e22d925406c7280b5d74a60bf95b8b9d77c032da01f6e65026ab",
+    "results/robotics-staged-extension/episodes/scene-101-draw-30000-staged15.json": "7b06185c9fc7d709ed35e31bd57aad6a7e005680f0313e6df000099591c4a745",
+    "results/robotics-staged-extension/episodes/scene-101-draw-30000-staged15.trace.json.gz": "d50f661fd65db64d77a93176221c84f7752cb1a3962429d476105fc56a87fbb1",
+    "results/robotics-staged-extension/episodes/scene-102-draw-30000-staged15.json": "0d05e7259046bd198ea3710756f1b4af500db1ff11917cd6a7012be2645cc3c8",
+    "results/robotics-staged-extension/episodes/scene-102-draw-30000-staged15.trace.json.gz": "e6ad9839269dfc96dfc0cefce1a0bf1220290612927ed6ea3a0f64624321b229",
+    "results/robotics-staged-extension/episodes/scene-103-draw-30000-staged15.json": "efe3b385ab78bcf49743e6dfe84690f31d2d865cec206266fcf947e7c960b5cd",
+    "results/robotics-staged-extension/episodes/scene-103-draw-30000-staged15.trace.json.gz": "c57a0c8ce159aaf58a27e3cd7b43c615a62ce25c0f0f745a8221b026229b0ddb",
+    "results/robotics-staged-extension/episodes/scene-104-draw-30000-staged15.json": "0bdcda3dd1600f3ea21885f0e8d9a6d4fd54c4a442763fbf6baceab71e5ca938",
+    "results/robotics-staged-extension/episodes/scene-104-draw-30000-staged15.trace.json.gz": "eaa1b349ce8be965674b9a6d9f0323061b6c6f547ef12f53f247313161d2d82d",
+    "results/robotics-staged-extension/episodes/scene-105-draw-30000-staged15.json": "ab18b7d63f4cbee317b3b6097667c0a1a0e6d2a074da12000e333715b91884da",
+    "results/robotics-staged-extension/episodes/scene-105-draw-30000-staged15.trace.json.gz": "f768d3975ec8c96d60dfc503f5b86eeceea1cede719d26b4b69ee491dfbaee1d",
+    "results/robotics-staged-extension/episodes/scene-106-draw-30000-staged15.json": "2b2553037abda347383c0c312aa29facfb47cbd04f9509309555b84c6e829a35",
+    "results/robotics-staged-extension/episodes/scene-106-draw-30000-staged15.trace.json.gz": "f9949d26ad5079cb3eb7557c64086f24104f865a503902e970920d74d503031c",
+    "results/robotics-staged-extension/episodes/scene-107-draw-30000-staged15.json": "a4d54ff53090368c39d0e0523879d82e6da7320bdca576019d13c789c3a9e4e4",
+    "results/robotics-staged-extension/episodes/scene-107-draw-30000-staged15.trace.json.gz": "a7f87d5cc2abdae85b6b50f1caf8c32ee4c0296c68c7bb40a43dbc671b9b1846",
+    "results/robotics-staged-extension/episodes/scene-108-draw-30000-staged15.json": "7ec5c70536eba239cf80847af1ad68cd9e2efec86faccc4882244a0ba1cc2bd0",
+    "results/robotics-staged-extension/episodes/scene-108-draw-30000-staged15.trace.json.gz": "467233900d9a7ac70aa0f033ae22111c71a7ce5cd5a791c3ce12a0723296770e",
+    "results/robotics-staged-extension/episodes/scene-109-draw-30000-staged15.json": "330f33ce01d4643925ab7a1ff39028ed272ef1014b9ea96d4c58030fac1d98b7",
+    "results/robotics-staged-extension/episodes/scene-109-draw-30000-staged15.trace.json.gz": "6f17999838dddf15430c9d6e040b1aaf5c3054822b15928e61975166d775fa76",
+    "results/robotics-staged-extension/episodes/scene-110-draw-40000-adaptive12.json": "1a9455282e49de61618632f577d7e83a4d77e7314bd344930baa261744d7c150",
+    "results/robotics-staged-extension/episodes/scene-110-draw-40000-adaptive12.trace.json.gz": "c51eeeb472e9c6d379d67f2b8ee665f9f8ae6e33c8c93be07ee1b589a79fa945",
+    "results/robotics-staged-extension/episodes/scene-110-draw-40000-fixed8.json": "b9587ae6609a040b0067f67f5f91e482e42eba7ca251998480c371f8ac20bb1c",
+    "results/robotics-staged-extension/episodes/scene-110-draw-40000-fixed8.trace.json.gz": "9d64621d11fb8a6d99e551b39dc790b29a4256258a6daa821eea35311d3d782a",
+    "results/robotics-staged-extension/episodes/scene-110-draw-40000-staged15.json": "90c33c38d8d5324fb5c7919f7cdb71dbc4e568ce32a7fc15f3ddfb7754654844",
+    "results/robotics-staged-extension/episodes/scene-110-draw-40000-staged15.trace.json.gz": "1ddd84dd4105c252af118b8db0ae1a4062d1341d0653929d245f6650d6999e58",
+    "results/robotics-staged-extension/episodes/scene-111-draw-40000-adaptive12.json": "79f1c430a5a2257f289126a4af6bbc83393bde57f073d3d3eae74edd259c1003",
+    "results/robotics-staged-extension/episodes/scene-111-draw-40000-adaptive12.trace.json.gz": "e30e8c27b5ffa4e076203e880102790db390af05cfb26117fbdf5d0da3caa627",
+    "results/robotics-staged-extension/episodes/scene-111-draw-40000-fixed8.json": "af8454f3b1c95ad97c0e4cdf35fdae35d0d64d27f045b9e97c3ee6808b59725c",
+    "results/robotics-staged-extension/episodes/scene-111-draw-40000-fixed8.trace.json.gz": "70df257a88e7363a7d3e792fb9915028563eb3efd81ab92ca7a64eec6f514754",
+    "results/robotics-staged-extension/episodes/scene-111-draw-40000-staged15.json": "83e1c1192966d5a10c3066ee23dbca00f17e7a32ecf2d0df635c3811bb1f35fa",
+    "results/robotics-staged-extension/episodes/scene-111-draw-40000-staged15.trace.json.gz": "d56ce34bb5e6c5b909e898b85e239fed7951897da65921e04ecc727aa3ed19ab",
+    "results/robotics-staged-extension/episodes/scene-112-draw-40000-adaptive12.json": "5afa63e466325216910317ac8338589d187b00a70cf4580b35948def65e9df29",
+    "results/robotics-staged-extension/episodes/scene-112-draw-40000-adaptive12.trace.json.gz": "c72d742318d4a27814f6f3237e2950be3d2eaceeae43e4974a6545bcefe48634",
+    "results/robotics-staged-extension/episodes/scene-112-draw-40000-fixed8.json": "a69399e7369b105b2dcf6c3a69d52e0af4d320f6a4b802f6f66f7c8a160d3b7e",
+    "results/robotics-staged-extension/episodes/scene-112-draw-40000-fixed8.trace.json.gz": "c9493093a6ddcb01ea6fb2b32d45b77dbb284d422afc517a02417fd7f8d3424f",
+    "results/robotics-staged-extension/episodes/scene-112-draw-40000-staged15.json": "0dbc2a4821d3633557aece8c8c1ee53766d8e5f88f145e11ca62c9792c3871ac",
+    "results/robotics-staged-extension/episodes/scene-112-draw-40000-staged15.trace.json.gz": "bb74d4761e7dbceb450f36efd49cc6b7cc23bcf028d270f26763e0150245bb24",
+    "results/robotics-staged-extension/episodes/scene-113-draw-40000-adaptive12.json": "e897b487ca3a19b09ac77e658cb17595144715eb587334261c869022ec50fd47",
+    "results/robotics-staged-extension/episodes/scene-113-draw-40000-adaptive12.trace.json.gz": "a4821198b302c06ab4125f5639017e250ff45956900f1ac6ed1eb64f4700664a",
+    "results/robotics-staged-extension/episodes/scene-113-draw-40000-fixed8.json": "4469c1957ea133809a905056678ec074db0784f7a8fc0a95db89bdbd67332973",
+    "results/robotics-staged-extension/episodes/scene-113-draw-40000-fixed8.trace.json.gz": "777de9c612befdc58ffd71cca4ebf795dddbe176d907ec511524eb3489773a81",
+    "results/robotics-staged-extension/episodes/scene-113-draw-40000-staged15.json": "b28d83250617b0bb49f2fa2c7732bf1bc0074f291cc4f68ab55c9885f514b7b5",
+    "results/robotics-staged-extension/episodes/scene-113-draw-40000-staged15.trace.json.gz": "e702e93580030556609fa036fdfd5158915bcd7d40a815359aafebf47b484e36",
+    "results/robotics-staged-extension/episodes/scene-114-draw-40000-adaptive12.json": "6affe88fba3b762c44fa9dac8e1cc2b4542eb2679540b995324aa7d4b0e83eeb",
+    "results/robotics-staged-extension/episodes/scene-114-draw-40000-adaptive12.trace.json.gz": "47d4ea5d978b33427f0d64444ee7c3aa20119ddec577366398990f4f4f923c1d",
+    "results/robotics-staged-extension/episodes/scene-114-draw-40000-fixed8.json": "4de814bfb17ba366dacedfc3e1d9a23c6a16300545d221c260b8720baac30c66",
+    "results/robotics-staged-extension/episodes/scene-114-draw-40000-fixed8.trace.json.gz": "dbb5538e293298a8c4f14d65217dba3ed9123940ba553915948f9bcb6f4e93e8",
+    "results/robotics-staged-extension/episodes/scene-114-draw-40000-staged15.json": "2b17c922d9b22aa63dd706b0b6e0c41009fa72e2fed363ca22c879eb906ca3f3",
+    "results/robotics-staged-extension/episodes/scene-114-draw-40000-staged15.trace.json.gz": "c4ca0c247e799a5d5d897fa583e4b8bd5bab91415fbbe5fe9dec0df11184ec00",
+    "results/robotics-staged-extension/episodes/scene-115-draw-40000-adaptive12.json": "240b14bc0313398b57bbd112930dc727bac0400db3ee8b6dc3048d2247a3ea06",
+    "results/robotics-staged-extension/episodes/scene-115-draw-40000-adaptive12.trace.json.gz": "cb8cabec6a763e4aa58813a9ee34b21143662a6bc71a14bf2eb258cb3373e7a0",
+    "results/robotics-staged-extension/episodes/scene-115-draw-40000-fixed8.json": "040dfd67b718b846a50a60b63fd32d588125d1a6d707fc98b0772af5097d9a8b",
+    "results/robotics-staged-extension/episodes/scene-115-draw-40000-fixed8.trace.json.gz": "e1eba5d7c535049af661f0550190dc53d6a601a109a88092cfc82a35afa6279d",
+    "results/robotics-staged-extension/episodes/scene-115-draw-40000-staged15.json": "0bb905c465f6af9aa8801a905f40a11c6315ae2de6e3c46f892cdb0050cdc3db",
+    "results/robotics-staged-extension/episodes/scene-115-draw-40000-staged15.trace.json.gz": "8f9b35407951de8bc72fadefc22185db70d89e83e6ea13f15a3223ae6e0c2e0b",
+    "results/robotics-staged-extension/episodes/scene-116-draw-40000-adaptive12.json": "f0548bb8f885d71f64929c3fc5f2713d779568e998e63c74554c2d9b0704d9ed",
+    "results/robotics-staged-extension/episodes/scene-116-draw-40000-adaptive12.trace.json.gz": "35d721be773fbe86fda68cec0163229d095b0c7e7f30a69f0e8ed27b5694650f",
+    "results/robotics-staged-extension/episodes/scene-116-draw-40000-fixed8.json": "5b9709669d5b2c1b7bbff2f012517558b415942007949ea2837ad3fb95bef911",
+    "results/robotics-staged-extension/episodes/scene-116-draw-40000-fixed8.trace.json.gz": "e700dbdfcde3cc7e404720cd65c1a7c6a3aaef8811ff08864ec7bb946437c31d",
+    "results/robotics-staged-extension/episodes/scene-116-draw-40000-staged15.json": "06a064d83ed038636503e1812e1dd9c736d00a02c90aa084f4464f596fe2e00b",
+    "results/robotics-staged-extension/episodes/scene-116-draw-40000-staged15.trace.json.gz": "7eaf72151550a027bf707d61f0f4f1adfbe0f21279885a66e0eee343ab9f0f88",
+    "results/robotics-staged-extension/episodes/scene-117-draw-40000-adaptive12.json": "87313fdb6011a2140c60f8cfa2049e2e4c7922f229010d4e37e074cf83129768",
+    "results/robotics-staged-extension/episodes/scene-117-draw-40000-adaptive12.trace.json.gz": "bd3fa1ddd9e58aa0cb14d53bf312ae307b938b7ed2ae13fcce3c52099e1ffedd",
+    "results/robotics-staged-extension/episodes/scene-117-draw-40000-fixed8.json": "461c3dc294bdabe985d50d6630d6dfe82c9df2157817184815dcb5f09e5fa8b3",
+    "results/robotics-staged-extension/episodes/scene-117-draw-40000-fixed8.trace.json.gz": "6e9fcedfc11b30cd597f914aff71e09cecd5f55f16780f924281d1a0c877d5db",
+    "results/robotics-staged-extension/episodes/scene-117-draw-40000-staged15.json": "d8c28bafd7ef8bf8fbda70089a923bff5207ef93beb5104449371850bea2b1ed",
+    "results/robotics-staged-extension/episodes/scene-117-draw-40000-staged15.trace.json.gz": "bbbc98a16eeac9dc9df5c38c1a4a56b52e677e0d4b7a25cca0f4fbd48b682478",
+    "results/robotics-staged-extension/episodes/scene-118-draw-40000-adaptive12.json": "3490b6dba66478e66eae33ed4ec597fe8513739e0eee67bd44f85be634ceb442",
+    "results/robotics-staged-extension/episodes/scene-118-draw-40000-adaptive12.trace.json.gz": "dbf28b11ed416b01307b4125d413ce42530cb1ab5a1e48f143a42b33262aee06",
+    "results/robotics-staged-extension/episodes/scene-118-draw-40000-fixed8.json": "c237143084749ab5dbae6c68b59778c83e4e3489e07e93f26bbebf60e65650d1",
+    "results/robotics-staged-extension/episodes/scene-118-draw-40000-fixed8.trace.json.gz": "47abafd1fd12d288a4704fff6c6911c7f6c554e7c07f622d92907517025b9670",
+    "results/robotics-staged-extension/episodes/scene-118-draw-40000-staged15.json": "e25890b0268f2c685ed44d8b9dadc7f51ea399e0edcb8a9bfe920f2a2d40acb4",
+    "results/robotics-staged-extension/episodes/scene-118-draw-40000-staged15.trace.json.gz": "7db3f137ab10b0387f560c0bdcc0b7c07b14005e4170dbd4f4353d05b38e795e",
+    "results/robotics-staged-extension/episodes/scene-119-draw-40000-adaptive12.json": "1b847e79fd63a2e7b7bf75249b93b4c1f4c1cfd839ed4334c0af2b042d6e70ec",
+    "results/robotics-staged-extension/episodes/scene-119-draw-40000-adaptive12.trace.json.gz": "5a869d603b7d6a0a6fa39463b583d458c6b13f96537e382e9b283b0562519333",
+    "results/robotics-staged-extension/episodes/scene-119-draw-40000-fixed8.json": "2b5ca62cc6c5104c026a454e9c3e0647f33f7b9dc91c72eb66aa9c7057fe91b3",
+    "results/robotics-staged-extension/episodes/scene-119-draw-40000-fixed8.trace.json.gz": "a35147cd90e3b94a0e970ed521fd716b0f7b38925b020e0329fbb1d045b3d367",
+    "results/robotics-staged-extension/episodes/scene-119-draw-40000-staged15.json": "7a3d1a0f0d436a7c458cfe2f699c1203183b8f2a2d9b7ea00e72a651ec5ba3cd",
+    "results/robotics-staged-extension/episodes/scene-119-draw-40000-staged15.trace.json.gz": "9cb18b566fd15239310a870c16d33b4d0ed373c0d57ebccd02ace7ac4bd35857",
+    "results/robotics-staged-extension/episodes/scene-120-draw-40000-adaptive12.json": "75ad432af20860d39432c323d01b31791837063ec0a734c45530c0343ed4314a",
+    "results/robotics-staged-extension/episodes/scene-120-draw-40000-adaptive12.trace.json.gz": "7d6f7b85847e3ff9f93b0ebb85b9f50dba2a1e44ddb258ac178dbe7e5b7a7f8a",
+    "results/robotics-staged-extension/episodes/scene-120-draw-40000-fixed8.json": "1d222a23a116a19f684e689b03e6bd4bb879e228c6109d90789821decd6f0628",
+    "results/robotics-staged-extension/episodes/scene-120-draw-40000-fixed8.trace.json.gz": "3b9906880421753710dd90892047302806c09cb3d58ba9b03b02ed3fd36eae18",
+    "results/robotics-staged-extension/episodes/scene-120-draw-40000-staged15.json": "55e580ee6413089d96c50263aa76a3fbf8cfbff4f8bcf98f7e85d39b4d5118f4",
+    "results/robotics-staged-extension/episodes/scene-120-draw-40000-staged15.trace.json.gz": "5b6cf6a9398625d06a2afcf7093b1cf52b1bf10888dde326f262d7c62bf73832",
+    "results/robotics-staged-extension/episodes/scene-121-draw-40000-adaptive12.json": "56c0e54c623c1608c14d6c393bcd0d66dedaa05f7cf6fce59fe7e84b8ebed80c",
+    "results/robotics-staged-extension/episodes/scene-121-draw-40000-adaptive12.trace.json.gz": "ba2b32267581afea50f1c8714b01953efe42292d59445926bd2913c799c4f0ed",
+    "results/robotics-staged-extension/episodes/scene-121-draw-40000-fixed8.json": "26fff60f3e97a63006d36577a59fce8d047c6f76c221e15868eade414e5a4ca5",
+    "results/robotics-staged-extension/episodes/scene-121-draw-40000-fixed8.trace.json.gz": "940da5e8f5ce70eb9bdbbc47ad0ad6ec29bd38516b048276ab377b27bf695ffc",
+    "results/robotics-staged-extension/episodes/scene-121-draw-40000-staged15.json": "e667cc26aa582fe24f45376ea245a59b6c7d1ffd9e52c7d3a56b4cd87e1a2d4a",
+    "results/robotics-staged-extension/episodes/scene-121-draw-40000-staged15.trace.json.gz": "97f355a5ea2bb3bc12d07781232c9ecaf145badd54576d095f1d9b9f6f380c97",
+    "results/robotics-staged-extension/episodes/scene-122-draw-40000-adaptive12.json": "a462ffbaa8fcdd72727b35b11b0dda4a68ddc5991ff87138dce3878842a4c117",
+    "results/robotics-staged-extension/episodes/scene-122-draw-40000-adaptive12.trace.json.gz": "615dd4738efa018af33939ea13827f6cefb01f5a13243cd0c7957c7bf94e5f7d",
+    "results/robotics-staged-extension/episodes/scene-122-draw-40000-fixed8.json": "7e0a6ade47f1c23d4ad9e6a746e8c27f62b90e28226dd440fb5aef84a6803c3e",
+    "results/robotics-staged-extension/episodes/scene-122-draw-40000-fixed8.trace.json.gz": "b4939d6df023375b3fe2f119ae9ac55a16fc6040ae1ef8c60d17145e0ade15ef",
+    "results/robotics-staged-extension/episodes/scene-122-draw-40000-staged15.json": "4d3029efb4c6b4acbb5cd978c2dbf3012a4698a49d9857739878c8ceb12f25ba",
+    "results/robotics-staged-extension/episodes/scene-122-draw-40000-staged15.trace.json.gz": "acbfd96a0ada19b4777b0a0e322a687bbb9cb90f1906304cf3d9a85023937b0e",
+    "results/robotics-staged-extension/episodes/scene-123-draw-40000-adaptive12.json": "1333eb02243d569a370b7a04189d17255f56af01191b411cdfde8f39922e7761",
+    "results/robotics-staged-extension/episodes/scene-123-draw-40000-adaptive12.trace.json.gz": "4217efc1379f4048b58f379a14736a41c6b0f5956abea9828ba7d82729e1f49d",
+    "results/robotics-staged-extension/episodes/scene-123-draw-40000-fixed8.json": "0579743dea741f1d1f62fec597656b7112ae49c9de93a96208a3c5d15e81d524",
+    "results/robotics-staged-extension/episodes/scene-123-draw-40000-fixed8.trace.json.gz": "f3a60c08b7fd5cec11e9892411a7f8cde8bf288a6b627e9f5587acbb76dcb902",
+    "results/robotics-staged-extension/episodes/scene-123-draw-40000-staged15.json": "6d23204efebcbf187f87d5e8a6f10c2f9b8361cb18f3c85a63bf481c5d736b89",
+    "results/robotics-staged-extension/episodes/scene-123-draw-40000-staged15.trace.json.gz": "8838dc20f06e7a23854e10c63d585723b5ce1079faa3fcc5534214c7996486dc",
+    "results/robotics-staged-extension/episodes/scene-124-draw-40000-adaptive12.json": "5434d0d7b113f6af98f273525e721a30b08a893fbe8a54e8b6644a754f8f0884",
+    "results/robotics-staged-extension/episodes/scene-124-draw-40000-adaptive12.trace.json.gz": "3fc6ceffccaac60a810832bab0ce59e7947ef9e51d64e13455c59c63900d1d6a",
+    "results/robotics-staged-extension/episodes/scene-124-draw-40000-fixed8.json": "72c4cecc4226135a97d3f07d538f39e4c0673108f9438ae46c2e099ca795461d",
+    "results/robotics-staged-extension/episodes/scene-124-draw-40000-fixed8.trace.json.gz": "7f152757034fe9e45bdb990e74bdf833dc4ff8ed9b4ec8e3f037663936302c29",
+    "results/robotics-staged-extension/episodes/scene-124-draw-40000-staged15.json": "441e6b97f54ac2d85060fe4031ecdeee84db3c44ef8c0da557579fcef1fe902d",
+    "results/robotics-staged-extension/episodes/scene-124-draw-40000-staged15.trace.json.gz": "b62f35b1ad76bfe2fb460f511773b4b33f71413ec749c74a22e90c81e0c2ff7b",
+    "results/robotics-staged-extension/episodes/scene-125-draw-40000-adaptive12.json": "474017aa02a18fb51a7dda2a8149ade527c1bea12dab4c44ec53d9ba2bbd5d49",
+    "results/robotics-staged-extension/episodes/scene-125-draw-40000-adaptive12.trace.json.gz": "1f050a62f12c86ba8affdf11104c9377e94fd725bef38aa3a02f901c7eb06e8a",
+    "results/robotics-staged-extension/episodes/scene-125-draw-40000-fixed8.json": "dc60a946107ded3aed336cf39b7d8f5813d1370da0bd3f2dedbfc2e5611cbdb1",
+    "results/robotics-staged-extension/episodes/scene-125-draw-40000-fixed8.trace.json.gz": "0dae9d1a47a88e56098eebe7431d4af5b89bd694b55065ccf025aa296de10679",
+    "results/robotics-staged-extension/episodes/scene-125-draw-40000-staged15.json": "ce621d04f04d90869895dcb06e62e4a385a6dad70042dac0187944b7570bb076",
+    "results/robotics-staged-extension/episodes/scene-125-draw-40000-staged15.trace.json.gz": "c1545671bcb84fd2e6a7e34afccbd24078e2f20ff5774fc4cecbb8a874d902fe",
+    "results/robotics-staged-extension/episodes/scene-126-draw-40000-adaptive12.json": "fef2ead382eeacfaa12c269af26c80524c2392f371a96546c255eb3b9267d345",
+    "results/robotics-staged-extension/episodes/scene-126-draw-40000-adaptive12.trace.json.gz": "f343a1d8ab93d10e1cb44346265d489228dbcaab296dfd7e91117883b68ae7b6",
+    "results/robotics-staged-extension/episodes/scene-126-draw-40000-fixed8.json": "490716f3b4a4aee8af840c3457ba640c28432af3917aae375ceb5c556f6a9a10",
+    "results/robotics-staged-extension/episodes/scene-126-draw-40000-fixed8.trace.json.gz": "e67a06aaf6899120436954702abbc99b0a168c950f24cc3bb08192f8fa0cebe5",
+    "results/robotics-staged-extension/episodes/scene-126-draw-40000-staged15.json": "bc0a94b9fc0ac2e1e360aeba322897728b27e9b079db49a244c18c1e933db68d",
+    "results/robotics-staged-extension/episodes/scene-126-draw-40000-staged15.trace.json.gz": "436876d01665fa68c0da310f5325c5d0fd4a4b69e39aecad04ceab085b574212",
+    "results/robotics-staged-extension/episodes/scene-127-draw-40000-adaptive12.json": "d3badd7f35c66b1edb563bcf652808525f8e621de23ef0578e51e0c1bb091d34",
+    "results/robotics-staged-extension/episodes/scene-127-draw-40000-adaptive12.trace.json.gz": "cad92903a9e89a6a3512c24c0d46cefae3033210adec31308bbcf2244a6843f8",
+    "results/robotics-staged-extension/episodes/scene-127-draw-40000-fixed8.json": "68a4f666f5fb88e2ac8bfff5b67ebb50cd17999b18f990bff8b335d9e3d629ba",
+    "results/robotics-staged-extension/episodes/scene-127-draw-40000-fixed8.trace.json.gz": "adf14e2633d5383620c213e9623daf1506954dff2285ec2044bdd307df3206d7",
+    "results/robotics-staged-extension/episodes/scene-127-draw-40000-staged15.json": "a96cf4c65cc5b82603c5ff27030b3975e78c5f40a0fcd2f13541d383d519173d",
+    "results/robotics-staged-extension/episodes/scene-127-draw-40000-staged15.trace.json.gz": "cdb24eaeb1ae4c23a75f0b00c17bc423fb1b1489dbe3e052c4273a05c9780842",
+    "results/robotics-staged-extension/episodes/scene-128-draw-40000-adaptive12.json": "174e580ac109c7e783c704bce4521bf35ab763d23b355f8120251dcfcd325ba5",
+    "results/robotics-staged-extension/episodes/scene-128-draw-40000-adaptive12.trace.json.gz": "11f464284e3aba54bc9546e3011caa40f95d6176165b9df54dee3b92c9db6c3e",
+    "results/robotics-staged-extension/episodes/scene-128-draw-40000-fixed8.json": "60526aa9099c13a519d3fc656b28406691229659b1bc8df23fc8604a32ede450",
+    "results/robotics-staged-extension/episodes/scene-128-draw-40000-fixed8.trace.json.gz": "93d4b245db5ffcd8f3c09234fa344b8e8931743f10f5111c7537096c99b11ef7",
+    "results/robotics-staged-extension/episodes/scene-128-draw-40000-staged15.json": "d24f1bec982aaa961798f2bc207b4a0cd08181139692b9d8ce3068da5cde2372",
+    "results/robotics-staged-extension/episodes/scene-128-draw-40000-staged15.trace.json.gz": "41784b6268b2425416c4e33e9ae15da63b510a1fa6c03ae24e721d2ba8534c23",
+    "results/robotics-staged-extension/episodes/scene-129-draw-40000-adaptive12.json": "016f9ef910115e3196179fc4e516f5aa3c5efee2819e0f1a7d50fd030e22b893",
+    "results/robotics-staged-extension/episodes/scene-129-draw-40000-adaptive12.trace.json.gz": "2df4fc195d218db554e12e7efc5cf76cc0040b58122fc7666741a097d7fb8c6a",
+    "results/robotics-staged-extension/episodes/scene-129-draw-40000-fixed8.json": "47f9458f62d80511c947f1585cead64ca87afbd47c813b659a9e6186a1f506f2",
+    "results/robotics-staged-extension/episodes/scene-129-draw-40000-fixed8.trace.json.gz": "8d448b5eb0018bf791a4b5ed60e0ccefdec1bfdf1f6fcd9f724438084db55cc7",
+    "results/robotics-staged-extension/episodes/scene-129-draw-40000-staged15.json": "fc8daa041e3e6ad0f78cf8b83851333368c8102445ddc137d741f552acf3b56a",
+    "results/robotics-staged-extension/episodes/scene-129-draw-40000-staged15.trace.json.gz": "856b387d033714a10c48280a53f4b5319d5ea0f4ec77a1e05569cbc1a6eaaf7a",
+    "results/robotics-staged-extension/episodes/scene-130-draw-40000-adaptive12.json": "ef7c2b4d46e31631d2a26eaf4bd461444ded6d77725459e916096ce549d81333",
+    "results/robotics-staged-extension/episodes/scene-130-draw-40000-adaptive12.trace.json.gz": "eb05412274b24d52d63342c9050332437454de593a855fa514b877665b036c65",
+    "results/robotics-staged-extension/episodes/scene-130-draw-40000-fixed8.json": "d3a07ad72c55060efdc84d441df45a8076ee293c8a02ab7a3b8d985a3cb28cb1",
+    "results/robotics-staged-extension/episodes/scene-130-draw-40000-fixed8.trace.json.gz": "fa48bd8b55c36de81f3dd3e0fe8169798e485d532f32330d858488c03202a2f5",
+    "results/robotics-staged-extension/episodes/scene-130-draw-40000-staged15.json": "6c818649a108591af4595c2564e6a420836e53a05a06edf07e924066d06353f5",
+    "results/robotics-staged-extension/episodes/scene-130-draw-40000-staged15.trace.json.gz": "40fc4d19775d50c834adc64aeaacb31af6399fa3549475c619a02456bad5f4f1",
+    "results/robotics-staged-extension/episodes/scene-131-draw-40000-adaptive12.json": "669845b641087c6d3b1835f0da11a1c7ecb7cca80a28df905fc3c15c85a56662",
+    "results/robotics-staged-extension/episodes/scene-131-draw-40000-adaptive12.trace.json.gz": "37393cc51c27ec2f35b48690d337d26e22289f2d6f70f61116692951ee49a45d",
+    "results/robotics-staged-extension/episodes/scene-131-draw-40000-fixed8.json": "74e68630a866452ed38544471917324e7a70df81fbe5e62328ea90c675f317b2",
+    "results/robotics-staged-extension/episodes/scene-131-draw-40000-fixed8.trace.json.gz": "fd16d93bf4716a8fc64e695a607d4a4e852ca8b2b03c9c26d447239ca76ada6f",
+    "results/robotics-staged-extension/episodes/scene-131-draw-40000-staged15.json": "95c137e1fdba0bc442a6908adc936024f02aacd9d602a19866fe4c9644dd68c7",
+    "results/robotics-staged-extension/episodes/scene-131-draw-40000-staged15.trace.json.gz": "8dd465f94a1c82bb60fe37e54868f0aa1b691059a39de8cb20e5c3051607f137",
+    "results/robotics-staged-extension/episodes/scene-132-draw-40000-adaptive12.json": "fb2778642456b31cce45b39b13aa5fd3561e6fb06782ea5b0391b0bcc6484571",
+    "results/robotics-staged-extension/episodes/scene-132-draw-40000-adaptive12.trace.json.gz": "d5115f1d44629fafff9b3d595c76cf9b4a8010dd0f6615f300b7eebe16b15af6",
+    "results/robotics-staged-extension/episodes/scene-132-draw-40000-fixed8.json": "96ea146e7cb94767572021b08074da6cd2c1dca5ae8f86f7ee7f1a1fa621f99e",
+    "results/robotics-staged-extension/episodes/scene-132-draw-40000-fixed8.trace.json.gz": "12306e8ba8b6676f6491fb4cfabcf2d343776c6e95e7a335ff4f12c2ce21cf29",
+    "results/robotics-staged-extension/episodes/scene-132-draw-40000-staged15.json": "2942d4e3bc6ef616e01f99eec624f4a3639c1be42305a3816883549438d95ac5",
+    "results/robotics-staged-extension/episodes/scene-132-draw-40000-staged15.trace.json.gz": "204207ee031b9617fcb1843acfa98c9dda2ff42d7d686d91d51414facbd3e124",
+    "results/robotics-staged-extension/episodes/scene-133-draw-40000-adaptive12.json": "d79e550958bf835019043e8fb6cd6ad19b8ee707560c13ddadf4bd982dab61b4",
+    "results/robotics-staged-extension/episodes/scene-133-draw-40000-adaptive12.trace.json.gz": "b6e7a7a47daa20d69b988006ba1d5c4852141b0e33674a39931a3016f9a481d1",
+    "results/robotics-staged-extension/episodes/scene-133-draw-40000-fixed8.json": "2ffd035a158723a50b55823055dcd56beaaf041fe544b1d915737acaff485cec",
+    "results/robotics-staged-extension/episodes/scene-133-draw-40000-fixed8.trace.json.gz": "9cc09d14065f0ba37f501df3154087ae9bd9980cda411712f34ed59a160f8704",
+    "results/robotics-staged-extension/episodes/scene-133-draw-40000-staged15.json": "301614ece1e308ede9adadff5ffdc6e489c4b3ec558bbf14402c49a045640bd8",
+    "results/robotics-staged-extension/episodes/scene-133-draw-40000-staged15.trace.json.gz": "31c234990788b27a98b3ee691aeced9d627642c2aec199d54a4320b6fa294118",
+    "results/robotics-staged-extension/episodes/scene-134-draw-40000-adaptive12.json": "e067dd624e5c1bd6f18c17f7bbe4b6427ce2d3eb034834350c450dbe66a34064",
+    "results/robotics-staged-extension/episodes/scene-134-draw-40000-adaptive12.trace.json.gz": "74ef43eeb2e11798cc49870e5e737cf51a43949c1f15494150aa03181f1c9311",
+    "results/robotics-staged-extension/episodes/scene-134-draw-40000-fixed8.json": "8d6851d9723a12c6def9da0ce8d1bfd3149fe3938a7d6f98c098a77e59a37273",
+    "results/robotics-staged-extension/episodes/scene-134-draw-40000-fixed8.trace.json.gz": "c7ed460172b1bd4972783cf97b955c805740755377cbd07c6b89ee3095448b0c",
+    "results/robotics-staged-extension/episodes/scene-134-draw-40000-staged15.json": "14df62797cccf0127bb608e2b73240623a72b9385889eca6202f7aa7a4e3439e",
+    "results/robotics-staged-extension/episodes/scene-134-draw-40000-staged15.trace.json.gz": "10a37cad4ac712d230b71700565f95e4392b11c3b4338bf23797e9a1c287cdd1",
+    "results/robotics-staged-extension/episodes/scene-135-draw-40000-adaptive12.json": "d64b426f6ecdf2bc00b5175db0f0e096306b2b1607e78e62f68dd3ad852eaec6",
+    "results/robotics-staged-extension/episodes/scene-135-draw-40000-adaptive12.trace.json.gz": "de4ed1355fdc91b1c55d0fd75f892e6ed7203e7dbd618022dd891af9cdf63f30",
+    "results/robotics-staged-extension/episodes/scene-135-draw-40000-fixed8.json": "7ef1058c9e89926a452f38d39313a374badd43cc908d71fad9c1147d9dcf2a6b",
+    "results/robotics-staged-extension/episodes/scene-135-draw-40000-fixed8.trace.json.gz": "bac593b88e284db93ae887a30696d88abc2913479bd3f41c5afddfc2fbd746f1",
+    "results/robotics-staged-extension/episodes/scene-135-draw-40000-staged15.json": "67286da5314b66cdf9a7470a18625507dac9b9f86d02d4c1d7ded4d895017ae8",
+    "results/robotics-staged-extension/episodes/scene-135-draw-40000-staged15.trace.json.gz": "2401418d8d6bf7358c5c02135d7cdcb500a422c1aeedbe83531c7dbc643c9282",
+    "results/robotics-staged-extension/episodes/scene-136-draw-40000-adaptive12.json": "e9b2b887144872fba2bfe9096af8406fa07a3cee59c9e5b4a3fd1c70a5827a7f",
+    "results/robotics-staged-extension/episodes/scene-136-draw-40000-adaptive12.trace.json.gz": "48072bbf52d14a6b3f0104c29888cd11a04d8224fa308685dd5576c5d2b42d02",
+    "results/robotics-staged-extension/episodes/scene-136-draw-40000-fixed8.json": "4fc081109ef9f6f40a3071311ecc6d1e228f0641c5076b79ca34aebebd9964f7",
+    "results/robotics-staged-extension/episodes/scene-136-draw-40000-fixed8.trace.json.gz": "f19d0437d51bc93b19ff56ef65859d0f9436f02d39c25cd9fa509be38ce8a452",
+    "results/robotics-staged-extension/episodes/scene-136-draw-40000-staged15.json": "6f2eaa9f9d09119aafe345d795d4027ef265dcd268e3770aca1c9d2354a61acf",
+    "results/robotics-staged-extension/episodes/scene-136-draw-40000-staged15.trace.json.gz": "fe637ab1ac7a1bc53d146e044dec111f63adac01b87bf3a1bb29b8356cfb0c5b",
+    "results/robotics-staged-extension/episodes/scene-137-draw-40000-adaptive12.json": "b93ccee214ad328f09f73f5f25f6b0de8f5100e51f4cf4f0945ab4f95719c57c",
+    "results/robotics-staged-extension/episodes/scene-137-draw-40000-adaptive12.trace.json.gz": "870e138710a3d67439c6d77c812f1fb1f53917be9b8dbe9a19137654cfb47860",
+    "results/robotics-staged-extension/episodes/scene-137-draw-40000-fixed8.json": "8f460846f16527ad4b883f9f885476e589019fc994523866aa88b1e493a5df1a",
+    "results/robotics-staged-extension/episodes/scene-137-draw-40000-fixed8.trace.json.gz": "621f260b141c71b0988751b04087bba2e1c7490cb725b46ba2210e758694c7d5",
+    "results/robotics-staged-extension/episodes/scene-137-draw-40000-staged15.json": "4ee0ec3d51a8a5ecf186e407cf675b0d9618d27b13fed3249b759915ee72aef3",
+    "results/robotics-staged-extension/episodes/scene-137-draw-40000-staged15.trace.json.gz": "d642af922b594c53a9decaf39024da899571d38157487b632338b373fada429c",
+    "results/robotics-staged-extension/episodes/scene-138-draw-40000-adaptive12.json": "59417a754bcb432d569d83e9bbe76f022dbab7d1aa5bd4e5a1ba4cf1f357c765",
+    "results/robotics-staged-extension/episodes/scene-138-draw-40000-adaptive12.trace.json.gz": "edb2f52612d69df8fc8d6a13cfcdb1cbfc226055205a3401d1188ac3f440ec58",
+    "results/robotics-staged-extension/episodes/scene-138-draw-40000-fixed8.json": "f17da853b807edde33a149891a5eb8574935ea6f01be358ab89c3e5f3c297520",
+    "results/robotics-staged-extension/episodes/scene-138-draw-40000-fixed8.trace.json.gz": "c8315858c098ca706491b23b504721a1dc8be34dbe234eefe488c6cd521f732f",
+    "results/robotics-staged-extension/episodes/scene-138-draw-40000-staged15.json": "e9a55a922d2bd9841aa3b95d31b970abe1b74dfd576bedcb8a34017af836a545",
+    "results/robotics-staged-extension/episodes/scene-138-draw-40000-staged15.trace.json.gz": "b5083f171323165a2a9717e8e1b3bb79dce518ea36a6826ac1f3783eaec08031",
+    "results/robotics-staged-extension/episodes/scene-139-draw-40000-adaptive12.json": "6b5edd6d4ed4fd49ac4995781ff0f229fe3eb13d8e283404e636e1cb5b63bbb3",
+    "results/robotics-staged-extension/episodes/scene-139-draw-40000-adaptive12.trace.json.gz": "691d8e0b91aa2414eaa1b37bff23dae06e172fc4e3c035b87ab2c023c0467824",
+    "results/robotics-staged-extension/episodes/scene-139-draw-40000-fixed8.json": "d7619c36fd1896d5568723edd441e44f92cc7a8b65b7448b6c30e2be3ac95a20",
+    "results/robotics-staged-extension/episodes/scene-139-draw-40000-fixed8.trace.json.gz": "e8e9b778a615484b65dedcc066e4c98c4a9cca83fc6a7b44969ba86187ac0d95",
+    "results/robotics-staged-extension/episodes/scene-139-draw-40000-staged15.json": "0312784b7835abb47a3ad439f289bb2127e768a7c6696f171320a554e7a60f75",
+    "results/robotics-staged-extension/episodes/scene-139-draw-40000-staged15.trace.json.gz": "192d3b8db3146b370f6edf9e27a4015edfe7b9b537da1c0b0f6bd021e4551563",
+    "results/robotics-staged-extension/episodes/scene-140-draw-40000-adaptive12.json": "3ebdbf36dcc7b35e6544e509c95226b9c79d199bbf658d64cdedc8e62affafbe",
+    "results/robotics-staged-extension/episodes/scene-140-draw-40000-adaptive12.trace.json.gz": "aa7b57fb71a9192dd303e59effcaeec9a323b6d63e7a1a19036c21b76aac4909",
+    "results/robotics-staged-extension/episodes/scene-140-draw-40000-fixed8.json": "2d6fcd2286aa1cad223dabba343068abd994dbf22f7f0d3ab72eff51e8513f1b",
+    "results/robotics-staged-extension/episodes/scene-140-draw-40000-fixed8.trace.json.gz": "5de830377a25e20bafde11e2ef55669851db31ce0bfc079cd6ffa899d4ef9209",
+    "results/robotics-staged-extension/episodes/scene-140-draw-40000-staged15.json": "932c588e59b6eba76ce98db7b24445bef753192037c396d4844a11b03de204a4",
+    "results/robotics-staged-extension/episodes/scene-140-draw-40000-staged15.trace.json.gz": "43a62adfb24e5b27e0f8081f5a6e1833b28599a14659f4be3cbefdfc69ca3b39",
+    "results/robotics-staged-extension/episodes/scene-141-draw-40000-adaptive12.json": "54f6898cf79cc738c66a4d62156914064baac8318a6500a7a7de52cfa23c2a84",
+    "results/robotics-staged-extension/episodes/scene-141-draw-40000-adaptive12.trace.json.gz": "b2e54eae08705e35789e1102120fff07142fb60441e325cdae5751be725f6847",
+    "results/robotics-staged-extension/episodes/scene-141-draw-40000-fixed8.json": "14e471514d580578029b5ae4a197a118e94dc6480671b0298d8fe01c0d9e9e21",
+    "results/robotics-staged-extension/episodes/scene-141-draw-40000-fixed8.trace.json.gz": "baf6e46c393093adf19f066a72672e11c556433c3ebaf389a7af76c0501a547f",
+    "results/robotics-staged-extension/episodes/scene-141-draw-40000-staged15.json": "906873fb3db3c150e8264f1740331159179c812662a145508dedd3e018dfd21b",
+    "results/robotics-staged-extension/episodes/scene-141-draw-40000-staged15.trace.json.gz": "67b3fca4b99827742696c7a02b52b5a381a6ad9c8f0a9d0d3dce8b33008211e6",
+    "results/robotics-staged-extension/episodes/scene-142-draw-40000-adaptive12.json": "9e241b59b1a674562d3477fbb0b4e53611afb30172275a2731ea61c321559ddd",
+    "results/robotics-staged-extension/episodes/scene-142-draw-40000-adaptive12.trace.json.gz": "dc9bf4135f2017380c0fe6724e3b9d802d8f5d8d42b680134d3c4d503d7942d9",
+    "results/robotics-staged-extension/episodes/scene-142-draw-40000-fixed8.json": "655f8506690138a9eae389010fe2b18a8a61f55adab4ba0682d8e01ef643edd1",
+    "results/robotics-staged-extension/episodes/scene-142-draw-40000-fixed8.trace.json.gz": "1c5fe35060049ab466e38e2440fa38c064a926134a42b12de213683783581272",
+    "results/robotics-staged-extension/episodes/scene-142-draw-40000-staged15.json": "77d490758fd09bb824575814b25df5b1f6ad2d95965b36e2a5bae81aaf66d5db",
+    "results/robotics-staged-extension/episodes/scene-142-draw-40000-staged15.trace.json.gz": "1073e3f4c28498db434e91f297e3d8f523e1a9b98fc76541c1497e911423d404",
+    "results/robotics-staged-extension/episodes/scene-143-draw-40000-adaptive12.json": "27cd23991a6491c377e54b70223c92b92628ac9f9ac3b6497c282da58239e2c3",
+    "results/robotics-staged-extension/episodes/scene-143-draw-40000-adaptive12.trace.json.gz": "cc3317d471cb8822a82d858e36a469547413b8927b39c600bab81ff5f90adcf8",
+    "results/robotics-staged-extension/episodes/scene-143-draw-40000-fixed8.json": "a93fdaa71a738a35044ea40d9efbee5a5ce4083f776e22d82f3fe7dc0f16b38d",
+    "results/robotics-staged-extension/episodes/scene-143-draw-40000-fixed8.trace.json.gz": "f429ed2a1a8ba3f806f177867230f7813fde44ddf47a3390fe2b0c1716e2d004",
+    "results/robotics-staged-extension/episodes/scene-143-draw-40000-staged15.json": "1b57f09b1699c85cd8474cfc46d64a7391f498c3d65ab9351369ea6bd7b6a4fa",
+    "results/robotics-staged-extension/episodes/scene-143-draw-40000-staged15.trace.json.gz": "0aa720f22accd201441dd90f24ee25c66c93985e827a1cd62dc379ab9aea322d",
+    "results/robotics-staged-extension/episodes/scene-144-draw-40000-adaptive12.json": "3ae0228219b99fbfcf149ed8d4b3de36021e74ec7c4e7fd95cc063b3d94efd8d",
+    "results/robotics-staged-extension/episodes/scene-144-draw-40000-adaptive12.trace.json.gz": "5c43d02b19b3bd75400c73404a81a650e6603e94c4a619904286887af869dc88",
+    "results/robotics-staged-extension/episodes/scene-144-draw-40000-fixed8.json": "52a1e3c19fb23de5ca2d4bdab12cb93d47046c11c8df691672c441b24169b70c",
+    "results/robotics-staged-extension/episodes/scene-144-draw-40000-fixed8.trace.json.gz": "7309c3e30eda033c45c16d59a214d31590ff1d613f65afe7bc933e10681cb939",
+    "results/robotics-staged-extension/episodes/scene-144-draw-40000-staged15.json": "64c4acdd42eba958f310c6c540267c8b652f06d6e35f003b1467335f6d1d0394",
+    "results/robotics-staged-extension/episodes/scene-144-draw-40000-staged15.trace.json.gz": "6897a6c14d7a5b388ccd7629d27726469518817cef834d9f13c1c97e876d807c",
+    "results/robotics-staged-extension/episodes/scene-145-draw-40000-adaptive12.json": "4135eacfbe210c2ad3c9223c2b7b384c52f38d14ab82553e6c9e2d614daac2e5",
+    "results/robotics-staged-extension/episodes/scene-145-draw-40000-adaptive12.trace.json.gz": "6bb3b14045f34e81b165f2f0120ae9e9180b3703fb06a770b8934ad3ceac35ce",
+    "results/robotics-staged-extension/episodes/scene-145-draw-40000-fixed8.json": "3829f857671b1667a542e2cbfa597474a1e3d84929927b595fdaf6a8b347bda5",
+    "results/robotics-staged-extension/episodes/scene-145-draw-40000-fixed8.trace.json.gz": "7597c2abd5d2fd9af04e0bfd5f8422dd05cdcbb499d92f1c7df114ca2bb6f9d2",
+    "results/robotics-staged-extension/episodes/scene-145-draw-40000-staged15.json": "e31145ad1331a80d05e3727a405ab1e9c16347382da11a27f6583f1f9b0d4f63",
+    "results/robotics-staged-extension/episodes/scene-145-draw-40000-staged15.trace.json.gz": "0e4114a5f9068e6da4b3e6c45cf97c86456b5c69eb052afb1ee1a2a9b8299013",
+    "results/robotics-staged-extension/episodes/scene-146-draw-40000-adaptive12.json": "71a13549834877e08549ec0cf2e0537353b310b973d5913f1f30859d247fbb0d",
+    "results/robotics-staged-extension/episodes/scene-146-draw-40000-adaptive12.trace.json.gz": "34a402c32d65a99028abaa22367ecd6989ebc34b3889dda418a9f788dda58dc4",
+    "results/robotics-staged-extension/episodes/scene-146-draw-40000-fixed8.json": "e86968998e33e648525f29fc2b440794644b0c46d873a1edd0c8384681e6cfea",
+    "results/robotics-staged-extension/episodes/scene-146-draw-40000-fixed8.trace.json.gz": "9920f8def173d1230fbc07c31d00adc37464f91fa258d9284d79339533a49878",
+    "results/robotics-staged-extension/episodes/scene-146-draw-40000-staged15.json": "2d5f486e3aa96aef2d4860b8eb163e051aa8fd67d3cce3d4987d2ef8acb34fd0",
+    "results/robotics-staged-extension/episodes/scene-146-draw-40000-staged15.trace.json.gz": "4019b4035a47029e4e1ebe1ed78450174b149e2ecb7a56d733a84ac0337d4cff",
+    "results/robotics-staged-extension/episodes/scene-147-draw-40000-adaptive12.json": "01e6866d419a69d813efd6fa81fe00a0034e6fb3293bd3a9dfc1a844834d1990",
+    "results/robotics-staged-extension/episodes/scene-147-draw-40000-adaptive12.trace.json.gz": "379f5357cde7ed1192ab3e3ddc06f92af6de279b60465b49fcff847057627301",
+    "results/robotics-staged-extension/episodes/scene-147-draw-40000-fixed8.json": "bc6720a4e2163aca0d562eb5ece25a19a5a0a2673dca75555ff6f67fb25c4625",
+    "results/robotics-staged-extension/episodes/scene-147-draw-40000-fixed8.trace.json.gz": "1cd56703ac37952da7867d59f5e6e5218dbf25c72b28d8f6bfb9cb7ebdd98600",
+    "results/robotics-staged-extension/episodes/scene-147-draw-40000-staged15.json": "1b4f61ad5f62b1cb665e4349cf8cb691038060737e18052b625f0efb83a67b58",
+    "results/robotics-staged-extension/episodes/scene-147-draw-40000-staged15.trace.json.gz": "bbc1addb165d090009b13c5809341632d7479635965defb1f27d5be05dd255b1",
+    "results/robotics-staged-extension/episodes/scene-148-draw-40000-adaptive12.json": "37b6489967dc043ff3e73afb124c9b46566e8bc6ea96adf91261dcb03eb59710",
+    "results/robotics-staged-extension/episodes/scene-148-draw-40000-adaptive12.trace.json.gz": "96b4ded7e35dddca2004c4bf963107db9bed63fe22b83329efcef77e66bedd4e",
+    "results/robotics-staged-extension/episodes/scene-148-draw-40000-fixed8.json": "c49029e475d6f6592b478c2859c08ac1656fb48ee8de733e29f39b06186cc302",
+    "results/robotics-staged-extension/episodes/scene-148-draw-40000-fixed8.trace.json.gz": "4532256bac8264c1e21f20054e956354e934bafafc49f5bb9c0bfaa093b8b180",
+    "results/robotics-staged-extension/episodes/scene-148-draw-40000-staged15.json": "db9c70293af85a48b3b239408d72affbf155fafe3c7a9f0cdac75d6d3f4055a0",
+    "results/robotics-staged-extension/episodes/scene-148-draw-40000-staged15.trace.json.gz": "d279f5819aa63ed6f3678b128a31d8b518ae4e9cabd702cd3e89f1ca9cf748fc",
+    "results/robotics-staged-extension/episodes/scene-149-draw-40000-adaptive12.json": "beaa422102d703953f7473ca4704516210db9c39d8292a803eadc156da90aa1d",
+    "results/robotics-staged-extension/episodes/scene-149-draw-40000-adaptive12.trace.json.gz": "924557747863c8a33dfb6590b73ccb423f92ce8c14cb8402e6b25183c540df0a",
+    "results/robotics-staged-extension/episodes/scene-149-draw-40000-fixed8.json": "19eeedaab6a20f642c825acbb1ff1758f62c54ee0c2d09010538e50ce19147e5",
+    "results/robotics-staged-extension/episodes/scene-149-draw-40000-fixed8.trace.json.gz": "9ef746767f916a385d9c61eac00f4a7446b3ff3e86de269f053a89965601d016",
+    "results/robotics-staged-extension/episodes/scene-149-draw-40000-staged15.json": "59c80ec54de6238a305e27250f2d28d7f1fedf516bb1ff9d79ccbe1ea6d4941e",
+    "results/robotics-staged-extension/episodes/scene-149-draw-40000-staged15.trace.json.gz": "ed0cb72be782092fd61c71587fe2516ca30ba9a4332cea4155b53fe4c919abbc",
+    "results/robotics-staged-extension/episodes/scene-90-draw-30000-staged15.json": "5f71bbb52c8983f1a6a28d5798ef56404f56dcb8ba4f216b28fe5515416ca373",
+    "results/robotics-staged-extension/episodes/scene-90-draw-30000-staged15.trace.json.gz": "aedfc4faae53194d91db25abc912981f571c0370fc21e161fd3ac92b21b7a935",
+    "results/robotics-staged-extension/episodes/scene-91-draw-30000-staged15.json": "1dece29122920923a14f0184f101a9a10e2aa272cca204696a019b0093902293",
+    "results/robotics-staged-extension/episodes/scene-91-draw-30000-staged15.trace.json.gz": "68f88aefcfe4d3cf2f9ffa87c5ab6a05fb4e57a4189cc869482417b0ca0d4c5b",
+    "results/robotics-staged-extension/episodes/scene-92-draw-30000-staged15.json": "7c541cbe325bc59e15a23e857a34379317554821f32c39b19b42efde4ce0b740",
+    "results/robotics-staged-extension/episodes/scene-92-draw-30000-staged15.trace.json.gz": "44ebd15dd9e316ed2b95a24c6112fabee8c687f06d9e6fb7b889b7b436f06cd3",
+    "results/robotics-staged-extension/episodes/scene-93-draw-30000-staged15.json": "3b6774bfb43427e7c8ad1e1646f00df4e06c92f44d218c3c946a06e70b126f96",
+    "results/robotics-staged-extension/episodes/scene-93-draw-30000-staged15.trace.json.gz": "f28c7e80613a1f6b596fe022a6c26731668551272a8f864789d0fc4c159b94a0",
+    "results/robotics-staged-extension/episodes/scene-94-draw-30000-staged15.json": "9663e03a5ac6aa798e069741336870070189986989f868e196fc179837d0b7d4",
+    "results/robotics-staged-extension/episodes/scene-94-draw-30000-staged15.trace.json.gz": "4b48119c0ca559b50708437739db76137ceb63e2dcae6807f8ec69f8014c0d55",
+    "results/robotics-staged-extension/episodes/scene-95-draw-30000-staged15.json": "25ab2a49c77ea15f5ab8ad73e2600ae5fd71132d8beb3d6656bb4352de799c08",
+    "results/robotics-staged-extension/episodes/scene-95-draw-30000-staged15.trace.json.gz": "dd17ef5c828f0423e01408ff8f22ce3bd03f73b581cfa35c734791d37de4e2c9",
+    "results/robotics-staged-extension/episodes/scene-96-draw-30000-staged15.json": "79bc8994ea8a9e2374949172764bfc513548ced78f3c296cdfb615eb07d44490",
+    "results/robotics-staged-extension/episodes/scene-96-draw-30000-staged15.trace.json.gz": "1ce6460863010f9758c83205e411e9845cd646f209bb000232ce4b82451cc5ef",
+    "results/robotics-staged-extension/episodes/scene-97-draw-30000-staged15.json": "2218b471cb260526901a52dc1948ef1651f89d007dd3f9aa2fbcef5c7fd7f78e",
+    "results/robotics-staged-extension/episodes/scene-97-draw-30000-staged15.trace.json.gz": "ae4596767cc2f09e79b4b36c305ca608bbc9793c0203e1cf12dc3e88c022af13",
+    "results/robotics-staged-extension/episodes/scene-98-draw-30000-staged15.json": "dd91efa96974be0947b907c1ccdd40e3c6a91383f861c6b2b0927d9dc7dc2cf9",
+    "results/robotics-staged-extension/episodes/scene-98-draw-30000-staged15.trace.json.gz": "31d2930b4483bf75d569322f51d6edb3a5449fbc9984f37540df284e33a1d4ae",
+    "results/robotics-staged-extension/episodes/scene-99-draw-30000-staged15.json": "d7469c21560aecbf56349367ed87f6e79344848079deed72452797f140e578ec",
+    "results/robotics-staged-extension/episodes/scene-99-draw-30000-staged15.trace.json.gz": "a9965ed02720df9e3f9da72ff12ec3519b5c863278b3e3f5ad98ba6516a0f932",
+    "results/robotics-staged-extension/episodes.json": "cf42dffe7e5e96954b2910d2ccfa92a406b3ec945ee6733ceec1c5852fa851f7",
+    "results/robotics-staged-extension/forced/scene-0-draw-1234-staged15.json": "f24af4bf5be78e7f1320ccf8d2be54eb46781069861293bec1664aa99cfbdd32",
+    "results/robotics-staged-extension/forced/scene-0-draw-1234-staged15.trace.json.gz": "f1689154df622aa163ff9c5a5f1837e27d076f5e37ee8e1166efd9db7ae83979",
+    "results/robotics-staged-extension/prepare-resources.json": "4341e2823936d26b15498b1f518761304ada8842a5832658bd8eb55fc6c26f88",
+    "results/robotics-staged-extension/protocol.json": "64519c93629eefb87d7d8bf0b0dd4a1540b06a83e65aaa09fe74272a430c655f",
+    "results/robotics-staged-extension/run-resources.json": "0ac6ece647f3c922d5defb6458afaba3ba6d0d9548e168850a93122bcb4879d7",
+    "results/robotics-staged-extension/smoke/scene-0-draw-1234-adaptive12.json": "6b8feb3c50aea162009cc5c409519c4c993cf0186ab1e3f5318538dc81fb7305",
+    "results/robotics-staged-extension/smoke/scene-0-draw-1234-adaptive12.trace.json.gz": "0ec7e7620c55ae4b629d5e02bc4e36712af35d622ca8430cf8cf3777247a93ae",
+    "results/robotics-staged-extension/smoke/scene-0-draw-1234-fixed8.json": "c65ef25e12af623b1d7d7b0609ec82b23d1d4687fa6e7fa93fe1fa584dcc7234",
+    "results/robotics-staged-extension/smoke/scene-0-draw-1234-fixed8.trace.json.gz": "20d68006d97880fffb47ee2505d23a33ecf4b50063d9dbf23cfeeae9f760afaf",
+    "results/robotics-staged-extension/smoke/scene-0-draw-1234-staged15.json": "4e20b6a9aaed03ba2c45b673da60fb830fbfad3101c52f36be89d0a83b34b0c1",
+    "results/robotics-staged-extension/smoke/scene-0-draw-1234-staged15.trace.json.gz": "11d1a3886bf501fdfe05f851ef468611deab8c4499049c61995470af94cb35e7",
+    "results/robotics-staged-extension/smoke-resources.json": "cc235e1f4a2ca2a85cc28c904bb87d4447cffe4b6789fe396ccf1a78ab10d792",
+    "results/robotics-staged-extension/smoke.json": "e99b7c864021079ff74557145ea728bcc4704798c425c7e25b8b28cc2075a7a4",
+    "results/robotics-staged-extension/summary.json": "06ef73bf668e582c500b2c07b0ce060b6ae9c6da4256d57f8af758048934656e",
+    "results/robotics-stateful-budget/episodes/scene-100-draw-30000-adaptive12.json": "6c407929ec3c594457da8b2b3616228fb4f5ed4eeaf02e074c7c80b446e2cf0a",
+    "results/robotics-stateful-budget/episodes/scene-100-draw-30000-adaptive12.trace.json.gz": "d55917ef2900f2508c9d0335f860069c7b28215768346d54642fb46deb3f31c2",
+    "results/robotics-stateful-budget/episodes/scene-100-draw-30000-fixed8.json": "4fd43237ce1822d37e374666c2ee3ade802dcd46a0e5f753247aa4f003db0f68",
+    "results/robotics-stateful-budget/episodes/scene-100-draw-30000-fixed8.trace.json.gz": "1db0be29f98ba3f90c7416bd00819ac9c1d9b8c664cf3c7d5bd61f10eeb87505",
+    "results/robotics-stateful-budget/episodes/scene-101-draw-30000-adaptive12.json": "acaab3f13b56bd6396da081f4de371eb90d68abde24c7737c1dcae790d4d5242",
+    "results/robotics-stateful-budget/episodes/scene-101-draw-30000-adaptive12.trace.json.gz": "939bf32aa4c21c0e214f5b0b9e824cff8f8d318dbd64fb7c7c2a62c64062ef5f",
+    "results/robotics-stateful-budget/episodes/scene-101-draw-30000-fixed8.json": "cdd25ca594d4bee6043414fafa88ea90a30275074771872a0c761e9b284b73d3",
+    "results/robotics-stateful-budget/episodes/scene-101-draw-30000-fixed8.trace.json.gz": "4b75fd5151d5f23eed494c52db85e6afc195883c2e60db957e8510f61a048e92",
+    "results/robotics-stateful-budget/episodes/scene-102-draw-30000-adaptive12.json": "29c45728e97453ada14fb6e48f3f1de636c1f08f012b2fec53b231963cdb82c9",
+    "results/robotics-stateful-budget/episodes/scene-102-draw-30000-adaptive12.trace.json.gz": "706ffa7cc146f534e32fb014eecb97f50a44e97b9b2fcacbb734bd3e215e8fd0",
+    "results/robotics-stateful-budget/episodes/scene-102-draw-30000-fixed8.json": "b9734d4d9cf47e33babb75297715121483ef423578a9466496cd25a40d4c9575",
+    "results/robotics-stateful-budget/episodes/scene-102-draw-30000-fixed8.trace.json.gz": "6da9bda6d3a0bce770ebae2fa83536b7e56ae31a8ee98d9ffd4ad876e5d98aa1",
+    "results/robotics-stateful-budget/episodes/scene-103-draw-30000-adaptive12.json": "8fe366c8da4c50f52a4260328fc78c65a0a3e4ddd9fafb68f821643c36cc70f6",
+    "results/robotics-stateful-budget/episodes/scene-103-draw-30000-adaptive12.trace.json.gz": "3cd9fdd8668428aab7c0a3b4c10487fd9c688591bcbbb12b604d2c45435b152a",
+    "results/robotics-stateful-budget/episodes/scene-103-draw-30000-fixed8.json": "da74425d33ad8e351932c5726cabd1fed4f0bc1162a92f16489a48388458bfd4",
+    "results/robotics-stateful-budget/episodes/scene-103-draw-30000-fixed8.trace.json.gz": "7a148267dee62ec04669700a8db47f3663db8f169240318c685cf2c77ae51107",
+    "results/robotics-stateful-budget/episodes/scene-104-draw-30000-adaptive12.json": "3028977ef4d1ebd80aa687d5fb9efe2181391537af1b458b7105adf5a5d79d90",
+    "results/robotics-stateful-budget/episodes/scene-104-draw-30000-adaptive12.trace.json.gz": "9e81c8e2bc14434605a7f13c5ef49e083b6ec0054b7e3fdade38836145b0441c",
+    "results/robotics-stateful-budget/episodes/scene-104-draw-30000-fixed8.json": "d35f84853ecc969ab4a10b6a343e130f91d1c5b6ce5df5359899a4b23a619ae9",
+    "results/robotics-stateful-budget/episodes/scene-104-draw-30000-fixed8.trace.json.gz": "70ff7ed868b12011de43f6c78b7a229569dff428636c22705415d26545b7eb00",
+    "results/robotics-stateful-budget/episodes/scene-105-draw-30000-adaptive12.json": "3e33438380af2ddbe5263dc21226e504007e9c9e7af0130f3a1bc8369458adf1",
+    "results/robotics-stateful-budget/episodes/scene-105-draw-30000-adaptive12.trace.json.gz": "2f7ab6041a6fca578023e264aef40fad88e2a2638a880dfcb35cf70805777e02",
+    "results/robotics-stateful-budget/episodes/scene-105-draw-30000-fixed8.json": "7d1b9fa9b8be70d47ca6c8b3bb657d3c789b2741361e35b4df6cc1892294519d",
+    "results/robotics-stateful-budget/episodes/scene-105-draw-30000-fixed8.trace.json.gz": "fab177dfc2c5fc20cb5f88a8763a97bdc7a70f8d64c0fa4fc6de57b41d22b7cd",
+    "results/robotics-stateful-budget/episodes/scene-106-draw-30000-adaptive12.json": "a775288c0324b88dcf5d6f980876ca2b805b2b4ca7a91af3ed3f1e62c986c68f",
+    "results/robotics-stateful-budget/episodes/scene-106-draw-30000-adaptive12.trace.json.gz": "2af581373146da1ab58b0f101e11188d945f09c3316464b3dcb0a1faa411a312",
+    "results/robotics-stateful-budget/episodes/scene-106-draw-30000-fixed8.json": "ad2221db93de9224131eef36b624ecbae8521eb5fb1bd1f5547dc01bcdb3144b",
+    "results/robotics-stateful-budget/episodes/scene-106-draw-30000-fixed8.trace.json.gz": "622eca16b13338568a53a6697b636f525ba5ff103de881028622c77618f00b37",
+    "results/robotics-stateful-budget/episodes/scene-107-draw-30000-adaptive12.json": "d7fe937655cd4110ad346ef1612310915eef3f8b181b991b91152b207781bce9",
+    "results/robotics-stateful-budget/episodes/scene-107-draw-30000-adaptive12.trace.json.gz": "5ebb02789ed94a4f393b7adcf679f576dfdcc004aa13c1cde79d868404590f95",
+    "results/robotics-stateful-budget/episodes/scene-107-draw-30000-fixed8.json": "e3a85318de7a5de456bccb1ce7be5be6f8082ed3aa37c5342d6561ebbbeac80c",
+    "results/robotics-stateful-budget/episodes/scene-107-draw-30000-fixed8.trace.json.gz": "3991824d43b0b4132a494e2f7b9ed39cb72effe73d7f125863acb8f83b69949d",
+    "results/robotics-stateful-budget/episodes/scene-108-draw-30000-adaptive12.json": "0a618e220601855700468355635d09f3f4b2718fdcdda6fa143304961cd8f123",
+    "results/robotics-stateful-budget/episodes/scene-108-draw-30000-adaptive12.trace.json.gz": "a6c3d7449dd19938c6ab73921834a5e30d61ac96c838f9a3c4c0401b080d62c4",
+    "results/robotics-stateful-budget/episodes/scene-108-draw-30000-fixed8.json": "53a62b0badac1f69d7c1cfa450722fd002dc721b29efe32c11d6a79bf5805f25",
+    "results/robotics-stateful-budget/episodes/scene-108-draw-30000-fixed8.trace.json.gz": "be43640aaf1a9b5aa69c14be4d7a0190727dc07978f4e3c1b8d9a681623dd8cc",
+    "results/robotics-stateful-budget/episodes/scene-109-draw-30000-adaptive12.json": "ae8a61b3965e1bd375b0de08aa662209b39daed9300d7044781d8f0ebd0b3b7c",
+    "results/robotics-stateful-budget/episodes/scene-109-draw-30000-adaptive12.trace.json.gz": "c41c6d2b4f3cf11c0e1801daec60b4c547feef225d2bf54905a74ab9f01daf7b",
+    "results/robotics-stateful-budget/episodes/scene-109-draw-30000-fixed8.json": "2955198950e7f7ce86a39ff5bd7e8750927c5805a30ddf3584fe77d0e66c5fc7",
+    "results/robotics-stateful-budget/episodes/scene-109-draw-30000-fixed8.trace.json.gz": "5b6f020a8fa54d31609bff20d29dcf37498dc6f0f4d4b871656618e2aa9d0ead",
+    "results/robotics-stateful-budget/episodes/scene-90-draw-30000-adaptive12.json": "af060268272289dc3507711bdf4370c9f4a18f1dbd0568b9b3b64c35b6ee3711",
+    "results/robotics-stateful-budget/episodes/scene-90-draw-30000-adaptive12.trace.json.gz": "923dd61050fe5b1f4e159e7d3ccf60dca02a817e37d04a6f9c7e843a421a101c",
+    "results/robotics-stateful-budget/episodes/scene-90-draw-30000-fixed8.json": "06ba4998cb1e414944dc1abfa4b64e4af928b6daf4e8be672d25fbc5ad0fd7fd",
+    "results/robotics-stateful-budget/episodes/scene-90-draw-30000-fixed8.trace.json.gz": "1912bf9f3db60a09e52d7610cc719d2ddb8f70321af3c80711c1457757385f7f",
+    "results/robotics-stateful-budget/episodes/scene-91-draw-30000-adaptive12.json": "e9a4717afa019d8f9292e46530f0383d0983b6039847ae600ad79d4871ce677f",
+    "results/robotics-stateful-budget/episodes/scene-91-draw-30000-adaptive12.trace.json.gz": "dfeb57d5a0b7026794f0eda24c655619cb036abe230cc64e5c4baa619428f029",
+    "results/robotics-stateful-budget/episodes/scene-91-draw-30000-fixed8.json": "0a6c22342dc6be1addbca950119ad47ced537ad7bfefac728d02bebf9463aafb",
+    "results/robotics-stateful-budget/episodes/scene-91-draw-30000-fixed8.trace.json.gz": "4c9215f0423f67a030ce0b81cca25e9bed7a99da19b23fb3501d3b262131e109",
+    "results/robotics-stateful-budget/episodes/scene-92-draw-30000-adaptive12.json": "218e980c21218395a0af904509a74a04a7ef1c21c874397263bbde1e745feb0c",
+    "results/robotics-stateful-budget/episodes/scene-92-draw-30000-adaptive12.trace.json.gz": "e81401c0b31732cbb0b6f631570e95865d7b0407d65b9f66cfa785dc480b7bd4",
+    "results/robotics-stateful-budget/episodes/scene-92-draw-30000-fixed8.json": "2382491336a200b1d2b604ab3cecea6c0de052bb76027311321fcdae2ec8371f",
+    "results/robotics-stateful-budget/episodes/scene-92-draw-30000-fixed8.trace.json.gz": "5b277304c0de360bb83b61175ff2652b9550238cf45eb41c1eb2c54568e3e7ff",
+    "results/robotics-stateful-budget/episodes/scene-93-draw-30000-adaptive12.json": "8fcf10a579d0201b05a602f9b94ba18c7dcab4cdaad44916d794a991820ffc82",
+    "results/robotics-stateful-budget/episodes/scene-93-draw-30000-adaptive12.trace.json.gz": "61af86546f82cb4ef4d78fe61fc103ba371b4dc1024a69cab2d0a530f745b79f",
+    "results/robotics-stateful-budget/episodes/scene-93-draw-30000-fixed8.json": "b67464d031a1bd391096d5036df41f39c2c385f87ed61f2d43bd8c7aabd460f8",
+    "results/robotics-stateful-budget/episodes/scene-93-draw-30000-fixed8.trace.json.gz": "17be3bd943eda1f531758657227ddebdb97c9ddce0b8b627da16dbcce0c62969",
+    "results/robotics-stateful-budget/episodes/scene-94-draw-30000-adaptive12.json": "8e5d57f684a3cce64d100e7c7ae9ee7f66011904c55e8189e598d7e7c689034b",
+    "results/robotics-stateful-budget/episodes/scene-94-draw-30000-adaptive12.trace.json.gz": "9213287f9ff129061d1d848c4dfc25a0045d4a564fff652630e040e405fd5f59",
+    "results/robotics-stateful-budget/episodes/scene-94-draw-30000-fixed8.json": "a1b780bbd85bb6bd2b0c132df5610398051fff6dfdfae49ce0d066cc14b80637",
+    "results/robotics-stateful-budget/episodes/scene-94-draw-30000-fixed8.trace.json.gz": "a3f20de7fd7fb08a714bdecdfce0047943bb8e4f2835b68c65add8320ec28457",
+    "results/robotics-stateful-budget/episodes/scene-95-draw-30000-adaptive12.json": "feb41189819db81bef60647f8fd895789d87a5c776997cd4b7bcf8c15b15115c",
+    "results/robotics-stateful-budget/episodes/scene-95-draw-30000-adaptive12.trace.json.gz": "6dff2d5b1d70aaffd86a3d0f57adbef2f97293b2f0375a6f3727fef5f6d33cbf",
+    "results/robotics-stateful-budget/episodes/scene-95-draw-30000-fixed8.json": "30741640a3f6203b567324388a7b7652b0c4e231fc69674393eb83df641d28f9",
+    "results/robotics-stateful-budget/episodes/scene-95-draw-30000-fixed8.trace.json.gz": "af9c96e5195c0761d2a9f6e192c553413fc6dc10376bc99d43dc51bd7f1c7861",
+    "results/robotics-stateful-budget/episodes/scene-96-draw-30000-adaptive12.json": "9ca7def884a6d91e969f654ab0cd6bb620e7b236801ccd1e3bd98ec9fb6b7e69",
+    "results/robotics-stateful-budget/episodes/scene-96-draw-30000-adaptive12.trace.json.gz": "97930c9090095f030f049ba366bbb38eb0bd8720f273f0709b9747ae18b8000e",
+    "results/robotics-stateful-budget/episodes/scene-96-draw-30000-fixed8.json": "8a393470a49274333e4f38929c451fa5d36c64789921165fdeac2a30d511a2cf",
+    "results/robotics-stateful-budget/episodes/scene-96-draw-30000-fixed8.trace.json.gz": "84df480dead41a14ea0c62e54521dd75be38c9641cf83d27530728cc6581fe8d",
+    "results/robotics-stateful-budget/episodes/scene-97-draw-30000-adaptive12.json": "30cad33f13b22eb31ab24569ccab61382052d76ded598f6a26b130ba74ece374",
+    "results/robotics-stateful-budget/episodes/scene-97-draw-30000-adaptive12.trace.json.gz": "d869a041ef5e848788f4831abb7118f7198d1dcc4af10687ed276c095071f8c7",
+    "results/robotics-stateful-budget/episodes/scene-97-draw-30000-fixed8.json": "90be920c8bd1077132d0c7ea3cf23f9aa1271fd4c10578214b0a705630aaa35c",
+    "results/robotics-stateful-budget/episodes/scene-97-draw-30000-fixed8.trace.json.gz": "50f5d64e1b940a16233c0384339a09d6818e7f103ff7cb7ddf2fb7c8b9155dcd",
+    "results/robotics-stateful-budget/episodes/scene-98-draw-30000-adaptive12.json": "3371d78235e8b0bcebf62f638b29806caa957d1bb994754a5e8059a3d5355299",
+    "results/robotics-stateful-budget/episodes/scene-98-draw-30000-adaptive12.trace.json.gz": "7c6fa346bc9844f6d178dfeaf2cc53cc4689485d886a56e16895e8128f26605d",
+    "results/robotics-stateful-budget/episodes/scene-98-draw-30000-fixed8.json": "5e98f1732387dca98e3a99a26191e0ba54bb83334a4b13e31d3030e3f35a7a9c",
+    "results/robotics-stateful-budget/episodes/scene-98-draw-30000-fixed8.trace.json.gz": "901869ebc6138d342c92c985313cfc0ad3444f6298e0600a5195d98bc5ddcbc1",
+    "results/robotics-stateful-budget/episodes/scene-99-draw-30000-adaptive12.json": "dfec5fff8d968dfdc583c66db8a3e1aad89a00c71e5c099bae390da1559210b8",
+    "results/robotics-stateful-budget/episodes/scene-99-draw-30000-adaptive12.trace.json.gz": "1237a8a8dceafaf75e52faa63ea337e784915d1f41bac792587ba57dd6224531",
+    "results/robotics-stateful-budget/episodes/scene-99-draw-30000-fixed8.json": "1d8e96d08e4c86c6b464259d1a7f915acf4b6482fe0f6547f1ab631436462ba5",
+    "results/robotics-stateful-budget/episodes/scene-99-draw-30000-fixed8.trace.json.gz": "3163a0475f8ef61347a5127b237b2604b7048431faecd4120d95df0e89a23b03"
+  },
+  "auditor_sha256": "a6fcebef96f459d2dbb6c82256bf7bf9288785b94c19e0a2e6405167224323a4",
+  "cpu_helper_sha256": "742614360843b1f2b7df559837b7951163576b8d3fc15627c9bd7d7157e3f7e8",
+  "scope_limits": [
+    "No inference, GPU operation, image fitting, physics replay or timing benchmark was repeated.",
+    "Recorded camera coverage reconstructs past-only histories; actual image fits are not independently repeated.",
+    "Generated tensor shapes and parameter-version assertions are source-bound collector records.",
+    "Fresh40 is primary; inspected20 and pooled60 are secondary, and mixed-session timing is descriptive.",
+    "One sample per scene is not a reliability, safety, equivalence or deployment guarantee."
+  ]
+}
