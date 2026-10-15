@@ -176,4 +176,13 @@ Candidate/milestone/fixed-eight successes were 17/17/14 out of twenty. The candi
 
 On forty fresh scenes, staged/milestone/fixed-eight successes were 26/30/26. Staged calls/runtime were essentially unchanged from the milestone, with lower observed alignment. All sixty scenes pooled gave 40/47/40 successes; pooled runtime is descriptive because controls span sessions. The staged controller actually completed 326 fifteen-movement units, unlike the earlier persistent variant, but is not adopted. All 529 CPU tests and the independent audit passed. Preserve milestone `0f40449` and frozen evidence; fresh seeds 110–149 are now inspected data for any subsequent revision.
 
+## Recovery-data and limited-training feasibility
+
+- [robotics-recovery-feasibility/data-audit.json](robotics-recovery-feasibility/data-audit.json): 293 bound source/evidence files, discovery-only recovery/rehearsal/control categories, native H16 executed-action alignment, complete windows and exact-content duplicate checks. RGB reconstruction is not implied by stored image hashes.
+- [training-gate.json](robotics-recovery-feasibility/training-gate.json): one real supervised update of the existing final output block on a replay-verified scene-2 recovery example; finite gradients, actual Adam state, peak resources, unchanged frozen state and exact restoration. No learned checkpoint, new policy prediction or pushing attempt.
+- [independent-audit.json](robotics-recovery-feasibility/independent-audit.json): independent record/provenance and implementation checks without repeating training, inference or physics.
+- [Feasibility report](../reports/2026-10-15-robotics-recovery-feasibility.md): objective, data limits, exact movement indices, resource results, sources and reproduction instructions.
+
+The pool contains 31 successful continuations across eight originally failed scenes and nine contexts, supplying 2,760 overlapping native windows. Twenty ordinary successful baselines supply 2,686 separate potential rehearsal windows. One update of 1,313,282 existing parameters fits at 1,100.42 MiB peak allocated GPU memory; all weights are restored. This is a limited-update feasibility result, not policy improvement, full-training feasibility or evidence that the correlated data are sufficiently diverse. The milestone stays unchanged.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

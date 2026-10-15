@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "independent_cpu_artifact_checks": true,
+  "training_or_collector_modules_imported": false,
+  "data_source_bindings_verified": 293,
+  "training_source_bindings_verified": 11,
+  "trajectory_records_verified": 156,
+  "record_categories_recomputed": {
+    "failed_baseline": 10,
+    "ordinary_successful_baseline": 20,
+    "successful_continuation_of_failed_original": 31,
+    "successful_difficult_context_control": 36,
+    "unsuccessful_selected_continuation": 59
+  },
+  "recovery_candidate_records": 31,
+  "recovery_candidate_scenes": [
+    2,
+    3,
+    4,
+    6,
+    7,
+    15,
+    16,
+    18
+  ],
+  "recovery_candidate_contexts": 9,
+  "candidate_native_windows_recomputed": 2760,
+  "exact_content_unique_candidate_windows": 2760,
+  "ordinary_successful_baseline_windows_recomputed": 2686,
+  "sample_checks": {
+    "scene": 2,
+    "successful_continuation_draw": 2001,
+    "observations_after_movements": [
+      156,
+      157
+    ],
+    "executed_target_movements_inclusive": [
+      157,
+      172
+    ],
+    "past_command_target_index": 0,
+    "next_command_target_index": 1,
+    "action_state_padding_tensor_hashes_independently_recomputed": true,
+    "rgb_tensor_hash_independently_recomputed": false,
+    "padding": false
+  },
+  "checkpoint_header_checks": {
+    "total_model_parameters": 262709044,
+    "normalization_buffer_values": 18,
+    "trainable_tail_parameters": 1313282,
+    "trainable_tail_tensor_names": 6,
+    "adam_state_bytes_recomputed": 10506280
+  },
+  "recorded_training_checks_reviewed": {
+    "finite_loss": 0.10540015995502472,
+    "finite_nonzero_gradient_l2_norm": 2.306671619415283,
+    "denoiser_forward_calls": 1,
+    "diffusion_timestep": 42,
+    "tail_update_names": 6,
+    "frozen_parameters_and_buffers_unchanged": true,
+    "entire_model_restored_exactly": true,
+    "no_learned_checkpoint_saved": true,
+    "no_policy_generation_or_alternative_actions": true
+  },
+  "recorded_resources_consistent": {
+    "single_update_seconds": 1.2950917000125628,
+    "cuda_allocator_budget_mib": 2800,
+    "peak_cuda_allocated_mib": 1100.423828125,
+    "peak_cuda_reserved_mib": 1182,
+    "peak_process_rss_mib": 2579.90625,
+    "minimum_available_system_ram_mib": 3366.06640625
+  },
+  "artifact_fingerprints": {
+    "results/robotics-recovery-feasibility/data-audit.json": "6831de2f731b6733dfacf26c20d934518aae131ad21089719ae0f140f21f51df",
+    "results/robotics-recovery-feasibility/training-gate.json": "97ba56113471e54337749de263aebc1ed23f3d4a28651fc93ca8930056915c26",
+    "experiments/robotics_recovery_data_audit.py": "cc32802eb617d9eb5c4796b7d759541af81cd537625ec9fc00b35d8ea426f93b",
+    "experiments/robotics_recovery_feasibility.py": "310ada43ba75a015d8ffe62e94e72d58bcbad38e2343bb2495fbed6befb05bcd"
+  },
+  "scope_limits": [
+    "This independent audit reads existing records and checkpoint headers; it performs no GPU work, policy inference, training, image fitting or physics replay.",
+    "Trajectory chronology, selection categories, window counts, duplicate hashes, sample state/action/padding hashes and optimizer-size arithmetic were independently recomputed from source content.",
+    "The selected RGB tensor and 157-step exact replay were not independently reconstructed; their recorded checks are bound to the reviewed collector source.",
+    "Finite gradients, one forward pass, tail mutation, frozen-state equality and complete model restoration are recorded runtime assertions, not newly witnessed training or in-memory comparisons.",
+    "A single unpadded update demonstrates this tail-only resource gate, not full-policy training feasibility, dataset adequacy or recovery improvement.",
+    "Thirty-one outcome-selected continuations from eight scenes and nine contexts contain heavily overlapping windows; they are not independent demonstrations or unseen evaluation evidence."
+  ]
+}

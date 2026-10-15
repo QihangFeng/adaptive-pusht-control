@@ -44,6 +44,8 @@ The [persistent execution-budget comparison](reports/2026-10-14-robotics-statefu
 
 The [staged 8/12/15 comparison](reports/2026-10-15-robotics-staged-extension.md) completed 180 comparisons on sixty scenes, with 140 new attempts and forty reused controls. Unlike persistent budgets, this version simply adds a checkpoint after twelve. On the primary forty fresh scenes it succeeded 26/40 times versus the milestone's 30/40, with 89.91% versus 93.70% alignment and almost identical calls/runtime. It genuinely executed fifteen movements in 326 units, but did not establish an upgrade. Pooled successes were fixed-eight/milestone/staged 40/47/40 out of sixty; mixed-session pooled runtime is descriptive. All 529 CPU tests and the independent audit passed. Keep the milestone unchanged; no new candidate is adopted.
 
+The [recovery-training feasibility check](reports/2026-10-15-robotics-recovery-feasibility.md) audits 31 existing successful continuations from eight originally failed discovery scenes, yielding 2,760 overlapping complete action-label windows. One reversible final-block update on a real replay-verified example fits the GTX 1650 at 1,100.42 MiB peak allocated GPU memory. All weights were restored; no trained checkpoint or new pushing result was produced. This establishes limited-update feasibility, not successful policy training or improvement. The next proposal would learn recovery movements offline while preserving the milestone's 8/12 execution and prediction architecture.
+
 ## Where to start
 
 | Location | Purpose |
@@ -69,6 +71,8 @@ The [staged 8/12/15 comparison](reports/2026-10-15-robotics-staged-extension.md)
 | [experiments/robotics_generation_length.py](experiments/robotics_generation_length.py) | Frozen actual H8/H16 generation comparison, matched four-action control, original baseline and unchanged milestone |
 | [experiments/robotics_stateful_budget.py](experiments/robotics_stateful_budget.py) | Frozen persistent 8/12/15 execution-budget comparison on twenty new scenes; generation remains fixed |
 | [experiments/robotics_staged_extension.py](experiments/robotics_staged_extension.py) | Frozen staged eight/twelve/fifteen comparison with cached-tail mechanics, reused controls and separate fresh confirmation |
+| [experiments/robotics_recovery_data_audit.py](experiments/robotics_recovery_data_audit.py) | CPU-only provenance and executed-label audit of existing discovery recoveries |
+| [experiments/robotics_recovery_feasibility.py](experiments/robotics_recovery_feasibility.py) | One reversible final-block training update on a replay-verified real example; no saved learned policy |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
