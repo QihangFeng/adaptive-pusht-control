@@ -1,0 +1,578 @@
+{
+  "passed": true,
+  "trials": [
+    {
+      "scene": 0,
+      "draw": 1234,
+      "prediction_seed": 1234,
+      "method": "fixed8",
+      "horizon": 16,
+      "execution": 8,
+      "success": false,
+      "truncated": true,
+      "steps": 16,
+      "model_queries": 2,
+      "initial": {
+        "pusher_pos": [
+          222.0,
+          97.0
+        ],
+        "pusher_velocity": [
+          0.0,
+          0.0
+        ],
+        "block_pos": [
+          222.99382739283774,
+          381.59903623605413
+        ],
+        "block_angle": 3.0079994677219553,
+        "block_velocity": [
+          0.0,
+          0.0
+        ],
+        "block_angular_velocity": 0.0,
+        "block_vertices": [
+          [
+            282.4592090409099,
+            373.60726637893714
+          ],
+          [
+            163.52844574476558,
+            389.5908060931711
+          ],
+          [
+            159.5325608162071,
+            359.85811526913506
+          ],
+          [
+            278.4633241123514,
+            343.87457555490107
+          ],
+          [
+            233.86428787629728,
+            349.8684029477388
+          ],
+          [
+            204.1315970522612,
+            353.8642878762973
+          ],
+          [
+            192.14394226658575,
+            264.6662154041891
+          ],
+          [
+            221.87663309062182,
+            260.6703304756306
+          ]
+        ],
+        "pusher_block_gap": 148.67037696967785,
+        "coverage": 0.18078262177574944,
+        "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+      },
+      "initial_features": null,
+      "final_coverage": 0.18078262177574944,
+      "wall_seconds": 9.709195999999793,
+      "monitor_seconds": 0.0,
+      "prediction_seconds": [
+        5.000294900000881,
+        4.636231799999223
+      ],
+      "peak_gpu_allocated_bytes": 1148623360,
+      "unit_lengths": [
+        8,
+        8
+      ],
+      "events": [],
+      "generated_shapes": [
+        [
+          1,
+          16,
+          2
+        ],
+        [
+          1,
+          16,
+          2
+        ]
+      ],
+      "trace": "scene-0-draw-1234-fixed8.trace.json.gz",
+      "trace_sha256": "28089d4073c2b075beeecb8a0980a640d3dd91de4a9e6ad4321a6a0847887fa6"
+    },
+    {
+      "scene": 0,
+      "draw": 1234,
+      "prediction_seed": 1234,
+      "method": "adaptive12",
+      "horizon": 16,
+      "execution": 12,
+      "success": false,
+      "truncated": true,
+      "steps": 16,
+      "model_queries": 2,
+      "initial": {
+        "pusher_pos": [
+          222.0,
+          97.0
+        ],
+        "pusher_velocity": [
+          0.0,
+          0.0
+        ],
+        "block_pos": [
+          222.99382739283774,
+          381.59903623605413
+        ],
+        "block_angle": 3.0079994677219553,
+        "block_velocity": [
+          0.0,
+          0.0
+        ],
+        "block_angular_velocity": 0.0,
+        "block_vertices": [
+          [
+            282.4592090409099,
+            373.60726637893714
+          ],
+          [
+            163.52844574476558,
+            389.5908060931711
+          ],
+          [
+            159.5325608162071,
+            359.85811526913506
+          ],
+          [
+            278.4633241123514,
+            343.87457555490107
+          ],
+          [
+            233.86428787629728,
+            349.8684029477388
+          ],
+          [
+            204.1315970522612,
+            353.8642878762973
+          ],
+          [
+            192.14394226658575,
+            264.6662154041891
+          ],
+          [
+            221.87663309062182,
+            260.6703304756306
+          ]
+        ],
+        "pusher_block_gap": 148.67037696967785,
+        "coverage": 0.18078262177574944,
+        "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+      },
+      "initial_features": {
+        "quality": true,
+        "coverage": 0.1796584761676043,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.0,
+        "stagnation": 0.0,
+        "position_error": 0.25432559958143597,
+        "orientation_error": 0.7059772873567948,
+        "pending_actions": 0,
+        "history_steps": 0,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.1796584761676043
+      },
+      "final_coverage": 0.18078262177574944,
+      "wall_seconds": 10.00842940000075,
+      "monitor_seconds": 0.6415916999976616,
+      "prediction_seconds": [
+        4.639032199997018,
+        4.654852299998311
+      ],
+      "peak_gpu_allocated_bytes": 1148623360,
+      "unit_lengths": [
+        12,
+        4
+      ],
+      "events": [
+        {
+          "step": 8,
+          "plan_age": 8,
+          "kind": "extend",
+          "reason": "camera_and_plan_eligible",
+          "discarded": 0,
+          "features": {
+            "quality": true,
+            "coverage": 0.1796584761676043,
+            "warning_count": 0,
+            "drawdown": 3.2196416033247743e-08,
+            "recovery": 0.0,
+            "stagnation": 3.2196416033247743e-08,
+            "position_error": 0.25432559958143597,
+            "orientation_error": 0.7059772873567948,
+            "pending_actions": 4,
+            "history_steps": 8,
+            "recent_best_gain": 3.2196416033247743e-08,
+            "recent_peak": 0.17965850836402034
+          }
+        }
+      ],
+      "generated_shapes": [
+        [
+          1,
+          16,
+          2
+        ],
+        [
+          1,
+          16,
+          2
+        ]
+      ],
+      "trace": "scene-0-draw-1234-adaptive12.trace.json.gz",
+      "trace_sha256": "f621f5aff114fe0ca1f01dc1a666afa8626864ff55998aa7dca9017d9291cd92"
+    },
+    {
+      "scene": 0,
+      "draw": 1234,
+      "prediction_seed": 1234,
+      "method": "stateful15",
+      "horizon": 16,
+      "execution": 15,
+      "force_budget": null,
+      "success": false,
+      "truncated": true,
+      "steps": 16,
+      "model_queries": 2,
+      "initial": {
+        "pusher_pos": [
+          222.0,
+          97.0
+        ],
+        "pusher_velocity": [
+          0.0,
+          0.0
+        ],
+        "block_pos": [
+          222.99382739283774,
+          381.59903623605413
+        ],
+        "block_angle": 3.0079994677219553,
+        "block_velocity": [
+          0.0,
+          0.0
+        ],
+        "block_angular_velocity": 0.0,
+        "block_vertices": [
+          [
+            282.4592090409099,
+            373.60726637893714
+          ],
+          [
+            163.52844574476558,
+            389.5908060931711
+          ],
+          [
+            159.5325608162071,
+            359.85811526913506
+          ],
+          [
+            278.4633241123514,
+            343.87457555490107
+          ],
+          [
+            233.86428787629728,
+            349.8684029477388
+          ],
+          [
+            204.1315970522612,
+            353.8642878762973
+          ],
+          [
+            192.14394226658575,
+            264.6662154041891
+          ],
+          [
+            221.87663309062182,
+            260.6703304756306
+          ]
+        ],
+        "pusher_block_gap": 148.67037696967785,
+        "coverage": 0.18078262177574944,
+        "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+      },
+      "initial_features": {
+        "quality": true,
+        "coverage": 0.1796584761676043,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.0,
+        "stagnation": 0.0,
+        "position_error": 0.25432559958143597,
+        "orientation_error": 0.7059772873567948,
+        "pending_actions": 0,
+        "history_steps": 0,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.1796584761676043
+      },
+      "final_coverage": 0.18078262177574944,
+      "wall_seconds": 10.141729699997086,
+      "monitor_seconds": 0.6399915000074543,
+      "prediction_seconds": [
+        4.702054000001226,
+        4.728733600000851
+      ],
+      "peak_gpu_allocated_bytes": 1148623360,
+      "unit_lengths": [
+        8,
+        8
+      ],
+      "events": [
+        {
+          "step": 8,
+          "plan_age": 8,
+          "kind": "unit_end",
+          "reason": "retain_feedback_frequency",
+          "discarded": 0,
+          "budget": 8,
+          "next_budget": 8,
+          "streak": 0,
+          "features": {
+            "quality": true,
+            "coverage": 0.1796584761676043,
+            "warning_count": 0,
+            "drawdown": 3.2196416033247743e-08,
+            "recovery": 0.0,
+            "stagnation": 3.2196416033247743e-08,
+            "position_error": 0.25432559958143597,
+            "orientation_error": 0.7059772873567948,
+            "pending_actions": 0,
+            "history_steps": 8,
+            "recent_best_gain": 3.2196416033247743e-08,
+            "recent_peak": 0.17965850836402034
+          }
+        }
+      ],
+      "generated_shapes": [
+        [
+          1,
+          16,
+          2
+        ],
+        [
+          1,
+          16,
+          2
+        ]
+      ],
+      "final_budget": 8,
+      "final_streak": 0,
+      "trace": "scene-0-draw-1234-stateful15.trace.json.gz",
+      "trace_sha256": "d56b6782c98962d4711fd677289e7cd8b8d59d9af4fefdd3c57e769649fcc2af"
+    }
+  ],
+  "prefixes": [
+    {
+      "scene": 0,
+      "common_executed_prefix": 8
+    }
+  ],
+  "forced8": {
+    "scene": 0,
+    "draw": 1234,
+    "prediction_seed": 1234,
+    "method": "stateful15",
+    "horizon": 16,
+    "execution": 15,
+    "force_budget": 8,
+    "success": false,
+    "truncated": true,
+    "steps": 16,
+    "model_queries": 2,
+    "initial": {
+      "pusher_pos": [
+        222.0,
+        97.0
+      ],
+      "pusher_velocity": [
+        0.0,
+        0.0
+      ],
+      "block_pos": [
+        222.99382739283774,
+        381.59903623605413
+      ],
+      "block_angle": 3.0079994677219553,
+      "block_velocity": [
+        0.0,
+        0.0
+      ],
+      "block_angular_velocity": 0.0,
+      "block_vertices": [
+        [
+          282.4592090409099,
+          373.60726637893714
+        ],
+        [
+          163.52844574476558,
+          389.5908060931711
+        ],
+        [
+          159.5325608162071,
+          359.85811526913506
+        ],
+        [
+          278.4633241123514,
+          343.87457555490107
+        ],
+        [
+          233.86428787629728,
+          349.8684029477388
+        ],
+        [
+          204.1315970522612,
+          353.8642878762973
+        ],
+        [
+          192.14394226658575,
+          264.6662154041891
+        ],
+        [
+          221.87663309062182,
+          260.6703304756306
+        ]
+      ],
+      "pusher_block_gap": 148.67037696967785,
+      "coverage": 0.18078262177574944,
+      "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+    },
+    "initial_features": null,
+    "final_coverage": 0.18078262177574944,
+    "wall_seconds": 9.448525100000552,
+    "monitor_seconds": 0.0,
+    "prediction_seconds": [
+      4.6940676999984134,
+      4.687863399998605
+    ],
+    "peak_gpu_allocated_bytes": 1148623360,
+    "unit_lengths": [
+      8,
+      8
+    ],
+    "events": [],
+    "generated_shapes": [
+      [
+        1,
+        16,
+        2
+      ],
+      [
+        1,
+        16,
+        2
+      ]
+    ],
+    "final_budget": 8,
+    "final_streak": 0,
+    "trace": "scene-0-draw-1234-stateful15.trace.json.gz",
+    "trace_sha256": "6cf23a7638b8a56ec581b20cfc8cdb2a1c4d17816ad7ad7d24cd0844e6818a3b"
+  },
+  "forced15": {
+    "scene": 0,
+    "draw": 1234,
+    "prediction_seed": 1234,
+    "method": "stateful15",
+    "horizon": 16,
+    "execution": 15,
+    "force_budget": 15,
+    "success": false,
+    "truncated": true,
+    "steps": 16,
+    "model_queries": 2,
+    "initial": {
+      "pusher_pos": [
+        222.0,
+        97.0
+      ],
+      "pusher_velocity": [
+        0.0,
+        0.0
+      ],
+      "block_pos": [
+        222.99382739283774,
+        381.59903623605413
+      ],
+      "block_angle": 3.0079994677219553,
+      "block_velocity": [
+        0.0,
+        0.0
+      ],
+      "block_angular_velocity": 0.0,
+      "block_vertices": [
+        [
+          282.4592090409099,
+          373.60726637893714
+        ],
+        [
+          163.52844574476558,
+          389.5908060931711
+        ],
+        [
+          159.5325608162071,
+          359.85811526913506
+        ],
+        [
+          278.4633241123514,
+          343.87457555490107
+        ],
+        [
+          233.86428787629728,
+          349.8684029477388
+        ],
+        [
+          204.1315970522612,
+          353.8642878762973
+        ],
+        [
+          192.14394226658575,
+          264.6662154041891
+        ],
+        [
+          221.87663309062182,
+          260.6703304756306
+        ]
+      ],
+      "pusher_block_gap": 148.67037696967785,
+      "coverage": 0.18078262177574944,
+      "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+    },
+    "initial_features": null,
+    "final_coverage": 0.18078262177574944,
+    "wall_seconds": 9.530118099999527,
+    "monitor_seconds": 0.0,
+    "prediction_seconds": [
+      4.715735800000402,
+      4.743284399999538
+    ],
+    "peak_gpu_allocated_bytes": 1148623360,
+    "unit_lengths": [
+      15,
+      1
+    ],
+    "events": [],
+    "generated_shapes": [
+      [
+        1,
+        16,
+        2
+      ],
+      [
+        1,
+        16,
+        2
+      ]
+    ],
+    "final_budget": 8,
+    "final_streak": 0,
+    "trace": "scene-0-draw-1234-stateful15.trace.json.gz",
+    "trace_sha256": "5ccd9eade5f28cd92cef3db075160788534f5e71d197cf2334740d72b3625be6"
+  }
+}

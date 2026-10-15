@@ -152,4 +152,16 @@ Near-target direction agreement is 184/184 eligible components, but cold 95th-pe
 
 Short and matched four-action methods each finished 6/16 pushes, versus baseline 11/16 and milestone 10/16. Short generation averaged 301.72 seconds versus baseline 138.29 seconds, with no clear practically useful per-call or memory saving. All 427 CPU tests and the independent audit passed. This unchanged-checkpoint H8 override is not adopted; it does not establish that every shorter or adaptive generation method fails. Preserve milestone `0f40449` and frozen evidence. The eight reused scenes are development data, not unseen evaluation; no training or variable-generation controller was introduced.
 
+## Persistent execution-budget comparison
+
+- [robotics-stateful-budget/protocol.json](robotics-stateful-budget/protocol.json): predeclared persistent 8/12/15 rule, unchanged baseline/milestone, twenty new scenes 90–109, paired prediction seeds, rotated method order, 50 frozen input bindings and installed model/checkpoint/package identity.
+- [smoke.json](robotics-stateful-budget/smoke.json), `robotics-stateful-budget/smoke/`, `forced8/` and `forced15/`: five mechanics records, full fixed H16 generation, exact forced-eight baseline reproduction across two predictions, and execution of all fifteen cached commands under the forced control.
+- [episodes.json](robotics-stateful-budget/episodes.json) and `robotics-stateful-budget/episodes/`: all 60 scored sidecars and compressed traces, complete generated plans, selected/actual execution lengths, camera features, transitions and costs. No scored trial was excluded or replaced.
+- [summary.json](robotics-stateful-budget/summary.json): four-metric means, gained/lost successes, selected budgets/events, initial-prefix checks and 10,000 whole-scene-pair bootstrap intervals.
+- [independent-audit.json](robotics-stateful-budget/independent-audit.json): independent frozen provenance, 136 artifact hashes, 11,530 scored movements, 1,394 predictions, queue/controller/camera arithmetic and statistics. No inference, physics, image fitting or timing was repeated.
+- [run-resources.json](robotics-stateful-budget/run-resources.json): 121.62-minute scored invocation, peak process RAM 2.55 GiB and minimum available system RAM 2.82 GiB; mechanics resources are recorded separately.
+- [Persistent-budget report](../reports/2026-10-14-robotics-stateful-budget.md): conclusion-first results, method, uncertainty, budget usage, limits and reproduction instructions.
+
+Candidate/milestone/fixed-eight successes were 17/17/14 out of twenty. The candidate's mean alignment was slightly higher, but it used 24.50 versus the milestone's 20.60 predictions and took 131.39 versus 110.81 seconds. Only 21/490 candidate units executed more than eight movements, including two full fifteen-movement units. All 482 CPU tests and the independent audit passed. No overall upgrade is established and no controller is adopted; preserve milestone `0f40449` and all frozen evidence. Scenes 90–109 are now inspected evaluation data, not unseen scenes for a revised rule.
+
 Power-grid results belong to the repository's `main` branch and are intentionally absent here.

@@ -1,0 +1,211 @@
+{
+  "complete": true,
+  "scope": "Twenty new initial scenes, one prediction sample; no generality or recovery guarantee",
+  "methods": {
+    "fixed8": {
+      "attempts": 20,
+      "successes": 14,
+      "mean_final_coverage": 0.9427344890130049,
+      "mean_model_queries": 24.6,
+      "mean_wall_seconds": 121.91905649000128,
+      "mean_monitor_seconds": 0.0,
+      "mean_prediction_seconds": 4.907123711703565
+    },
+    "adaptive12": {
+      "attempts": 20,
+      "successes": 17,
+      "mean_final_coverage": 0.9429873670734296,
+      "mean_model_queries": 20.6,
+      "mean_wall_seconds": 110.8092083749998,
+      "mean_monitor_seconds": 8.684819574993526,
+      "mean_prediction_seconds": 4.928081120473793
+    },
+    "stateful15": {
+      "attempts": 20,
+      "successes": 17,
+      "mean_final_coverage": 0.9505894257095523,
+      "mean_model_queries": 24.5,
+      "mean_wall_seconds": 131.3949160399994,
+      "mean_monitor_seconds": 9.19531137498634,
+      "mean_prediction_seconds": 4.9659945695282355
+    }
+  },
+  "comparisons": [
+    {
+      "reference": "fixed8",
+      "method": "stateful15",
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.15,
+          "scene_pair_bootstrap_95_interval": [
+            -0.05,
+            0.35
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": 0.007854936696547282,
+          "scene_pair_bootstrap_95_interval": [
+            -0.010592405840712926,
+            0.027725855484216706
+          ]
+        },
+        "model_queries": {
+          "mean_difference": -0.1,
+          "scene_pair_bootstrap_95_interval": [
+            -5.0,
+            4.9
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": 9.47585954999813,
+          "scene_pair_bootstrap_95_interval": [
+            -15.64565642287558,
+            35.229954630498185
+          ]
+        }
+      },
+      "gained_successes": [
+        91,
+        102,
+        104,
+        108
+      ],
+      "lost_successes": [
+        109
+      ]
+    },
+    {
+      "reference": "adaptive12",
+      "method": "stateful15",
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.0,
+          "scene_pair_bootstrap_95_interval": [
+            -0.15,
+            0.15
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": 0.007602058636122566,
+          "scene_pair_bootstrap_95_interval": [
+            -0.0105996181918594,
+            0.03470717725762566
+          ]
+        },
+        "model_queries": {
+          "mean_difference": 3.9,
+          "scene_pair_bootstrap_95_interval": [
+            -0.75,
+            8.15
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": 20.58570766499961,
+          "scene_pair_bootstrap_95_interval": [
+            -3.591359707624897,
+            42.37861208837418
+          ]
+        }
+      },
+      "gained_successes": [
+        90
+      ],
+      "lost_successes": [
+        96
+      ]
+    }
+  ],
+  "candidate_selected_budgets": {
+    "8": 447,
+    "12": 36,
+    "15": 7
+  },
+  "candidate_event_counts": {
+    "unit_end": 438,
+    "checkpoint_replan": 22,
+    "interrupt": 10,
+    "checkpoint_continue": 21
+  },
+  "common_prefixes": [
+    {
+      "scene": 90,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 91,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 92,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 93,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 94,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 95,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 96,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 97,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 98,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 99,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 100,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 101,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 102,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 103,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 104,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 105,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 106,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 107,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 108,
+      "common_executed_prefix": 8
+    },
+    {
+      "scene": 109,
+      "common_executed_prefix": 8
+    }
+  ]
+}

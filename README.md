@@ -40,6 +40,8 @@ The [camera pose-precision gate](reports/2026-10-13-robotics-camera-pose-gate.md
 
 The [generation-length screen](reports/2026-10-14-robotics-generation-length.md) completed 64 attempts on eight inspected scenes with two new prediction samples each. Actual short H8/E4 generation and matched H16/E4 each succeeded 6/16 times, versus fixed-eight 11/16 and the unchanged milestone 10/16. Short generation showed no clear per-call computation saving and averaged 301.72 seconds per attempt versus baseline 138.29 seconds. All 427 CPU tests and the independent audit passed. This inference-only change is not adopted; the milestone stays unchanged. No variable-generation controller or generalization benefit is established.
 
+The [persistent execution-budget comparison](reports/2026-10-14-robotics-stateful-budget.md) completed 60 attempts on twenty new scenes, seeds 90–109. The new controller remembers an 8/12/15 execution budget while neural generation stays fixed. It matched the milestone's 17/20 successes versus fixed-eight 14/20, with slightly higher mean alignment, but used 24.50 versus 20.60 calls and took 131.39 versus 110.81 seconds. Only two of its 490 prediction units actually executed fifteen movements. All 482 CPU tests and the independent audit passed. This is not an established overall upgrade; the candidate is not adopted and milestone `0f40449` stays unchanged.
+
 ## Where to start
 
 | Location | Purpose |
@@ -63,6 +65,7 @@ The [generation-length screen](reports/2026-10-14-robotics-generation-length.md)
 | [experiments/robotics_loss_review.py](experiments/robotics_loss_review.py) | Saved-evidence diagnosis of all six lost successes, final positioning, stationary intervals and successful counterexamples; no new trials |
 | [experiments/robotics_pose_gate.py](experiments/robotics_pose_gate.py) | Frozen CPU recorded-action replay and pixel-only pose-precision screen before any final-action corrector |
 | [experiments/robotics_generation_length.py](experiments/robotics_generation_length.py) | Frozen actual H8/H16 generation comparison, matched four-action control, original baseline and unchanged milestone |
+| [experiments/robotics_stateful_budget.py](experiments/robotics_stateful_budget.py) | Frozen persistent 8/12/15 execution-budget comparison on twenty new scenes; generation remains fixed |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
