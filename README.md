@@ -2,15 +2,15 @@
 
 ECE 730 course project: computation and AI for cyber-physical systems.
 
-This branch explores feedback around a frozen robot-action model. In the PushT simulator, a camera observes a pusher and a T-shaped block. A pretrained Diffusion Policy predicts movements; the simulator applies them and returns updated images.
+This branch explores visual execution feedback and bounded offline refinement of a pretrained robot-action model. In the PushT simulator, a camera observes a pusher and a T-shaped block. Diffusion Policy predicts movements; the simulator applies them and returns updated images.
 
-The candidate contribution is lightweight execution feedback that decides when to reuse more predicted movements or request a new prediction. The completed benefit-aware pilot tests one early interruption per attempt. A separate adaptive-length screen tests camera/path-guided eight-versus-twelve-action execution and bounded interruptions. Both are preliminary investigations, not proven general improvements.
+The main execution method is lightweight feedback that decides when to reuse more predicted movements or request a new prediction. Earlier pilots test interruptions and camera/path-guided eight-versus-twelve-action execution. The latest pilot updates only the model's final convolution block using recovery and expert examples while preserving that execution rule. These remain bounded investigations, not proven general improvements.
 
 ## Current status
 
 Laptop feasibility is verified on a GTX 1650 (4 GiB), 16 GB RAM and Python 3.11.9. Three complete simulator runs finished without crashes or GPU-memory errors; two reached the target. New predictions averaged 4.80 seconds, and full runs took 1.9–3.1 minutes.
 
-This supports bounded **offline simulation**, not real-time deployment, large 3D robot models or policy training. See the [feasibility report](reports/2026-10-10-robotics-laptop-feasibility.md) for evidence, limitations, sources and setup instructions.
+This initial check supports bounded **offline simulation**, not real-time deployment, large 3D robot models or general policy-training feasibility. A later bounded final-block training pilot is reported below. See the [feasibility report](reports/2026-10-10-robotics-laptop-feasibility.md) for the original evidence, limitations, sources and setup instructions.
 
 The [baseline diagnostic report](reports/2026-10-10-robotics-baseline-check.md) preserves the original six unchanged-policy episodes and 15 short probes. The [expanded failure/recovery report](reports/2026-10-11-robotics-failure-patterns.md) covers 30 baseline attempts (20 successes, 10 timeouts) and 24 matched-state continuations. Immediate replanning helped in some selected failed scenes but disrupted the successful control: overall success was 5/12 under each arm, with more AI calls for replanning. This is exploratory evidence, not a validated controller improvement.
 
@@ -46,6 +46,8 @@ The [staged 8/12/15 comparison](reports/2026-10-15-robotics-staged-extension.md)
 
 The [recovery-training feasibility check](reports/2026-10-15-robotics-recovery-feasibility.md) audits 31 existing successful continuations from eight originally failed discovery scenes, yielding 2,760 overlapping complete action-label windows. One reversible final-block update on a real replay-verified example fits the GTX 1650 at 1,100.42 MiB peak allocated GPU memory. All weights were restored; no trained checkpoint or new pushing result was produced. This establishes limited-update feasibility, not successful policy training or improvement. The next proposal would learn recovery movements offline while preserving the milestone's 8/12 execution and prediction architecture.
 
+The [completed recovery-rehearsal pilot](reports/2026-10-16-robotics-recovery-pilot.md) trained only the existing final convolution block for 600 updates, mixing discovery recoveries with public expert demonstrations. On twenty new scenes, trained/milestone/fixed-eight successes were **17/13/14 out of twenty**. The trained version averaged 94.47% alignment, 18.40 predictions and 97.62 seconds, versus the milestone's 88.75%, 22.50 and 118.95 seconds. Per-prediction time stayed essentially unchanged at 4.845 seconds; all other weights and the 8/12 rule are unchanged. Training fit at about 1.1 GiB allocated GPU memory. All 655 CPU tests and independent audits passed. These are promising pilot improvements, not proven general superiority: success intervals include zero and scene 167 lost both original controls' success. Preserve the milestone and frozen candidate; no new controller is automatically adopted.
+
 ## Where to start
 
 | Location | Purpose |
@@ -73,6 +75,10 @@ The [recovery-training feasibility check](reports/2026-10-15-robotics-recovery-f
 | [experiments/robotics_staged_extension.py](experiments/robotics_staged_extension.py) | Frozen staged eight/twelve/fifteen comparison with cached-tail mechanics, reused controls and separate fresh confirmation |
 | [experiments/robotics_recovery_data_audit.py](experiments/robotics_recovery_data_audit.py) | CPU-only provenance and executed-label audit of existing discovery recoveries |
 | [experiments/robotics_recovery_feasibility.py](experiments/robotics_recovery_feasibility.py) | One reversible final-block training update on a replay-verified real example; no saved learned policy |
+| [experiments/robotics_recovery_pilot.py](experiments/robotics_recovery_pilot.py) | Frozen data split, bounded training budget and three-way fresh-scene comparison |
+| [experiments/robotics_recovery_dataset.py](experiments/robotics_recovery_dataset.py) | Exact recovery-image replay and pinned public expert-rehearsal preparation |
+| [experiments/robotics_recovery_training.py](experiments/robotics_recovery_training.py) | Final-block-only training with balanced rehearsal, fixed validation and local resumption |
+| [experiments/robotics_recovery_evaluation.py](experiments/robotics_recovery_evaluation.py) | Original baseline, unchanged milestone and trained-model milestone with safe weight switching |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
