@@ -1,0 +1,492 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "arm": "fixed8",
+      "directory": "results/robotics-recovery-confirmation/smoke/before",
+      "trial": {
+        "scene": 0,
+        "draw": 1234,
+        "prediction_seed": 1234,
+        "method": "fixed8",
+        "horizon": 16,
+        "execution": 8,
+        "success": false,
+        "truncated": true,
+        "steps": 16,
+        "model_queries": 2,
+        "initial": {
+          "pusher_pos": [
+            222.0,
+            97.0
+          ],
+          "pusher_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_pos": [
+            222.99382739283774,
+            381.59903623605413
+          ],
+          "block_angle": 3.0079994677219553,
+          "block_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_angular_velocity": 0.0,
+          "block_vertices": [
+            [
+              282.4592090409099,
+              373.60726637893714
+            ],
+            [
+              163.52844574476558,
+              389.5908060931711
+            ],
+            [
+              159.5325608162071,
+              359.85811526913506
+            ],
+            [
+              278.4633241123514,
+              343.87457555490107
+            ],
+            [
+              233.86428787629728,
+              349.8684029477388
+            ],
+            [
+              204.1315970522612,
+              353.8642878762973
+            ],
+            [
+              192.14394226658575,
+              264.6662154041891
+            ],
+            [
+              221.87663309062182,
+              260.6703304756306
+            ]
+          ],
+          "pusher_block_gap": 148.67037696967785,
+          "coverage": 0.18078262177574944,
+          "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+        },
+        "initial_features": null,
+        "final_coverage": 0.18078262177574944,
+        "wall_seconds": 10.554128200000378,
+        "monitor_seconds": 0.0,
+        "prediction_seconds": [
+          5.792198799999824,
+          4.687547399999858
+        ],
+        "peak_gpu_allocated_bytes": 1148623360,
+        "unit_lengths": [
+          8,
+          8
+        ],
+        "events": [],
+        "generated_shapes": [
+          [
+            1,
+            16,
+            2
+          ],
+          [
+            1,
+            16,
+            2
+          ]
+        ],
+        "trace": "scene-0-draw-1234-fixed8.trace.json.gz",
+        "trace_sha256": "d1a38c7d7c208be664d006a80b21c1ded282ad00d3241b196936b8d05d03c2d8"
+      },
+      "head_digest": "ab4692b8ebab463bda2232d9cc3e24b42c2f7813c0c1de432599e0e65213c938",
+      "eval_bindings_sha256": "cb2cd097e0c7bad85de2e3ad267740c528a65d5aa04487e4c01cd494bf7e5502",
+      "label": "before"
+    },
+    {
+      "arm": "milestone12",
+      "directory": "results/robotics-recovery-confirmation/smoke/milestone",
+      "trial": {
+        "scene": 0,
+        "draw": 1234,
+        "prediction_seed": 1234,
+        "method": "adaptive12",
+        "horizon": 16,
+        "execution": 12,
+        "success": false,
+        "truncated": true,
+        "steps": 16,
+        "model_queries": 2,
+        "initial": {
+          "pusher_pos": [
+            222.0,
+            97.0
+          ],
+          "pusher_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_pos": [
+            222.99382739283774,
+            381.59903623605413
+          ],
+          "block_angle": 3.0079994677219553,
+          "block_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_angular_velocity": 0.0,
+          "block_vertices": [
+            [
+              282.4592090409099,
+              373.60726637893714
+            ],
+            [
+              163.52844574476558,
+              389.5908060931711
+            ],
+            [
+              159.5325608162071,
+              359.85811526913506
+            ],
+            [
+              278.4633241123514,
+              343.87457555490107
+            ],
+            [
+              233.86428787629728,
+              349.8684029477388
+            ],
+            [
+              204.1315970522612,
+              353.8642878762973
+            ],
+            [
+              192.14394226658575,
+              264.6662154041891
+            ],
+            [
+              221.87663309062182,
+              260.6703304756306
+            ]
+          ],
+          "pusher_block_gap": 148.67037696967785,
+          "coverage": 0.18078262177574944,
+          "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+        },
+        "initial_features": {
+          "quality": true,
+          "coverage": 0.1796584761676043,
+          "warning_count": 0,
+          "drawdown": 0.0,
+          "recovery": 0.0,
+          "stagnation": 0.0,
+          "position_error": 0.25432559958143597,
+          "orientation_error": 0.7059772873567948,
+          "pending_actions": 0,
+          "history_steps": 0,
+          "recent_best_gain": 0.0,
+          "recent_peak": 0.1796584761676043
+        },
+        "final_coverage": 0.18078262177574944,
+        "wall_seconds": 10.320194099999753,
+        "monitor_seconds": 0.8771723000008933,
+        "prediction_seconds": [
+          4.64550810000037,
+          4.708336900000177
+        ],
+        "peak_gpu_allocated_bytes": 1148623360,
+        "unit_lengths": [
+          12,
+          4
+        ],
+        "events": [
+          {
+            "step": 8,
+            "plan_age": 8,
+            "kind": "extend",
+            "reason": "camera_and_plan_eligible",
+            "discarded": 0,
+            "features": {
+              "quality": true,
+              "coverage": 0.1796584761676043,
+              "warning_count": 0,
+              "drawdown": 3.2196416033247743e-08,
+              "recovery": 0.0,
+              "stagnation": 3.2196416033247743e-08,
+              "position_error": 0.25432559958143597,
+              "orientation_error": 0.7059772873567948,
+              "pending_actions": 4,
+              "history_steps": 8,
+              "recent_best_gain": 3.2196416033247743e-08,
+              "recent_peak": 0.17965850836402034
+            }
+          }
+        ],
+        "generated_shapes": [
+          [
+            1,
+            16,
+            2
+          ],
+          [
+            1,
+            16,
+            2
+          ]
+        ],
+        "trace": "scene-0-draw-1234-adaptive12.trace.json.gz",
+        "trace_sha256": "6d0ea6f5dac983dee6a1d83e229854c0e08a800c8f892346c310b647535ca3fb"
+      },
+      "head_digest": "ab4692b8ebab463bda2232d9cc3e24b42c2f7813c0c1de432599e0e65213c938",
+      "eval_bindings_sha256": "cb2cd097e0c7bad85de2e3ad267740c528a65d5aa04487e4c01cd494bf7e5502",
+      "label": "milestone"
+    },
+    {
+      "arm": "recovery12",
+      "directory": "results/robotics-recovery-confirmation/smoke/trained",
+      "trial": {
+        "scene": 0,
+        "draw": 1234,
+        "prediction_seed": 1234,
+        "method": "adaptive12",
+        "horizon": 16,
+        "execution": 12,
+        "success": false,
+        "truncated": true,
+        "steps": 16,
+        "model_queries": 2,
+        "initial": {
+          "pusher_pos": [
+            222.0,
+            97.0
+          ],
+          "pusher_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_pos": [
+            222.99382739283774,
+            381.59903623605413
+          ],
+          "block_angle": 3.0079994677219553,
+          "block_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_angular_velocity": 0.0,
+          "block_vertices": [
+            [
+              282.4592090409099,
+              373.60726637893714
+            ],
+            [
+              163.52844574476558,
+              389.5908060931711
+            ],
+            [
+              159.5325608162071,
+              359.85811526913506
+            ],
+            [
+              278.4633241123514,
+              343.87457555490107
+            ],
+            [
+              233.86428787629728,
+              349.8684029477388
+            ],
+            [
+              204.1315970522612,
+              353.8642878762973
+            ],
+            [
+              192.14394226658575,
+              264.6662154041891
+            ],
+            [
+              221.87663309062182,
+              260.6703304756306
+            ]
+          ],
+          "pusher_block_gap": 148.67037696967785,
+          "coverage": 0.18078262177574944,
+          "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+        },
+        "initial_features": {
+          "quality": true,
+          "coverage": 0.1796584761676043,
+          "warning_count": 0,
+          "drawdown": 0.0,
+          "recovery": 0.0,
+          "stagnation": 0.0,
+          "position_error": 0.25432559958143597,
+          "orientation_error": 0.7059772873567948,
+          "pending_actions": 0,
+          "history_steps": 0,
+          "recent_best_gain": 0.0,
+          "recent_peak": 0.1796584761676043
+        },
+        "final_coverage": 0.18078262177574944,
+        "wall_seconds": 10.563463699999375,
+        "monitor_seconds": 1.0441905000025145,
+        "prediction_seconds": [
+          4.709980100000394,
+          4.708366900000328
+        ],
+        "peak_gpu_allocated_bytes": 1148623360,
+        "unit_lengths": [
+          12,
+          4
+        ],
+        "events": [
+          {
+            "step": 8,
+            "plan_age": 8,
+            "kind": "extend",
+            "reason": "camera_and_plan_eligible",
+            "discarded": 0,
+            "features": {
+              "quality": true,
+              "coverage": 0.1796584761676043,
+              "warning_count": 0,
+              "drawdown": 6.43504767527947e-08,
+              "recovery": 0.0,
+              "stagnation": 6.43504767527947e-08,
+              "position_error": 0.25432559958143597,
+              "orientation_error": 0.7059772873567948,
+              "pending_actions": 4,
+              "history_steps": 8,
+              "recent_best_gain": 6.43504767527947e-08,
+              "recent_peak": 0.17965854051808106
+            }
+          }
+        ],
+        "generated_shapes": [
+          [
+            1,
+            16,
+            2
+          ],
+          [
+            1,
+            16,
+            2
+          ]
+        ],
+        "trace": "scene-0-draw-1234-adaptive12.trace.json.gz",
+        "trace_sha256": "8200de94f6a865c3a1effcadc44b61379f11cec73cb68f00ac5bdd45f13b1014"
+      },
+      "head_digest": "4286fe28e2da68f003cfadbbe3cab2db51cbc716d21c8df9e128e6cbf15eb3da",
+      "eval_bindings_sha256": "cb2cd097e0c7bad85de2e3ad267740c528a65d5aa04487e4c01cd494bf7e5502",
+      "label": "trained"
+    },
+    {
+      "arm": "fixed8",
+      "directory": "results/robotics-recovery-confirmation/smoke/restored",
+      "trial": {
+        "scene": 0,
+        "draw": 1234,
+        "prediction_seed": 1234,
+        "method": "fixed8",
+        "horizon": 16,
+        "execution": 8,
+        "success": false,
+        "truncated": true,
+        "steps": 16,
+        "model_queries": 2,
+        "initial": {
+          "pusher_pos": [
+            222.0,
+            97.0
+          ],
+          "pusher_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_pos": [
+            222.99382739283774,
+            381.59903623605413
+          ],
+          "block_angle": 3.0079994677219553,
+          "block_velocity": [
+            0.0,
+            0.0
+          ],
+          "block_angular_velocity": 0.0,
+          "block_vertices": [
+            [
+              282.4592090409099,
+              373.60726637893714
+            ],
+            [
+              163.52844574476558,
+              389.5908060931711
+            ],
+            [
+              159.5325608162071,
+              359.85811526913506
+            ],
+            [
+              278.4633241123514,
+              343.87457555490107
+            ],
+            [
+              233.86428787629728,
+              349.8684029477388
+            ],
+            [
+              204.1315970522612,
+              353.8642878762973
+            ],
+            [
+              192.14394226658575,
+              264.6662154041891
+            ],
+            [
+              221.87663309062182,
+              260.6703304756306
+            ]
+          ],
+          "pusher_block_gap": 148.67037696967785,
+          "coverage": 0.18078262177574944,
+          "image_sha256": "92eb620e9cda471ecfeb36f2a0794d66167398a5b6f7d66c2227e9dae793f1ba"
+        },
+        "initial_features": null,
+        "final_coverage": 0.18078262177574944,
+        "wall_seconds": 9.560873099999299,
+        "monitor_seconds": 0.0,
+        "prediction_seconds": [
+          4.690626300000076,
+          4.795649999999114
+        ],
+        "peak_gpu_allocated_bytes": 1148623360,
+        "unit_lengths": [
+          8,
+          8
+        ],
+        "events": [],
+        "generated_shapes": [
+          [
+            1,
+            16,
+            2
+          ],
+          [
+            1,
+            16,
+            2
+          ]
+        ],
+        "trace": "scene-0-draw-1234-fixed8.trace.json.gz",
+        "trace_sha256": "b8f32b13063be4b9ba7f7a144845e00bca0d14c985d5ae519dfe37dcd6a91ccb"
+      },
+      "head_digest": "ab4692b8ebab463bda2232d9cc3e24b42c2f7813c0c1de432599e0e65213c938",
+      "eval_bindings_sha256": "cb2cd097e0c7bad85de2e3ad267740c528a65d5aa04487e4c01cd494bf7e5502",
+      "label": "restored"
+    }
+  ],
+  "original_backbone_unchanged": true
+}

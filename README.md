@@ -4,7 +4,7 @@ ECE 730 course project: computation and AI for cyber-physical systems.
 
 This branch explores visual execution feedback and bounded offline refinement of a pretrained robot-action model. In the PushT simulator, a camera observes a pusher and a T-shaped block. Diffusion Policy predicts movements; the simulator applies them and returns updated images.
 
-The main execution method is lightweight feedback that decides when to reuse more predicted movements or request a new prediction. Earlier pilots test interruptions and camera/path-guided eight-versus-twelve-action execution. The latest pilot updates only the model's final convolution block using recovery and expert examples while preserving that execution rule. These remain bounded investigations, not proven general improvements.
+The main execution method is lightweight feedback that decides when to reuse more predicted movements or request a new prediction. Earlier pilots test interruptions and camera/path-guided eight-versus-twelve-action execution. A later pilot updates only the model's final convolution block using recovery and expert examples while preserving that execution rule. The completed fresh-scene confirmation supports a success/efficiency improvement for that frozen trained checkpoint within clean PushT, not general robot or real-world superiority.
 
 ## Current status
 
@@ -48,6 +48,8 @@ The [recovery-training feasibility check](reports/2026-10-15-robotics-recovery-f
 
 The [completed recovery-rehearsal pilot](reports/2026-10-16-robotics-recovery-pilot.md) trained only the existing final convolution block for 600 updates, mixing discovery recoveries with public expert demonstrations. On twenty new scenes, trained/milestone/fixed-eight successes were **17/13/14 out of twenty**. The trained version averaged 94.47% alignment, 18.40 predictions and 97.62 seconds, versus the milestone's 88.75%, 22.50 and 118.95 seconds. Per-prediction time stayed essentially unchanged at 4.845 seconds; all other weights and the 8/12 rule are unchanged. Training fit at about 1.1 GiB allocated GPU memory. All 655 CPU tests and independent audits passed. These are promising pilot improvements, not proven general superiority: success intervals include zero and scene 167 lost both original controls' success. Preserve the milestone and frozen candidate; no new controller is automatically adopted.
 
+The [completed fresh-scene confirmation](reports/2026-10-17-robotics-recovery-confirmation.md) collected 240 attempts on forty new scenes with two prediction samples each. The same trained checkpoint achieved **60/80 successes**, versus unchanged milestone **48/80** and original fixed-eight **46/80**. Against the milestone, success rose 15 percentage points (40-scene clustered 95% interval: +3.75 to +27.50 points), predictions fell 11.15%, and observed runtime fell 11.06%. Both prediction samples favored trained success; alignment improvement remains uncertain. It turned nineteen milestone failures into successes, but lost seven milestone successes, so it does not preserve every successful scene/sample pair. All 693 CPU tests and the independent artifact/statistics audit passed. Collection was interrupted and safely resumed; runtime spans sessions, and only the resumed segment has a whole-invocation resource record. No retraining, threshold changes or automatic milestone replacement occurred.
+
 ## Where to start
 
 | Location | Purpose |
@@ -79,6 +81,7 @@ The [completed recovery-rehearsal pilot](reports/2026-10-16-robotics-recovery-pi
 | [experiments/robotics_recovery_dataset.py](experiments/robotics_recovery_dataset.py) | Exact recovery-image replay and pinned public expert-rehearsal preparation |
 | [experiments/robotics_recovery_training.py](experiments/robotics_recovery_training.py) | Final-block-only training with balanced rehearsal, fixed validation and local resumption |
 | [experiments/robotics_recovery_evaluation.py](experiments/robotics_recovery_evaluation.py) | Original baseline, unchanged milestone and trained-model milestone with safe weight switching |
+| [experiments/robotics_recovery_confirmation.py](experiments/robotics_recovery_confirmation.py) | Frozen forty-scene, two-sample confirmation with resumable collection and scene-cluster statistics |
 | [reports/](reports/) | Findings and reproduction instructions |
 | [results/](results/README.md) | Small, shareable experiment evidence |
 | `.venv-robotics/` | Local robotics environment; Git-ignored |
