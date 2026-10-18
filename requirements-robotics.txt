@@ -1,0 +1,22 @@
+# Isolated Python 3.11 robotics environment.
+# CUDA wheels match the laptop's existing driver; no separate CUDA toolkit needed.
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+lerobot[pusht]==0.3.3
+gym-pusht==0.1.5
+gymnasium==0.29.1
+pymunk==6.11.1
+numpy==1.26.4
+# Older dataset utilities are imported even for inference; avoid NumPy-2-only releases.
+pyarrow==20.0.0
+pandas==2.2.3
+diffusers==0.35.1
+huggingface-hub==0.35.3
+safetensors==0.6.2
+opencv-python==4.11.0.86
+opencv-python-headless==4.11.0.86
+psutil==7.2.2
+# Direct dependencies of the lightweight camera-based pose/coverage estimator.
+scipy==1.17.1
+shapely==2.2.0

@@ -1,0 +1,790 @@
+{
+  "purpose": "preliminary one-decision benefit-gate evaluation, not publication proof",
+  "model_id": "lerobot/diffusion_pusht",
+  "model_revision": "84a7c23178445c6bbf7e1a884ff497017910f653",
+  "weights_sha256": "995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8",
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "lerobot": "0.3.3",
+    "gym-pusht": "0.1.5",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "shapely": "2.2.0",
+    "diffusers": "0.35.1"
+  },
+  "config": {
+    "beta_end": 0.02,
+    "beta_schedule": "squaredcos_cap_v2",
+    "beta_start": 0.0001,
+    "clip_sample": true,
+    "clip_sample_range": 1.0,
+    "crop_is_random": true,
+    "crop_shape": [
+      84,
+      84
+    ],
+    "diffusion_step_embed_dim": 128,
+    "do_mask_loss_for_padding": false,
+    "down_dims": [
+      512,
+      1024,
+      2048
+    ],
+    "drop_n_last_frames": 7,
+    "horizon": 16,
+    "input_features": {
+      "observation.image": {
+        "shape": [
+          3,
+          96,
+          96
+        ],
+        "type": "VISUAL"
+      },
+      "observation.state": {
+        "shape": [
+          2
+        ],
+        "type": "STATE"
+      }
+    },
+    "kernel_size": 5,
+    "n_action_steps": 8,
+    "n_groups": 8,
+    "n_obs_steps": 2,
+    "device": "cuda",
+    "use_amp": false,
+    "noise_scheduler_type": "DDPM",
+    "normalization_mapping": {
+      "ACTION": "MIN_MAX",
+      "STATE": "MIN_MAX",
+      "VISUAL": "MEAN_STD"
+    },
+    "num_inference_steps": null,
+    "num_train_timesteps": 100,
+    "optimizer_betas": [
+      0.95,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "optimizer_lr": 0.0001,
+    "optimizer_weight_decay": 1e-06,
+    "output_features": {
+      "action": {
+        "shape": [
+          2
+        ],
+        "type": "ACTION"
+      }
+    },
+    "prediction_type": "epsilon",
+    "pretrained_backbone_weights": null,
+    "scheduler_name": "cosine",
+    "scheduler_warmup_steps": 500,
+    "spatial_softmax_num_keypoints": 32,
+    "type": "diffusion",
+    "use_film_scale_modulation": true,
+    "use_group_norm": true,
+    "use_separate_rgb_encoder_per_camera": false,
+    "vision_backbone": "resnet18"
+  },
+  "feature_names": [
+    "coverage",
+    "warning_count",
+    "drawdown",
+    "recovery",
+    "stagnation",
+    "position_error",
+    "orientation_error",
+    "pending_actions"
+  ],
+  "monitor_rules": {
+    "warning_window": 5,
+    "drawdown_window": 8,
+    "progress_window": 24,
+    "warning_drop": 0.015,
+    "maximum_fit_rms_pixels": 0.75,
+    "minimum_object_pixels": 120
+  },
+  "eligibility": {
+    "minimum_step": 32,
+    "maximum_step": 284,
+    "minimum_pending": 2,
+    "warning_count": 2,
+    "drawdown": 0.03,
+    "recent_peak": 0.8,
+    "stagnation_window": 24,
+    "stagnation_coverage": 0.75,
+    "stagnation_best_gain": 0.01
+  },
+  "selection": "first eligible camera-derived checkpoint per seed, seeds 0-29 ascending, cap 20",
+  "cases": [
+    {
+      "checkpoint_id": "seed-0-step-164",
+      "episode_id": 0,
+      "branch_step": 164,
+      "features": [
+        0.8515858223994571,
+        0.0,
+        0.002001971084435783,
+        -0.001750713135834192,
+        0.008812940802979452,
+        0.014978775370100651,
+        0.0034672505521484475,
+        4.0
+      ],
+      "feature_values": {
+        "step": 164,
+        "quality": true,
+        "coverage": 0.8515858223994571,
+        "warning_count": 0,
+        "drawdown": 0.002001971084435783,
+        "recovery": -0.001750713135834192,
+        "stagnation": 0.008812940802979452,
+        "position_error": 0.014978775370100651,
+        "orientation_error": 0.0034672505521484475,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.008812940802979452,
+        "recent_peak": 0.8535877934838929
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-1-step-142",
+      "episode_id": 1,
+      "branch_step": 142,
+      "features": [
+        0.8541005078391694,
+        0.0,
+        0.007478786530915826,
+        -0.0017652208669065583,
+        0.009654299304608926,
+        0.010134384575186794,
+        0.014112528992033465,
+        2.0
+      ],
+      "feature_values": {
+        "step": 142,
+        "quality": true,
+        "coverage": 0.8541005078391694,
+        "warning_count": 0,
+        "drawdown": 0.007478786530915826,
+        "recovery": -0.0017652208669065583,
+        "stagnation": 0.009654299304608926,
+        "position_error": 0.010134384575186794,
+        "orientation_error": 0.014112528992033465,
+        "pending_actions": 2,
+        "history_steps": 24,
+        "recent_best_gain": 0.009654299304608926,
+        "recent_peak": 0.8615792943700852
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-2-step-157",
+      "episode_id": 2,
+      "branch_step": 157,
+      "features": [
+        0.8583271481522536,
+        2.0,
+        0.07468916318897412,
+        -0.04507980540513257,
+        0.2400753935763793,
+        0.019865541785839116,
+        0.025988944851067803,
+        3.0
+      ],
+      "feature_values": {
+        "step": 157,
+        "quality": true,
+        "coverage": 0.8583271481522536,
+        "warning_count": 2,
+        "drawdown": 0.07468916318897412,
+        "recovery": -0.04507980540513257,
+        "stagnation": 0.2400753935763793,
+        "position_error": 0.019865541785839116,
+        "orientation_error": 0.025988944851067803,
+        "pending_actions": 3,
+        "history_steps": 24,
+        "recent_best_gain": 0.2400753935763793,
+        "recent_peak": 0.9330163113412278
+      },
+      "reason": "regression",
+      "hand_replan": true
+    },
+    {
+      "checkpoint_id": "seed-3-step-193",
+      "episode_id": 3,
+      "branch_step": 193,
+      "features": [
+        0.9329745577182823,
+        0.0,
+        1.0325860833049205e-08,
+        0.0,
+        0.0,
+        0.007836450625024827,
+        0.00661256483497502,
+        7.0
+      ],
+      "feature_values": {
+        "step": 193,
+        "quality": true,
+        "coverage": 0.9329745577182823,
+        "warning_count": 0,
+        "drawdown": 1.0325860833049205e-08,
+        "recovery": 0.0,
+        "stagnation": 0.0,
+        "position_error": 0.007836450625024827,
+        "orientation_error": 0.00661256483497502,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.9329745680441431
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-4-step-178",
+      "episode_id": 4,
+      "branch_step": 178,
+      "features": [
+        0.8965652626745508,
+        0.0,
+        0.0005823710945174199,
+        -0.0005823710945174199,
+        0.0006503964628251646,
+        0.011412232466439945,
+        0.029419546916306032,
+        6.0
+      ],
+      "feature_values": {
+        "step": 178,
+        "quality": true,
+        "coverage": 0.8965652626745508,
+        "warning_count": 0,
+        "drawdown": 0.0005823710945174199,
+        "recovery": -0.0005823710945174199,
+        "stagnation": 0.0006503964628251646,
+        "position_error": 0.011412232466439945,
+        "orientation_error": 0.029419546916306032,
+        "pending_actions": 6,
+        "history_steps": 24,
+        "recent_best_gain": 0.0006503964628251646,
+        "recent_peak": 0.8971476337690683
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-5-step-150",
+      "episode_id": 5,
+      "branch_step": 150,
+      "features": [
+        0.8727699111663234,
+        0.0,
+        5.861782159666262e-08,
+        5.661138224866136e-12,
+        0.008473037919845772,
+        0.010190370563569336,
+        0.013507052068507275,
+        2.0
+      ],
+      "feature_values": {
+        "step": 150,
+        "quality": true,
+        "coverage": 0.8727699111663234,
+        "warning_count": 0,
+        "drawdown": 5.861782159666262e-08,
+        "recovery": 5.661138224866136e-12,
+        "stagnation": 0.008473037919845772,
+        "position_error": 0.010190370563569336,
+        "orientation_error": 0.013507052068507275,
+        "pending_actions": 2,
+        "history_steps": 24,
+        "recent_best_gain": 0.008473037919845772,
+        "recent_peak": 0.872769969784145
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-6-step-62",
+      "episode_id": 6,
+      "branch_step": 62,
+      "features": [
+        0.8242945545842744,
+        0.0,
+        1.3413303279197208e-07,
+        6.903051263940085e-08,
+        0.0,
+        0.024795274211007728,
+        0.05242031759094915,
+        2.0
+      ],
+      "feature_values": {
+        "step": 62,
+        "quality": true,
+        "coverage": 0.8242945545842744,
+        "warning_count": 0,
+        "drawdown": 1.3413303279197208e-07,
+        "recovery": 6.903051263940085e-08,
+        "stagnation": 0.0,
+        "position_error": 0.024795274211007728,
+        "orientation_error": 0.05242031759094915,
+        "pending_actions": 2,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.8242946887173072
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-7-step-241",
+      "episode_id": 7,
+      "branch_step": 241,
+      "features": [
+        0.8610189082442575,
+        0.0,
+        3.6157379423862324e-08,
+        6.661338147750939e-16,
+        0.0,
+        0.0061806110867353705,
+        0.02137342555015956,
+        7.0
+      ],
+      "feature_values": {
+        "step": 241,
+        "quality": true,
+        "coverage": 0.8610189082442575,
+        "warning_count": 0,
+        "drawdown": 3.6157379423862324e-08,
+        "recovery": 6.661338147750939e-16,
+        "stagnation": 0.0,
+        "position_error": 0.0061806110867353705,
+        "orientation_error": 0.02137342555015956,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.861018944401637
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-8-step-51",
+      "episode_id": 8,
+      "branch_step": 51,
+      "features": [
+        0.7599469136468289,
+        0.0,
+        3.328630704402258e-10,
+        3.1086244689504383e-15,
+        0.0,
+        0.01641726403709898,
+        0.028073172022318765,
+        5.0
+      ],
+      "feature_values": {
+        "step": 51,
+        "quality": true,
+        "coverage": 0.7599469136468289,
+        "warning_count": 0,
+        "drawdown": 3.328630704402258e-10,
+        "recovery": 3.1086244689504383e-15,
+        "stagnation": 0.0,
+        "position_error": 0.01641726403709898,
+        "orientation_error": 0.028073172022318765,
+        "pending_actions": 5,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.7599469139796919
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-9-step-153",
+      "episode_id": 9,
+      "branch_step": 153,
+      "features": [
+        0.8321718224643855,
+        3.0,
+        0.06343156752203205,
+        -0.03362868360760862,
+        0.004349155540891436,
+        0.010644401590244662,
+        0.025205030519216874,
+        7.0
+      ],
+      "feature_values": {
+        "step": 153,
+        "quality": true,
+        "coverage": 0.8321718224643855,
+        "warning_count": 3,
+        "drawdown": 0.06343156752203205,
+        "recovery": -0.03362868360760862,
+        "stagnation": 0.004349155540891436,
+        "position_error": 0.010644401590244662,
+        "orientation_error": 0.025205030519216874,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.004349155540891436,
+        "recent_peak": 0.8956033899864175
+      },
+      "reason": "regression",
+      "hand_replan": true
+    },
+    {
+      "checkpoint_id": "seed-11-step-185",
+      "episode_id": 11,
+      "branch_step": 185,
+      "features": [
+        0.905464439838136,
+        0.0,
+        0.018856563023185946,
+        -0.002789730894871445,
+        0.0,
+        0.007557196492670681,
+        0.0034013324052848807,
+        7.0
+      ],
+      "feature_values": {
+        "step": 185,
+        "quality": true,
+        "coverage": 0.905464439838136,
+        "warning_count": 0,
+        "drawdown": 0.018856563023185946,
+        "recovery": -0.002789730894871445,
+        "stagnation": 0.0,
+        "position_error": 0.007557196492670681,
+        "orientation_error": 0.0034013324052848807,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.9243210028613219
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-15-step-218",
+      "episode_id": 15,
+      "branch_step": 218,
+      "features": [
+        0.8214630011805186,
+        2.0,
+        0.06386709065732077,
+        -0.06386657988171573,
+        0.13840953019475344,
+        0.013490650208322352,
+        0.00016263743829801304,
+        6.0
+      ],
+      "feature_values": {
+        "step": 218,
+        "quality": true,
+        "coverage": 0.8214630011805186,
+        "warning_count": 2,
+        "drawdown": 0.06386709065732077,
+        "recovery": -0.06386657988171573,
+        "stagnation": 0.13840953019475344,
+        "position_error": 0.013490650208322352,
+        "orientation_error": 0.00016263743829801304,
+        "pending_actions": 6,
+        "history_steps": 24,
+        "recent_best_gain": 0.13840953019475344,
+        "recent_peak": 0.8853300918378394
+      },
+      "reason": "regression",
+      "hand_replan": true
+    },
+    {
+      "checkpoint_id": "seed-16-step-132",
+      "episode_id": 16,
+      "branch_step": 132,
+      "features": [
+        0.7545632719440915,
+        2.0,
+        0.17054423776441585,
+        -0.17054423776441585,
+        0.558193913410447,
+        0.028020432066060738,
+        0.05953696397711016,
+        4.0
+      ],
+      "feature_values": {
+        "step": 132,
+        "quality": true,
+        "coverage": 0.7545632719440915,
+        "warning_count": 2,
+        "drawdown": 0.17054423776441585,
+        "recovery": -0.17054423776441585,
+        "stagnation": 0.558193913410447,
+        "position_error": 0.028020432066060738,
+        "orientation_error": 0.05953696397711016,
+        "pending_actions": 4,
+        "history_steps": 24,
+        "recent_best_gain": 0.558193913410447,
+        "recent_peak": 0.9251075097085073
+      },
+      "reason": "regression",
+      "hand_replan": true
+    },
+    {
+      "checkpoint_id": "seed-18-step-97",
+      "episode_id": 18,
+      "branch_step": 97,
+      "features": [
+        0.8510681172734177,
+        2.0,
+        0.03278576769782915,
+        -0.014983171281938712,
+        0.6448781151359597,
+        0.011555809021856593,
+        0.0009259778161762671,
+        7.0
+      ],
+      "feature_values": {
+        "step": 97,
+        "quality": true,
+        "coverage": 0.8510681172734177,
+        "warning_count": 2,
+        "drawdown": 0.03278576769782915,
+        "recovery": -0.014983171281938712,
+        "stagnation": 0.6448781151359597,
+        "position_error": 0.011555809021856593,
+        "orientation_error": 0.0009259778161762671,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.6448781151359597,
+        "recent_peak": 0.8838538849712468
+      },
+      "reason": "regression",
+      "hand_replan": true
+    },
+    {
+      "checkpoint_id": "seed-22-step-161",
+      "episode_id": 22,
+      "branch_step": 161,
+      "features": [
+        0.8743180446211614,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.006328728812989236,
+        0.023992022803516692,
+        7.0
+      ],
+      "feature_values": {
+        "step": 161,
+        "quality": true,
+        "coverage": 0.8743180446211614,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 0.0,
+        "stagnation": 0.0,
+        "position_error": 0.006328728812989236,
+        "orientation_error": 0.023992022803516692,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.8743180446211614
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-25-step-185",
+      "episode_id": 25,
+      "branch_step": 185,
+      "features": [
+        0.9323127807263321,
+        0.0,
+        0.0,
+        8.38340508124702e-11,
+        0.0007294643521923438,
+        0.006599638969655194,
+        0.006104886642887936,
+        7.0
+      ],
+      "feature_values": {
+        "step": 185,
+        "quality": true,
+        "coverage": 0.9323127807263321,
+        "warning_count": 0,
+        "drawdown": 0.0,
+        "recovery": 8.38340508124702e-11,
+        "stagnation": 0.0007294643521923438,
+        "position_error": 0.006599638969655194,
+        "orientation_error": 0.006104886642887936,
+        "pending_actions": 7,
+        "history_steps": 24,
+        "recent_best_gain": 0.0007294643521923438,
+        "recent_peak": 0.9323127807263321
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    },
+    {
+      "checkpoint_id": "seed-28-step-125",
+      "episode_id": 28,
+      "branch_step": 125,
+      "features": [
+        0.8035807015261089,
+        0.0,
+        4.3259840154519225e-12,
+        -2.0901058661593197e-12,
+        0.0,
+        0.01776696957692844,
+        0.0028328998741770635,
+        3.0
+      ],
+      "feature_values": {
+        "step": 125,
+        "quality": true,
+        "coverage": 0.8035807015261089,
+        "warning_count": 0,
+        "drawdown": 4.3259840154519225e-12,
+        "recovery": -2.0901058661593197e-12,
+        "stagnation": 0.0,
+        "position_error": 0.01776696957692844,
+        "orientation_error": 0.0028328998741770635,
+        "pending_actions": 3,
+        "history_steps": 24,
+        "recent_best_gain": 0.0,
+        "recent_peak": 0.8035807015304349
+      },
+      "reason": "stagnation",
+      "hand_replan": false
+    }
+  ],
+  "train_episode_ids": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    7,
+    9,
+    11,
+    16,
+    18,
+    25,
+    28
+  ],
+  "validation_episode_ids": [
+    2,
+    5,
+    8,
+    15,
+    22
+  ],
+  "label_seeds": [
+    3000,
+    3001,
+    3002
+  ],
+  "evaluation_seeds": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "evaluation_rng": "torch/numpy reset to episode seed for each method; matched by prediction order not time",
+  "methods": [
+    "fixed8",
+    "fixed4",
+    "warning_rule",
+    "learned_gate"
+  ],
+  "max_total_actions": 300,
+  "success": "simulator termination: coverage strictly >0.95",
+  "decision_scope": "learned gate: first eligible point only, then fixed8; warning baseline: first confirmed regression, then fixed8",
+  "tree": {
+    "max_depth": 2,
+    "min_leaf": 3
+  },
+  "thresholds": [
+    0,
+    0.1,
+    0.34,
+    0.67,
+    1.1
+  ],
+  "minimum_margin": 0.05,
+  "threshold_selection": "validation success then fewer calls then higher threshold",
+  "source_fingerprints": {
+    "results/robotics-failure-patterns/summary.json": "f748d6b7e8d3b4a3b79531f71129292972cadefadb17b585fedc466fd546effe",
+    "results/robotics-failure-patterns/protocol.json": "155dc7333f5d34b62d58c5eed469883cc14b0de2ccb4486cdce34158c5106690",
+    "results/robotics-failure-patterns/analysis.json": "edfb8bcdffda29edf608212178588cf4b83194642951c254c2657d5242d33e51",
+    "results/robotics-failure-patterns/recovery.json": "01b96f9fff6e30cdce312b9d8a4a156dc8580dc04cc682ffe05c4279bd8d929a",
+    "results/robotics-baseline-check/seed-0.trace.json.gz": "f4b9f9513b21d0192ab659264eb52a40f5eda1f1b8b6706728f1561f41503ae2",
+    "results/robotics-baseline-check/seed-1.trace.json.gz": "7c850c640c76a0b885b90acc8036c1299421e4e30b55d259f8b2691512ef5b38",
+    "results/robotics-baseline-check/seed-2.trace.json.gz": "fb25a02bf0b04772bd7bbc06ab19b4dc91f9b5e2be543f542163301fb6de1088",
+    "results/robotics-baseline-check/seed-3.trace.json.gz": "33738a44b79a7e7eb2bb522c1658e500386065043ae1a4d3ed147edc3545cec6",
+    "results/robotics-baseline-check/seed-4.trace.json.gz": "48e9ba03d58ccc035fdd2d3fc73b9dc8b972ab7681cc5966e7aa369375772a39",
+    "results/robotics-baseline-check/seed-5.trace.json.gz": "80ea31a039da07c0b8f3bdf77ec56828dc328720e7c401ef12f84f17b255e9b6",
+    "results/robotics-failure-patterns/episodes/seed-6.trace.json.gz": "7c09fc4320520b806f9ae55ad708e6cb575ff7551f55c103b36aaf35182799c6",
+    "results/robotics-failure-patterns/episodes/seed-7.trace.json.gz": "5f2d666c3bc91c9dcc8817e3a8ef6c1670f6090902e25201de9f43645d0a7039",
+    "results/robotics-failure-patterns/episodes/seed-8.trace.json.gz": "7eb2d850f0bd1345534b0902983f625564ba2825458eafde43bf8753a68f7f09",
+    "results/robotics-failure-patterns/episodes/seed-9.trace.json.gz": "e0568c668e709bfeffedfd7bbce88f359c67b5a07626ec789fdc6d3ff00f56a6",
+    "results/robotics-failure-patterns/episodes/seed-10.trace.json.gz": "dc0de002f7976f3562f0b9b429697868b5f4dcaa102ddaad7a77d5fddc8e1e2b",
+    "results/robotics-failure-patterns/episodes/seed-11.trace.json.gz": "e4b846e706de73fe4e1a70aab07833263c1477d7ee789bb673a254e41a897f82",
+    "results/robotics-failure-patterns/episodes/seed-12.trace.json.gz": "42bf38af48da55043e8a65686f49856dd31e2740d83499699af8b9d9eee72c05",
+    "results/robotics-failure-patterns/episodes/seed-13.trace.json.gz": "fe8a1accc4c30307e28aa165281e16d027f675d2362e62e6e49347d2fb746a04",
+    "results/robotics-failure-patterns/episodes/seed-14.trace.json.gz": "36bbe3339a537e9cee555edc627b988ed65f22901174b093dd330a55b88f295e",
+    "results/robotics-failure-patterns/episodes/seed-15.trace.json.gz": "a1937c9f751fc0ee430750f7ae43ee4b27425847a3e461b650ed10591180c031",
+    "results/robotics-failure-patterns/episodes/seed-16.trace.json.gz": "d3453e44682fd3a26997f89a67dd3c2d1fe4a1c6f36d57e9cfe3a8f00cfed6da",
+    "results/robotics-failure-patterns/episodes/seed-17.trace.json.gz": "b966b79b0195f94f46247870cd8789cf2040d4a9edd5156e20bf79fbdced78c8",
+    "results/robotics-failure-patterns/episodes/seed-18.trace.json.gz": "85753aff08f3f6a292beaa34a36b77593150f1accc787bc84fe235a78688382d",
+    "results/robotics-failure-patterns/episodes/seed-19.trace.json.gz": "c9e5736a05a1b9b29440ca8cdcb92b5317b8d9651fbaf36157baac0d8f778b30",
+    "results/robotics-failure-patterns/episodes/seed-20.trace.json.gz": "61be40b36fbd26bc06de1ba43afd4053eab6e6be3e87c24759bfdb99e1b67da8",
+    "results/robotics-failure-patterns/episodes/seed-21.trace.json.gz": "83df90f5d5205cc2ebfbf137920aa10f7bdb4b8d7f4cfee852254cc31ffd524c",
+    "results/robotics-failure-patterns/episodes/seed-22.trace.json.gz": "29195041f76aaf76c2a0813928c2bf69db7ad566d925f6eea6ef1e3743f0b291",
+    "results/robotics-failure-patterns/episodes/seed-23.trace.json.gz": "447b1a5170883a6f7d2f5692e903e35fe7ecb32ffd02de00f2797ff2796db6f4",
+    "results/robotics-failure-patterns/episodes/seed-24.trace.json.gz": "3ef19a22c6c1c8999bd5c2b8c86444f04f9397e42c8ebd6019bc1512de49ab52",
+    "results/robotics-failure-patterns/episodes/seed-25.trace.json.gz": "924ae14479a81a9296c1a6eb1878ed458dfb1fc0df2ad1353e8745d6d9d53e9d",
+    "results/robotics-failure-patterns/episodes/seed-26.trace.json.gz": "ed99ea679a2dae183abf03176c6c815a664231749a8090ccc88bd21bf9c836f3",
+    "results/robotics-failure-patterns/episodes/seed-27.trace.json.gz": "d5f300828f61aa383c0902d93b444e9ac59f7c08f652420c402fa29a31b305c0",
+    "results/robotics-failure-patterns/episodes/seed-28.trace.json.gz": "9d35bc7ef319d05699e88eebfa8b625b0f67952a2b9e49f6705cffc61685d351",
+    "results/robotics-failure-patterns/episodes/seed-29.trace.json.gz": "8291348aade344db44d6070c7cc70d967e884ded14897dc83cd1eb55e351fdc2",
+    "results/robotics-baseline-check/summary.json": "79827f7e572c8f066c57a3d7ff5ec4669365820ac156ec43fe46670888eb2595",
+    "results/robotics-baseline-check/protocol.json": "b2a52eab070eac4b74559cbfc245ff86341a29453cec5367f25109eadd4f127e"
+  },
+  "code_fingerprints": {
+    "robotics_benefit_pilot.py": "132c4bb72ce59da1e2f5ee4c1f9049432ad35ca1c5dc89ed06eb03ca0f92cd53",
+    "robotics_visual_monitor.py": "2c99de00434210693f9c6dc5b5cf134dcdaa55c144bea1560305ac7bea8a23f9",
+    "robotics_benefit_model.py": "e0691e9c833734ed34d98b73a2be5c4abb4cfd0174aa86af9449a2532cababa6",
+    "robotics_baseline_check.py": "d8e16317ba3a53d5d7abbf19b9712454bad8850639d6f4d70585f83380e91a19",
+    "robotics_failure_investigation.py": "a741c8b51e2018c1e2d450bf39e601069e30180ab4017a660f513b9a11dbd29f",
+    "robotics_feasibility.py": "1bcc3fdcf251c91f20aab5b35527ab29cbc211c0f269df9cfadb480703a90552",
+    "requirements-robotics.txt": "2d509ac01f233be9d24a16834c67d42f47266e40a61dea1b28232bb8916e309b"
+  },
+  "visual_evidence": {
+    "visual-validation.json": "c25380ab323cd1974e640a03491b190a4dac043d794d7573705bfcc413710e58",
+    "visual-features.json.gz": "a2149aaef08d23d6e7d33f60eb16891571c21821592bb6fdcb61895696659f30",
+    "near-target-validation.json": "04855e05c6e560766ea1bc09c5f82d0dc8093548c7c014d30950b1358c768460"
+  }
+}

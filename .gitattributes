@@ -1,5 +1,42 @@
-# Preserve byte hashes used by the completed grid robustness protocol.
-/experiments/*.py -text
-/results/robustness-check/*.json -text
-/results/power-model-pilot-verified/manifest.json -text
-/results/delay-screen/selection.json -text
+# Preserve the byte fingerprints of the frozen robotics pilot on checkout.
+experiments/robotics_benefit_pilot.py text eol=lf
+experiments/robotics_visual_monitor.py text eol=lf
+experiments/robotics_benefit_model.py text eol=lf
+experiments/robotics_adaptive_length.py text eol=lf
+experiments/robotics_fresh_evaluation.py text eol=lf
+experiments/robotics_regression_diagnosis.py text eol=lf
+experiments/robotics_decline_screen.py text eol=lf
+experiments/robotics_weighted_gate.py text eol=lf
+experiments/robotics_gate_evaluation.py text eol=lf
+experiments/robotics_decision_review.py text eol=lf
+experiments/robotics_cohort_completion.py text eol=lf
+experiments/robotics_loss_review.py text eol=lf
+experiments/robotics_pose_gate.py text eol=lf
+experiments/robotics_generation_length.py text eol=lf
+experiments/robotics_stateful_budget.py text eol=lf
+experiments/robotics_staged_extension.py text eol=lf
+experiments/robotics_recovery_data_audit.py text eol=lf
+experiments/robotics_recovery_feasibility.py text eol=lf
+experiments/robotics_recovery_pilot.py text eol=lf
+experiments/robotics_recovery_dataset.py text eol=lf
+experiments/robotics_recovery_training.py text eol=lf
+experiments/robotics_recovery_evaluation.py text eol=lf
+experiments/robotics_recovery_confirmation.py text eol=lf
+tests/test_robotics_recovery_confirmation.py text eol=lf
+experiments/robotics_baseline_check.py text eol=lf
+experiments/robotics_failure_investigation.py text eol=lf
+experiments/robotics_feasibility.py text eol=crlf
+requirements-robotics.txt text eol=crlf
+results/**/*.json text eol=crlf
+# Preserve the earlier audit's original bytes when later reviews bind its hash.
+results/robotics-decision-review/independent-audit.json text eol=lf
+results/robotics-recovery-feasibility/data-audit.json text eol=lf
+results/robotics-recovery-feasibility/independent-audit.json text eol=lf
+results/robotics-recovery-pilot/protocol.json text eol=lf
+results/robotics-recovery-pilot/dataset.json text eol=lf
+results/robotics-recovery-pilot/training.json text eol=lf
+results/robotics-recovery-pilot/independent-audit.json text eol=lf
+results/robotics-recovery-pilot/preflight/protocol.json text eol=lf
+results/robotics-recovery-confirmation/protocol.json text eol=lf
+results/robotics-recovery-confirmation/eval-bindings.json text eol=lf
+results/robotics-recovery-confirmation/independent-audit.json text eol=lf

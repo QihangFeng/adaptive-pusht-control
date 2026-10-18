@@ -1,0 +1,120 @@
+{
+  "purpose": "exploratory unchanged-baseline diagnosis, not controller validation",
+  "model_id": "lerobot/diffusion_pusht",
+  "model_revision": "84a7c23178445c6bbf7e1a884ff497017910f653",
+  "weights_sha256": "995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8",
+  "config": {
+    "beta_end": 0.02,
+    "beta_schedule": "squaredcos_cap_v2",
+    "beta_start": 0.0001,
+    "clip_sample": true,
+    "clip_sample_range": 1.0,
+    "crop_is_random": true,
+    "crop_shape": [
+      84,
+      84
+    ],
+    "diffusion_step_embed_dim": 128,
+    "do_mask_loss_for_padding": false,
+    "down_dims": [
+      512,
+      1024,
+      2048
+    ],
+    "drop_n_last_frames": 7,
+    "horizon": 16,
+    "input_features": {
+      "observation.image": {
+        "shape": [
+          3,
+          96,
+          96
+        ],
+        "type": "VISUAL"
+      },
+      "observation.state": {
+        "shape": [
+          2
+        ],
+        "type": "STATE"
+      }
+    },
+    "kernel_size": 5,
+    "n_action_steps": 8,
+    "n_groups": 8,
+    "n_obs_steps": 2,
+    "device": "cuda",
+    "use_amp": false,
+    "noise_scheduler_type": "DDPM",
+    "normalization_mapping": {
+      "ACTION": "MIN_MAX",
+      "STATE": "MIN_MAX",
+      "VISUAL": "MEAN_STD"
+    },
+    "num_inference_steps": null,
+    "num_train_timesteps": 100,
+    "optimizer_betas": [
+      0.95,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "optimizer_lr": 0.0001,
+    "optimizer_weight_decay": 1e-06,
+    "output_features": {
+      "action": {
+        "shape": [
+          2
+        ],
+        "type": "ACTION"
+      }
+    },
+    "prediction_type": "epsilon",
+    "pretrained_backbone_weights": null,
+    "scheduler_name": "cosine",
+    "scheduler_warmup_steps": 500,
+    "spatial_softmax_num_keypoints": 32,
+    "type": "diffusion",
+    "use_film_scale_modulation": true,
+    "use_group_norm": true,
+    "use_separate_rgb_encoder_per_camera": false,
+    "vision_backbone": "resnet18"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "max_episode_steps": 300,
+  "disturbances": "none",
+  "candidate_rules": {
+    "window_steps": 3,
+    "near_gap_pixels": 10.0,
+    "max_block_vertex_motion_pixels": 2.0,
+    "min_command_distance_pixels": 5.0,
+    "minimum_pending_actions": 2
+  },
+  "diagnostic_state_not_policy_input": true,
+  "selection": "first flagged window per seed, chronological; all local trials retained",
+  "probe_diffusion_seeds": [
+    1000,
+    1001,
+    1002
+  ],
+  "probe_scope": "current-chunk remainder only; additional one model query",
+  "packages": {
+    "lerobot": "0.3.3",
+    "gym-pusht": "0.1.5",
+    "pymunk": "6.11.1",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "diffusers": "0.35.1"
+  },
+  "sources": {
+    "policy": "https://github.com/huggingface/lerobot/blob/v0.3.3/src/lerobot/policies/diffusion/modeling_diffusion.py",
+    "simulator": "https://github.com/huggingface/gym-pusht",
+    "paper": "https://arxiv.org/abs/2303.04137"
+  }
+}

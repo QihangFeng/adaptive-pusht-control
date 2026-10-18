@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "analysis_sha256": "26c82baf4954dc28bb40b1ab1f90b58439255b45f46bb71ddc7ac64963217141",
+  "counts": {
+    "sha_bindings": 176,
+    "trial_sidecars_and_traces": 60,
+    "movement_rows": 10691,
+    "extension_windows": 131,
+    "noninitial_transitions": 1095,
+    "adaptive_transitions": 358,
+    "lost_case_extensions": 21
+  },
+  "checks": [
+    "All recorded file SHA-256 bindings and 60 source sidecar/trace identities; row numbering, episode endings and query counts.",
+    "All extension windows, camera snapshots, block displacement/rotation and coverage arithmetic independently derived from raw traces.",
+    "All 1095 handovers, executed-command displacement/cosines, physical displacement/speed, camera snapshots and first-prefix coverage arithmetic.",
+    "All method/group counts, medians and descriptive drop/reversal bins.",
+    "Loss 54/59 exact handovers, preceding and last extensions at 160/100, ranks, post-decline minima, regained coverage, whole-attempt and camera peaks."
+  ],
+  "units": "Commands/positions/displacements are simulator coordinate units; stored physical velocity norms are units per second, not 96x96 camera-image pixels.",
+  "limits": [
+    "CPU artifact audit only; no neural prediction, physics replay, rendering or RGB-fitting rerun.",
+    "Dynamic state is retrospective diagnosis, not proposed controller input. No unlogged discarded-plan reconstruction or causal recovery claim.",
+    "Repeated handovers are correlated; retrospective group counts are not independent trials."
+  ]
+}

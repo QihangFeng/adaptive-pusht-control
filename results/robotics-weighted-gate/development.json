@@ -1,0 +1,1736 @@
+{
+  "scope": "Offline development selection on reused selected-state continuation labels; optimistic proxy, not full-controller results.",
+  "normalization": {
+    "D_scale": 0.2,
+    "W_scale": 5,
+    "R_scale": 0.1,
+    "R_movements": 2
+  },
+  "formula": "wD*D + wW*W - wR*R >= threshold; R is signed two-movement camera change",
+  "selection_order": [
+    "conditional successes descending",
+    "conditional predictions ascending",
+    "conditional final alignment descending",
+    "candidate index ascending"
+  ],
+  "context_order": [
+    {
+      "scene_seed": 53,
+      "checkpoint": 131,
+      "prediction_seeds": [
+        9100,
+        9101,
+        9102
+      ]
+    },
+    {
+      "scene_seed": 54,
+      "checkpoint": 193,
+      "prediction_seeds": [
+        9100,
+        9101,
+        9102
+      ]
+    },
+    {
+      "scene_seed": 59,
+      "checkpoint": 151,
+      "prediction_seeds": [
+        9100,
+        9101,
+        9102
+      ]
+    },
+    {
+      "scene_seed": 62,
+      "checkpoint": 85,
+      "prediction_seeds": [
+        9100,
+        9101,
+        9102
+      ]
+    },
+    {
+      "scene_seed": 65,
+      "checkpoint": 160,
+      "prediction_seeds": [
+        9100,
+        9101,
+        9102
+      ]
+    },
+    {
+      "scene_seed": 67,
+      "checkpoint": 146,
+      "prediction_seeds": [
+        9100,
+        9101,
+        9102
+      ]
+    }
+  ],
+  "paired_futures": 18,
+  "search_results": [
+    {
+      "candidate_index": 0,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "threshold": 0.5
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.45297417977381704
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8710861274504182
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.4640383747012363
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.42417883617649776
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 1,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "threshold": 0.35
+      },
+      "decision_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.45297417977381704
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8710861274504182
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.4640383747012363
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.42417883617649776
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        }
+      ],
+      "conditional_successes": 7,
+      "conditional_model_queries": 281,
+      "conditional_mean_final_coverage": 0.8749350256583958
+    },
+    {
+      "candidate_index": 2,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "threshold": 0.65
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.45297417977381704
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8710861274504182
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.4640383747012363
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.42417883617649776
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 3,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "threshold": 0.5
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.4469939901967229
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.7855430637252091
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.43290040346800307
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.40824120157143173
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 4,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "threshold": 0.35
+      },
+      "decision_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.4469939901967229
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.7855430637252091
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.43290040346800307
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.40824120157143173
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8
+        }
+      ],
+      "conditional_successes": 7,
+      "conditional_model_queries": 281,
+      "conditional_mean_final_coverage": 0.8749350256583958
+    },
+    {
+      "candidate_index": 5,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "threshold": 0.65
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.4469939901967229
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.7855430637252091
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.43290040346800307
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.40824120157143173
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 6,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "threshold": 0.5
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.48800779081635165
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8855430637252091
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.434662835702773
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.4005447685377975
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 7,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "threshold": 0.35
+      },
+      "decision_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.48800779081635165
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8855430637252091
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.434662835702773
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.4005447685377975
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        }
+      ],
+      "conditional_successes": 7,
+      "conditional_model_queries": 281,
+      "conditional_mean_final_coverage": 0.8749350256583958
+    },
+    {
+      "candidate_index": 8,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "threshold": 0.65
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.48800779081635165
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8855430637252091
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.434662835702773
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.4005447685377975
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.9
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 9,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "threshold": 0.5
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.46265865359563046
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8473907516336121
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8666666666666667
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.4438672046240041
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.41098826876190897
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8666666666666667
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 10,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "threshold": 0.35
+      },
+      "decision_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.46265865359563046
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8473907516336121
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8666666666666667
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.4438672046240041
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.41098826876190897
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8666666666666667
+        }
+      ],
+      "conditional_successes": 7,
+      "conditional_model_queries": 281,
+      "conditional_mean_final_coverage": 0.8749350256583958
+    },
+    {
+      "candidate_index": 11,
+      "config": {
+        "family": "weighted",
+        "weights": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "threshold": 0.65
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": 0.46265865359563046
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8473907516336121
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8666666666666667
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": 0.4438672046240041
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": 0.41098826876190897
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": 0.8666666666666667
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 12,
+      "config": {
+        "family": "threshold",
+        "min_warnings": 3,
+        "min_drawdown": 0.15
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 13,
+      "config": {
+        "family": "threshold",
+        "min_warnings": 3,
+        "min_drawdown": 0.1
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 14,
+      "config": {
+        "family": "threshold",
+        "min_warnings": 3,
+        "min_drawdown": 0.2
+      },
+      "decision_mask": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        }
+      ],
+      "conditional_successes": 11,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.8967034469465784
+    },
+    {
+      "candidate_index": 15,
+      "config": {
+        "family": "threshold",
+        "min_warnings": 2,
+        "min_drawdown": 0.15
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        }
+      ],
+      "conditional_successes": 12,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.9061397259760601
+    },
+    {
+      "candidate_index": 16,
+      "config": {
+        "family": "threshold",
+        "min_warnings": 2,
+        "min_drawdown": 0.1
+      },
+      "decision_mask": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        }
+      ],
+      "conditional_successes": 9,
+      "conditional_model_queries": 273,
+      "conditional_mean_final_coverage": 0.8994223415009537
+    },
+    {
+      "candidate_index": 17,
+      "config": {
+        "family": "threshold",
+        "min_warnings": 2,
+        "min_drawdown": 0.2
+      },
+      "decision_mask": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4239207583083765,
+            "W": 0.4,
+            "R": -0.564055202478515
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.9421722549008366,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.5245518849329328,
+            "W": 0.4,
+            "R": -0.40704972893907954
+          },
+          "score": null
+        },
+        {
+          "allowed": false,
+          "signals": {
+            "quality": true,
+            "D": 0.4637505384202639,
+            "W": 0.4,
+            "R": -0.3692142678654631
+          },
+          "score": null
+        },
+        {
+          "allowed": true,
+          "signals": {
+            "quality": true,
+            "D": 1.0,
+            "W": 0.6,
+            "R": -1.0
+          },
+          "score": null
+        }
+      ],
+      "conditional_successes": 11,
+      "conditional_model_queries": 198,
+      "conditional_mean_final_coverage": 0.8967034469465784
+    }
+  ],
+  "selected": {
+    "weighted": {
+      "family": "weighted",
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "threshold": 0.5
+    },
+    "threshold": {
+      "family": "threshold",
+      "min_warnings": 3,
+      "min_drawdown": 0.15
+    }
+  },
+  "selection_details": {
+    "weighted": {
+      "selected_index": 0,
+      "tied_best_indices": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11
+      ],
+      "tied_best_configurations": [
+        {
+          "family": "weighted",
+          "weights": [
+            0.5,
+            0.25,
+            0.25
+          ],
+          "threshold": 0.5
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.5,
+            0.25,
+            0.25
+          ],
+          "threshold": 0.65
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "threshold": 0.5
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "threshold": 0.65
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.25,
+            0.25,
+            0.5
+          ],
+          "threshold": 0.5
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.25,
+            0.25,
+            0.5
+          ],
+          "threshold": 0.65
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "threshold": 0.5
+        },
+        {
+          "family": "weighted",
+          "weights": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "threshold": 0.65
+        }
+      ],
+      "equivalent_selected_mask_indices": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11
+      ],
+      "selected_mask_equivalence_count": 8,
+      "distinct_decision_mask_count": 2
+    },
+    "threshold": {
+      "selected_index": 12,
+      "tied_best_indices": [
+        12,
+        13,
+        15
+      ],
+      "tied_best_configurations": [
+        {
+          "family": "threshold",
+          "min_warnings": 3,
+          "min_drawdown": 0.15
+        },
+        {
+          "family": "threshold",
+          "min_warnings": 3,
+          "min_drawdown": 0.1
+        },
+        {
+          "family": "threshold",
+          "min_warnings": 2,
+          "min_drawdown": 0.15
+        }
+      ],
+      "equivalent_selected_mask_indices": [
+        12,
+        13,
+        15
+      ],
+      "selected_mask_equivalence_count": 3,
+      "distinct_decision_mask_count": 3
+    }
+  },
+  "limits": [
+    "These contexts/outcomes already informed the proposal; search objective is optimistic development evidence, not held-out accuracy.",
+    "Offline continue labels suppress interruption for the current unit; a runtime gate is reconsidered every movement and can interrupt later in that unit.",
+    "Future trajectories, prediction timing and interruption budgets can change after any gate decision; an outcome-selected mixture is not a measured controller.",
+    "Correlated signals, few contexts and mask-equivalent/tied configurations do not uniquely identify useful weights or guarantee generalization."
+  ]
+}

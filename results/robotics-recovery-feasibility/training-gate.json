@@ -1,0 +1,121 @@
+{
+  "purpose": "one reversible supervised update, not a trained controller",
+  "passed": true,
+  "python": "3.11.9",
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "lerobot": "0.3.3",
+    "gym-pusht": "0.1.5",
+    "gymnasium": "0.29.1",
+    "numpy": "1.26.4",
+    "diffusers": "0.35.1"
+  },
+  "source_bindings": {
+    "results\\robotics-baseline-check\\seed-2.trace.json.gz": "fb25a02bf0b04772bd7bbc06ab19b4dc91f9b5e2be543f542163301fb6de1088",
+    "results\\robotics-failure-patterns\\recovery\\seed-2-sample-2001-replan_once.trace.json.gz": "b2033602a8b0bbb65b0e1b7d8fc9009bc65fa76cab7ea8e213ca21692fa314a1",
+    "results\\robotics-failure-patterns\\recovery\\seed-2-sample-2001-replan_once.json": "58ca0525b869c5bdba0cfb05083fae31ccc731b2d776a265a9142e86bd44a650",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\experiments\\robotics_recovery_feasibility.py": "310ada43ba75a015d8ffe62e94e72d58bcbad38e2343bb2495fbed6befb05bcd",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\experiments\\robotics_baseline_check.py": "d8e16317ba3a53d5d7abbf19b9712454bad8850639d6f4d70585f83380e91a19",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\experiments\\robotics_feasibility.py": "1bcc3fdcf251c91f20aab5b35527ab29cbc211c0f269df9cfadb480703a90552",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\.venv-robotics\\Lib\\site-packages\\lerobot\\policies\\diffusion\\modeling_diffusion.py": "c60d98bade6508be7446d9eb39a28c788b47d8c336b28767046bb84fe1484095",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\.venv-robotics\\Lib\\site-packages\\lerobot\\policies\\diffusion\\configuration_diffusion.py": "de06c1fd9cdfa3d0c0ed8930e1ce60153003175b9607f48db81e9579a126b4fc",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\.venv-robotics\\Lib\\site-packages\\lerobot\\policies\\normalize.py": "a28fbec9127c0e23510d5720747cf14f42e0b997c361556ec1f9702c63d559d5",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\data\\raw\\robotics\\diffusion_pusht\\config.json": "d391a7bf488accd1c26b2043482f0060b0855b1ec236f3d7358486918472c0a5",
+    "E:\\Courses\\Fall 2026\\ECE 730\\project\\data\\raw\\robotics\\diffusion_pusht\\model.safetensors": "995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8"
+  },
+  "sample": {
+    "scene": 2,
+    "successful_recovery_sample": 2001,
+    "observation_after_movements": [
+      156,
+      157
+    ],
+    "executed_target_movements": [
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "historical_target_slot": 0,
+    "first_future_target_slot": 1,
+    "cpu_replay_commands_checked": 157,
+    "rgb_and_physics_exact": true,
+    "coverage_only_tolerance": 1e-12,
+    "padding": false,
+    "inputs": [
+      "observation.image",
+      "observation.state",
+      "action",
+      "action_is_pad"
+    ],
+    "sample_hashes": {
+      "observation.image": "334618d710b77914b55da368a7269d2bc141f18a4b3426a46cc94cdd5a9ed457",
+      "observation.state": "7698b4606524accc2b4a63adac061f7499c50222de922f62ac9338ab901d935e",
+      "action": "ee9a7cc2ca7d53450207fe52f2728e395fe163f5ef0987e51827bdbdef622dc7",
+      "action_is_pad": "0e5f1b673762b7c7299fe1d00250af96e80f1ea6acd7b57609d65ff686180ea3"
+    },
+    "success_is_selection_only_not_model_input": true
+  },
+  "gpu_before": "NVIDIA GeForce GTX 1650, 4096, 1151, 552.22",
+  "cuda_allocator_budget_mib": 2800.0,
+  "deployment": {
+    "horizon": 16,
+    "denoising_iterations": 100,
+    "controller": "unchanged milestone 8/12",
+    "extra_models": 0
+  },
+  "no_policy_predictions_or_alternative_actions": true,
+  "no_learned_checkpoint_saved": true,
+  "trainable_names": [
+    "diffusion.unet.final_conv.0.block.0.weight",
+    "diffusion.unet.final_conv.0.block.0.bias",
+    "diffusion.unet.final_conv.0.block.1.weight",
+    "diffusion.unet.final_conv.0.block.1.bias",
+    "diffusion.unet.final_conv.1.weight",
+    "diffusion.unet.final_conv.1.bias"
+  ],
+  "trainable_parameters": 1313282,
+  "total_parameters": 262709044,
+  "update": {
+    "loss": 0.10540015995502472,
+    "gradient_l2_norm": 2.306671619415283,
+    "trainable_changed_names": [
+      "diffusion.unet.final_conv.0.block.0.weight",
+      "diffusion.unet.final_conv.0.block.0.bias",
+      "diffusion.unet.final_conv.0.block.1.weight",
+      "diffusion.unet.final_conv.0.block.1.bias",
+      "diffusion.unet.final_conv.1.weight",
+      "diffusion.unet.final_conv.1.bias"
+    ],
+    "adam_state_count": 6,
+    "adam_state_bytes": 10506280,
+    "denoiser_forward_calls": 1,
+    "sampled_diffusion_timesteps": [
+      [
+        42
+      ]
+    ],
+    "seconds": 1.2950917000125628,
+    "learning_rate": 1e-05
+  },
+  "frozen_parameters_and_buffers_unchanged": true,
+  "peak_cuda_allocated_mib": 1100.423828125,
+  "peak_cuda_reserved_mib": 1182.0,
+  "entire_model_restored_exactly": true,
+  "source_files_unchanged": true,
+  "gpu_after": "NVIDIA GeForce GTX 1650, 4096, 2353, 552.22",
+  "peak_process_rss_mib": 2579.90625,
+  "minimum_system_available_ram_mib": 3366.06640625
+}

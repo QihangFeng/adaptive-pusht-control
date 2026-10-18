@@ -1,0 +1,331 @@
+{
+  "complete": true,
+  "scope": "Inspected cohort completion and retrospective pooled synthesis; unchanged method.",
+  "cohort_70_89": {
+    "methods": {
+      "fixed8": {
+        "attempts": 20,
+        "successes": 18,
+        "mean_final_coverage": 0.9521984225357493,
+        "mean_model_queries": 21.1,
+        "mean_wall_seconds": 103.25170301999897,
+        "mean_monitor_seconds": 0.0
+      },
+      "fixed12": {
+        "attempts": 20,
+        "successes": 13,
+        "mean_final_coverage": 0.8837439273978381,
+        "mean_model_queries": 18.55,
+        "mean_wall_seconds": 90.97703258999972,
+        "mean_monitor_seconds": 0.0
+      },
+      "adaptive12": {
+        "attempts": 20,
+        "successes": 15,
+        "mean_final_coverage": 0.920201168680992,
+        "mean_model_queries": 23.15,
+        "mean_wall_seconds": 125.9111574949995,
+        "mean_monitor_seconds": 11.585935684983998
+      }
+    },
+    "paired": {
+      "fixed12_vs_fixed8": {
+        "reference": "fixed8",
+        "method": "fixed12",
+        "gained_success_seeds": [
+          72,
+          89
+        ],
+        "lost_success_seeds": [
+          70,
+          77,
+          78,
+          81,
+          82,
+          86,
+          87
+        ],
+        "exact_two_sided_discordant_success_p": 0.1796875,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": -0.25,
+            "paired_bootstrap_95_interval": [
+              -0.5,
+              0.05
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": -0.0684544951379108,
+            "paired_bootstrap_95_interval": [
+              -0.16813171137695496,
+              0.0042310723005188075
+            ]
+          },
+          "model_queries": {
+            "mean_difference": -2.55,
+            "paired_bootstrap_95_interval": [
+              -6.6,
+              1.45
+            ]
+          }
+        },
+        "descriptive_runtime_difference": -12.274670429999242
+      },
+      "adaptive12_vs_fixed8": {
+        "reference": "fixed8",
+        "method": "adaptive12",
+        "gained_success_seeds": [
+          89
+        ],
+        "lost_success_seeds": [
+          78,
+          80,
+          81,
+          82
+        ],
+        "exact_two_sided_discordant_success_p": 0.375,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": -0.15,
+            "paired_bootstrap_95_interval": [
+              -0.35,
+              0.05
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": -0.03199725385475714,
+            "paired_bootstrap_95_interval": [
+              -0.09495305528781943,
+              0.006550107538142227
+            ]
+          },
+          "model_queries": {
+            "mean_difference": 2.05,
+            "paired_bootstrap_95_interval": [
+              -2.35,
+              6.8
+            ]
+          }
+        },
+        "descriptive_runtime_difference": 22.65945447500053
+      },
+      "adaptive12_vs_fixed12": {
+        "reference": "fixed12",
+        "method": "adaptive12",
+        "gained_success_seeds": [
+          70,
+          77,
+          86,
+          87
+        ],
+        "lost_success_seeds": [
+          72,
+          80
+        ],
+        "exact_two_sided_discordant_success_p": 0.6875,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.1,
+            "paired_bootstrap_95_interval": [
+              -0.15,
+              0.35
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": 0.036457241283153655,
+            "paired_bootstrap_95_interval": [
+              -0.06459982277774096,
+              0.1492854590398316
+            ]
+          },
+          "model_queries": {
+            "mean_difference": 4.6,
+            "paired_bootstrap_95_interval": [
+              1.0,
+              8.35
+            ]
+          }
+        },
+        "descriptive_runtime_difference": 34.93412490499977
+      }
+    }
+  },
+  "pooled_50_89": {
+    "methods": {
+      "fixed8": {
+        "attempts": 40,
+        "successes": 33,
+        "mean_final_coverage": 0.9404952912352629,
+        "mean_model_queries": 22.7,
+        "mean_wall_seconds": 111.38081807249955,
+        "mean_monitor_seconds": 0.0
+      },
+      "fixed12": {
+        "attempts": 40,
+        "successes": 29,
+        "mean_final_coverage": 0.8849293048859698,
+        "mean_model_queries": 16.55,
+        "mean_wall_seconds": 81.27289612499999,
+        "mean_monitor_seconds": 0.0
+      },
+      "adaptive12": {
+        "attempts": 40,
+        "successes": 33,
+        "mean_final_coverage": 0.9381064643023802,
+        "mean_model_queries": 21.025,
+        "mean_wall_seconds": 112.94256947249987,
+        "mean_monitor_seconds": 9.604598049987453
+      }
+    },
+    "paired": {
+      "fixed12_vs_fixed8": {
+        "reference": "fixed8",
+        "method": "fixed12",
+        "gained_success_seeds": [
+          53,
+          57,
+          58,
+          67,
+          72,
+          89
+        ],
+        "lost_success_seeds": [
+          54,
+          63,
+          68,
+          70,
+          77,
+          78,
+          81,
+          82,
+          86,
+          87
+        ],
+        "exact_two_sided_discordant_success_p": 0.454498291015625,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": -0.1,
+            "paired_bootstrap_95_interval": [
+              -0.3,
+              0.1
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": -0.05556598634929304,
+            "paired_bootstrap_95_interval": [
+              -0.12755272792977623,
+              0.004425882337661301
+            ]
+          },
+          "model_queries": {
+            "mean_difference": -6.15,
+            "paired_bootstrap_95_interval": [
+              -9.35,
+              -2.974375000000009
+            ]
+          }
+        },
+        "descriptive_runtime_difference": -30.107921947499563
+      },
+      "adaptive12_vs_fixed8": {
+        "reference": "fixed8",
+        "method": "adaptive12",
+        "gained_success_seeds": [
+          53,
+          55,
+          57,
+          58,
+          67,
+          89
+        ],
+        "lost_success_seeds": [
+          54,
+          59,
+          78,
+          80,
+          81,
+          82
+        ],
+        "exact_two_sided_discordant_success_p": 1.0,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.0,
+            "paired_bootstrap_95_interval": [
+              -0.175,
+              0.175
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": -0.0023888269328826315,
+            "paired_bootstrap_95_interval": [
+              -0.040309933612206236,
+              0.02666449511068899
+            ]
+          },
+          "model_queries": {
+            "mean_difference": -1.675,
+            "paired_bootstrap_95_interval": [
+              -4.875,
+              1.575
+            ]
+          }
+        },
+        "descriptive_runtime_difference": 1.5617514000003212
+      },
+      "adaptive12_vs_fixed12": {
+        "reference": "fixed12",
+        "method": "adaptive12",
+        "gained_success_seeds": [
+          55,
+          63,
+          68,
+          70,
+          77,
+          86,
+          87
+        ],
+        "lost_success_seeds": [
+          59,
+          72,
+          80
+        ],
+        "exact_two_sided_discordant_success_p": 0.34375,
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.1,
+            "paired_bootstrap_95_interval": [
+              -0.05,
+              0.25
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": 0.0531771594164104,
+            "paired_bootstrap_95_interval": [
+              -0.013178655195277665,
+              0.12817319874826047
+            ]
+          },
+          "model_queries": {
+            "mean_difference": 4.475,
+            "paired_bootstrap_95_interval": [
+              2.0,
+              6.975
+            ]
+          }
+        },
+        "descriptive_runtime_difference": 31.669673347499884
+      }
+    }
+  },
+  "statistics": {
+    "unit": "paired initial scene",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261013,
+    "confidence": 0.95,
+    "interpretation": "Exploratory intervals without multiplicity correction; runtime descriptive only."
+  },
+  "runtime_limit": "Different sessions/logging: descriptive only.",
+  "new_scored_attempts": 40,
+  "reused_adaptive_attempts": 20,
+  "reused_original_attempts": 60
+}

@@ -1,0 +1,458 @@
+{
+  "passed": true,
+  "audit_type": "Independent arithmetic and artifact verification; no runner/controller invocation, GPU inference, image re-estimation or simulator replay.",
+  "artifact_sha256": {
+    "protocol.json": "045db1867c9ceaae39bb88ece1b448fafdd43bbf8995fc3270a44f6ae78c8911",
+    "discovery-analysis.json": "3f3595b6761208289d2a7259f76d81d93c0cac338e3ff8664442967cbcea013e",
+    "episodes.json": "cec75b2a0a82015b10c07996d6d9b16c0caae99f1e38464a770f1cd3e3531543",
+    "summary.json": "f8790aab9d3d78507e584c103e3b0208123ae2a9e1384940b13ef51b0c36b24f"
+  },
+  "frozen_source_and_evidence_files_verified": 47,
+  "installed_package_versions_verified": {
+    "torch": "2.6.0+cu124",
+    "lerobot": "0.3.3",
+    "gym-pusht": "0.1.5",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "shapely": "2.2.0",
+    "diffusers": "0.35.1"
+  },
+  "checkpoint_weights_sha256_verified": "995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8",
+  "counts": {
+    "attempts": 24,
+    "actions": 5392,
+    "initial_scenes": 8,
+    "old_fixed8_actions": 2057,
+    "feature_rows": 1570,
+    "queue_transitions": 5392,
+    "extensions_full_path_checked": 75,
+    "extensions_partial_path_checked": 0,
+    "interruptions": 1,
+    "camera_eligible_trims_without_saved_suffix": 23
+  },
+  "checks": [
+    "Complete 8-scene by 3-method matrix; all trace hashes; sequential actions and finite two-dimensional commands.",
+    "All query starts, queue decrements/discards, plan ages and actual action-unit lengths reconstructed from traces.",
+    "All saved camera warning, drawdown, recovery, stagnation and history features independently recomputed.",
+    "All interruption persistence, minimum-age/pending, rearming, cooldown and cap guards independently recomputed.",
+    "Camera eligibility and complete executed command-path continuity verified for all 75 extensions.",
+    "Initial scenes matched across methods; fixed-eight actions, pixels and originally recorded state fields match all 8 original discovery traces.",
+    "Success threshold, action cap, termination/truncation, timing bounds and all summary values verified."
+  ],
+  "methods": {
+    "fixed8": {
+      "attempts": 8,
+      "successes": 3,
+      "mean_final_coverage": 0.9343415191599098,
+      "mean_model_queries": 32.625,
+      "mean_wall_seconds": 162.8470413749999,
+      "mean_monitor_seconds": 0,
+      "extensions": 0,
+      "interruptions": 0
+    },
+    "fixed12": {
+      "attempts": 8,
+      "successes": 5,
+      "mean_final_coverage": 0.8205313068980631,
+      "mean_model_queries": 18.5,
+      "mean_wall_seconds": 92.75594440000009,
+      "mean_monitor_seconds": 0,
+      "extensions": 0,
+      "interruptions": 0
+    },
+    "adaptive12": {
+      "attempts": 8,
+      "successes": 6,
+      "mean_final_coverage": 0.9214295380452426,
+      "mean_model_queries": 20.375,
+      "mean_wall_seconds": 111.30511537500001,
+      "mean_monitor_seconds": 9.71404235000091,
+      "extensions": 75,
+      "interruptions": 1
+    }
+  },
+  "paired_vs_fixed8": {
+    "fixed12": {
+      "paired_outcomes": {
+        "both_success": 2,
+        "both_failure": 2,
+        "new_only_success": 3,
+        "baseline_only_success": 1
+      },
+      "by_seed": [
+        {
+          "seed": 0,
+          "baseline_success": true,
+          "method_success": false,
+          "coverage_difference": -0.5119889978147509,
+          "call_difference": 1,
+          "runtime_difference": 5.8804709000014554,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 1,
+          "baseline_success": true,
+          "method_success": true,
+          "coverage_difference": -0.04109022239182303,
+          "call_difference": -14,
+          "runtime_difference": -70.58541630000036,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 2,
+          "baseline_success": false,
+          "method_success": false,
+          "coverage_difference": -0.06449518070669191,
+          "call_difference": -13,
+          "runtime_difference": -65.65022820000195,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 3,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.02412786166223435,
+          "call_difference": -25,
+          "runtime_difference": -127.7014354999992,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 4,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.0523088497116313,
+          "call_difference": -16,
+          "runtime_difference": -78.39779350000026,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 5,
+          "baseline_success": true,
+          "method_success": true,
+          "coverage_difference": -0.0014274778177806313,
+          "call_difference": -7,
+          "runtime_difference": -34.27785759999824,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 6,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.029818386147298925,
+          "call_difference": -26,
+          "runtime_difference": -127.20270999999775,
+          "extensions": 0,
+          "interruptions": 0
+        },
+        {
+          "seed": 7,
+          "baseline_success": false,
+          "method_success": false,
+          "coverage_difference": -0.3977349168848916,
+          "call_difference": -13,
+          "runtime_difference": -62.79380560000209,
+          "extensions": 0,
+          "interruptions": 0
+        }
+      ],
+      "total_call_difference": -113,
+      "total_runtime_difference": -560.7287757999984
+    },
+    "adaptive12": {
+      "paired_outcomes": {
+        "both_success": 2,
+        "both_failure": 1,
+        "new_only_success": 4,
+        "baseline_only_success": 1
+      },
+      "by_seed": [
+        {
+          "seed": 0,
+          "baseline_success": true,
+          "method_success": false,
+          "coverage_difference": -0.29050643140988974,
+          "call_difference": 4,
+          "runtime_difference": 34.79003040000134,
+          "extensions": 19,
+          "interruptions": 0
+        },
+        {
+          "seed": 1,
+          "baseline_success": true,
+          "method_success": true,
+          "coverage_difference": -0.027114575705057042,
+          "call_difference": -7,
+          "runtime_difference": -29.11519699999917,
+          "extensions": 6,
+          "interruptions": 0
+        },
+        {
+          "seed": 2,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.09532338082007441,
+          "call_difference": -15,
+          "runtime_difference": -63.50741680000101,
+          "extensions": 8,
+          "interruptions": 0
+        },
+        {
+          "seed": 3,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.0165259940408381,
+          "call_difference": -23,
+          "runtime_difference": -109.48305160000018,
+          "extensions": 8,
+          "interruptions": 0
+        },
+        {
+          "seed": 4,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.047249026714211606,
+          "call_difference": -22,
+          "runtime_difference": -101.44178429999738,
+          "extensions": 9,
+          "interruptions": 0
+        },
+        {
+          "seed": 5,
+          "baseline_success": true,
+          "method_success": true,
+          "coverage_difference": -0.006626871282592317,
+          "call_difference": -6,
+          "runtime_difference": -20.33851660000073,
+          "extensions": 8,
+          "interruptions": 0
+        },
+        {
+          "seed": 6,
+          "baseline_success": false,
+          "method_success": true,
+          "coverage_difference": 0.020424841591052956,
+          "call_difference": -23,
+          "runtime_difference": -107.08299419999821,
+          "extensions": 6,
+          "interruptions": 1
+        },
+        {
+          "seed": 7,
+          "baseline_success": false,
+          "method_success": false,
+          "coverage_difference": 0.04142878631402391,
+          "call_difference": -6,
+          "runtime_difference": -16.156477900003665,
+          "extensions": 11,
+          "interruptions": 0
+        }
+      ],
+      "total_call_difference": -98,
+      "total_runtime_difference": -412.335407999999
+    }
+  },
+  "adaptive_vs_fixed12": [
+    {
+      "seed": 0,
+      "fixed12_success": false,
+      "adaptive_success": false,
+      "coverage_difference": 0.2214825664048612,
+      "call_difference": 3,
+      "runtime_difference": 28.909559499999887
+    },
+    {
+      "seed": 1,
+      "fixed12_success": true,
+      "adaptive_success": true,
+      "coverage_difference": 0.013975646686765986,
+      "call_difference": 7,
+      "runtime_difference": 41.47021930000119
+    },
+    {
+      "seed": 2,
+      "fixed12_success": false,
+      "adaptive_success": true,
+      "coverage_difference": 0.15981856152676632,
+      "call_difference": -2,
+      "runtime_difference": 2.1428114000009373
+    },
+    {
+      "seed": 3,
+      "fixed12_success": true,
+      "adaptive_success": true,
+      "coverage_difference": -0.007601867621396252,
+      "call_difference": 2,
+      "runtime_difference": 18.218383899999026
+    },
+    {
+      "seed": 4,
+      "fixed12_success": true,
+      "adaptive_success": true,
+      "coverage_difference": -0.005059822997419694,
+      "call_difference": -6,
+      "runtime_difference": -23.04399079999712
+    },
+    {
+      "seed": 5,
+      "fixed12_success": true,
+      "adaptive_success": true,
+      "coverage_difference": -0.005199393464811686,
+      "call_difference": 1,
+      "runtime_difference": 13.939340999997512
+    },
+    {
+      "seed": 6,
+      "fixed12_success": true,
+      "adaptive_success": true,
+      "coverage_difference": -0.00939354455624597,
+      "call_difference": 3,
+      "runtime_difference": 20.11971579999954
+    },
+    {
+      "seed": 7,
+      "fixed12_success": false,
+      "adaptive_success": false,
+      "coverage_difference": 0.4391637031989155,
+      "call_difference": 7,
+      "runtime_difference": 46.63732769999842
+    }
+  ],
+  "efficiency_diagnostics": {
+    "fixed8": {
+      "total_executed_actions": 2057,
+      "total_queries": 261,
+      "executed_actions_per_query": 7.881226053639847,
+      "mean_per_attempt_actions_per_query": 7.878168859649122
+    },
+    "fixed12": {
+      "total_executed_actions": 1757,
+      "total_queries": 148,
+      "executed_actions_per_query": 11.871621621621621,
+      "mean_per_attempt_actions_per_query": 11.8134324009324
+    },
+    "adaptive12": {
+      "total_executed_actions": 1578,
+      "total_queries": 163,
+      "executed_actions_per_query": 9.680981595092025,
+      "mean_per_attempt_actions_per_query": 9.650298697377501
+    }
+  },
+  "both_success_comparisons": {
+    "fixed12": {
+      "seeds": [
+        1,
+        5
+      ],
+      "means": {
+        "fixed8": {
+          "steps": 185,
+          "model_queries": 23.5,
+          "wall_seconds": 118.2610273499995,
+          "final_coverage": 0.9762402427399853,
+          "actions_per_query": 7.872340425531915
+        },
+        "fixed12": {
+          "steps": 150.5,
+          "model_queries": 13,
+          "wall_seconds": 65.8293904000002,
+          "final_coverage": 0.9549813926351836,
+          "actions_per_query": 11.576923076923077
+        }
+      },
+      "interpretation": "Descriptive paired successful subset, not an independent causal effect or replacement for all-scene outcomes."
+    },
+    "adaptive12": {
+      "seeds": [
+        1,
+        5
+      ],
+      "means": {
+        "fixed8": {
+          "steps": 185,
+          "model_queries": 23.5,
+          "wall_seconds": 118.2610273499995,
+          "final_coverage": 0.9762402427399853,
+          "actions_per_query": 7.872340425531915
+        },
+        "adaptive12": {
+          "steps": 159,
+          "model_queries": 17,
+          "wall_seconds": 93.53417054999954,
+          "final_coverage": 0.9593695192461607,
+          "actions_per_query": 9.352941176470589
+        }
+      },
+      "interpretation": "Descriptive paired successful subset, not an independent causal effect or replacement for all-scene outcomes."
+    }
+  },
+  "interrupt_events": [
+    {
+      "seed": 6,
+      "step": 72,
+      "plan_age": 4,
+      "kind": "interrupt",
+      "reason": "confirmed_regression",
+      "discarded": 8,
+      "features": {
+        "quality": true,
+        "coverage": 0.7298334351572259,
+        "warning_count": 3,
+        "drawdown": 0.10375022425787261,
+        "recovery": -0.10349876246999079,
+        "stagnation": 0.046138258539240695,
+        "position_error": 0.018747066925531904,
+        "orientation_error": 0.01491856707481164,
+        "pending_actions": 8,
+        "history_steps": 24,
+        "recent_best_gain": 0.046138258539240695,
+        "recent_peak": 0.8335836594150985
+      }
+    }
+  ],
+  "limitations": [
+    "Full predicted plans are not recorded; the plan-based reason for 23 camera-eligible trims cannot be independently reconstructed.",
+    "Camera arithmetic is checked from recorded estimated coverage, not re-estimated RGB images.",
+    "Original traces for seeds 0-5 lack subsequently added velocity fields; every originally recorded field is compared.",
+    "Eight reused development scenes with one sample per method do not establish general improvement.",
+    "Adaptive mean final coverage is below fixed-eight; greater success and lower calls/runtime do not imply improvement in every metric.",
+    "Both-success subgroup is descriptive and selected after execution, not independent causal evidence."
+  ],
+  "history_initialization": "The initial camera estimate is not saved. When the first valid row has history_steps=1, infer c0=c1-recovery1 (its recovery contains only the initial one-step change). Reconstruct subsequent past-only windows from recorded camera coverage; invalid estimates clear history. This checks arithmetic consistency, not the initial image fit.",
+  "hash_verification": "Direct standard-library hashlib SHA256 of every manifest file and checkpoint weights, direct importlib.metadata package versions, and direct old visual-evidence/config checks; no runner/controller verification helper was invoked.",
+  "unit_length_counts": {
+    "fixed8": {
+      "2": 1,
+      "3": 1,
+      "4": 5,
+      "8": 254
+    },
+    "fixed12": {
+      "4": 1,
+      "8": 1,
+      "9": 1,
+      "10": 2,
+      "12": 143
+    },
+    "adaptive12": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "7": 1,
+      "8": 82,
+      "12": 75
+    }
+  },
+  "event_counts": {
+    "extend": 75,
+    "trim": 80,
+    "interrupt": 1
+  }
+}

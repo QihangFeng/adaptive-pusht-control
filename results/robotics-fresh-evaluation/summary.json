@@ -1,0 +1,186 @@
+{
+  "complete": true,
+  "methods": {
+    "fixed8": {
+      "attempts": 20,
+      "successes": 15,
+      "mean_final_coverage": 0.9287921599347765,
+      "mean_model_queries": 24.3,
+      "mean_wall_seconds": 119.50993312500013,
+      "mean_monitor_seconds": 0.0,
+      "extensions": 0,
+      "interruptions": 0
+    },
+    "fixed12": {
+      "attempts": 20,
+      "successes": 16,
+      "mean_final_coverage": 0.8861146823741015,
+      "mean_model_queries": 14.55,
+      "mean_wall_seconds": 71.56875966000025,
+      "mean_monitor_seconds": 0.0,
+      "extensions": 0,
+      "interruptions": 0
+    },
+    "adaptive12": {
+      "attempts": 20,
+      "successes": 18,
+      "mean_final_coverage": 0.9560117599237683,
+      "mean_model_queries": 18.9,
+      "mean_wall_seconds": 99.97398145000025,
+      "mean_monitor_seconds": 7.623260414990909,
+      "extensions": 131,
+      "interruptions": 7
+    }
+  },
+  "paired": {
+    "fixed12_vs_fixed8": {
+      "reference": "fixed8",
+      "method": "fixed12",
+      "gained_success_seeds": [
+        53,
+        57,
+        58,
+        67
+      ],
+      "lost_success_seeds": [
+        54,
+        63,
+        68
+      ],
+      "both_success": 12,
+      "both_failure": 1,
+      "exact_two_sided_discordant_success_p": 1.0,
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.05,
+          "paired_bootstrap_95_interval": [
+            -0.2,
+            0.3
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": -0.04267747756067526,
+          "paired_bootstrap_95_interval": [
+            -0.1564423302813925,
+            0.0405682773038128
+          ]
+        },
+        "model_queries": {
+          "mean_difference": -9.75,
+          "paired_bootstrap_95_interval": [
+            -14.05,
+            -5.35
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": -47.941173464999885,
+          "paired_bootstrap_95_interval": [
+            -69.18282023662587,
+            -26.373155161249
+          ]
+        }
+      }
+    },
+    "adaptive12_vs_fixed8": {
+      "reference": "fixed8",
+      "method": "adaptive12",
+      "gained_success_seeds": [
+        53,
+        55,
+        57,
+        58,
+        67
+      ],
+      "lost_success_seeds": [
+        54,
+        59
+      ],
+      "both_success": 13,
+      "both_failure": 0,
+      "exact_two_sided_discordant_success_p": 0.453125,
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.15,
+          "paired_bootstrap_95_interval": [
+            -0.1,
+            0.4
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": 0.027219599988991882,
+          "paired_bootstrap_95_interval": [
+            0.0010405485189116845,
+            0.06259297455833042
+          ]
+        },
+        "model_queries": {
+          "mean_difference": -5.4,
+          "paired_bootstrap_95_interval": [
+            -9.2,
+            -1.8
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": -19.535951674999886,
+          "paired_bootstrap_95_interval": [
+            -38.47874883025015,
+            -1.1405188318750576
+          ]
+        }
+      }
+    },
+    "adaptive12_vs_fixed12": {
+      "reference": "fixed12",
+      "method": "adaptive12",
+      "gained_success_seeds": [
+        55,
+        63,
+        68
+      ],
+      "lost_success_seeds": [
+        59
+      ],
+      "both_success": 15,
+      "both_failure": 1,
+      "exact_two_sided_discordant_success_p": 0.625,
+      "differences_method_minus_reference": {
+        "success": {
+          "mean_difference": 0.1,
+          "paired_bootstrap_95_interval": [
+            -0.1,
+            0.3
+          ]
+        },
+        "final_coverage": {
+          "mean_difference": 0.06989707754966715,
+          "paired_bootstrap_95_interval": [
+            0.0009281191659164574,
+            0.1752036840977605
+          ]
+        },
+        "model_queries": {
+          "mean_difference": 4.35,
+          "paired_bootstrap_95_interval": [
+            0.95,
+            7.75
+          ]
+        },
+        "wall_seconds": {
+          "mean_difference": 28.405221789999995,
+          "paired_bootstrap_95_interval": [
+            10.987716124125214,
+            45.89986520025035
+          ]
+        }
+      }
+    }
+  },
+  "scope": "20 previously unused PushT initializations; one prediction seed per scene/method",
+  "statistics": {
+    "unit": "paired initial scene",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261012,
+    "confidence": 0.95,
+    "interpretation": "exploratory intervals; no multiplicity adjustment"
+  }
+}

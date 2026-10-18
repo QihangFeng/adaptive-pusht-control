@@ -1,0 +1,419 @@
+{
+  "passed": true,
+  "scope": "Independent CPU artifact and statistical audit; no policy inference, physics replay, image fitting or training repeated.",
+  "evaluation": {
+    "attempts": 60,
+    "scenes": [
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169
+    ],
+    "arms": [
+      "fixed8",
+      "milestone12",
+      "recovery12"
+    ],
+    "prediction_draw": 50000,
+    "schedule_verified": true,
+    "raw_trace_steps_checked": 11584,
+    "raw_prediction_calls_checked": 1319,
+    "controller_events_independently_recomputed": 780,
+    "same_initial_states_all_arms": true,
+    "original_weight_first_plan_and_executed_prefix_match": true,
+    "weight_conditions_bound_to_original_or_final600_head": true,
+    "sidecars_checked": 60,
+    "compressed_traces_checked": 60
+  },
+  "smoke": {
+    "attempts": 4,
+    "steps_per_attempt": 16,
+    "original_trained_original_switch_verified_from_recorded_artifacts": true,
+    "restored_original_and_historical_original_actions_physics_rgb_equal": true
+  },
+  "statistics": {
+    "tables_exact_match": true,
+    "paired_comparisons_exact_match": true,
+    "bootstrap_seed": 20261016,
+    "bootstrap_resamples": 10000,
+    "unit": "paired initial scene",
+    "successes": {
+      "fixed8": 14,
+      "milestone12": 13,
+      "recovery12": 17
+    },
+    "comparisons": [
+      {
+        "method": "recovery12",
+        "reference": "milestone12",
+        "gained_successes": [
+          151,
+          152,
+          153,
+          157,
+          163,
+          166
+        ],
+        "lost_successes": [
+          150,
+          167
+        ],
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.2,
+            "paired_scene_bootstrap_95_interval": [
+              -0.05,
+              0.45
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": 0.05722442155119813,
+            "paired_scene_bootstrap_95_interval": [
+              -0.0039553668048328645,
+              0.1474011588554889
+            ]
+          },
+          "model_queries": {
+            "mean_difference": -4.1,
+            "paired_scene_bootstrap_95_interval": [
+              -9.601249999999999,
+              1.4012499999999817
+            ]
+          },
+          "wall_seconds": {
+            "mean_difference": -21.335773439998594,
+            "paired_scene_bootstrap_95_interval": [
+              -50.39935992349625,
+              7.8079206916263315
+            ]
+          }
+        },
+        "exact_two_sided_discordant_success_p": 0.2890625
+      },
+      {
+        "method": "recovery12",
+        "reference": "fixed8",
+        "gained_successes": [
+          151,
+          152,
+          156,
+          169
+        ],
+        "lost_successes": [
+          167
+        ],
+        "differences_method_minus_reference": {
+          "success": {
+            "mean_difference": 0.15,
+            "paired_scene_bootstrap_95_interval": [
+              -0.05,
+              0.35
+            ]
+          },
+          "final_coverage": {
+            "mean_difference": 0.015983289596137245,
+            "paired_scene_bootstrap_95_interval": [
+              -0.009345507793795251,
+              0.04589030966394687
+            ]
+          },
+          "model_queries": {
+            "mean_difference": -6.65,
+            "paired_scene_bootstrap_95_interval": [
+              -10.65,
+              -3
+            ]
+          },
+          "wall_seconds": {
+            "mean_difference": -25.27401896000083,
+            "paired_scene_bootstrap_95_interval": [
+              -45.28987824925145,
+              -6.7978844686279984
+            ]
+          }
+        },
+        "exact_two_sided_discordant_success_p": 0.375
+      }
+    ]
+  },
+  "binding_checks": {
+    "unique_current_source_data_and_checkpoint_files": 610,
+    "canonical_source_binding_map_sha256": "b2b4445b3bfabb45b358727063bf510942c3534a39615aa58799d266d5f37f3d",
+    "packages_verified": 15,
+    "installed_model_sources_verified": 3
+  },
+  "artifact_fingerprints": {
+    "data/prepared/robotics/recovery-pilot/training/final-tail.pt": "1d1b0b0383fd6da6cc5325929fa879bed6ceef5289688c8dae52dedd7bda7219",
+    "data/prepared/robotics/recovery-pilot/training/resume.pt": "cb2532f3e25b83e355d5b7afae2e700225f22d4f036532c0e5f82e7ee9f69f80",
+    "results/robotics-recovery-pilot/dataset.json": "9650153226439d9a19559824d7a0946e6bc8c63a173a523b7f2f700a768bdea2",
+    "results/robotics-recovery-pilot/eval-bindings.json": "6479889bf847b9f33f15e34b9b80254c0caf79a56feeb7dfbcdbc7ab0331b4cc",
+    "results/robotics-recovery-pilot/evaluation-resources-from-000.json": "0dce1d063fb406e813cae95fe10e3dd53ae0cc6ab321e155d87480b48939d8a4",
+    "results/robotics-recovery-pilot/evaluation.json": "0e9037b0fecddce87934313e18ebb141c19942658689015d374ca9161c5334ea",
+    "results/robotics-recovery-pilot/evaluation/fixed8/model-binding.json": "5d55666d500e6a5fb98dc22ca399963d6dd1e471f2259161b8a3cd988fbe33fb",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-150-draw-50000-fixed8.json": "6f1f5146f13bc45ed22f31c595e5da4868405524e34332936fe55ee9699914ef",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-150-draw-50000-fixed8.trace.json.gz": "446afe4e48f2a6a802eb851f30cc2c64760277cb87733bb066402299f31f4c3e",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-151-draw-50000-fixed8.json": "b8b8620dcb29f789ce97d76c00caf294655a85041171d228ca656f73603f804b",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-151-draw-50000-fixed8.trace.json.gz": "a7c659ac329f16de05d85d219989652aef0efb8747a5827ffb4bcd72f0605103",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-152-draw-50000-fixed8.json": "c38476f2a12ed77f029d90110585e2247549e01847dd95cf511f95376e3d5b23",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-152-draw-50000-fixed8.trace.json.gz": "45ead3890860501e316342cb41d5c03a98a094be83c87ddd70eac99d4cfd06e8",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-153-draw-50000-fixed8.json": "860362c19919efd16a6a6247b7d9a498fcd1d65b207ba3bc922e3538f926a8b5",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-153-draw-50000-fixed8.trace.json.gz": "df88b6f472bd9aeae5287abe0af86c0a325903530ff3b4e9f29778f4806806d8",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-154-draw-50000-fixed8.json": "61b446712ab5820122c0eeec042bcde225065d040804b528c0d9cd8b69d0a46e",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-154-draw-50000-fixed8.trace.json.gz": "cf59aae1e7b2a73b02e7d8606be186225372865ee04c5a02f8bdbeaa4829c0a2",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-155-draw-50000-fixed8.json": "dbf4769a731898da7e22cf6a6cc41a9aa907725c3c0efa48838b9deeaea38cd3",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-155-draw-50000-fixed8.trace.json.gz": "77bbe9aca3e020d4dcc0f5b8c231324f8fd79ef68332ad0fd79553ddc3af94fd",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-156-draw-50000-fixed8.json": "ba8e266bcbd104b88e616f4e1c2ea195ce0d47423af80490571ee4cc2254732f",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-156-draw-50000-fixed8.trace.json.gz": "f640b969affe34935adcdf0bd6fed566629d04574d54edb2e6f11dc7258c715b",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-157-draw-50000-fixed8.json": "d64d07aa3725b566d193e514cd4f31053a6701bdd7e2239e9732149f854c6fb0",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-157-draw-50000-fixed8.trace.json.gz": "2334639f64d4690fb9bf8e1fe036307d7235103257bb862dc4d12731ba376a6a",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-158-draw-50000-fixed8.json": "e2a1a32d91a64a576d985c3fad6fea463ba321d93f10ce42ec71dce8a0c25684",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-158-draw-50000-fixed8.trace.json.gz": "ba817454aa60cf00809017cd5b1fdc20be356b1d6d54e680f06b3bd42f309775",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-159-draw-50000-fixed8.json": "a834d7fbe1229fbb5746a7e9e6c09dc00650a347bdcebe980bf57a0fb66e12ba",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-159-draw-50000-fixed8.trace.json.gz": "62eb012ce8a0ace4e9ce5b0e74e6581c3f53ec55bde27c79920aeb9e6407f4a2",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-160-draw-50000-fixed8.json": "3de9c406d316377c3b98190649343d36b5bec39d0660df44905aa627a92b0e63",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-160-draw-50000-fixed8.trace.json.gz": "1af52e7757294c869894af877cb4422436e84783fd44d424b830675f8a1dafb0",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-161-draw-50000-fixed8.json": "c195123289bde12e6261553025b0aafc70441647fdbfbe880a2957b7a25962dd",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-161-draw-50000-fixed8.trace.json.gz": "ac3690fe4a26a2065cf95c27b9c27915b102a31b627432f0c8cf3abbeaa9dd5d",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-162-draw-50000-fixed8.json": "1d5d4ff74ad8721ff45896da36351c36eb863a5fd670f84d09a6293f6f61f85f",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-162-draw-50000-fixed8.trace.json.gz": "bfdbd653e3ce53dc3a905637e52aaa556efcd6c6594e43429c95d2b0a7b1e82c",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-163-draw-50000-fixed8.json": "85c69407bbe77ba08295d334d69f38e9f5972b9cb659916250f5fa01579b3440",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-163-draw-50000-fixed8.trace.json.gz": "bd4ab91a4ab92cf7fcb6d8fc036c3b18bd2250e295469ba39890da12a261da10",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-164-draw-50000-fixed8.json": "f36c21cc32c71192c25086253e34dcf12301dfb461be53d535423492b3b7b659",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-164-draw-50000-fixed8.trace.json.gz": "cc595ad98910ab38d2c3aa627f0c444269a9617158595713a1db3ccc43ef3934",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-165-draw-50000-fixed8.json": "af10e2f507a1fe72fcebd94dde7c20e13b74e7372e0df9eb595acb0228dbbafa",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-165-draw-50000-fixed8.trace.json.gz": "42dae70a4bb8d36a63dc6bd1583e6479ad82006571459d191c14157297c2f709",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-166-draw-50000-fixed8.json": "6ba1eaddd1314c996a562efe20b06b8f51ede549ea484e56027fef1b08abfa38",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-166-draw-50000-fixed8.trace.json.gz": "12cd87c415cf80f7de5ba4a45cb5d80c802ad989a83433cd93b560475dc7339c",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-167-draw-50000-fixed8.json": "45e7e4cf141e29bf438116a2753e2ad233b490acf1cf3bbf798a0e8bd063ce07",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-167-draw-50000-fixed8.trace.json.gz": "bf0e5376c41d0fc595d4858b930b930e60de24c03740d5edf38a61d5630f9921",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-168-draw-50000-fixed8.json": "8dfe04dc48d99eca42c6c9ddd698c36effee8d63c8722191ec9b99cc80d9d9ae",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-168-draw-50000-fixed8.trace.json.gz": "9ab0173c0961b33906940ea50fd90f40db3dd446844aeb50314cb727fd9144cf",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-169-draw-50000-fixed8.json": "f48fdcef3e1efa760172fc3ae429c9268f2ee6c1f70078b87cae46ecd419d6c9",
+    "results/robotics-recovery-pilot/evaluation/fixed8/scene-169-draw-50000-fixed8.trace.json.gz": "9c04e6f0ff41fd8a71ba89515541b82980fe4ef41d498c640d01931dc01a70da",
+    "results/robotics-recovery-pilot/evaluation/milestone12/model-binding.json": "753319fc7d4343a723c7c7bffd302f7508c84519313fec2595325ae1b1d36d40",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-150-draw-50000-adaptive12.json": "078dd8addb2b16ac2d8b9d7c94bb02944988753d1f07855177a7bd1bfc4676b2",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-150-draw-50000-adaptive12.trace.json.gz": "d5434769f9dcee0237845dddc759939f17c0944a432153b1eea8230d3317ded3",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-151-draw-50000-adaptive12.json": "07867fa446526a0945584b09728c17aadfe05a00db86806113b345f66e4ea150",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-151-draw-50000-adaptive12.trace.json.gz": "4ab6b9a3010f182d2c37b96f06edaed92a91fe0472b504e957f7b0274f6398ba",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-152-draw-50000-adaptive12.json": "177075883546a25412503e21a047143700f4b4ad9b08baabe6a8df2de522f603",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-152-draw-50000-adaptive12.trace.json.gz": "d0732729917680aaa0ef548228d9ed3c009d309f271354e7d835f01e3e4d2382",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-153-draw-50000-adaptive12.json": "4e927a645370487fb37375554092d8f50457aa505ffff258f3bd8a72df5676c6",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-153-draw-50000-adaptive12.trace.json.gz": "04286f022b44b60211365636dc29b1c05e8227e651d8c78859e87e6f34bf98b3",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-154-draw-50000-adaptive12.json": "cff14df10655419ec89add5c5bc7e9c99c8c77cbccf3eff6be24c4108b3483fe",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-154-draw-50000-adaptive12.trace.json.gz": "1e05c58f36b143abbca38e6b3caa54241b64394ab28a97820c9e914f49faad3d",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-155-draw-50000-adaptive12.json": "8e33eaf6d07dd81cd54fec525d58a5e80be14119903a289f7559ccdef0b3ad79",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-155-draw-50000-adaptive12.trace.json.gz": "200336108d1d10d3a3415351b4f31b666c435f4245b4ae7f69251936d17b9c2f",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-156-draw-50000-adaptive12.json": "cfb8f8a96a8ce767a88fb974160bacfff81af2f9c4d814d1c528fe187563d0e2",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-156-draw-50000-adaptive12.trace.json.gz": "8a1f0cd70a51f15dc743b80db5f837a129aa702d04e48310b8bac42707ae8547",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-157-draw-50000-adaptive12.json": "8c7c16d14348d7c75b8792446510cc239fa7731c3b32c3ad0ae5eec828d3b103",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-157-draw-50000-adaptive12.trace.json.gz": "8a6b922e77053f3f557c11806b0947c9d86d6d011db0aee28633e248f31cd37c",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-158-draw-50000-adaptive12.json": "1a95467a21cb0d17e7f03754548bd43c747d89ad8139f3e7275fce9413107b9e",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-158-draw-50000-adaptive12.trace.json.gz": "cd1a82f95118a399ee595643be7906678ae102a821413e9a9fe81523eb706659",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-159-draw-50000-adaptive12.json": "f5d4b2a29f0f441ed6edfec39b79e80b1aabd9f4b53f62318f015c77953004c4",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-159-draw-50000-adaptive12.trace.json.gz": "214e3141830087083d5d3ad56f8babd590d1ec7f76ee401ac704456c0abf6813",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-160-draw-50000-adaptive12.json": "b654309086d39fe2f79c1a26bb9b406ea4017731831af21d14ee3683fc8e3dde",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-160-draw-50000-adaptive12.trace.json.gz": "ca8e982eeef7e55b1c986c991479f0c43e9b04231a043ad6c7b5ec79a4d2d76f",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-161-draw-50000-adaptive12.json": "c30bb96fe4e8e84c5ac26707dc7f08e02ea7aaf059a327909b8c7eab18d737c3",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-161-draw-50000-adaptive12.trace.json.gz": "d47241d57daca1e1bbe1290d130605539989cc099e01f1dfe0a445a999316f8e",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-162-draw-50000-adaptive12.json": "553b195fb0fea1ffc49e8461a5ea9cca23df59c2848589064c715d037ce3dcba",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-162-draw-50000-adaptive12.trace.json.gz": "153bebe429201708644cbaa1dc6b22d0e9e7ad56f57d86b80678b95f41f78613",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-163-draw-50000-adaptive12.json": "62c1a2d228d1d3fee08fc0ee9bb5088265135d325c6036e067c5bd957ca6b289",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-163-draw-50000-adaptive12.trace.json.gz": "6783c0fc4e74d4a55315aa993bdab072b64399f62832851019a0b5d29474b744",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-164-draw-50000-adaptive12.json": "5babdbe6003ff29cd615da76410bc5680563c57fea8624b729b3cbffeadbec6e",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-164-draw-50000-adaptive12.trace.json.gz": "d98f319057ed340620b0ab5eb49c77911aa1d6757e2eacd51f0d35cbcde655af",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-165-draw-50000-adaptive12.json": "70c3193a766fd4c906671a08341d83eb64088240ac3a7c3bf09ae576cd0dafdb",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-165-draw-50000-adaptive12.trace.json.gz": "664e561fc64886626b6feaaae4c4ef63c911766fe9b06daa4dd1c19674525868",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-166-draw-50000-adaptive12.json": "b4a9f5fb1e2360b676cc03e5d06db26c31d577e4ce075fe3d37fcff1332493b5",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-166-draw-50000-adaptive12.trace.json.gz": "c5987fa2bab5bd3ee1c85def48a6d1c349fad521072abd3e76139b1c5a77d802",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-167-draw-50000-adaptive12.json": "6da988265dff7a623304fbd6a48d4efecc2c9cd2ea2e4e90554f8ba4f00d1f0d",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-167-draw-50000-adaptive12.trace.json.gz": "675fee46076e7ed11516c6c1af57ae5bd5f7019104ec8105e658e8f23a519f4f",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-168-draw-50000-adaptive12.json": "f1a308a5748ddbbe58092e9adf36f5d6e06074065709b750dee46449943fef9b",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-168-draw-50000-adaptive12.trace.json.gz": "851f52996fde2f91f962923385b3ed3307999ab757aca47590bd627ee84ce9d5",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-169-draw-50000-adaptive12.json": "e3013874f609eedcc9216b39d87d7546c4bf3d4d783d9ad60c093a92eccc55f5",
+    "results/robotics-recovery-pilot/evaluation/milestone12/scene-169-draw-50000-adaptive12.trace.json.gz": "c856b825146e9cf3fcc754a3f5dbff0e543c66654851b2dc367771d0abb53a97",
+    "results/robotics-recovery-pilot/evaluation/recovery12/model-binding.json": "5c453e1c793c11443220e3238eb834cf1f51f4978340c6575561cdcd954bb7d6",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-150-draw-50000-adaptive12.json": "0009e858a8e9d428423bdc3160173a445b28b692a6a11c3bfd4cda0011b66620",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-150-draw-50000-adaptive12.trace.json.gz": "62329cb807c72841d34633521b7b1e2d99be4bf9ad68a797de27ecdbd4ec7d90",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-151-draw-50000-adaptive12.json": "cc6258fac600a0cf63cb15d099d415d89cfb662b3dcd095add05749783b2941f",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-151-draw-50000-adaptive12.trace.json.gz": "0755eba8b7fb79fc018a6966d76a6b1b84058a2a2681e7b18671c1b85c36b6d2",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-152-draw-50000-adaptive12.json": "64a1018a0c1c1ce36103a3c8f65b65a4a34c59cbf2a8d4be73f14293fb4aad05",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-152-draw-50000-adaptive12.trace.json.gz": "a0cef28dc7618a8db8784a4aa1c9c3d03c062938d93f7057439a56489a05c276",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-153-draw-50000-adaptive12.json": "ce88a3f2212d72897a14f245e77fef4b9ca6797e8a41162e8d7ada261bd7521f",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-153-draw-50000-adaptive12.trace.json.gz": "bfec1617c64df58f4c8db56f016029da3919a10577628243654a88a3bab106a7",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-154-draw-50000-adaptive12.json": "108dfc54121a2affda0c3911a95abee3f40280fe7d2aa3d799accb362efcedab",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-154-draw-50000-adaptive12.trace.json.gz": "e6403b09b183c0a76cac706ffe368ae8b7d03a2ca62e7f3f02cb977cdc596ed0",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-155-draw-50000-adaptive12.json": "7a5a9dbcbf0b0510487a632657487b482049b80415985c5f937abe76a226792e",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-155-draw-50000-adaptive12.trace.json.gz": "05c6968c82e4659b5c0ce1d9efa5b98bea538a18b075fe932ab88ad3530ea9c5",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-156-draw-50000-adaptive12.json": "a0eae4e13e77eb4b09bf56d4c781fe796e573c08a4541bf2defeb7b063c70a99",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-156-draw-50000-adaptive12.trace.json.gz": "865e13eee66341ab5c502704fcde7519d23d871433f35fee384a943976629960",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-157-draw-50000-adaptive12.json": "720e675135213e2e18f2d2a8b780f4145d839935fa630b5941bd10914c01f432",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-157-draw-50000-adaptive12.trace.json.gz": "b878646a4d65f01a597e3792f2b84a8b150d1e52177c7d921178d1a11a7843c3",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-158-draw-50000-adaptive12.json": "8f91027c50b359c7fb748ca1b03212035f13a86e2e938f4d907eb6644101e929",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-158-draw-50000-adaptive12.trace.json.gz": "61ebc37555443cc0dca9213a8f981b070ef1d6d6141502272ce9eae718bc9f0a",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-159-draw-50000-adaptive12.json": "c885e86bc9a69e7553a580ad5e923792c7ac3066665d5299bfc6ac1506a58d17",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-159-draw-50000-adaptive12.trace.json.gz": "f7d6d2edc4b24b5b73f8e71469af6a8ea5cc0e5369a4cfeff5c8f49b46c2694b",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-160-draw-50000-adaptive12.json": "558867ee6e2ba9da2cb27358e779db08b4ab383ed0f59eecd1664cf7f0f6dd34",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-160-draw-50000-adaptive12.trace.json.gz": "6448c752a897fe20a7dbf07f2a2a653474427e94a850e696726e495ce2283b42",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-161-draw-50000-adaptive12.json": "01cf04cbe80b75b15f0ec1df1f60b9ed2ef0f0c4105299e99e1528d687fb3f54",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-161-draw-50000-adaptive12.trace.json.gz": "17a3d1747f858fb065c706a9a5c0979d49d2bdc9b90ab6a7f5346576fce40b63",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-162-draw-50000-adaptive12.json": "e6accdd557a7f8f9d1c2c4d0576499d2349be417cb721c79bf24aa2ad83abce1",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-162-draw-50000-adaptive12.trace.json.gz": "077a127bfb519a9d43ba7e915a2dabe6fee1cc344ebc69feec28d1f9e6654463",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-163-draw-50000-adaptive12.json": "81ecbc3e845f18b2cf25d7c8506da6c7ab9e561f0fed9bc92de5a2cb5d5511d9",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-163-draw-50000-adaptive12.trace.json.gz": "ae30251b8935cf57daf541db62145b8079b0aba45474ef31f1be1887534e7831",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-164-draw-50000-adaptive12.json": "266aa21f9388dca64f9d2fea2af36e6441e6869738ef62dc1a240cfbee489328",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-164-draw-50000-adaptive12.trace.json.gz": "153fb8542d3370b1f0df4981a3f81c3e8d1e4e5aaae3a500897a3951e4e9f696",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-165-draw-50000-adaptive12.json": "d0188b246a2725ff9e4a2b7ebc2be8add2e48c69e2200de13ace514386d97153",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-165-draw-50000-adaptive12.trace.json.gz": "1868faf9b4cafdc52922d287fd9114cf60c40a91717478d1c3dae448246f575b",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-166-draw-50000-adaptive12.json": "92a64e11ffa8d208d78f8aa71b85dc9157162467927b7492979826c2cbb02087",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-166-draw-50000-adaptive12.trace.json.gz": "abecb8a3e472dea69b785ad8f6748f95db4cd1fd7431f3c64cafaa1cfcf724da",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-167-draw-50000-adaptive12.json": "17ba2ad2fe50e335cfa965a6c93e2af1a614727c3113462c64568175d32e66ab",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-167-draw-50000-adaptive12.trace.json.gz": "d88a581164830af02097c1de4962c832ca7c2f92bd0d1306a4cf1b56cfe567c9",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-168-draw-50000-adaptive12.json": "634b996ee4a4b5be709b6cc96bf9263422bca44eba067e2b842f7ccd099c7efb",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-168-draw-50000-adaptive12.trace.json.gz": "0e410fa6778fed06f9edd34f6a9b19c02a18eb4d4fbaf109ee98ed05f9db9f8a",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-169-draw-50000-adaptive12.json": "c091dd65506d8aadfef92c0e025da7d260df93514094601d96487987ef6c1224",
+    "results/robotics-recovery-pilot/evaluation/recovery12/scene-169-draw-50000-adaptive12.trace.json.gz": "d071e5165ce6f9ce46d645d371d68bc497f7705477741ee2b5f73a1fd03e98ae",
+    "results/robotics-recovery-pilot/protocol.json": "e1978eb27d33aba1eff7dc41af35d9cc5bc486cd2590023f95c5ae26a282d835",
+    "results/robotics-recovery-pilot/smoke.json": "0523c5ca4646429f1f46ec86f0c22d5e69068ead4b3d3068ebbe67a3ae712f96",
+    "results/robotics-recovery-pilot/smoke/before/model-binding.json": "5d55666d500e6a5fb98dc22ca399963d6dd1e471f2259161b8a3cd988fbe33fb",
+    "results/robotics-recovery-pilot/smoke/before/scene-0-draw-1234-fixed8.json": "bd67eef7c970392e9a03644192b8fd031d30ac09232d361de6d164459b8146d2",
+    "results/robotics-recovery-pilot/smoke/before/scene-0-draw-1234-fixed8.trace.json.gz": "0eef0b9d440d92bb552975c6ffa07d1f9483e5f1a4099fe8f16c6695d2e80dfd",
+    "results/robotics-recovery-pilot/smoke/milestone/model-binding.json": "753319fc7d4343a723c7c7bffd302f7508c84519313fec2595325ae1b1d36d40",
+    "results/robotics-recovery-pilot/smoke/milestone/scene-0-draw-1234-adaptive12.json": "fc110c2382b289c998cf0def4d5db1a6889bc19ca1a1159af4102dba13f51899",
+    "results/robotics-recovery-pilot/smoke/milestone/scene-0-draw-1234-adaptive12.trace.json.gz": "39e41537098e12ba8d6a2049766afbd994dac25a436ae155c0aa9e94702b9bdb",
+    "results/robotics-recovery-pilot/smoke/restored/model-binding.json": "5d55666d500e6a5fb98dc22ca399963d6dd1e471f2259161b8a3cd988fbe33fb",
+    "results/robotics-recovery-pilot/smoke/restored/scene-0-draw-1234-fixed8.json": "3d24574390c80ff72f3135df9f794c844882f00e66c80dfb8506cb0eac1d3c69",
+    "results/robotics-recovery-pilot/smoke/restored/scene-0-draw-1234-fixed8.trace.json.gz": "b1028620975e987e1809d5682d9923d89c134fb61dbf3cf4de53d14b1337db6e",
+    "results/robotics-recovery-pilot/smoke/trained/model-binding.json": "5c453e1c793c11443220e3238eb834cf1f51f4978340c6575561cdcd954bb7d6",
+    "results/robotics-recovery-pilot/smoke/trained/scene-0-draw-1234-adaptive12.json": "68bfc693fd629c59d9df0f9a5706c9a1e56151a7f12b7a07597f63beb9ec8fce",
+    "results/robotics-recovery-pilot/smoke/trained/scene-0-draw-1234-adaptive12.trace.json.gz": "8cfa9fe102b7089c59e2a331aafd264dc04c7729caa887e570bddefd0d750632",
+    "results/robotics-recovery-pilot/summary.json": "103be92003d8395e697b01a0358178937b941b20f612581fe3810459c5e27c3f",
+    "results/robotics-recovery-pilot/training.json": "34c9ee9e60b979d2299f385f0a46730f1419a0fee4fe003e0065197120510fef"
+  },
+  "limitations": [
+    "Stored events were recomputed from saved visual features, not independently estimated again from pixels.",
+    "Hashes and saved backbone flags do not independently repeat on-device weight checks or establish causal recovery.",
+    "Twenty scenes and one training seed provide preliminary evidence, not stable general improvement or statistical significance.",
+    "Successful recovery labels are correlated, self-generated continuations; validation loss is not pushing performance.",
+    "Runtime backbone-unchanged flags remain recorded collector assertions; pristine checkpoint digest agreement and final six-tensor artifacts were independently checked, not reproduced on the GPU.",
+    "No expert-only or recovery-only ablation was run, so the benefit cannot be attributed specifically to the recovery component rather than rehearsal/fine-tuning as a whole."
+  ],
+  "artifact_count": 145,
+  "training_artifact_checks": {
+    "passed": true,
+    "scope": "Independent CPU audit of saved tensor/optimizer artifacts, selection RNG and recorded arithmetic; no loss forward, training or GPU replay.",
+    "training_bindings_rehashed": 191,
+    "dataset_archives_rehashed": 131,
+    "optimizer_updates": 600,
+    "microbatches_per_update": 4,
+    "total_denoiser_training_calls_recorded": 2400,
+    "selection_seed": 51000,
+    "all_selected_training_indices_independently_reproduced": true,
+    "expert_microbatches": 1200,
+    "recovery_microbatches": 1200,
+    "unique_selected_training_windows": 1747,
+    "validation_selection_seed": 51001,
+    "validation_plan_draws": 64,
+    "unique_validation_windows": 63,
+    "validation_windows_per_group": 32,
+    "validation_stages": [
+      0,
+      200,
+      400,
+      600
+    ],
+    "validation_recorded_window_uses": 256,
+    "training_validation_window_overlap": 0,
+    "validation_noise_seeds": {
+      "expert": [
+        52001,
+        52032
+      ],
+      "recovery": [
+        53001,
+        53032
+      ]
+    },
+    "original_tail_tensor_digest": "ab4692b8ebab463bda2232d9cc3e24b42c2f7813c0c1de432599e0e65213c938",
+    "pristine_backbone_tensor_digest": "b5e2e5bfbae9f2d30d8f15fbc0e2dc5fb8bcfd1e33962c92732cccecdd3e24cc",
+    "pristine_backbone_digest_matches_recorded_training": true,
+    "final_tail_tensor_digest": "4286fe28e2da68f003cfadbbe3cab2db51cbc716d21c8df9e128e6cbf15eb3da",
+    "final_tail_tensor_count": 6,
+    "final_tail_parameters": 1313282,
+    "all_final_tensors_float32_finite_and_changed_from_original": true,
+    "final_head_exactly_matches_resume_tail": true,
+    "all_six_optimizer_step_counters": 600,
+    "adam_state_bytes": 10506280,
+    "recorded_training_wall_seconds": 201.1164606,
+    "recorded_update_seconds_sum": 135.1994214,
+    "recorded_peak_gpu_allocated_bytes": 1165053952,
+    "recorded_peak_gpu_reserved_bytes": 1239416832,
+    "allocator_budget_bytes": 2936012800,
+    "validation_loss_forward_recomputed": false,
+    "bitwise_cuda_reproduction_claimed": false
+  },
+  "dataset_checks": {
+    "passed": true,
+    "current_source_binding_files_rehashed": 460,
+    "current_npz_archives_rehashed": 131,
+    "npz_total_bytes": 18073206,
+    "recovery_training": {
+      "scenes": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "window_bearing_episodes": 18,
+      "windows": 1737
+    },
+    "recovery_validation": {
+      "scenes": [
+        15,
+        16,
+        18
+      ],
+      "window_bearing_episodes": 11,
+      "windows": 1023
+    },
+    "expert_training": {
+      "episodes": 64,
+      "windows": 6818
+    },
+    "expert_validation": {
+      "episodes": 16,
+      "windows": 1677
+    },
+    "complete_windows_without_padding": true,
+    "whole_scene_recovery_split_disjoint": true,
+    "ordinary_controls_used_for_training": false,
+    "scene3_recovery008_windows": 90,
+    "scene3_recovery009_and_010_windows": 0,
+    "prior_independent_cpu_array_audit": {
+      "recovery_control_rgb_hashes_checked": 10715,
+      "executed_commands_and_pusher_observations_checked": 10664,
+      "expert_parquet_terminal_checks": 80,
+      "expert_raw_rows": 9775,
+      "expert_nonterminal_rows": 9695,
+      "expert_av1_independently_redecoded": false,
+      "physics_replay_repeated": false
+    },
+    "note": "Current final audit rehashed sources/archives. Earlier independent array checks inspected saved arrays and original tabular labels, without repeating physics or AV1 decoding."
+  }
+}
