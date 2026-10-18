@@ -2,6 +2,8 @@
 
 ECE 730 course project: computation and AI for cyber-physical systems.
 
+**Project status: Work in progress.** This repository documents an ongoing ECE 730 course project.
+
 This project explores visual execution feedback and bounded offline refinement of a pretrained robot-action model. In the PushT simulator, a camera observes a pusher and a T-shaped block. Diffusion Policy predicts movements; the simulator applies them and returns updated images.
 
 The main execution method is lightweight feedback that decides when to reuse more predicted movements or request a new prediction. Earlier pilots test interruptions and camera/path-guided eight-versus-twelve-action execution. A later pilot updates only the model's final convolution block using recovery and expert examples while preserving that execution rule. The completed fresh-scene confirmation supports a success/efficiency improvement for that frozen trained checkpoint within clean PushT, not general robot or real-world superiority.
